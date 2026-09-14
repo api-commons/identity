@@ -1,0 +1,65 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+arazzo: 1.0.1
+info:
+  title: SCIM 2.0 core conformance
+  version: 1.0.0
+  summary: Ask the server what it supports, then provision and de-provision a user.
+  description: 'The flow opens with GET /ServiceProviderConfig even though only about a third of the cohort
+    declares it, because that is the point: a client that wants to adapt to a server''s capabilities has
+    exactly one mechanism, the RFC does not compel a server to provide it, and most do not. If step one
+    fails, the rest of the flow still runs — the client is simply flying blind, which is the normal condition.
+
+
+    Every operation is authenticated. Run it against a tenant you control: it creates a user and deletes
+    it again.'
+sourceDescriptions:
+- name: profile
+  url: ../openapi.yml
+  type: openapi
+workflows:
+- workflowId: core-conformance
+  summary: ServiceProviderConfig, then create, read, and delete a User.
+  description: Every step is a core or discovery operation from RFC 7644 Table 2.
+  inputs:
+    type: object
+    properties:
+      userName:
+        type: string
+        default: api-commons-conformance
+  steps:
+  - stepId: discover
+    description: GET /ServiceProviderConfig — declared by only a third of the cohort.
+    operationId: $sourceDescriptions.profile.getServiceproviderconfig
+    successCriteria:
+    - condition: $statusCode == 200
+    onFailure:
+    - name: continueBlind
+      type: goto
+      stepId: createUser
+      criteria:
+      - condition: $statusCode != 200
+  - stepId: createUser
+    description: POST /Users — the operation everyone has.
+    operationId: $sourceDescriptions.profile.postUsers
+    successCriteria:
+    - condition: $statusCode == 201
+    - context: $response.body
+      condition: $.id
+      type: jsonpath
+    outputs:
+      userId: $response.body#/id
+  - stepId: readUser
+    description: GET /Users/{id} — read back what was created.
+    operationId: $sourceDescriptions.profile.getUsersById
+    successCriteria:
+    - condition: $statusCode == 200
+    - context: $response.body
+      condition: $.userName
+      type: jsonpath
+  - stepId: deleteUser
+    description: DELETE /Users/{id} — leave no residue.
+    operationId: $sourceDescriptions.profile.deleteUsersById
+    successCriteria:
+    - condition: $statusCode == 204
+  outputs:
+    userId: $steps.createUser.outputs.userId

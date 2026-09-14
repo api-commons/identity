@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "description": "RFC 7643 Section 4.2. Core schema urn:ietf:params:scim:schemas:core:2.0:Group.",
+  "required": [
+    "schemas",
+    "displayName"
+  ],
+  "properties": {
+    "schemas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "id": {
+      "type": "string",
+      "readOnly": true
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "members": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "$ref": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "meta": {
+      "$ref": "#/components/schemas/Meta"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/schema/Group.json",
+  "title": "SCIM Group"
+}

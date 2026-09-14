@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "description": "RFC 7644 Section 3.4.2. Every query answers in this envelope, identified by urn:ietf:params:scim:api:messages:2.0:ListResponse.",
+  "required": [
+    "schemas",
+    "totalResults"
+  ],
+  "properties": {
+    "schemas": {
+      "type": "array",
+      "items": {
+        "const": "urn:ietf:params:scim:api:messages:2.0:ListResponse"
+      }
+    },
+    "totalResults": {
+      "type": "integer"
+    },
+    "startIndex": {
+      "type": "integer",
+      "description": "1-based, not 0-based."
+    },
+    "itemsPerPage": {
+      "type": "integer"
+    },
+    "Resources": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/schema/ListResponse.json",
+  "title": "SCIM ListResponse"
+}

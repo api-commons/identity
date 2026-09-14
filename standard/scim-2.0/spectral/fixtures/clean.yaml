@@ -1,0 +1,95 @@
+# Every measured-core operation, the discovery endpoints, the SCIM media type, and
+# error status typed as the string the RFC specifies.
+openapi: 3.1.0
+info:
+  title: Fixture
+  version: 1.0.0
+paths:
+  /Users:
+    get:
+      operationId: GETUsers
+      responses:
+        '200':
+          description: ok
+          content:
+            application/scim+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+    post:
+      operationId: POSTUsers
+      responses:
+        '200':
+          description: ok
+          content:
+            application/scim+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+  /Users/{id}:
+    get:
+      operationId: GETUsersid
+      responses:
+        '200':
+          description: ok
+          content:
+            application/scim+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+    put:
+      operationId: PUTUsersid
+      responses:
+        '200':
+          description: ok
+          content:
+            application/scim+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+    delete:
+      operationId: DELETEUsersid
+      responses:
+        '200':
+          description: ok
+          content:
+            application/scim+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+  /ServiceProviderConfig:
+    get:
+      operationId: GETServiceProviderConfig
+      responses:
+        '200':
+          description: ok
+          content:
+            application/scim+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+  /Schemas:
+    get:
+      operationId: GETSchemas
+      responses:
+        '200':
+          description: ok
+          content:
+            application/scim+json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string

@@ -1,0 +1,44 @@
+# An identity API that is not SCIM: no /Users, no discovery, no scim+json.
+openapi: 3.1.0
+info:
+  title: Fixture
+  version: 1.0.0
+paths:
+  /people:
+    get:
+      operationId: GETpeople
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+    post:
+      operationId: POSTpeople
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+  /people/{id}:
+    get:
+      operationId: GETpeopleid
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string

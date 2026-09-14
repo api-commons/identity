@@ -1,0 +1,69 @@
+# The core operations are present, but served as plain JSON with the error status
+# typed as an integer — the two mistakes that break generated clients.
+openapi: 3.1.0
+info:
+  title: Fixture
+  version: 1.0.0
+paths:
+  /Users:
+    get:
+      operationId: GETUsers
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+    post:
+      operationId: POSTUsers
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+  /Users/{id}:
+    get:
+      operationId: GETUsersid
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+    put:
+      operationId: PUTUsersid
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+    delete:
+      operationId: DELETEUsersid
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer

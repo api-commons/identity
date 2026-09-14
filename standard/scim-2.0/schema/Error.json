@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "description": "RFC 7644 Section 3.12. Identified by urn:ietf:params:scim:api:messages:2.0:Error. `status` is a STRING carrying the HTTP status code, which is a common source of client bugs.",
+  "required": [
+    "schemas",
+    "status"
+  ],
+  "properties": {
+    "schemas": {
+      "type": "array",
+      "items": {
+        "const": "urn:ietf:params:scim:api:messages:2.0:Error"
+      }
+    },
+    "status": {
+      "type": "string"
+    },
+    "scimType": {
+      "type": "string",
+      "enum": [
+        "invalidFilter",
+        "tooMany",
+        "uniqueness",
+        "mutability",
+        "invalidSyntax",
+        "invalidPath",
+        "noTarget",
+        "invalidValue",
+        "invalidVers",
+        "sensitive"
+      ]
+    },
+    "detail": {
+      "type": "string"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/schema/Error.json",
+  "title": "SCIM Error"
+}

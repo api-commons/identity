@@ -1,0 +1,361 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+profile: scim-2.0
+title: SCIM 2.0
+originator: IETF
+standard_class: ratified
+standard_class_note: The other five profiles in this programme describe interfaces that became standards
+  by being copied, where no specification exists to check anyone against. SCIM was ratified in 2015. Describing
+  it again would add nothing; what is missing is the measurement of what the industry actually built,
+  set beside what the RFC actually says.
+generated: '2026-09-14'
+generated_by: scripts/build-profile.py
+upstream:
+  specifications:
+  - rfc: RFC 7643
+    title: 'SCIM: Core Schema'
+    url: https://www.rfc-editor.org/rfc/rfc7643
+  - rfc: RFC 7644
+    title: 'SCIM: Protocol'
+    url: https://www.rfc-editor.org/rfc/rfc7644
+  published: September 2015
+  license: IETF Trust. RFCs may be described, quoted and implemented freely; this profile quotes normative
+    language with its section and does not reproduce the documents.
+  operations: 24
+  source_note: The operation list is transcribed from RFC 7644 Section 3.2 Table 2 and each normative
+    claim is quoted from the RFC text, not paraphrased from memory.
+method:
+  summary: Two gradings per operation. `normative_force` is what RFC 7644 says, quoted. `tier` is what
+    the industry declares, measured the same way as every other profile here. The gap between them is
+    the point.
+  cohort: 77
+  claimants: 368
+  cohort_definition: 368 providers in the API Evangelist catalog mention SCIM — the largest claim cohort
+    of any standard in this programme. 77 of them publish an OpenAPI containing a SCIM path, and those
+    are the denominator.
+  why_no_probe: A SCIM endpoint is an identity surface and every operation on it is authenticated. There
+    is no anonymous discriminator, so no `tested` grade is available — the same structural limit as S3,
+    for the same reason.
+  thresholds:
+    core: '>= 50.0%'
+    extended: '>= 5.0%'
+    vendor: < 5.0%
+counts:
+  core: 5
+  extended: 12
+  vendor: 7
+operations:
+- operation: GET /Users
+  method: GET
+  path: /Users
+  resource: /Users
+  rfc_section: 3.4.1
+  summary: List or query User resources.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.2 Table 2 lists /Users with GET, POST, PUT, PATCH and DELETE.
+    The RFC defines the operations; it does not compel a server to implement all of them.
+  tier: core
+  providers_declaring: 53
+  percent_of_cohort: 68.8
+  evidence: 53 of 77 providers that publish a SCIM path declare this operation (68.8%).
+- operation: POST /Users
+  method: POST
+  path: /Users
+  resource: /Users
+  rfc_section: '3.3'
+  summary: Create a User.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.2 Table 2 lists /Users with GET, POST, PUT, PATCH and DELETE.
+    The RFC defines the operations; it does not compel a server to implement all of them.
+  tier: core
+  providers_declaring: 52
+  percent_of_cohort: 67.5
+  evidence: 52 of 77 providers that publish a SCIM path declare this operation (67.5%).
+- operation: GET /Users/{id}
+  method: GET
+  path: /Users/{id}
+  resource: /Users
+  rfc_section: 3.4.1
+  summary: Retrieve a known User.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.2 Table 2 lists /Users with GET, POST, PUT, PATCH and DELETE.
+    The RFC defines the operations; it does not compel a server to implement all of them.
+  tier: core
+  providers_declaring: 51
+  percent_of_cohort: 66.2
+  evidence: 51 of 77 providers that publish a SCIM path declare this operation (66.2%).
+- operation: PUT /Users/{id}
+  method: PUT
+  path: /Users/{id}
+  resource: /Users
+  rfc_section: 3.5.1
+  summary: Replace a User.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.2 Table 2 lists /Users with GET, POST, PUT, PATCH and DELETE.
+    The RFC defines the operations; it does not compel a server to implement all of them.
+  tier: core
+  providers_declaring: 46
+  percent_of_cohort: 59.7
+  evidence: 46 of 77 providers that publish a SCIM path declare this operation (59.7%).
+- operation: DELETE /Users/{id}
+  method: DELETE
+  path: /Users/{id}
+  resource: /Users
+  rfc_section: '3.6'
+  summary: Delete a User.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.2 Table 2 lists /Users with GET, POST, PUT, PATCH and DELETE.
+    The RFC defines the operations; it does not compel a server to implement all of them.
+  tier: core
+  providers_declaring: 42
+  percent_of_cohort: 54.5
+  evidence: 42 of 77 providers that publish a SCIM path declare this operation (54.5%).
+- operation: PATCH /Users/{id}
+  method: PATCH
+  path: /Users/{id}
+  resource: /Users
+  rfc_section: 3.5.2
+  summary: Modify a User with a patch set.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.2 Table 2 lists /Users with GET, POST, PUT, PATCH and DELETE.
+    The RFC defines the operations; it does not compel a server to implement all of them.
+  tier: extended
+  providers_declaring: 38
+  percent_of_cohort: 49.4
+  evidence: 38 of 77 providers that publish a SCIM path declare this operation (49.4%).
+- operation: GET /Groups
+  method: GET
+  path: /Groups
+  resource: /Groups
+  rfc_section: 3.4.1
+  summary: List or query Group resources.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.2 Table 2 lists /Groups with the same five methods as /Users,
+    and with no weaker obligation attached.
+  tier: extended
+  providers_declaring: 35
+  percent_of_cohort: 45.5
+  evidence: 35 of 77 providers that publish a SCIM path declare this operation (45.5%).
+- operation: GET /ResourceTypes
+  method: GET
+  path: /ResourceTypes
+  resource: /ResourceTypes
+  rfc_section: '4'
+  summary: Discover the resource types served.
+  normative_force: may-retrieve-shall-shape
+  normative_citation: RFC 7644 Section 4, same framing. Section 3.4.1 adds that clients "SHOULD discover
+    resource endpoints via the '/ResourceTypes' endpoint" — an obligation on the CLIENT, which is only
+    meetable if the server chose to implement it.
+  tier: extended
+  providers_declaring: 29
+  percent_of_cohort: 37.7
+  evidence: 29 of 77 providers that publish a SCIM path declare this operation (37.7%).
+- operation: GET /Schemas
+  method: GET
+  path: /Schemas
+  resource: /Schemas
+  rfc_section: '4'
+  summary: Retrieve supported schemas.
+  normative_force: may-retrieve-shall-shape
+  normative_citation: 'RFC 7644 Section 4: "An HTTP GET to the endpoint ''/Schemas'' SHALL return all
+    supported schemas in ListResponse format." Again a shape obligation, not an implementation one.'
+  tier: extended
+  providers_declaring: 29
+  percent_of_cohort: 37.7
+  evidence: 29 of 77 providers that publish a SCIM path declare this operation (37.7%).
+- operation: GET /Groups/{id}
+  method: GET
+  path: /Groups/{id}
+  resource: /Groups
+  rfc_section: 3.4.1
+  summary: Retrieve a known Group.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.2 Table 2 lists /Groups with the same five methods as /Users,
+    and with no weaker obligation attached.
+  tier: extended
+  providers_declaring: 27
+  percent_of_cohort: 35.1
+  evidence: 27 of 77 providers that publish a SCIM path declare this operation (35.1%).
+- operation: POST /Groups
+  method: POST
+  path: /Groups
+  resource: /Groups
+  rfc_section: '3.3'
+  summary: Create a Group.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.2 Table 2 lists /Groups with the same five methods as /Users,
+    and with no weaker obligation attached.
+  tier: extended
+  providers_declaring: 26
+  percent_of_cohort: 33.8
+  evidence: 26 of 77 providers that publish a SCIM path declare this operation (33.8%).
+- operation: GET /ServiceProviderConfig
+  method: GET
+  path: /ServiceProviderConfig
+  resource: /ServiceProviderConfig
+  rfc_section: '4'
+  summary: Retrieve the server's declared features.
+  normative_force: may-retrieve-shall-shape
+  normative_citation: 'RFC 7644 Section 4: the three discovery endpoints "MAY be retrieved using HTTP
+    GET". The obligation attaches to the SHAPE, not to implementation — this endpoint "SHALL return responses
+    with a JSON object using a ''schemas'' attribute of ''urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig''".'
+  tier: extended
+  providers_declaring: 26
+  percent_of_cohort: 33.8
+  evidence: 26 of 77 providers that publish a SCIM path declare this operation (33.8%).
+- operation: PATCH /Groups/{id}
+  method: PATCH
+  path: /Groups/{id}
+  resource: /Groups
+  rfc_section: 3.5.2
+  summary: Modify a Group with a patch set.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.2 Table 2 lists /Groups with the same five methods as /Users,
+    and with no weaker obligation attached.
+  tier: extended
+  providers_declaring: 25
+  percent_of_cohort: 32.5
+  evidence: 25 of 77 providers that publish a SCIM path declare this operation (32.5%).
+- operation: DELETE /Groups/{id}
+  method: DELETE
+  path: /Groups/{id}
+  resource: /Groups
+  rfc_section: '3.6'
+  summary: Delete a Group.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.2 Table 2 lists /Groups with the same five methods as /Users,
+    and with no weaker obligation attached.
+  tier: extended
+  providers_declaring: 25
+  percent_of_cohort: 32.5
+  evidence: 25 of 77 providers that publish a SCIM path declare this operation (32.5%).
+- operation: PUT /Groups/{id}
+  method: PUT
+  path: /Groups/{id}
+  resource: /Groups
+  rfc_section: 3.5.1
+  summary: Replace a Group.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.2 Table 2 lists /Groups with the same five methods as /Users,
+    and with no weaker obligation attached.
+  tier: extended
+  providers_declaring: 21
+  percent_of_cohort: 27.3
+  evidence: 21 of 77 providers that publish a SCIM path declare this operation (27.3%).
+- operation: GET /Schemas/{id}
+  method: GET
+  path: /Schemas/{id}
+  resource: /Schemas
+  rfc_section: '4'
+  summary: Retrieve one schema definition.
+  normative_force: may-retrieve-shall-shape
+  normative_citation: 'RFC 7644 Section 4: "An HTTP GET to the endpoint ''/Schemas'' SHALL return all
+    supported schemas in ListResponse format." Again a shape obligation, not an implementation one.'
+  tier: extended
+  providers_declaring: 21
+  percent_of_cohort: 27.3
+  evidence: 21 of 77 providers that publish a SCIM path declare this operation (27.3%).
+- operation: GET /ResourceTypes/{id}
+  method: GET
+  path: /ResourceTypes/{id}
+  resource: /ResourceTypes
+  rfc_section: '4'
+  summary: Retrieve one resource type.
+  normative_force: may-retrieve-shall-shape
+  normative_citation: RFC 7644 Section 4, same framing. Section 3.4.1 adds that clients "SHOULD discover
+    resource endpoints via the '/ResourceTypes' endpoint" — an obligation on the CLIENT, which is only
+    meetable if the server chose to implement it.
+  tier: extended
+  providers_declaring: 15
+  percent_of_cohort: 19.5
+  evidence: 15 of 77 providers that publish a SCIM path declare this operation (19.5%).
+- operation: GET /Me
+  method: GET
+  path: /Me
+  resource: /Me
+  rfc_section: '3.11'
+  summary: Alias for the authenticated subject.
+  normative_force: may
+  normative_citation: 'RFC 7644 Section 3.11: a client "MAY use a URL of the form ''<base-URI>/Me'' as
+    a URI alias for the User or other resource associated with the currently authenticated subject".'
+  tier: vendor
+  providers_declaring: 2
+  percent_of_cohort: 2.6
+  evidence: 2 of 77 providers that publish a SCIM path declare this operation (2.6%).
+- operation: PUT /Me
+  method: PUT
+  path: /Me
+  resource: /Me
+  rfc_section: '3.11'
+  summary: Alias for the authenticated subject.
+  normative_force: may
+  normative_citation: 'RFC 7644 Section 3.11: a client "MAY use a URL of the form ''<base-URI>/Me'' as
+    a URI alias for the User or other resource associated with the currently authenticated subject".'
+  tier: vendor
+  providers_declaring: 1
+  percent_of_cohort: 1.3
+  evidence: 1 of 77 providers that publish a SCIM path declare this operation (1.3%).
+- operation: POST /Bulk
+  method: POST
+  path: /Bulk
+  resource: /Bulk
+  rfc_section: '3.7'
+  summary: Apply bulk updates to many resources.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.7 defines bulk operations. Section 3.2 Table 2 lists POST /Bulk.
+    Support is advertised through ServiceProviderConfig's "bulk" attribute, which implies it is optional.
+  tier: vendor
+  providers_declaring: 1
+  percent_of_cohort: 1.3
+  evidence: 1 of 77 providers that publish a SCIM path declare this operation (1.3%).
+- operation: POST /.search
+  method: POST
+  path: /.search
+  resource: /.search
+  rfc_section: 3.4.3
+  summary: Query via POST when a GET would leak filters.
+  normative_force: defined
+  normative_citation: RFC 7644 Section 3.4.3 defines POST /.search so a client can query without putting
+    filter values in a URL.
+  tier: vendor
+  providers_declaring: 1
+  percent_of_cohort: 1.3
+  evidence: 1 of 77 providers that publish a SCIM path declare this operation (1.3%).
+- operation: POST /Me
+  method: POST
+  path: /Me
+  resource: /Me
+  rfc_section: '3.11'
+  summary: Alias for the authenticated subject.
+  normative_force: may
+  normative_citation: 'RFC 7644 Section 3.11: a client "MAY use a URL of the form ''<base-URI>/Me'' as
+    a URI alias for the User or other resource associated with the currently authenticated subject".'
+  tier: vendor
+  providers_declaring: 0
+  percent_of_cohort: 0.0
+  evidence: 0 of 77 providers that publish a SCIM path declare this operation (0.0%).
+- operation: PATCH /Me
+  method: PATCH
+  path: /Me
+  resource: /Me
+  rfc_section: '3.11'
+  summary: Alias for the authenticated subject.
+  normative_force: may
+  normative_citation: 'RFC 7644 Section 3.11: a client "MAY use a URL of the form ''<base-URI>/Me'' as
+    a URI alias for the User or other resource associated with the currently authenticated subject".'
+  tier: vendor
+  providers_declaring: 0
+  percent_of_cohort: 0.0
+  evidence: 0 of 77 providers that publish a SCIM path declare this operation (0.0%).
+- operation: DELETE /Me
+  method: DELETE
+  path: /Me
+  resource: /Me
+  rfc_section: '3.11'
+  summary: Alias for the authenticated subject.
+  normative_force: may
+  normative_citation: 'RFC 7644 Section 3.11: a client "MAY use a URL of the form ''<base-URI>/Me'' as
+    a URI alias for the User or other resource associated with the currently authenticated subject".'
+  tier: vendor
+  providers_declaring: 0
+  percent_of_cohort: 0.0
+  evidence: 0 of 77 providers that publish a SCIM path declare this operation (0.0%).

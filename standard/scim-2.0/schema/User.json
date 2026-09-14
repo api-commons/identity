@@ -1,0 +1,70 @@
+{
+  "type": "object",
+  "description": "RFC 7643 Section 4.1. Core schema urn:ietf:params:scim:schemas:core:2.0:User. Only `userName` is REQUIRED: \"Each User MUST include a non-empty userName value... This attribute is REQUIRED and is case insensitive.\"",
+  "required": [
+    "schemas",
+    "userName"
+  ],
+  "properties": {
+    "schemas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Includes urn:ietf:params:scim:schemas:core:2.0:User."
+    },
+    "id": {
+      "type": "string",
+      "readOnly": true
+    },
+    "externalId": {
+      "type": "string"
+    },
+    "userName": {
+      "type": "string"
+    },
+    "name": {
+      "type": "object",
+      "properties": {
+        "formatted": {
+          "type": "string"
+        },
+        "familyName": {
+          "type": "string"
+        },
+        "givenName": {
+          "type": "string"
+        }
+      }
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "emails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "primary": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "meta": {
+      "$ref": "#/components/schemas/Meta"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/schema/User.json",
+  "title": "SCIM User"
+}

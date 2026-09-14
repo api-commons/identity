@@ -1,0 +1,64 @@
+aid: standard-identity
+name: Identity
+type: Standard
+description: 'De facto standards for the identity layer. SCIM is the odd one out in this programme: it
+  was ratified in 2015, so describing it again adds nothing. What was missing is the measurement beside
+  it — every operation carries what RFC 7644 says about it AND what the industry actually declares.
+
+
+  368 providers mention SCIM, the largest claim cohort here. 77 publish a spec containing a SCIM path.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Identity
+- SCIM
+- Provisioning
+created: '2026-09-13'
+modified: '2026-09-13'
+url: https://raw.githubusercontent.com/api-commons/identity/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: standard-identity:scim-2.0
+  name: SCIM 2.0
+  description: SCIM as the industry implements it, set beside what RFC 7643 and RFC 7644 say. The one
+    standard in this programme whose OpenAPI is the artifact of record — SCIM is ordinary REST with real
+    paths.
+  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://apicommons.org/standards/identity/
+  baseURL: https://example.com/scim/v2
+  tags:
+  - API
+  - Identity
+  - SCIM
+  - Provisioning
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/profile.yml
+  - type: Arazzo
+    url: https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/arazzo/core-conformance.yml
+  - type: MCP
+    url: https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/mcp/tools.json
+  - type: SpectralRules
+    url: https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/spectral/s3-profile.yaml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/identity/main/adopters/scim-2.0.yml
+  - type: GitHubRepository
+    url: https://github.com/api-commons/identity
+  - type: Documentation
+    url: https://apicommons.org/standards/identity/
+  - type: License
+    url: https://github.com/api-commons/identity/blob/main/LICENSE
+  contact:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+common:
+- type: Commons
+  url: https://apicommons.org/standards/identity/
+- type: Discussion
+  url: https://github.com/orgs/api-commons/discussions
+maintainers:
+- FN: Kin Lane
+  email: info@apievangelist.com

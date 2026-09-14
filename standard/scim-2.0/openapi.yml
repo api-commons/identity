@@ -1,0 +1,771 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+openapi: 3.1.0
+info:
+  title: SCIM 2.0 — API Commons profile
+  summary: SCIM as the industry actually implements it, beside what the RFC says.
+  description: '**SCIM is ratified, so this is not a description of the standard — RFC 7643 and RFC 7644
+    already are that.** This is the other axis: every operation carries `x-normative-force` quoting what
+    the RFC says about it, and `x-tier` measuring what the industry declares.
+
+
+    The gap is the artifact. SCIM''s three discovery endpoints — the mechanism that would let a client
+    adapt to a server''s capabilities — are declared by about a third of implementers, and the RFC does
+    not compel them, so a client cannot rely on discovery and has no grounds to complain.
+
+
+    Vendor-tier operations are graded in `profile.yml` and excluded here. Measured across 77 providers
+    that publish a SCIM path, out of 368 that mention SCIM.'
+  version: '2.0'
+  contact:
+    name: API Commons
+    url: https://apicommons.org
+  license:
+    name: CC-BY-NC-SA-4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+externalDocs:
+  description: RFC 7644 — SCIM Protocol
+  url: https://www.rfc-editor.org/rfc/rfc7644
+servers:
+- url: https://{host}/scim/v2
+  variables:
+    host:
+      default: example.com
+      description: Any SCIM service provider.
+tags:
+- name: Groups
+- name: ResourceTypes
+- name: Schemas
+- name: ServiceProviderConfig
+- name: Users
+paths:
+  /Users:
+    get:
+      operationId: getUsers
+      summary: List or query User resources.
+      description: '53 of 77 providers that publish a SCIM path declare this operation (68.8%).
+
+
+        RFC 7644 Section 3.4.1. Normative force: **defined** — RFC 7644 Section 3.2 Table 2 lists /Users
+        with GET, POST, PUT, PATCH and DELETE. The RFC defines the operations; it does not compel a server
+        to implement all of them.'
+      tags:
+      - Users
+      x-tier: core
+      x-rfc-section: 3.4.1
+      x-normative-force: defined
+      x-providers-declaring: 53
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/ListResponse'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      operationId: postUsers
+      summary: Create a User.
+      description: '52 of 77 providers that publish a SCIM path declare this operation (67.5%).
+
+
+        RFC 7644 Section 3.3. Normative force: **defined** — RFC 7644 Section 3.2 Table 2 lists /Users
+        with GET, POST, PUT, PATCH and DELETE. The RFC defines the operations; it does not compel a server
+        to implement all of them.'
+      tags:
+      - Users
+      x-tier: core
+      x-rfc-section: '3.3'
+      x-normative-force: defined
+      x-providers-declaring: 52
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/scim+json:
+            schema:
+              $ref: '#/components/schemas/User'
+  /Users/{id}:
+    get:
+      operationId: getUsersByid
+      summary: Retrieve a known User.
+      description: '51 of 77 providers that publish a SCIM path declare this operation (66.2%).
+
+
+        RFC 7644 Section 3.4.1. Normative force: **defined** — RFC 7644 Section 3.2 Table 2 lists /Users
+        with GET, POST, PUT, PATCH and DELETE. The RFC defines the operations; it does not compel a server
+        to implement all of them.'
+      tags:
+      - Users
+      x-tier: core
+      x-rfc-section: 3.4.1
+      x-normative-force: defined
+      x-providers-declaring: 51
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The resource's service-provider id.
+    put:
+      operationId: putUsersByid
+      summary: Replace a User.
+      description: '46 of 77 providers that publish a SCIM path declare this operation (59.7%).
+
+
+        RFC 7644 Section 3.5.1. Normative force: **defined** — RFC 7644 Section 3.2 Table 2 lists /Users
+        with GET, POST, PUT, PATCH and DELETE. The RFC defines the operations; it does not compel a server
+        to implement all of them.'
+      tags:
+      - Users
+      x-tier: core
+      x-rfc-section: 3.5.1
+      x-normative-force: defined
+      x-providers-declaring: 46
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/scim+json:
+            schema:
+              $ref: '#/components/schemas/User'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The resource's service-provider id.
+    delete:
+      operationId: deleteUsersByid
+      summary: Delete a User.
+      description: '42 of 77 providers that publish a SCIM path declare this operation (54.5%).
+
+
+        RFC 7644 Section 3.6. Normative force: **defined** — RFC 7644 Section 3.2 Table 2 lists /Users
+        with GET, POST, PUT, PATCH and DELETE. The RFC defines the operations; it does not compel a server
+        to implement all of them.'
+      tags:
+      - Users
+      x-tier: core
+      x-rfc-section: '3.6'
+      x-normative-force: defined
+      x-providers-declaring: 42
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The resource's service-provider id.
+    patch:
+      operationId: patchUsersByid
+      summary: Modify a User with a patch set.
+      description: '38 of 77 providers that publish a SCIM path declare this operation (49.4%).
+
+
+        RFC 7644 Section 3.5.2. Normative force: **defined** — RFC 7644 Section 3.2 Table 2 lists /Users
+        with GET, POST, PUT, PATCH and DELETE. The RFC defines the operations; it does not compel a server
+        to implement all of them.'
+      tags:
+      - Users
+      x-tier: extended
+      x-rfc-section: 3.5.2
+      x-normative-force: defined
+      x-providers-declaring: 38
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/scim+json:
+            schema:
+              $ref: '#/components/schemas/User'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The resource's service-provider id.
+  /Groups:
+    get:
+      operationId: getGroups
+      summary: List or query Group resources.
+      description: '35 of 77 providers that publish a SCIM path declare this operation (45.5%).
+
+
+        RFC 7644 Section 3.4.1. Normative force: **defined** — RFC 7644 Section 3.2 Table 2 lists /Groups
+        with the same five methods as /Users, and with no weaker obligation attached.'
+      tags:
+      - Groups
+      x-tier: extended
+      x-rfc-section: 3.4.1
+      x-normative-force: defined
+      x-providers-declaring: 35
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/ListResponse'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      operationId: postGroups
+      summary: Create a Group.
+      description: '26 of 77 providers that publish a SCIM path declare this operation (33.8%).
+
+
+        RFC 7644 Section 3.3. Normative force: **defined** — RFC 7644 Section 3.2 Table 2 lists /Groups
+        with the same five methods as /Users, and with no weaker obligation attached.'
+      tags:
+      - Groups
+      x-tier: extended
+      x-rfc-section: '3.3'
+      x-normative-force: defined
+      x-providers-declaring: 26
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Group'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/scim+json:
+            schema:
+              $ref: '#/components/schemas/Group'
+  /ResourceTypes:
+    get:
+      operationId: getResourcetypes
+      summary: Discover the resource types served.
+      description: '29 of 77 providers that publish a SCIM path declare this operation (37.7%).
+
+
+        RFC 7644 Section 4. Normative force: **may-retrieve-shall-shape** — RFC 7644 Section 4, same framing.
+        Section 3.4.1 adds that clients "SHOULD discover resource endpoints via the ''/ResourceTypes''
+        endpoint" — an obligation on the CLIENT, which is only meetable if the server chose to implement
+        it.'
+      tags:
+      - ResourceTypes
+      x-tier: extended
+      x-rfc-section: '4'
+      x-normative-force: may-retrieve-shall-shape
+      x-providers-declaring: 29
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/ListResponse'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /Schemas:
+    get:
+      operationId: getSchemas
+      summary: Retrieve supported schemas.
+      description: '29 of 77 providers that publish a SCIM path declare this operation (37.7%).
+
+
+        RFC 7644 Section 4. Normative force: **may-retrieve-shall-shape** — RFC 7644 Section 4: "An HTTP
+        GET to the endpoint ''/Schemas'' SHALL return all supported schemas in ListResponse format." Again
+        a shape obligation, not an implementation one.'
+      tags:
+      - Schemas
+      x-tier: extended
+      x-rfc-section: '4'
+      x-normative-force: may-retrieve-shall-shape
+      x-providers-declaring: 29
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/ListResponse'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /Groups/{id}:
+    get:
+      operationId: getGroupsByid
+      summary: Retrieve a known Group.
+      description: '27 of 77 providers that publish a SCIM path declare this operation (35.1%).
+
+
+        RFC 7644 Section 3.4.1. Normative force: **defined** — RFC 7644 Section 3.2 Table 2 lists /Groups
+        with the same five methods as /Users, and with no weaker obligation attached.'
+      tags:
+      - Groups
+      x-tier: extended
+      x-rfc-section: 3.4.1
+      x-normative-force: defined
+      x-providers-declaring: 27
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Group'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The resource's service-provider id.
+    patch:
+      operationId: patchGroupsByid
+      summary: Modify a Group with a patch set.
+      description: '25 of 77 providers that publish a SCIM path declare this operation (32.5%).
+
+
+        RFC 7644 Section 3.5.2. Normative force: **defined** — RFC 7644 Section 3.2 Table 2 lists /Groups
+        with the same five methods as /Users, and with no weaker obligation attached.'
+      tags:
+      - Groups
+      x-tier: extended
+      x-rfc-section: 3.5.2
+      x-normative-force: defined
+      x-providers-declaring: 25
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Group'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/scim+json:
+            schema:
+              $ref: '#/components/schemas/Group'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The resource's service-provider id.
+    delete:
+      operationId: deleteGroupsByid
+      summary: Delete a Group.
+      description: '25 of 77 providers that publish a SCIM path declare this operation (32.5%).
+
+
+        RFC 7644 Section 3.6. Normative force: **defined** — RFC 7644 Section 3.2 Table 2 lists /Groups
+        with the same five methods as /Users, and with no weaker obligation attached.'
+      tags:
+      - Groups
+      x-tier: extended
+      x-rfc-section: '3.6'
+      x-normative-force: defined
+      x-providers-declaring: 25
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Group'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The resource's service-provider id.
+    put:
+      operationId: putGroupsByid
+      summary: Replace a Group.
+      description: '21 of 77 providers that publish a SCIM path declare this operation (27.3%).
+
+
+        RFC 7644 Section 3.5.1. Normative force: **defined** — RFC 7644 Section 3.2 Table 2 lists /Groups
+        with the same five methods as /Users, and with no weaker obligation attached.'
+      tags:
+      - Groups
+      x-tier: extended
+      x-rfc-section: 3.5.1
+      x-normative-force: defined
+      x-providers-declaring: 21
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Group'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/scim+json:
+            schema:
+              $ref: '#/components/schemas/Group'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The resource's service-provider id.
+  /ServiceProviderConfig:
+    get:
+      operationId: getServiceproviderconfig
+      summary: Retrieve the server's declared features.
+      description: '26 of 77 providers that publish a SCIM path declare this operation (33.8%).
+
+
+        RFC 7644 Section 4. Normative force: **may-retrieve-shall-shape** — RFC 7644 Section 4: the three
+        discovery endpoints "MAY be retrieved using HTTP GET". The obligation attaches to the SHAPE, not
+        to implementation — this endpoint "SHALL return responses with a JSON object using a ''schemas''
+        attribute of ''urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig''".'
+      tags:
+      - ServiceProviderConfig
+      x-tier: extended
+      x-rfc-section: '4'
+      x-normative-force: may-retrieve-shall-shape
+      x-providers-declaring: 26
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/ListResponse'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /Schemas/{id}:
+    get:
+      operationId: getSchemasByid
+      summary: Retrieve one schema definition.
+      description: '21 of 77 providers that publish a SCIM path declare this operation (27.3%).
+
+
+        RFC 7644 Section 4. Normative force: **may-retrieve-shall-shape** — RFC 7644 Section 4: "An HTTP
+        GET to the endpoint ''/Schemas'' SHALL return all supported schemas in ListResponse format." Again
+        a shape obligation, not an implementation one.'
+      tags:
+      - Schemas
+      x-tier: extended
+      x-rfc-section: '4'
+      x-normative-force: may-retrieve-shall-shape
+      x-providers-declaring: 21
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/ListResponse'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The resource's service-provider id.
+  /ResourceTypes/{id}:
+    get:
+      operationId: getResourcetypesByid
+      summary: Retrieve one resource type.
+      description: '15 of 77 providers that publish a SCIM path declare this operation (19.5%).
+
+
+        RFC 7644 Section 4. Normative force: **may-retrieve-shall-shape** — RFC 7644 Section 4, same framing.
+        Section 3.4.1 adds that clients "SHOULD discover resource endpoints via the ''/ResourceTypes''
+        endpoint" — an obligation on the CLIENT, which is only meetable if the server chose to implement
+        it.'
+      tags:
+      - ResourceTypes
+      x-tier: extended
+      x-rfc-section: '4'
+      x-normative-force: may-retrieve-shall-shape
+      x-providers-declaring: 15
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/ListResponse'
+        '400':
+          description: SCIM error.
+          content:
+            application/scim+json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The resource's service-provider id.
+components:
+  schemas:
+    ListResponse:
+      type: object
+      description: RFC 7644 Section 3.4.2. Every query answers in this envelope, identified by urn:ietf:params:scim:api:messages:2.0:ListResponse.
+      required:
+      - schemas
+      - totalResults
+      properties:
+        schemas:
+          type: array
+          items:
+            const: urn:ietf:params:scim:api:messages:2.0:ListResponse
+        totalResults:
+          type: integer
+        startIndex:
+          type: integer
+          description: 1-based, not 0-based.
+        itemsPerPage:
+          type: integer
+        Resources:
+          type: array
+          items:
+            type: object
+    Error:
+      type: object
+      description: RFC 7644 Section 3.12. Identified by urn:ietf:params:scim:api:messages:2.0:Error. `status`
+        is a STRING carrying the HTTP status code, which is a common source of client bugs.
+      required:
+      - schemas
+      - status
+      properties:
+        schemas:
+          type: array
+          items:
+            const: urn:ietf:params:scim:api:messages:2.0:Error
+        status:
+          type: string
+        scimType:
+          type: string
+          enum:
+          - invalidFilter
+          - tooMany
+          - uniqueness
+          - mutability
+          - invalidSyntax
+          - invalidPath
+          - noTarget
+          - invalidValue
+          - invalidVers
+          - sensitive
+        detail:
+          type: string
+    User:
+      type: object
+      description: 'RFC 7643 Section 4.1. Core schema urn:ietf:params:scim:schemas:core:2.0:User. Only
+        `userName` is REQUIRED: "Each User MUST include a non-empty userName value... This attribute is
+        REQUIRED and is case insensitive."'
+      required:
+      - schemas
+      - userName
+      properties:
+        schemas:
+          type: array
+          items:
+            type: string
+          description: Includes urn:ietf:params:scim:schemas:core:2.0:User.
+        id:
+          type: string
+          readOnly: true
+        externalId:
+          type: string
+        userName:
+          type: string
+        name:
+          type: object
+          properties:
+            formatted:
+              type: string
+            familyName:
+              type: string
+            givenName:
+              type: string
+        displayName:
+          type: string
+        active:
+          type: boolean
+        emails:
+          type: array
+          items:
+            type: object
+            properties:
+              value:
+                type: string
+              type:
+                type: string
+              primary:
+                type: boolean
+        meta:
+          $ref: '#/components/schemas/Meta'
+    Group:
+      type: object
+      description: RFC 7643 Section 4.2. Core schema urn:ietf:params:scim:schemas:core:2.0:Group.
+      required:
+      - schemas
+      - displayName
+      properties:
+        schemas:
+          type: array
+          items:
+            type: string
+        id:
+          type: string
+          readOnly: true
+        displayName:
+          type: string
+        members:
+          type: array
+          items:
+            type: object
+            properties:
+              value:
+                type: string
+              $ref:
+                type: string
+              type:
+                type: string
+        meta:
+          $ref: '#/components/schemas/Meta'
+    Meta:
+      type: object
+      description: RFC 7643 Section 3.1 common attributes.
+      properties:
+        resourceType:
+          type: string
+        created:
+          type: string
+        lastModified:
+          type: string
+        location:
+          type: string
+        version:
+          type: string
