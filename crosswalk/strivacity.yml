@@ -1,0 +1,76 @@
+provider: strivacity
+apis_io: https://apis.io/providers/strivacity/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - identities
+    - members
+    properties:
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/strivacity-admin-management-openapi-original.json#GET /admin/api/v1/admin/identityStore/accounts/{accountId}/identities
+    - openapi/_original/strivacity-admin-management-openapi.yml#GET /admin/api/v1/admin/identityStore/accounts/{accountId}/identities
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#DELETE /admin/api/v1/identityStores/{identityStoreName}/accounts/{accountId}/identities/{externalLoginId}
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#DELETE /admin/api/v1/identityStores/{identityStoreName}/groups/{groupId}/members/{accountId}
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#GET /admin/api/v1/identityStores/{identityStoreName}/accounts/{accountId}/identities
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      name: name
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#DELETE /admin/api/v1/identityStores/{identityStoreName}/groups/{id}
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#GET /admin/api/v1/identityStores/{identityStoreName}/groups
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#GET /admin/api/v1/identityStores/{identityStoreName}/groups/{id}
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#POST /admin/api/v1/identityStores/{identityStoreName}/accounts/{accountId}/groups
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#POST /admin/api/v1/identityStores/{identityStoreName}/groups
+  organization:
+    path_segment:
+    - organizations
+    - organization
+    properties:
+      name: name
+      id: id
+      description: description
+      metadata: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#DELETE /admin/api/v1/identityStores/{identityStoreName}/organizations/{id}
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#DELETE /admin/api/v2/applications/{appId}/organizations/{orgId}
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#GET /admin/api/v1/identityStores/{identityStoreName}/organizations
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#GET /admin/api/v1/identityStores/{identityStoreName}/organizations/{id}
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#GET /admin/api/v2/applications/{appId}/organizations
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+      description: description
+      permission_ids: scopes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/strivacity-admin-management-openapi-original.json#DELETE /admin/api/v1/admin/identityStore/roles/{id}
+    - openapi/_original/strivacity-admin-management-openapi-original.json#GET /admin/api/v1/admin/identityStore/roles
+    - openapi/_original/strivacity-admin-management-openapi-original.json#GET /admin/api/v1/admin/identityStore/roles/{id}
+    - openapi/_original/strivacity-admin-management-openapi-original.json#POST /admin/api/v1/admin/identityStore/accounts/{accountId}/roles
+    - openapi/_original/strivacity-admin-management-openapi-original.json#POST /admin/api/v1/admin/identityStore/roles
+  permission:
+    path_segment:
+    - scopes
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/strivacity-admin-management-openapi-original.json#GET /admin/api/v1/admin/identityStore/roles/scopes
+    - openapi/_original/strivacity-admin-management-openapi.yml#GET /admin/api/v1/admin/identityStore/roles/scopes
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#DELETE /admin/api/v1/accessPolicies/{policyId}/scopes/{scopeId}
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#GET /admin/api/v1/accessPolicies/{policyId}/scopes/{scopeId}
+    - openapi/_original/strivacity-admin-portal-openapi-original.json#GET /admin/api/v1/identityStores/{identityStoreName}/scopes

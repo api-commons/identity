@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/identity/main/schema/group.json",
+  "title": "Group",
+  "description": "The common group in Identity and Users, distilled from 75 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.787,
+      "x-commons-providers": 59,
+      "x-commons-spellings": [
+        "id",
+        "externalId",
+        "userId",
+        "group_id",
+        "uuid",
+        "$id",
+        "external_id",
+        "groupId"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.773,
+      "x-commons-providers": 58,
+      "x-commons-spellings": [
+        "name",
+        "displayName",
+        "title",
+        "display_name",
+        "label",
+        "Name"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.493,
+      "x-commons-providers": 37,
+      "x-commons-spellings": [
+        "description",
+        "details",
+        "Description"
+      ]
+    },
+    "member_ids": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.373,
+      "x-commons-providers": 28,
+      "x-commons-spellings": [
+        "members",
+        "users",
+        "members_count",
+        "memberIds",
+        "memberCount",
+        "member_count",
+        "Members"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.32,
+      "x-commons-providers": 24,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "$createdAt",
+        "create_time",
+        "createdDate",
+        "date_created"
+      ],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.293,
+      "x-commons-providers": 22,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "$updatedAt",
+        "update_time",
+        "modifiedAt",
+        "modifiedDate",
+        "updated"
+      ],
+      "format": "date-time"
+    },
+    "organization_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "orgId",
+        "organizationId",
+        "tenant_id",
+        "organization_id",
+        "tenantId",
+        "accountId",
+        "companyId"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "identity",
+    "concept": "group",
+    "providers": 75,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

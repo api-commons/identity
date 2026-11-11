@@ -1,0 +1,40 @@
+provider: appomni
+apis_io: https://apis.io/providers/appomni/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/appomni-discovery-insights-api-openapi.yml#GET /api/v1/discovery/users/
+    - openapi/_original/appomni-scim-api-openapi.yml#GET /scim/v2/Users
+    - openapi/_original/appomni-scim-api-openapi.yml#GET /scim/v2/Users/
+    - openapi/_original/appomni-scim-api-openapi.yml#GET /scim/v2/Users/{user_id}
+    - openapi/_original/appomni-scim-api-openapi.yml#PUT /scim/v2/Users/{user_id}
+  group:
+    path_segment:
+    - group
+    - groups
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/appomni-compliance-api-openapi.yml#GET /api/v1/reports/group
+    - openapi/_original/appomni-compliance-api-openapi.yml#GET /api/v1/reports/group/{group_id}
+    - openapi/_original/appomni-compliance-api-openapi.yml#GET /api/v1/reports/request/group/
+    - openapi/_original/appomni-compliance-api-openapi.yml#PATCH /api/v1/reports/group/{group_id}
+    - openapi/_original/appomni-compliance-api-openapi.yml#POST /api/v1/reports/group
+  permission:
+    path_segment:
+    - permissions
+    - scopes
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/appomni-developer-platform-api-openapi.yml#DELETE /api/v1/custom/custommonitoredservicetype/{cmst_id}/permissions/
+    - openapi/_original/appomni-developer-platform-api-openapi.yml#DELETE /api/v1/custom/custommonitoredservicetype/{cmst_id}/scopes/
+    - openapi/_original/appomni-developer-platform-api-openapi.yml#GET /api/v1/custom/custommonitoredservicetype/{cmst_id}/permissions/
+    - openapi/_original/appomni-developer-platform-api-openapi.yml#GET /api/v1/custom/custommonitoredservicetype/{cmst_id}/scopes/
+    - openapi/_original/appomni-developer-platform-api-openapi.yml#PATCH /api/v1/custom/custommonitoredservicetype/{cmst_id}/permissions/

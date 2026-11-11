@@ -1,0 +1,31 @@
+provider: university-of-wisconsin-madison
+apis_io: https://apis.io/providers/university-of-wisconsin-madison/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - people
+    - members
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/university-of-wisconsin-madison-manifest-api-openapi.yml#GET /groups/{id}/members
+    - openapi/_original/university-of-wisconsin-madison-manifest-api-openapi.yml#GET /members/{id}
+    - openapi/_original/university-of-wisconsin-madison-mock-manifest-api-openapi.yml#GET /groups/{id}/members
+    - openapi/_original/university-of-wisconsin-madison-mock-manifest-api-openapi.yml#GET /members/{id}
+    - openapi/_original/university-of-wisconsin-madison-mock-person-api-certificates-openapi.yml#GET /people
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/university-of-wisconsin-madison-manifest-api-openapi.yml#GET /groups
+    - openapi/_original/university-of-wisconsin-madison-manifest-api-openapi.yml#GET /groups/{id}
+    - openapi/_original/university-of-wisconsin-madison-manifest-api-openapi.yml#GET /members/{id}/groups
+    - openapi/_original/university-of-wisconsin-madison-mock-manifest-api-openapi.yml#GET /groups
+    - openapi/_original/university-of-wisconsin-madison-mock-manifest-api-openapi.yml#GET /groups/{id}

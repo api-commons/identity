@@ -1,0 +1,15 @@
+provider: lever-co
+apis_io: https://apis.io/providers/lever-co/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lever-data-api-openapi.yml#GET /users
+    - openapi/_original/lever-data-api-openapi.yml#GET /users/{id}
+    - openapi/_original/lever-data-api-openapi.yml#POST /users
+    - openapi/_original/lever-data-api-openapi.yml#PUT /users/{id}

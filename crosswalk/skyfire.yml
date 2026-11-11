@@ -1,0 +1,34 @@
+provider: skyfire
+apis_io: https://apis.io/providers/skyfire/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id:
+      - id
+      - userId
+      email: email
+      status: isActive
+      created_at: createdAt
+      role_ids: role
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/skyfire-agent-and-token-apis-openapi.yml#GET /api/v1/organizations/users
+    - openapi/_original/skyfire-agent-and-token-apis-openapi.yml#GET /api/v1/organizations/users/{userId}
+    - openapi/_original/skyfire-agent-and-token-apis-openapi.yml#POST /api/v1/organizations/users
+  api_key:
+    path_segment:
+    - api-keys
+    properties:
+      id: id
+      created_at: createdAt
+      key: apiKey
+      status: active
+      description: notes
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/skyfire-agent-and-token-apis-openapi.yml#GET /api/v1/organizations/users/{userId}/agents/{agentId}/api-keys
+    - openapi/_original/skyfire-agent-and-token-apis-openapi.yml#POST /api/v1/organizations/users/{userId}/agents/{agentId}/api-keys

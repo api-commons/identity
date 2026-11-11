@@ -1,0 +1,76 @@
+provider: openwork
+apis_io: https://apis.io/providers/openwork/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openwork-den-openapi.json#DELETE /v1/admin/users/{userId}
+    - openapi/_original/openwork-den-openapi.json#DELETE /v1/members/{memberId}
+    - openapi/_original/openwork-den-openapi.json#GET /v1/admin/users
+    - openapi/_original/openwork-den-openapi.json#PATCH /api/auth/scim/v2/Users/{userId}
+    - openapi/_original/openwork-den-openapi.json#POST /api/auth/scim/v2/Users
+  group:
+    path_segment:
+    - groups
+    - teams
+    - group
+    properties:
+      id: id
+      name: name
+      member_ids: memberIds
+      created_at: createdAt
+      updated_at: updatedAt
+      organization_id: organizationId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/openwork-den-openapi.json#DELETE /api/auth/scim/v2/Groups/{groupId}
+    - openapi/_original/openwork-den-openapi.json#DELETE /v1/teams/{teamId}
+    - openapi/_original/openwork-den-openapi.json#GET /api/auth/scim/v2/Groups
+    - openapi/_original/openwork-den-openapi.json#GET /api/auth/scim/v2/Groups/{groupId}
+    - openapi/_original/openwork-den-openapi.json#GET /api/auth/scim/v2/ResourceTypes/Group
+  organization:
+    path_segment:
+    - org
+    - organizations
+    - workspace
+    - orgs
+    properties:
+      name: name
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/openwork-den-openapi.json#GET /v1/admin/organizations
+    - openapi/_original/openwork-den-openapi.json#GET /v1/me/orgs
+    - openapi/_original/openwork-den-openapi.json#GET /v1/org
+    - openapi/_original/openwork-den-openapi.json#PATCH /v1/org
+    - openapi/_original/openwork-den-openapi.json#POST /v1/bootstrap/workspace
+  role:
+    path_segment:
+    - roles
+    - role
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openwork-den-openapi.json#DELETE /v1/roles/{roleId}
+    - openapi/_original/openwork-den-openapi.json#PATCH /v1/roles/{roleId}
+    - openapi/_original/openwork-den-openapi.json#POST /v1/members/{memberId}/role
+    - openapi/_original/openwork-den-openapi.json#POST /v1/roles
+  api_key:
+    path_segment:
+    - api-keys
+    properties:
+      id: id
+      created_at: createdAt
+      key: prefix
+      name: name
+      status: enabled
+      expires_at: expiresAt
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/openwork-den-openapi.json#GET /v1/api-keys

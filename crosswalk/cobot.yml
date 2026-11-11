@@ -1,0 +1,23 @@
+provider: cobot
+apis_io: https://apis.io/providers/cobot/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/cobot-api2-openapi.yml#GET /user
+  group:
+    path_segment:
+    - teams
+    properties:
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/cobot-api2-openapi.yml#GET /spaces/{spaceId}/teams
+    - openapi/_original/cobot-api2-openapi.yml#GET /teams/{id}

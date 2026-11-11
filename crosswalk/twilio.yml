@@ -1,0 +1,67 @@
+provider: twilio
+apis_io: https://apis.io/providers/twilio/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties:
+      id:
+      - id
+      - externalId
+      email: emails
+      name:
+      - displayName
+      - name
+      status:
+      - state
+      - active
+      created_at: date_created
+      username: userName
+      metadata: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/conversations-openapi-original.yml#DELETE /v1/Services/{ChatServiceSid}/Users/{Sid}
+    - openapi/_original/conversations-openapi-original.yml#DELETE /v1/Users/{Sid}
+    - openapi/_original/conversations-openapi-original.yml#GET /v1/Services/{ChatServiceSid}/Users
+    - openapi/_original/conversations-openapi-original.yml#GET /v1/Services/{ChatServiceSid}/Users/{Sid}
+    - openapi/_original/conversations-openapi-original.yml#GET /v1/Users
+  organization:
+    path_segment:
+    - workspaces
+    properties:
+      created_at: date_created
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/task-router-openapi-original.yml#DELETE /v1/Workspaces/{Sid}
+    - openapi/_original/task-router-openapi-original.yml#GET /v1/Workspaces
+    - openapi/_original/task-router-openapi-original.yml#GET /v1/Workspaces/{Sid}
+    - openapi/_original/task-router-openapi-original.yml#POST /v1/Workspaces
+    - openapi/_original/task-router-openapi-original.yml#POST /v1/Workspaces/{Sid}
+  role:
+    path_segment:
+    - roles
+    properties:
+      permission_ids: permissions
+      created_at: date_created
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/conversations-openapi-original.yml#DELETE /v1/Roles/{Sid}
+    - openapi/_original/conversations-openapi-original.yml#DELETE /v1/Services/{ChatServiceSid}/Roles/{Sid}
+    - openapi/_original/conversations-openapi-original.yml#GET /v1/Roles
+    - openapi/_original/conversations-openapi-original.yml#GET /v1/Roles/{Sid}
+    - openapi/_original/conversations-openapi-original.yml#GET /v1/Services/{ChatServiceSid}/Roles
+  permission:
+    path_segment:
+    - permissions
+    properties:
+      resource: resource
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/iam-openapi-original.yml#GET /v1/Roles/{RoleSid}/Permissions
+    - openapi/_original/sync-openapi-original.yml#DELETE /v1/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions/{Identity}
+    - openapi/_original/sync-openapi-original.yml#DELETE /v1/Services/{ServiceSid}/Lists/{ListSid}/Permissions/{Identity}
+    - openapi/_original/sync-openapi-original.yml#DELETE /v1/Services/{ServiceSid}/Maps/{MapSid}/Permissions/{Identity}
+    - openapi/_original/sync-openapi-original.yml#GET /v1/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions

@@ -1,0 +1,1204 @@
+context: identity
+generated: '2026-11-10'
+adopters:
+- provider: 1kosmos
+  apis_io: https://apis.io/providers/1kosmos/
+  crosswalk: crosswalk/1kosmos.yml
+  concepts:
+  - role
+  - user
+- provider: abnormal
+  apis_io: https://apis.io/providers/abnormal/
+  crosswalk: crosswalk/abnormal.yml
+  concepts:
+  - role
+  - user
+- provider: acall
+  apis_io: https://apis.io/providers/acall/
+  crosswalk: crosswalk/acall.yml
+  concepts:
+  - user
+- provider: accredify0604
+  apis_io: https://apis.io/providers/accredify0604/
+  crosswalk: crosswalk/accredify0604.yml
+  concepts:
+  - group
+  - role
+  - user
+- provider: active-directory
+  apis_io: https://apis.io/providers/active-directory/
+  crosswalk: crosswalk/active-directory.yml
+  concepts:
+  - group
+  - user
+- provider: aembit
+  apis_io: https://apis.io/providers/aembit/
+  crosswalk: crosswalk/aembit.yml
+  concepts:
+  - role
+  - user
+- provider: airtm
+  apis_io: https://apis.io/providers/airtm/
+  crosswalk: crosswalk/airtm.yml
+  concepts:
+  - api_key
+  - user
+- provider: altr
+  apis_io: https://apis.io/providers/altr/
+  crosswalk: crosswalk/altr.yml
+  concepts:
+  - api_key
+  - group
+  - organization
+  - role
+  - user
+- provider: apache-ranger
+  apis_io: https://apis.io/providers/apache-ranger/
+  crosswalk: crosswalk/apache-ranger.yml
+  concepts:
+  - group
+  - user
+- provider: appdirect
+  apis_io: https://apis.io/providers/appdirect/
+  crosswalk: crosswalk/appdirect.yml
+  concepts:
+  - api_key
+  - group
+  - organization
+  - role
+  - user
+- provider: appomni
+  apis_io: https://apis.io/providers/appomni/
+  crosswalk: crosswalk/appomni.yml
+  concepts:
+  - group
+  - permission
+  - user
+- provider: appwrite
+  apis_io: https://apis.io/providers/appwrite/
+  crosswalk: crosswalk/appwrite.yml
+  concepts:
+  - api_key
+  - group
+  - organization
+  - role
+  - user
+- provider: arccos-golf
+  apis_io: https://apis.io/providers/arccos-golf/
+  crosswalk: crosswalk/arccos-golf.yml
+  concepts:
+  - user
+- provider: aserto
+  apis_io: https://apis.io/providers/aserto/
+  crosswalk: crosswalk/aserto.yml
+  concepts:
+  - permission
+  - user
+- provider: auth0
+  apis_io: https://apis.io/providers/auth0/
+  crosswalk: crosswalk/auth0.yml
+  concepts:
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: authenticx
+  apis_io: https://apis.io/providers/authenticx/
+  crosswalk: crosswalk/authenticx.yml
+  concepts:
+  - group
+  - user
+- provider: authentik
+  apis_io: https://apis.io/providers/authentik/
+  crosswalk: crosswalk/authentik.yml
+  concepts:
+  - group
+  - permission
+  - role
+  - user
+- provider: authsignal
+  apis_io: https://apis.io/providers/authsignal/
+  crosswalk: crosswalk/authsignal.yml
+  concepts:
+  - user
+- provider: azure-ad
+  apis_io: https://apis.io/providers/azure-ad/
+  crosswalk: crosswalk/azure-ad.yml
+  concepts:
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: beyond-identity
+  apis_io: https://apis.io/providers/beyond-identity/
+  crosswalk: crosswalk/beyond-identity.yml
+  concepts:
+  - group
+  - organization
+  - role
+  - user
+- provider: bitwarden
+  apis_io: https://apis.io/providers/bitwarden/
+  crosswalk: crosswalk/bitwarden.yml
+  concepts:
+  - group
+  - user
+- provider: border0
+  apis_io: https://apis.io/providers/border0/
+  crosswalk: crosswalk/border0.yml
+  concepts:
+  - organization
+  - user
+- provider: britive
+  apis_io: https://apis.io/providers/britive/
+  crosswalk: crosswalk/britive.yml
+  concepts:
+  - api_key
+  - group
+  - permission
+  - role
+  - user
+- provider: cabify
+  apis_io: https://apis.io/providers/cabify/
+  crosswalk: crosswalk/cabify.yml
+  concepts:
+  - user
+- provider: canonical
+  apis_io: https://apis.io/providers/canonical/
+  crosswalk: crosswalk/canonical.yml
+  concepts:
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: cesnet
+  apis_io: https://apis.io/providers/cesnet/
+  crosswalk: crosswalk/cesnet.yml
+  concepts:
+  - group
+  - user
+- provider: cisco-control-hub
+  apis_io: https://apis.io/providers/cisco-control-hub/
+  crosswalk: crosswalk/cisco-control-hub.yml
+  concepts:
+  - organization
+  - user
+- provider: cisco-directory-connector
+  apis_io: https://apis.io/providers/cisco-directory-connector/
+  crosswalk: crosswalk/cisco-directory-connector.yml
+  concepts:
+  - group
+  - organization
+  - user
+- provider: clearslide
+  apis_io: https://apis.io/providers/clearslide/
+  crosswalk: crosswalk/clearslide.yml
+  concepts:
+  - user
+- provider: clerk-com
+  apis_io: https://apis.io/providers/clerk-com/
+  crosswalk: crosswalk/clerk-com.yml
+  concepts:
+  - api_key
+  - organization
+  - permission
+  - role
+  - user
+- provider: clever
+  apis_io: https://apis.io/providers/clever/
+  crosswalk: crosswalk/clever.yml
+  concepts:
+  - user
+- provider: clio
+  apis_io: https://apis.io/providers/clio/
+  crosswalk: crosswalk/clio.yml
+  concepts:
+  - group
+  - user
+- provider: cobot
+  apis_io: https://apis.io/providers/cobot/
+  crosswalk: crosswalk/cobot.yml
+  concepts:
+  - group
+  - user
+- provider: codecombat
+  apis_io: https://apis.io/providers/codecombat/
+  crosswalk: crosswalk/codecombat.yml
+  concepts:
+  - user
+- provider: commerce-layer
+  apis_io: https://apis.io/providers/commerce-layer/
+  crosswalk: crosswalk/commerce-layer.yml
+  concepts:
+  - organization
+  - permission
+  - role
+  - user
+- provider: conductorone
+  apis_io: https://apis.io/providers/conductorone/
+  crosswalk: crosswalk/conductorone.yml
+  concepts:
+  - permission
+  - role
+  - user
+- provider: corbado
+  apis_io: https://apis.io/providers/corbado/
+  crosswalk: crosswalk/corbado.yml
+  concepts:
+  - user
+- provider: cvent
+  apis_io: https://apis.io/providers/cvent/
+  crosswalk: crosswalk/cvent.yml
+  concepts:
+  - group
+  - user
+- provider: cvent-event-cloud
+  apis_io: https://apis.io/providers/cvent-event-cloud/
+  crosswalk: crosswalk/cvent-event-cloud.yml
+  concepts:
+  - group
+  - user
+- provider: cyberark-identity
+  apis_io: https://apis.io/providers/cyberark-identity/
+  crosswalk: crosswalk/cyberark-identity.yml
+  concepts:
+  - group
+  - user
+- provider: daon
+  apis_io: https://apis.io/providers/daon/
+  crosswalk: crosswalk/daon.yml
+  concepts:
+  - api_key
+  - user
+- provider: dashlane
+  apis_io: https://apis.io/providers/dashlane/
+  crosswalk: crosswalk/dashlane.yml
+  concepts:
+  - user
+- provider: deezer
+  apis_io: https://apis.io/providers/deezer/
+  crosswalk: crosswalk/deezer.yml
+  concepts:
+  - user
+- provider: descope
+  apis_io: https://apis.io/providers/descope/
+  crosswalk: crosswalk/descope.yml
+  concepts:
+  - api_key
+  - group
+  - organization
+  - user
+- provider: deutsche-telekom
+  apis_io: https://apis.io/providers/deutsche-telekom/
+  crosswalk: crosswalk/deutsche-telekom.yml
+  concepts:
+  - group
+  - permission
+  - role
+  - user
+- provider: didit
+  apis_io: https://apis.io/providers/didit/
+  crosswalk: crosswalk/didit.yml
+  concepts:
+  - user
+- provider: door
+  apis_io: https://apis.io/providers/door/
+  crosswalk: crosswalk/door.yml
+  concepts:
+  - user
+- provider: drchrono
+  apis_io: https://apis.io/providers/drchrono/
+  crosswalk: crosswalk/drchrono.yml
+  concepts:
+  - group
+  - user
+- provider: dream-sports
+  apis_io: https://apis.io/providers/dream-sports/
+  crosswalk: crosswalk/dream-sports.yml
+  concepts:
+  - organization
+  - permission
+  - user
+- provider: duo-security
+  apis_io: https://apis.io/providers/duo-security/
+  crosswalk: crosswalk/duo-security.yml
+  concepts:
+  - api_key
+  - group
+  - user
+- provider: dust-identity
+  apis_io: https://apis.io/providers/dust-identity/
+  crosswalk: crosswalk/dust-identity.yml
+  concepts:
+  - group
+  - permission
+  - user
+- provider: dynamic-labs
+  apis_io: https://apis.io/providers/dynamic-labs/
+  crosswalk: crosswalk/dynamic-labs.yml
+  concepts:
+  - api_key
+  - organization
+  - user
+- provider: eagle-eye-networks
+  apis_io: https://apis.io/providers/eagle-eye-networks/
+  crosswalk: crosswalk/eagle-eye-networks.yml
+  concepts:
+  - role
+  - user
+- provider: emory
+  apis_io: https://apis.io/providers/emory/
+  crosswalk: crosswalk/emory.yml
+  concepts:
+  - group
+  - permission
+  - user
+- provider: epic-games
+  apis_io: https://apis.io/providers/epic-games/
+  crosswalk: crosswalk/epic-games.yml
+  concepts:
+  - user
+- provider: etsy
+  apis_io: https://apis.io/providers/etsy/
+  crosswalk: crosswalk/etsy.yml
+  concepts:
+  - permission
+  - user
+- provider: express-gateway
+  apis_io: https://apis.io/providers/express-gateway/
+  crosswalk: crosswalk/express-gateway.yml
+  concepts:
+  - permission
+  - user
+- provider: feathery
+  apis_io: https://apis.io/providers/feathery/
+  crosswalk: crosswalk/feathery.yml
+  concepts:
+  - organization
+  - user
+- provider: fenergo
+  apis_io: https://apis.io/providers/fenergo/
+  crosswalk: crosswalk/fenergo.yml
+  concepts:
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: flume-health
+  apis_io: https://apis.io/providers/flume-health/
+  crosswalk: crosswalk/flume-health.yml
+  concepts:
+  - organization
+  - user
+- provider: forgerock
+  apis_io: https://apis.io/providers/forgerock/
+  crosswalk: crosswalk/forgerock.yml
+  concepts:
+  - group
+  - permission
+  - role
+  - user
+- provider: frontegg
+  apis_io: https://apis.io/providers/frontegg/
+  crosswalk: crosswalk/frontegg.yml
+  concepts:
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: fusebit
+  apis_io: https://apis.io/providers/fusebit/
+  crosswalk: crosswalk/fusebit.yml
+  concepts:
+  - user
+- provider: fusionauth
+  apis_io: https://apis.io/providers/fusionauth/
+  crosswalk: crosswalk/fusionauth.yml
+  concepts:
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: gluu
+  apis_io: https://apis.io/providers/gluu/
+  crosswalk: crosswalk/gluu.yml
+  concepts:
+  - group
+  - organization
+  - permission
+  - user
+- provider: gravitee
+  apis_io: https://apis.io/providers/gravitee/
+  crosswalk: crosswalk/gravitee.yml
+  concepts:
+  - api_key
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: guestready
+  apis_io: https://apis.io/providers/guestready/
+  crosswalk: crosswalk/guestready.yml
+  concepts:
+  - user
+- provider: habu
+  apis_io: https://apis.io/providers/habu/
+  crosswalk: crosswalk/habu.yml
+  concepts:
+  - user
+- provider: hanko
+  apis_io: https://apis.io/providers/hanko/
+  crosswalk: crosswalk/hanko.yml
+  concepts:
+  - user
+- provider: hootsuite
+  apis_io: https://apis.io/providers/hootsuite/
+  crosswalk: crosswalk/hootsuite.yml
+  concepts:
+  - group
+  - organization
+  - permission
+  - user
+- provider: hvault
+  apis_io: https://apis.io/providers/hvault/
+  crosswalk: crosswalk/hvault.yml
+  concepts:
+  - group
+  - role
+  - user
+- provider: iit-bombay
+  apis_io: https://apis.io/providers/iit-bombay/
+  crosswalk: crosswalk/iit-bombay.yml
+  concepts:
+  - role
+  - user
+- provider: infra
+  apis_io: https://apis.io/providers/infra/
+  crosswalk: crosswalk/infra.yml
+  concepts:
+  - group
+  - organization
+  - user
+- provider: infusionsoft
+  apis_io: https://apis.io/providers/infusionsoft/
+  crosswalk: crosswalk/infusionsoft.yml
+  concepts:
+  - group
+  - user
+- provider: insforge
+  apis_io: https://apis.io/providers/insforge/
+  crosswalk: crosswalk/insforge.yml
+  concepts:
+  - permission
+  - user
+- provider: ios
+  apis_io: https://apis.io/providers/ios/
+  crosswalk: crosswalk/ios.yml
+  concepts:
+  - group
+  - user
+- provider: iproov
+  apis_io: https://apis.io/providers/iproov/
+  crosswalk: crosswalk/iproov.yml
+  concepts:
+  - user
+- provider: ironclad
+  apis_io: https://apis.io/providers/ironclad/
+  crosswalk: crosswalk/ironclad.yml
+  concepts:
+  - group
+  - role
+  - user
+- provider: jack-henry
+  apis_io: https://apis.io/providers/jack-henry/
+  crosswalk: crosswalk/jack-henry.yml
+  concepts:
+  - user
+- provider: johns-hopkins-university
+  apis_io: https://apis.io/providers/johns-hopkins-university/
+  crosswalk: crosswalk/johns-hopkins-university.yml
+  concepts:
+  - user
+- provider: jupyterhub
+  apis_io: https://apis.io/providers/jupyterhub/
+  crosswalk: crosswalk/jupyterhub.yml
+  concepts:
+  - api_key
+  - group
+  - user
+- provider: kadence
+  apis_io: https://apis.io/providers/kadence/
+  crosswalk: crosswalk/kadence.yml
+  concepts:
+  - user
+- provider: kakao
+  apis_io: https://apis.io/providers/kakao/
+  crosswalk: crosswalk/kakao.yml
+  concepts:
+  - permission
+  - user
+- provider: keycloak
+  apis_io: https://apis.io/providers/keycloak/
+  crosswalk: crosswalk/keycloak.yml
+  concepts:
+  - group
+  - role
+  - user
+- provider: keyo
+  apis_io: https://apis.io/providers/keyo/
+  crosswalk: crosswalk/keyo.yml
+  concepts:
+  - user
+- provider: kfupm
+  apis_io: https://apis.io/providers/kfupm/
+  crosswalk: crosswalk/kfupm.yml
+  concepts:
+  - organization
+  - role
+  - user
+- provider: kinde
+  apis_io: https://apis.io/providers/kinde/
+  crosswalk: crosswalk/kinde.yml
+  concepts:
+  - api_key
+  - organization
+  - permission
+  - role
+  - user
+- provider: kisi
+  apis_io: https://apis.io/providers/kisi/
+  crosswalk: crosswalk/kisi.yml
+  concepts:
+  - group
+  - organization
+  - role
+  - user
+- provider: klavis
+  apis_io: https://apis.io/providers/klavis/
+  crosswalk: crosswalk/klavis.yml
+  concepts:
+  - user
+- provider: kolide
+  apis_io: https://apis.io/providers/kolide/
+  crosswalk: crosswalk/kolide.yml
+  concepts:
+  - user
+- provider: kyoto
+  apis_io: https://apis.io/providers/kyoto/
+  crosswalk: crosswalk/kyoto.yml
+  concepts:
+  - user
+- provider: lakekeeper
+  apis_io: https://apis.io/providers/lakekeeper/
+  crosswalk: crosswalk/lakekeeper.yml
+  concepts:
+  - role
+  - user
+- provider: lawmatics
+  apis_io: https://apis.io/providers/lawmatics/
+  crosswalk: crosswalk/lawmatics.yml
+  concepts:
+  - user
+- provider: lean-tech
+  apis_io: https://apis.io/providers/lean-tech/
+  crosswalk: crosswalk/lean-tech.yml
+  concepts:
+  - user
+- provider: lever-co
+  apis_io: https://apis.io/providers/lever-co/
+  crosswalk: crosswalk/lever-co.yml
+  concepts:
+  - user
+- provider: lichess
+  apis_io: https://apis.io/providers/lichess/
+  crosswalk: crosswalk/lichess.yml
+  concepts:
+  - group
+  - user
+- provider: logto
+  apis_io: https://apis.io/providers/logto/
+  crosswalk: crosswalk/logto.yml
+  concepts:
+  - api_key
+  - organization
+  - permission
+  - role
+  - user
+- provider: luminary
+  apis_io: https://apis.io/providers/luminary/
+  crosswalk: crosswalk/luminary.yml
+  concepts:
+  - user
+- provider: lumos
+  apis_io: https://apis.io/providers/lumos/
+  crosswalk: crosswalk/lumos.yml
+  concepts:
+  - group
+  - role
+  - user
+- provider: magic-link
+  apis_io: https://apis.io/providers/magic-link/
+  crosswalk: crosswalk/magic-link.yml
+  concepts:
+  - user
+- provider: microsoft-365
+  apis_io: https://apis.io/providers/microsoft-365/
+  crosswalk: crosswalk/microsoft-365.yml
+  concepts:
+  - group
+  - user
+- provider: microsoft-active-directory
+  apis_io: https://apis.io/providers/microsoft-active-directory/
+  crosswalk: crosswalk/microsoft-active-directory.yml
+  concepts:
+  - group
+  - user
+- provider: microsoft-azure-active-directory
+  apis_io: https://apis.io/providers/microsoft-azure-active-directory/
+  crosswalk: crosswalk/microsoft-azure-active-directory.yml
+  concepts:
+  - group
+  - user
+- provider: microsoft-entra
+  apis_io: https://apis.io/providers/microsoft-entra/
+  crosswalk: crosswalk/microsoft-entra.yml
+  concepts:
+  - group
+  - user
+- provider: microsoft-entra-id
+  apis_io: https://apis.io/providers/microsoft-entra-id/
+  crosswalk: crosswalk/microsoft-entra-id.yml
+  concepts:
+  - group
+  - user
+- provider: microsoft-graph
+  apis_io: https://apis.io/providers/microsoft-graph/
+  crosswalk: crosswalk/microsoft-graph.yml
+  concepts:
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: nhost
+  apis_io: https://apis.io/providers/nhost/
+  crosswalk: crosswalk/nhost.yml
+  concepts:
+  - user
+- provider: nudge-security
+  apis_io: https://apis.io/providers/nudge-security/
+  crosswalk: crosswalk/nudge-security.yml
+  concepts:
+  - group
+  - user
+- provider: okta
+  apis_io: https://apis.io/providers/okta/
+  crosswalk: crosswalk/okta.yml
+  concepts:
+  - api_key
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: onecli
+  apis_io: https://apis.io/providers/onecli/
+  crosswalk: crosswalk/onecli.yml
+  concepts:
+  - organization
+  - permission
+  - role
+  - user
+- provider: onelogin
+  apis_io: https://apis.io/providers/onelogin/
+  crosswalk: crosswalk/onelogin.yml
+  concepts:
+  - role
+  - user
+- provider: opal
+  apis_io: https://apis.io/providers/opal/
+  crosswalk: crosswalk/opal.yml
+  concepts:
+  - user
+- provider: opal-security
+  apis_io: https://apis.io/providers/opal-security/
+  crosswalk: crosswalk/opal-security.yml
+  concepts:
+  - group
+  - user
+- provider: openpath
+  apis_io: https://apis.io/providers/openpath/
+  crosswalk: crosswalk/openpath.yml
+  concepts:
+  - group
+  - permission
+  - role
+  - user
+- provider: openwork
+  apis_io: https://apis.io/providers/openwork/
+  crosswalk: crosswalk/openwork.yml
+  concepts:
+  - api_key
+  - group
+  - organization
+  - role
+  - user
+- provider: orange-business
+  apis_io: https://apis.io/providers/orange-business/
+  crosswalk: crosswalk/orange-business.yml
+  concepts:
+  - api_key
+  - group
+  - user
+- provider: ory
+  apis_io: https://apis.io/providers/ory/
+  crosswalk: crosswalk/ory.yml
+  concepts:
+  - organization
+  - user
+- provider: outsystems
+  apis_io: https://apis.io/providers/outsystems/
+  crosswalk: crosswalk/outsystems.yml
+  concepts:
+  - group
+  - permission
+  - role
+  - user
+- provider: palenca-vech
+  apis_io: https://apis.io/providers/palenca-vech/
+  crosswalk: crosswalk/palenca-vech.yml
+  concepts:
+  - group
+  - user
+- provider: passage-1password
+  apis_io: https://apis.io/providers/passage-1password/
+  crosswalk: crosswalk/passage-1password.yml
+  concepts:
+  - api_key
+  - user
+- provider: passbolt
+  apis_io: https://apis.io/providers/passbolt/
+  crosswalk: crosswalk/passbolt.yml
+  concepts:
+  - group
+  - role
+  - user
+- provider: permit-io
+  apis_io: https://apis.io/providers/permit-io/
+  crosswalk: crosswalk/permit-io.yml
+  concepts:
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: permutive
+  apis_io: https://apis.io/providers/permutive/
+  crosswalk: crosswalk/permutive.yml
+  concepts:
+  - user
+- provider: pingone
+  apis_io: https://apis.io/providers/pingone/
+  crosswalk: crosswalk/pingone.yml
+  concepts:
+  - user
+- provider: politecnico-di-torino
+  apis_io: https://apis.io/providers/politecnico-di-torino/
+  crosswalk: crosswalk/politecnico-di-torino.yml
+  concepts:
+  - user
+- provider: polygon-id
+  apis_io: https://apis.io/providers/polygon-id/
+  crosswalk: crosswalk/polygon-id.yml
+  concepts:
+  - user
+- provider: postman
+  apis_io: https://apis.io/providers/postman/
+  crosswalk: crosswalk/postman.yml
+  concepts:
+  - group
+  - organization
+  - role
+  - user
+- provider: privy
+  apis_io: https://apis.io/providers/privy/
+  crosswalk: crosswalk/privy.yml
+  concepts:
+  - user
+- provider: propelauth
+  apis_io: https://apis.io/providers/propelauth/
+  crosswalk: crosswalk/propelauth.yml
+  concepts:
+  - organization
+  - user
+- provider: purdue
+  apis_io: https://apis.io/providers/purdue/
+  crosswalk: crosswalk/purdue.yml
+  concepts:
+  - group
+  - permission
+  - role
+  - user
+- provider: rhombus-systems
+  apis_io: https://apis.io/providers/rhombus-systems/
+  crosswalk: crosswalk/rhombus-systems.yml
+  concepts:
+  - user
+- provider: rose-rocket
+  apis_io: https://apis.io/providers/rose-rocket/
+  crosswalk: crosswalk/rose-rocket.yml
+  concepts:
+  - group
+  - user
+- provider: rwth-aachen-university
+  apis_io: https://apis.io/providers/rwth-aachen-university/
+  crosswalk: crosswalk/rwth-aachen-university.yml
+  concepts:
+  - organization
+  - role
+  - user
+- provider: sadq-holding-limited
+  apis_io: https://apis.io/providers/sadq-holding-limited/
+  crosswalk: crosswalk/sadq-holding-limited.yml
+  concepts:
+  - user
+- provider: sailpoint
+  apis_io: https://apis.io/providers/sailpoint/
+  crosswalk: crosswalk/sailpoint.yml
+  concepts:
+  - permission
+  - role
+  - user
+- provider: scalekit
+  apis_io: https://apis.io/providers/scalekit/
+  crosswalk: crosswalk/scalekit.yml
+  concepts:
+  - group
+  - organization
+  - role
+  - user
+- provider: secureauth
+  apis_io: https://apis.io/providers/secureauth/
+  crosswalk: crosswalk/secureauth.yml
+  concepts:
+  - api_key
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: sign-in-enterprise
+  apis_io: https://apis.io/providers/sign-in-enterprise/
+  crosswalk: crosswalk/sign-in-enterprise.yml
+  concepts:
+  - user
+- provider: signicat
+  apis_io: https://apis.io/providers/signicat/
+  crosswalk: crosswalk/signicat.yml
+  concepts:
+  - organization
+  - role
+  - user
+- provider: simba-chain
+  apis_io: https://apis.io/providers/simba-chain/
+  crosswalk: crosswalk/simba-chain.yml
+  concepts:
+  - organization
+  - permission
+  - role
+  - user
+- provider: skyfire
+  apis_io: https://apis.io/providers/skyfire/
+  crosswalk: crosswalk/skyfire.yml
+  concepts:
+  - api_key
+  - user
+- provider: softr
+  apis_io: https://apis.io/providers/softr/
+  crosswalk: crosswalk/softr.yml
+  concepts:
+  - user
+- provider: specterops
+  apis_io: https://apis.io/providers/specterops/
+  crosswalk: crosswalk/specterops.yml
+  concepts:
+  - group
+  - permission
+  - role
+  - user
+- provider: spekit
+  apis_io: https://apis.io/providers/spekit/
+  crosswalk: crosswalk/spekit.yml
+  concepts:
+  - user
+- provider: stanford
+  apis_io: https://apis.io/providers/stanford/
+  crosswalk: crosswalk/stanford.yml
+  concepts:
+  - organization
+  - user
+- provider: strivacity
+  apis_io: https://apis.io/providers/strivacity/
+  crosswalk: crosswalk/strivacity.yml
+  concepts:
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: stytch
+  apis_io: https://apis.io/providers/stytch/
+  crosswalk: crosswalk/stytch.yml
+  concepts:
+  - api_key
+  - organization
+  - user
+- provider: supabase
+  apis_io: https://apis.io/providers/supabase/
+  crosswalk: crosswalk/supabase.yml
+  concepts:
+  - api_key
+  - organization
+  - user
+- provider: supertokens
+  apis_io: https://apis.io/providers/supertokens/
+  crosswalk: crosswalk/supertokens.yml
+  concepts:
+  - organization
+  - role
+  - user
+- provider: surveymonkey
+  apis_io: https://apis.io/providers/surveymonkey/
+  crosswalk: crosswalk/surveymonkey.yml
+  concepts:
+  - group
+  - user
+- provider: switchlabs
+  apis_io: https://apis.io/providers/switchlabs/
+  crosswalk: crosswalk/switchlabs.yml
+  concepts:
+  - user
+- provider: taskfolk
+  apis_io: https://apis.io/providers/taskfolk/
+  crosswalk: crosswalk/taskfolk.yml
+  concepts:
+  - api_key
+  - organization
+  - user
+- provider: telesign
+  apis_io: https://apis.io/providers/telesign/
+  crosswalk: crosswalk/telesign.yml
+  concepts:
+  - group
+  - user
+- provider: telnyx
+  apis_io: https://apis.io/providers/telnyx/
+  crosswalk: crosswalk/telnyx.yml
+  concepts:
+  - group
+  - user
+- provider: textmaster
+  apis_io: https://apis.io/providers/textmaster/
+  crosswalk: crosswalk/textmaster.yml
+  concepts:
+  - user
+- provider: thenile
+  apis_io: https://apis.io/providers/thenile/
+  crosswalk: crosswalk/thenile.yml
+  concepts:
+  - organization
+  - user
+- provider: trakt
+  apis_io: https://apis.io/providers/trakt/
+  crosswalk: crosswalk/trakt.yml
+  concepts:
+  - user
+- provider: transmit-security
+  apis_io: https://apis.io/providers/transmit-security/
+  crosswalk: crosswalk/transmit-security.yml
+  concepts:
+  - group
+  - organization
+  - user
+- provider: trustarc
+  apis_io: https://apis.io/providers/trustarc/
+  crosswalk: crosswalk/trustarc.yml
+  concepts:
+  - group
+  - role
+  - user
+- provider: twilio
+  apis_io: https://apis.io/providers/twilio/
+  crosswalk: crosswalk/twilio.yml
+  concepts:
+  - organization
+  - permission
+  - role
+  - user
+- provider: typingdna
+  apis_io: https://apis.io/providers/typingdna/
+  crosswalk: crosswalk/typingdna.yml
+  concepts:
+  - user
+- provider: uc-davis
+  apis_io: https://apis.io/providers/uc-davis/
+  crosswalk: crosswalk/uc-davis.yml
+  concepts:
+  - user
+- provider: ucsb
+  apis_io: https://apis.io/providers/ucsb/
+  crosswalk: crosswalk/ucsb.yml
+  concepts:
+  - organization
+  - user
+- provider: ucsd
+  apis_io: https://apis.io/providers/ucsd/
+  crosswalk: crosswalk/ucsd.yml
+  concepts:
+  - group
+  - user
+- provider: university-of-amsterdam
+  apis_io: https://apis.io/providers/university-of-amsterdam/
+  crosswalk: crosswalk/university-of-amsterdam.yml
+  concepts:
+  - group
+  - user
+- provider: university-of-cambridge
+  apis_io: https://apis.io/providers/university-of-cambridge/
+  crosswalk: crosswalk/university-of-cambridge.yml
+  concepts:
+  - group
+  - user
+- provider: university-of-chicago
+  apis_io: https://apis.io/providers/university-of-chicago/
+  crosswalk: crosswalk/university-of-chicago.yml
+  concepts:
+  - user
+- provider: university-of-helsinki
+  apis_io: https://apis.io/providers/university-of-helsinki/
+  crosswalk: crosswalk/university-of-helsinki.yml
+  concepts:
+  - organization
+  - user
+- provider: university-of-illinois-urbana-champaign
+  apis_io: https://apis.io/providers/university-of-illinois-urbana-champaign/
+  crosswalk: crosswalk/university-of-illinois-urbana-champaign.yml
+  concepts:
+  - api_key
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: university-of-manchester
+  apis_io: https://apis.io/providers/university-of-manchester/
+  crosswalk: crosswalk/university-of-manchester.yml
+  concepts:
+  - organization
+  - role
+  - user
+- provider: university-of-sheffield
+  apis_io: https://apis.io/providers/university-of-sheffield/
+  crosswalk: crosswalk/university-of-sheffield.yml
+  concepts:
+  - user
+- provider: university-of-texas-at-austin
+  apis_io: https://apis.io/providers/university-of-texas-at-austin/
+  crosswalk: crosswalk/university-of-texas-at-austin.yml
+  concepts:
+  - user
+- provider: university-of-vienna
+  apis_io: https://apis.io/providers/university-of-vienna/
+  crosswalk: crosswalk/university-of-vienna.yml
+  concepts:
+  - group
+  - user
+- provider: university-of-warsaw
+  apis_io: https://apis.io/providers/university-of-warsaw/
+  crosswalk: crosswalk/university-of-warsaw.yml
+  concepts:
+  - group
+  - permission
+  - role
+  - user
+- provider: university-of-wisconsin-madison
+  apis_io: https://apis.io/providers/university-of-wisconsin-madison/
+  crosswalk: crosswalk/university-of-wisconsin-madison.yml
+  concepts:
+  - group
+  - user
+- provider: venafi
+  apis_io: https://apis.io/providers/venafi/
+  crosswalk: crosswalk/venafi.yml
+  concepts:
+  - group
+  - permission
+  - role
+  - user
+- provider: vim
+  apis_io: https://apis.io/providers/vim/
+  crosswalk: crosswalk/vim.yml
+  concepts:
+  - organization
+  - user
+- provider: wahoo
+  apis_io: https://apis.io/providers/wahoo/
+  crosswalk: crosswalk/wahoo.yml
+  concepts:
+  - permission
+  - user
+- provider: warrant-dev
+  apis_io: https://apis.io/providers/warrant-dev/
+  crosswalk: crosswalk/warrant-dev.yml
+  concepts:
+  - organization
+  - permission
+  - role
+  - user
+- provider: withings
+  apis_io: https://apis.io/providers/withings/
+  crosswalk: crosswalk/withings.yml
+  concepts:
+  - user
+- provider: workday-security
+  apis_io: https://apis.io/providers/workday-security/
+  crosswalk: crosswalk/workday-security.yml
+  concepts:
+  - user
+- provider: workos
+  apis_io: https://apis.io/providers/workos/
+  crosswalk: crosswalk/workos.yml
+  concepts:
+  - api_key
+  - group
+  - organization
+  - permission
+  - role
+  - user
+- provider: zero-networks
+  apis_io: https://apis.io/providers/zero-networks/
+  crosswalk: crosswalk/zero-networks.yml
+  concepts:
+  - user
+- provider: zitadel
+  apis_io: https://apis.io/providers/zitadel/
+  crosswalk: crosswalk/zitadel.yml
+  concepts:
+  - organization
+  - role
+  - user
+- provider: zoho-crm
+  apis_io: https://apis.io/providers/zoho-crm/
+  crosswalk: crosswalk/zoho-crm.yml
+  concepts:
+  - group
+  - organization
+  - role
+  - user

@@ -1,0 +1,25 @@
+provider: ucsb
+apis_io: https://apis.io/providers/ucsb/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    properties:
+      email: email
+      last_name: lastName
+      first_name: firstName
+      phone: phone
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/gradapplverifications-v1.yaml#POST /v{apiVersion}/user
+    - openapi/_original/ucsb-grad-application-verifications-openapi.yml#POST /v{apiVersion}/user
+  organization:
+    path_segment:
+    - organizations
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/lookups-v1.6.out_.api__0.yaml#GET /lookups/v1/organizations
+    - openapi/_original/ucsb-student-record-code-lookups-openapi.yml#GET /lookups/v1/organizations

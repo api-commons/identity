@@ -1,0 +1,14 @@
+provider: zero-networks
+apis_io: https://apis.io/providers/zero-networks/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zero-networks-platform-openapi.yaml#DELETE /groups/custom/{groupId}/members
+    - openapi/_original/zero-networks-platform-openapi.yaml#GET /groups/custom/{groupId}/members
+    - openapi/_original/zero-networks-platform-openapi.yaml#PUT /groups/custom/{groupId}/members

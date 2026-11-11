@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/identity/main/schema/user.json",
+  "title": "User",
+  "description": "The common user in Identity and Users, distilled from 167 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.814,
+      "x-commons-providers": 136,
+      "x-commons-spellings": [
+        "id",
+        "userId",
+        "user_id",
+        "externalId",
+        "external_id",
+        "uuid",
+        "_id",
+        "$id"
+      ]
+    },
+    "email": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.677,
+      "x-commons-providers": 113,
+      "x-commons-spellings": [
+        "email",
+        "emails",
+        "mail",
+        "userPrincipalName",
+        "emailAddress",
+        "primaryEmail",
+        "email_address",
+        "email_addresses"
+      ],
+      "format": "email"
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.491,
+      "x-commons-providers": 82,
+      "x-commons-spellings": [
+        "name",
+        "displayName",
+        "title",
+        "display_name",
+        "Name",
+        "label"
+      ]
+    },
+    "status": {
+      "type": "boolean",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.449,
+      "x-commons-providers": 75,
+      "x-commons-spellings": [
+        "status",
+        "active",
+        "state",
+        "enabled",
+        "disabled",
+        "isActive",
+        "is_active",
+        "blocked"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.401,
+      "x-commons-providers": 67,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "createdDate",
+        "createdOn",
+        "create_time",
+        "createdTimestamp",
+        "date_created"
+      ],
+      "format": "date-time"
+    },
+    "last_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.347,
+      "x-commons-providers": 58,
+      "x-commons-spellings": [
+        "lastName",
+        "last_name",
+        "surname",
+        "family_name",
+        "lastname",
+        "familyName"
+      ]
+    },
+    "username": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.347,
+      "x-commons-providers": 58,
+      "x-commons-spellings": [
+        "username",
+        "userName",
+        "nickname",
+        "login",
+        "user_name",
+        "Username"
+      ]
+    },
+    "first_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.341,
+      "x-commons-providers": 57,
+      "x-commons-spellings": [
+        "firstName",
+        "first_name",
+        "givenName",
+        "given_name",
+        "firstname"
+      ]
+    },
+    "role_ids": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.293,
+      "x-commons-providers": 49,
+      "x-commons-spellings": [
+        "roles",
+        "role",
+        "roleIds",
+        "roleId",
+        "role_id",
+        "role_ids"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.269,
+      "x-commons-providers": 45,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "updated",
+        "modifiedDate",
+        "update_time",
+        "modifiedAt",
+        "lastModified",
+        "$updatedAt"
+      ],
+      "format": "date-time"
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.251,
+      "x-commons-providers": 42,
+      "x-commons-spellings": [
+        "metadata",
+        "attributes",
+        "properties",
+        "user_metadata",
+        "customAttributes",
+        "app_metadata",
+        "public_metadata",
+        "private_metadata"
+      ]
+    },
+    "phone": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.234,
+      "x-commons-providers": 39,
+      "x-commons-spellings": [
+        "phone",
+        "phoneNumbers",
+        "phone_number",
+        "phoneNumber",
+        "mobilePhone",
+        "phone_numbers",
+        "mobile"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "identity",
+    "concept": "user",
+    "providers": 167,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

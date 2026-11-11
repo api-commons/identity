@@ -1,0 +1,54 @@
+provider: rwth-aachen-university
+apis_io: https://apis.io/providers/rwth-aachen-university/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    - users
+    - user
+    - identities
+    properties:
+      id:
+      - id
+      - userId
+      email:
+      - emails
+      - email
+      name:
+      - displayName
+      - title
+      last_name: familyName
+      first_name: givenName
+      role_ids:
+      - roles
+      - role
+      - roleId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/rwth-aachen-university-coscine.yaml#DELETE /api/v2/admin/users/{userId}
+    - openapi/_original/rwth-aachen-university-coscine.yaml#DELETE /api/v2/projects/{projectId}/members/{membershipId}
+    - openapi/_original/rwth-aachen-university-coscine.yaml#GET /api/v2/admin/users
+    - openapi/_original/rwth-aachen-university-coscine.yaml#GET /api/v2/projects/{projectId}/members
+    - openapi/_original/rwth-aachen-university-coscine.yaml#GET /api/v2/projects/{projectId}/members/{membershipId}
+  organization:
+    path_segment:
+    - organizations
+    properties:
+      name: displayName
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/rwth-aachen-university-coscine.yaml#GET /api/v2/organizations
+    - openapi/_original/rwth-aachen-university-coscine.yaml#GET /api/v2/organizations/{organizationRorUri}
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: displayName
+      id: id
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/rwth-aachen-university-coscine.yaml#GET /api/v2/roles
+    - openapi/_original/rwth-aachen-university-coscine.yaml#GET /api/v2/roles/{roleId}

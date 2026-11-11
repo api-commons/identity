@@ -1,0 +1,18 @@
+provider: university-of-texas-at-austin
+apis_io: https://apis.io/providers/university-of-texas-at-austin/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    properties:
+      status: status
+      metadata: metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/university-of-texas-at-austin-tapis-apps-openapi-original.yml#GET /v3/apps/perms/{appId}/user/{userName}
+    - openapi/_original/university-of-texas-at-austin-tapis-apps-openapi-original.yml#POST /v3/apps/perms/{appId}/user/{userName}
+    - openapi/_original/university-of-texas-at-austin-tapis-systems-openapi-original.yml#DELETE /v3/systems/credential/{systemId}/user/{userName}
+    - openapi/_original/university-of-texas-at-austin-tapis-systems-openapi-original.yml#GET /v3/systems/credential/{systemId}/user/{userName}
+    - openapi/_original/university-of-texas-at-austin-tapis-systems-openapi-original.yml#GET /v3/systems/perms/{systemId}/user/{userName}

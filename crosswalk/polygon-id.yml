@@ -1,0 +1,17 @@
+provider: polygon-id
+apis_io: https://apis.io/providers/polygon-id/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - identities
+    properties:
+      name: displayName
+      status: state
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/issuer-node-api.yaml#GET /v2/identities
+    - openapi/_original/issuer-node-api.yaml#GET /v2/identities/{identifier}
+    - openapi/_original/issuer-node-api.yaml#PATCH /v2/identities/{identifier}
+    - openapi/_original/issuer-node-api.yaml#POST /v2/identities

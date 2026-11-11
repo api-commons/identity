@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/identity/main/schema/role.json",
+  "title": "Role",
+  "description": "The common role in Identity and Users, distilled from 58 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.759,
+      "x-commons-providers": 44,
+      "x-commons-spellings": [
+        "name",
+        "displayName",
+        "display_name",
+        "title",
+        "label"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.741,
+      "x-commons-providers": 43,
+      "x-commons-spellings": [
+        "id",
+        "externalId",
+        "userId",
+        "role_id",
+        "uuid",
+        "_id",
+        "user_id",
+        "Guid"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.603,
+      "x-commons-providers": 35,
+      "x-commons-spellings": [
+        "description",
+        "notes",
+        "details"
+      ]
+    },
+    "permission_ids": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.328,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "permissions",
+        "scopes"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.293,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at",
+        "created",
+        "date_created",
+        "create_time",
+        "created-at",
+        "creationDate"
+      ],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.224,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "modifiedAt",
+        "update_time",
+        "updated-at",
+        "updated",
+        "modified"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "identity",
+    "concept": "role",
+    "providers": 58,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

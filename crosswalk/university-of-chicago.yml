@@ -1,0 +1,18 @@
+provider: university-of-chicago
+apis_io: https://apis.io/providers/university-of-chicago/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    properties:
+      email: email
+      name: display_name
+      username: username
+      phone: phone_number
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/university-of-chicago-fence.yaml#GET /admin/user/{username}
+    - openapi/_original/university-of-chicago-fence.yaml#GET /user
+    - openapi/_original/university-of-chicago-fence.yaml#POST /admin/user

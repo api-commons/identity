@@ -1,0 +1,14 @@
+provider: clearslide
+apis_io: https://apis.io/providers/clearslide/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/clearslide-platform-api-swagger.json#GET /users

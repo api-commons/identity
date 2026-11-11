@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/identity/main/schema/organization.json",
+  "title": "Organization",
+  "description": "The common organization in Identity and Users, distilled from 56 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.821,
+      "x-commons-providers": 46,
+      "x-commons-spellings": [
+        "name",
+        "displayName",
+        "display_name",
+        "label",
+        "title"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.714,
+      "x-commons-providers": 40,
+      "x-commons-spellings": [
+        "id",
+        "external_id",
+        "externalId",
+        "uuid",
+        "$id",
+        "sub",
+        "@id",
+        "objectId"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.518,
+      "x-commons-providers": 29,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "create_time",
+        "createdDate",
+        "$createdAt",
+        "createdOn",
+        "createTime"
+      ],
+      "format": "date-time"
+    },
+    "organization_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.321,
+      "x-commons-providers": 18,
+      "x-commons-spellings": [
+        "tenantId",
+        "org_id",
+        "organization_id",
+        "orgId",
+        "organizationId",
+        "workspaceId",
+        "tenant_id",
+        "workspace_id"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.304,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "enabled",
+        "disabled",
+        "active"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.25,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "description",
+        "details"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.25,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "updated_at",
+        "update_time",
+        "updatedAt",
+        "modifiedDate",
+        "$updatedAt"
+      ],
+      "format": "date-time"
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.232,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "metadata",
+        "attributes",
+        "customAttributes",
+        "public_metadata",
+        "private_metadata"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "identity",
+    "concept": "organization",
+    "providers": 56,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

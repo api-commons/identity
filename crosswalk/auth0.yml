@@ -1,0 +1,92 @@
+provider: auth0
+apis_io: https://apis.io/providers/auth0/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties:
+      id: user_id
+      email: email
+      name: name
+      status: blocked
+      created_at: created_at
+      last_name: family_name
+      username:
+      - username
+      - nickname
+      first_name: given_name
+      role_ids: roles
+      updated_at: updated_at
+      metadata:
+      - app_metadata
+      - user_metadata
+      phone: phone_number
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/auth0-management-api-openapi.yml#DELETE /connections/{id}/users
+    - openapi/_original/auth0-management-api-openapi.yml#DELETE /organizations/{id}/members
+    - openapi/_original/auth0-management-api-openapi.yml#DELETE /users/{id}
+    - openapi/_original/auth0-management-api-openapi.yml#GET /groups/{id}/members
+    - openapi/_original/auth0-management-api-openapi.yml#GET /organizations/{id}/members
+  group:
+    path_segment:
+    - groups
+    properties:
+      id:
+      - id
+      - external_id
+      name: name
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/auth0-management-api-openapi.yml#DELETE /groups/{id}
+    - openapi/_original/auth0-management-api-openapi.yml#GET /groups
+    - openapi/_original/auth0-management-api-openapi.yml#GET /groups/{id}
+    - openapi/_original/auth0-management-api-openapi.yml#GET /users/{id}/groups
+  organization:
+    path_segment:
+    - organizations
+    properties:
+      name:
+      - name
+      - display_name
+      id: id
+      metadata: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/auth0-management-api-openapi.yml#DELETE /organizations/{id}
+    - openapi/_original/auth0-management-api-openapi.yml#GET /client-grants/{id}/organizations
+    - openapi/_original/auth0-management-api-openapi.yml#GET /organizations
+    - openapi/_original/auth0-management-api-openapi.yml#GET /organizations/{id}
+    - openapi/_original/auth0-management-api-openapi.yml#GET /users/{id}/organizations
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/auth0-management-api-openapi.yml#DELETE /organizations/{id}/members/{user_id}/roles
+    - openapi/_original/auth0-management-api-openapi.yml#DELETE /roles/{id}
+    - openapi/_original/auth0-management-api-openapi.yml#DELETE /users/{id}/roles
+    - openapi/_original/auth0-management-api-openapi.yml#GET /organizations/{id}/members/{user_id}/roles
+    - openapi/_original/auth0-management-api-openapi.yml#GET /roles
+  permission:
+    path_segment:
+    - permissions
+    properties:
+      description: description
+      resource: resource_server_identifier
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/auth0-management-api-openapi.yml#DELETE /roles/{id}/permissions
+    - openapi/_original/auth0-management-api-openapi.yml#DELETE /users/{id}/permissions
+    - openapi/_original/auth0-management-api-openapi.yml#GET /roles/{id}/permissions
+    - openapi/_original/auth0-management-api-openapi.yml#GET /users/{id}/permissions
+    - openapi/_original/auth0-management-api-openapi.yml#POST /roles/{id}/permissions

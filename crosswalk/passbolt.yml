@@ -1,0 +1,38 @@
+provider: passbolt
+apis_io: https://apis.io/providers/passbolt/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      status: disabled
+      username: username
+      role_ids: role_id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/passbolt-openapi.yaml#DELETE /users/{userId}.json
+    - openapi/_original/passbolt-openapi.yaml#GET /users.json
+    - openapi/_original/passbolt-openapi.yaml#GET /users/{userId}.json
+    - openapi/_original/passbolt-openapi.yaml#POST /users.json
+    - openapi/_original/passbolt-openapi.yaml#PUT /users/{userId}.json
+  group:
+    path_segment:
+    - groups
+    properties:
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/passbolt-openapi.yaml#DELETE /groups/{groupId}.json
+    - openapi/_original/passbolt-openapi.yaml#GET /groups.json
+    - openapi/_original/passbolt-openapi.yaml#GET /groups/{groupId}.json
+    - openapi/_original/passbolt-openapi.yaml#POST /groups.json
+    - openapi/_original/passbolt-openapi.yaml#PUT /groups/{groupId}.json
+  role:
+    path_segment:
+    - roles
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/passbolt-openapi.yaml#GET /roles.json

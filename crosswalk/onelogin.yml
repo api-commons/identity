@@ -1,0 +1,39 @@
+provider: onelogin
+apis_io: https://apis.io/providers/onelogin/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      email: email
+      name: title
+      status:
+      - status
+      - state
+      created_at: created_at
+      last_name: lastname
+      username: username
+      first_name: firstname
+      updated_at: updated_at
+      phone: phone
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/onelogin-openapi.yml#DELETE /api/1/users/{id}
+    - openapi/_original/onelogin-openapi.yml#GET /api/1/users
+    - openapi/_original/onelogin-openapi.yml#GET /api/1/users/{id}
+    - openapi/_original/onelogin-openapi.yml#POST /api/1/users
+    - openapi/_original/onelogin-openapi.yml#PUT /api/1/users/{id}
+  role:
+    path_segment:
+    - roles
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/onelogin-openapi.yml#DELETE /api/1/users/{id}/roles/{role_id}
+    - openapi/_original/onelogin-openapi.yml#DELETE /api/2/roles/{id}
+    - openapi/_original/onelogin-openapi.yml#GET /api/1/roles
+    - openapi/_original/onelogin-openapi.yml#GET /api/1/users/{id}/roles
+    - openapi/_original/onelogin-openapi.yml#GET /api/2/roles

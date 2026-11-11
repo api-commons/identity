@@ -1,0 +1,41 @@
+provider: microsoft-entra
+apis_io: https://apis.io/providers/microsoft-entra/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties:
+      id: id
+      email:
+      - mail
+      - userPrincipalName
+      name: displayName
+      status: state
+      last_name: surname
+      first_name: givenName
+      phone: mobilePhone
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/microsoft-entra-graph-identity-openapi.yml#DELETE /users/{user-id}
+    - openapi/_original/microsoft-entra-graph-identity-openapi.yml#GET /groups/{group-id}/members
+    - openapi/_original/microsoft-entra-graph-identity-openapi.yml#GET /users
+    - openapi/_original/microsoft-entra-graph-identity-openapi.yml#GET /users/{user-id}
+    - openapi/_original/microsoft-entra-graph-identity-openapi.yml#PATCH /users/{user-id}
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      name: displayName
+      description: description
+      member_ids: members
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/microsoft-entra-graph-identity-openapi.yml#DELETE /groups/{group-id}
+    - openapi/_original/microsoft-entra-graph-identity-openapi.yml#GET /groups
+    - openapi/_original/microsoft-entra-graph-identity-openapi.yml#GET /groups/{group-id}
+    - openapi/_original/microsoft-entra-graph-identity-openapi.yml#PATCH /groups/{group-id}
+    - openapi/_original/microsoft-entra-graph-identity-openapi.yml#POST /groups

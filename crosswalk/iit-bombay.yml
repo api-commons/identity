@@ -1,0 +1,30 @@
+provider: iit-bombay
+apis_io: https://apis.io/providers/iit-bombay/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      email: email
+      name: name
+      role_ids: roles
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/iit-bombay-instiapp-api-openapi.json#GET /users/{id}
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+      permission_ids: permissions
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/iit-bombay-instiapp-api-openapi.json#DELETE /roles/{id}
+    - openapi/_original/iit-bombay-instiapp-api-openapi.json#GET /roles/{id}
+    - openapi/_original/iit-bombay-instiapp-api-openapi.json#GET /user-me/roles
+    - openapi/_original/iit-bombay-instiapp-api-openapi.json#POST /roles
+    - openapi/_original/iit-bombay-instiapp-api-openapi.json#PUT /roles/{id}

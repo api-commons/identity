@@ -1,0 +1,23 @@
+provider: keyo
+apis_io: https://apis.io/providers/keyo/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - identities
+    properties:
+      id: id
+      email: email
+      created_at: creation_date
+      last_name: last_name
+      first_name: first_name
+      metadata: metadata
+      phone: phone
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keyo-openapi.yml#DELETE /identities/{id}/
+    - openapi/_original/keyo-openapi.yml#GET /identities/
+    - openapi/_original/keyo-openapi.yml#GET /identities/{id}/
+    - openapi/_original/keyo-openapi.yml#PATCH /identities/{id}/
+    - openapi/_original/keyo-openapi.yml#POST /identities/

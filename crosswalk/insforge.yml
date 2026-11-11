@@ -1,0 +1,28 @@
+provider: insforge
+apis_io: https://apis.io/providers/insforge/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      email: email
+      name: name
+      created_at: createdAt
+      updated_at: updatedAt
+      metadata: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/insforge-auth-openapi.yaml#DELETE /api/auth/users
+    - openapi/_original/insforge-auth-openapi.yaml#GET /api/auth/users
+    - openapi/_original/insforge-auth-openapi.yaml#GET /api/auth/users/{userId}
+    - openapi/_original/insforge-auth-openapi.yaml#POST /api/auth/users
+  permission:
+    path_segment:
+    - permissions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/insforge-realtime-openapi.yaml#GET /api/realtime/permissions

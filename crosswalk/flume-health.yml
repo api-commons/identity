@@ -1,0 +1,45 @@
+provider: flume-health
+apis_io: https://apis.io/providers/flume-health/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    - users
+    properties:
+      id:
+      - userId
+      - id
+      email: email
+      name: displayName
+      status: active
+      created_at: created
+      last_name: lastName
+      first_name: firstName
+      role_ids: role
+      updated_at: updated
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/flume-health-openapi.json#DELETE /api/v1/context/workspaces/{id}/members/{userId}
+    - openapi/_original/flume-health-openapi.json#GET /api/v1/context/workspaces/{id}/members
+    - openapi/_original/flume-health-openapi.json#GET /api/v1/users
+    - openapi/_original/flume-health-openapi.json#GET /api/v1/users/{id}
+    - openapi/_original/flume-health-openapi.json#PATCH /api/v1/context/workspaces/{id}/members/{userId}
+  organization:
+    path_segment:
+    - workspaces
+    properties:
+      name:
+      - displayName
+      - name
+      id: id
+      created_at: createTime
+      status: state
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/flume-health-openapi.json#GET /api/v1/context/workspaces
+    - openapi/_original/flume-health-openapi.json#GET /api/v1/context/workspaces/{id}
+    - openapi/_original/flume-health-openapi.json#PATCH /api/v1/context/workspaces/{id}
+    - openapi/_original/flume-health-openapi.json#POST /api/v1/context/workspaces

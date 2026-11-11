@@ -1,0 +1,49 @@
+provider: university-of-manchester
+apis_io: https://apis.io/providers/university-of-manchester/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: uuid
+      email: email
+      name: name
+      created_at: createdDate
+      username: username
+      updated_at: modifiedDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/university-of-manchester-pure-rest.yaml#DELETE /users/{uuid}
+    - openapi/_original/university-of-manchester-pure-rest.yaml#GET /users
+    - openapi/_original/university-of-manchester-pure-rest.yaml#GET /users/{uuid}
+    - openapi/_original/university-of-manchester-pure-rest.yaml#PUT /users
+    - openapi/_original/university-of-manchester-pure-rest.yaml#PUT /users/{uuid}
+  organization:
+    path_segment:
+    - organizations
+    properties:
+      name: name
+      id: uuid
+      created_at: createdDate
+      updated_at: modifiedDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/university-of-manchester-pure-rest.yaml#DELETE /organizations/{uuid}
+    - openapi/_original/university-of-manchester-pure-rest.yaml#GET /organizations
+    - openapi/_original/university-of-manchester-pure-rest.yaml#GET /organizations/{uuid}
+    - openapi/_original/university-of-manchester-pure-rest.yaml#PUT /organizations
+    - openapi/_original/university-of-manchester-pure-rest.yaml#PUT /organizations/{uuid}
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: title
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/university-of-manchester-pure-rest.yaml#GET /roles
+    - openapi/_original/university-of-manchester-pure-rest.yaml#GET /roles/{assignableRoleName}
+    - openapi/_original/university-of-manchester-pure-rest.yaml#GET /users/{uuid}/roles
+    - openapi/_original/university-of-manchester-pure-rest.yaml#PUT /users/{uuid}/roles
+    - openapi/_original/university-of-manchester-pure-rest_2.yaml#GET /roles

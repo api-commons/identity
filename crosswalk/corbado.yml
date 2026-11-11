@@ -1,0 +1,19 @@
+provider: corbado
+apis_io: https://apis.io/providers/corbado/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: userID
+      status: status
+      updated_at: updated
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/corbado-openapi.yml#DELETE /users/{userID}
+    - openapi/_original/corbado-openapi.yml#GET /users
+    - openapi/_original/corbado-openapi.yml#GET /users/{userID}
+    - openapi/_original/corbado-openapi.yml#PATCH /users/{userID}
+    - openapi/_original/corbado-openapi.yml#POST /users

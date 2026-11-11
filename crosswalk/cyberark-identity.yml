@@ -1,0 +1,30 @@
+provider: cyberark-identity
+apis_io: https://apis.io/providers/cyberark-identity/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      email: emails
+      name:
+      - displayName
+      - name
+      status: active
+      username: userName
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/cyberark-identity-openapi.yml#DELETE /scim/v2/Users/{id}
+    - openapi/_original/cyberark-identity-openapi.yml#GET /scim/v2/Users
+    - openapi/_original/cyberark-identity-openapi.yml#GET /scim/v2/Users/{id}
+    - openapi/_original/cyberark-identity-openapi.yml#POST /scim/v2/Users
+    - openapi/_original/cyberark-identity-openapi.yml#PUT /scim/v2/Users/{id}
+  group:
+    path_segment:
+    - groups
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cyberark-identity-openapi.yml#DELETE /scim/v2/Groups/{id}
+    - openapi/_original/cyberark-identity-openapi.yml#GET /scim/v2/Groups

@@ -1,0 +1,88 @@
+provider: university-of-illinois-urbana-champaign
+apis_io: https://apis.io/providers/university-of-illinois-urbana-champaign/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - people
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-gateway.yaml#GET /api/bbs/appointments/people
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      name: name
+      description: description
+      created_at: date_created
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#DELETE /admin/application/groups/{id}
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#GET /admin/application/groups
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#POST /admin/application/groups
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#PUT /admin/application/groups/{id}
+  organization:
+    path_segment:
+    - organizations
+    - organization
+    properties:
+      name: name
+      id: id
+      organization_id: org_id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#GET /system/organizations
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#GET /system/organizations/{id}
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#POST /admin/app-configs/organization
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#POST /services/app-configs/organization
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#POST /system/organizations
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+      description: description
+      permission_ids:
+      - permissions
+      - scopes
+      created_at: date_created
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#DELETE /admin/application/accounts/{id}/roles
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#DELETE /admin/application/roles/{id}
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#GET /admin/application/roles
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#POST /admin/application/roles
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#PUT /admin/application/accounts/{id}/roles
+  permission:
+    path_segment:
+    - permissions
+    properties:
+      id: id
+      name: name
+      description: description
+      created_at: date_created
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#DELETE /admin/application/accounts/{id}/permissions
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#GET /admin/application/permissions
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#POST /system/permissions
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#PUT /admin/application/accounts/{id}/permissions
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#PUT /admin/application/roles/{id}/permissions
+  api_key:
+    path_segment:
+    - api-keys
+    properties:
+      id: id
+      key: key
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#DELETE /system/api-keys
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#GET /system/api-keys
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#POST /system/api-keys
+    - openapi/_original/university-of-illinois-urbana-champaign-rokwire-core.yaml#PUT /system/api-keys

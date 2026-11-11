@@ -1,0 +1,17 @@
+provider: guestready
+apis_io: https://apis.io/providers/guestready/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      username: username
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/guestready-rentalready-openapi.yml#GET /api/v3/users/
+    - openapi/_original/guestready-rentalready-openapi.yml#GET /api/v3/users/{id}/
+    - openapi/_original/guestready-rentalready-openapi_2.yml#GET /api/v3/users/
+    - openapi/_original/guestready-rentalready-openapi_2.yml#GET /api/v3/users/{id}/

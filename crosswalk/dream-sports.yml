@@ -1,0 +1,48 @@
+provider: dream-sports
+apis_io: https://apis.io/providers/dream-sports/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    properties:
+      email: email
+      name: name
+      last_name: lastName
+      username: username
+      first_name: firstName
+      phone: phoneNumber
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/dream-sports-guardian-integrations-openapi.yml#GET /user
+    - openapi/_original/dream-sports-guardian-integrations-openapi.yml#POST /user
+  organization:
+    path_segment:
+    - tenants
+    - orgs
+    properties:
+      name: displayName
+      id: id
+      created_at: createdOn
+      organization_id: orgId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/dream-sports-checkmate-openapi.yml#GET /api/v1/orgs
+    - openapi/_original/dream-sports-delivr-ota-openapi.yml#DELETE /tenants/{tenantId}
+    - openapi/_original/dream-sports-delivr-ota-openapi.yml#GET /tenants
+    - openapi/_original/dream-sports-dota-openapi.yml#GET /tenants
+  permission:
+    path_segment:
+    - scopes
+    properties:
+      name:
+      - name
+      - display_name
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/dream-sports-guardian-openapi.yml#DELETE /scopes/{name}
+    - openapi/_original/dream-sports-guardian-openapi.yml#GET /scopes
+    - openapi/_original/dream-sports-guardian-openapi.yml#POST /scopes
+    - openapi/_original/dream-sports-guardian-openapi.yml#PUT /scopes/{name}

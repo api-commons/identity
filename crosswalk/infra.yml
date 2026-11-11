@@ -1,0 +1,40 @@
+provider: infra
+apis_io: https://apis.io/providers/infra/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      name: name
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/infra-openapi-original.json#DELETE /api/users/{id}
+    - openapi/_original/infra-openapi-original.json#GET /api/users
+    - openapi/_original/infra-openapi-original.json#GET /api/users/{id}
+    - openapi/_original/infra-openapi-original.json#PATCH /api/groups/{id}/users
+    - openapi/_original/infra-openapi-original.json#POST /api/users
+  group:
+    path_segment:
+    - groups
+    properties:
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/infra-openapi-original.json#DELETE /api/groups/{id}
+    - openapi/_original/infra-openapi-original.json#GET /api/groups
+    - openapi/_original/infra-openapi-original.json#GET /api/groups/{id}
+    - openapi/_original/infra-openapi-original.json#POST /api/groups
+  organization:
+    path_segment:
+    - organizations
+    properties:
+      name: name
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/infra-openapi-original.json#DELETE /api/organizations/{id}
+    - openapi/_original/infra-openapi-original.json#GET /api/organizations
+    - openapi/_original/infra-openapi-original.json#GET /api/organizations/{id}
+    - openapi/_original/infra-openapi-original.json#POST /api/organizations
+    - openapi/_original/infra-openapi-original.json#PUT /api/organizations/{id}

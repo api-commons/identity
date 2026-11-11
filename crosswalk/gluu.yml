@@ -1,0 +1,76 @@
+provider: gluu
+apis_io: https://apis.io/providers/gluu/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - user
+    properties:
+      id:
+      - id
+      - userId
+      - externalId
+      email: emails
+      name:
+      - name
+      - displayName
+      - title
+      status:
+      - status
+      - active
+      username:
+      - username
+      - userName
+      role_ids: roles
+      phone: phoneNumbers
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/gluu-jans-config-api-fido2-plugin-openapi.yml#GET /fido2/metrics/entries/user/{userId}
+    - openapi/_original/gluu-jans-config-api-fido2-plugin-openapi_2.yml#GET /fido2/metrics/entries/user/{userId}
+    - openapi/_original/gluu-jans-config-api-openapi.yml#DELETE /api/v1/jans-auth-server/session/user/{userDn}
+    - openapi/_original/gluu-jans-fido2-openapi.yml#GET /jans-fido2/restv1/metrics/entries/user/{userId}
+    - openapi/_original/gluu-jans-fido2-openapi_2.yml#GET /jans-fido2/restv1/metrics/entries/user/{userId}
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      name: displayName
+      member_ids: members
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/gluu-jans-scim-openapi.yml#DELETE /Groups/{id}
+    - openapi/_original/gluu-jans-scim-openapi.yml#GET /Groups
+    - openapi/_original/gluu-jans-scim-openapi.yml#GET /Groups/{id}
+    - openapi/_original/gluu-jans-scim-openapi.yml#PATCH /Groups/{id}
+    - openapi/_original/gluu-jans-scim-openapi.yml#POST /Groups
+  organization:
+    path_segment:
+    - org
+    properties:
+      name:
+      - displayName
+      - title
+      status: status
+      description: description
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/gluu-jans-config-api-openapi.yml#GET /api/v1/org
+    - openapi/_original/gluu-jans-config-api-openapi.yml#PATCH /api/v1/org
+  permission:
+    path_segment:
+    - scopes
+    properties:
+      id: id
+      name: displayName
+      description: description
+      created_at: creationDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/gluu-jans-config-api-openapi.yml#DELETE /api/v1/scopes/{inum}
+    - openapi/_original/gluu-jans-config-api-openapi.yml#GET /api/v1/scopes
+    - openapi/_original/gluu-jans-config-api-openapi.yml#GET /api/v1/scopes/{inum}
+    - openapi/_original/gluu-jans-config-api-openapi.yml#PATCH /api/v1/scopes/{inum}
+    - openapi/_original/gluu-jans-config-api-openapi.yml#POST /api/v1/scopes

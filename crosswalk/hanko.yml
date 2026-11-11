@@ -1,0 +1,30 @@
+provider: hanko
+apis_io: https://apis.io/providers/hanko/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - user
+    properties:
+      id:
+      - id
+      - user_id
+      email:
+      - emails
+      - email
+      name: name
+      created_at: created_at
+      last_name: family_name
+      username: username
+      first_name: given_name
+      updated_at: updated_at
+      metadata: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/hanko-admin-api-openapi.yml#DELETE /users/{id}
+    - openapi/_original/hanko-admin-api-openapi.yml#GET /users
+    - openapi/_original/hanko-admin-api-openapi.yml#GET /users/{id}
+    - openapi/_original/hanko-admin-api-openapi.yml#PATCH /users/{id}
+    - openapi/_original/hanko-admin-api-openapi.yml#POST /users

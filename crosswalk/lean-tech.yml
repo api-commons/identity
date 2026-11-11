@@ -1,0 +1,12 @@
+provider: lean-tech
+apis_io: https://apis.io/providers/lean-tech/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - identities
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lean-data-api-openapi.yml#GET /data/v2/accounts/{account_id}/identities

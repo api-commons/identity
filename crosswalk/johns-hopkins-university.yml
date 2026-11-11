@@ -1,0 +1,16 @@
+provider: johns-hopkins-university
+apis_io: https://apis.io/providers/johns-hopkins-university/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - people
+    properties:
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/johns-hopkins-university-hub-api-openapi.yml#GET /people
+    - openapi/_original/johns-hopkins-university-hub-api-openapi.yml#GET /people/{id}
+    - openapi/_original/johns-hopkins-university-hub-api.yaml#GET /people
+    - openapi/_original/johns-hopkins-university-hub-api.yaml#GET /people/{id}

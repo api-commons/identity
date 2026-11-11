@@ -1,0 +1,43 @@
+provider: cvent
+apis_io: https://apis.io/providers/cvent/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties:
+      id: id
+      email:
+      - emailAddress
+      - emails
+      name:
+      - name
+      - title
+      status: active
+      last_name: lastName
+      username: userName
+      first_name: firstName
+      phone: phoneNumbers
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cvent-openapi.json#DELETE /account-user-groups/{userGroupId}/users/{userId}
+    - openapi/_original/cvent-openapi.json#DELETE /scim/v2/Users/{id}
+    - openapi/_original/cvent-openapi.json#GET /events/{eventId}/attendee-messages/members
+    - openapi/_original/cvent-openapi.json#GET /hubs/{hubId}/members
+    - openapi/_original/cvent-openapi.json#GET /scim/v2/Users
+  group:
+    path_segment:
+    - user-groups
+    - groups
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cvent-openapi.json#DELETE /events/{id}/user-groups/{userGroupId}
+    - openapi/_original/cvent-openapi.json#GET /events/{id}/user-groups
+    - openapi/_original/cvent-openapi.json#GET /scim/v2/Groups
+    - openapi/_original/cvent-openapi.json#PUT /events/{id}/user-groups/{userGroupId}
+    - openapi/_original/cvent-public-spec-openapi.yaml#DELETE /events/{id}/user-groups/{userGroupId}

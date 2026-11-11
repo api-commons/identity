@@ -1,0 +1,90 @@
+provider: azure-ad
+apis_io: https://apis.io/providers/azure-ad/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    - people
+    properties:
+      id: id
+      email:
+      - mail
+      - userPrincipalName
+      name: displayName
+      status: state
+      last_name: surname
+      first_name: givenName
+      phone: mobilePhone
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/azure-ad-graph-groups-openapi.yml#GET /groups/{group-id}/members
+    - openapi/_original/azure-ad-graph-identity-directorymanagement-openapi.yml#GET /admin/people
+    - openapi/_original/azure-ad-graph-identity-directorymanagement-openapi.yml#GET /directory/administrativeUnits/{administrativeUnit-id}/members
+    - openapi/_original/azure-ad-graph-identity-directorymanagement-openapi.yml#GET /directoryRoles/{directoryRole-id}/members
+    - openapi/_original/azure-ad-graph-identity-directorymanagement-openapi.yml#POST /directory/administrativeUnits/{administrativeUnit-id}/members
+  group:
+    path_segment:
+    - groups
+    - group
+    properties:
+      id: id
+      name: displayName
+      description: description
+      member_ids: members
+      organization_id: organizationId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/azure-ad-graph-groups-openapi.yml#DELETE /groups/{group-id}
+    - openapi/_original/azure-ad-graph-groups-openapi.yml#GET /groups
+    - openapi/_original/azure-ad-graph-groups-openapi.yml#GET /groups/{group-id}
+    - openapi/_original/azure-ad-graph-groups-openapi.yml#PATCH /groups/{group-id}
+    - openapi/_original/azure-ad-graph-groups-openapi.yml#POST /groups
+  organization:
+    path_segment:
+    - organization
+    - tenants
+    properties:
+      name: displayName
+      id: id
+      organization_id: tenantId
+      status: state
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/azure-ad-graph-identity-directorymanagement-openapi.yml#DELETE /organization/{organization-id}
+    - openapi/_original/azure-ad-graph-identity-directorymanagement-openapi.yml#GET /organization
+    - openapi/_original/azure-ad-graph-identity-directorymanagement-openapi.yml#GET /organization/{organization-id}
+    - openapi/_original/azure-ad-graph-identity-directorymanagement-openapi.yml#PATCH /organization/{organization-id}
+    - openapi/_original/azure-ad-graph-identity-directorymanagement-openapi.yml#POST /organization
+  role:
+    path_segment:
+    - roles
+    - role
+    properties:
+      name: displayName
+      id: id
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resourceRoles/{accessPackageResourceRole-id}/resource/roles/{accessPackageResourceRole-id1}
+    - openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resourceRoles/{accessPackageResourceRole-id}/resource/scopes/{accessPackageResourceScope-id}/resource/roles/{accessPackageResourceRole-id1}
+    - openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resourceScopes/{accessPackageResourceScope-id}/resource/roles/{accessPackageResourceRole-id}
+    - openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/roles/{accessPackageResourceRole-id}
+    - openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/scopes/{accessPackageResourceScope-id}/resource/roles/{accessPackageResourceRole-id}
+  permission:
+    path_segment:
+    - scopes
+    properties:
+      id: id
+      name: displayName
+      description: description
+      resource: resource
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resourceRoles/{accessPackageResourceRole-id}/resource/scopes/{accessPackageResourceScope-id}
+    - openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resourceScopes/{accessPackageResourceScope-id}/resource/roles/{accessPackageResourceRole-id}/resource/scopes/{accessPackageResourceScope-id1}
+    - openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resourceScopes/{accessPackageResourceScope-id}/resource/scopes/{accessPackageResourceScope-id1}
+    - openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/roles/{accessPackageResourceRole-id}/resource/scopes/{accessPackageResourceScope-id}
+    - openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/scopes/{accessPackageResourceScope-id}

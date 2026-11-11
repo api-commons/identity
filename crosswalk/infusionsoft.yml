@@ -1,0 +1,45 @@
+provider: infusionsoft
+apis_io: https://apis.io/providers/infusionsoft/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      email:
+      - email_addresses
+      - email_address
+      - email
+      name: title
+      status: status
+      created_at:
+      - create_time
+      - date_created
+      last_name: family_name
+      username: nickname
+      first_name: given_name
+      updated_at: update_time
+      phone: phone_numbers
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/users
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/users/{user_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#PATCH /rest/v2/users/{user_id}
+    - openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#GET /v1/users
+    - openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#POST /v1/users
+  group:
+    path_segment:
+    - groups
+    - usergroups
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/affiliates/model/customFields/groups/{group_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/companies/model/customFields/groups/{group_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/contacts/model/customFields/groups/{group_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/notes/model/customFields/groups/{group_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/opportunities/model/customFields/groups/{group_id}

@@ -1,0 +1,14 @@
+provider: privy
+apis_io: https://apis.io/providers/privy/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      created_at: created_at
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/privy-openapi.yml#GET /users/{user_id}

@@ -1,0 +1,30 @@
+provider: border0
+apis_io: https://apis.io/providers/border0/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    properties:
+      id: user_id
+      email: email
+      name: name
+      username: user_name
+      role_ids: role
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/border0-openapi.json#GET /user/{user_id}
+    - openapi/_original/border0-openapi.json#POST /user
+    - openapi/_original/border0-openapi.json#PUT /user/{user_id}
+  organization:
+    path_segment:
+    - org
+    - organizations
+    properties:
+      name: name
+      organization_id: org_id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/border0-openapi.json#GET /client/auth/org/{slug}
+    - openapi/_original/border0-openapi.json#POST /organizations

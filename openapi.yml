@@ -1,0 +1,616 @@
+openapi: 3.1.0
+info:
+  title: Identity and Users (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Identity and Users interface, distilled from the harvested OpenAPI of 443 providers in
+    the APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
+    so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /users:
+    get:
+      operationId: listUsers
+      summary: List users
+      tags:
+      - Users
+      x-commons-tier: core
+      x-commons-share: 0.843
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/User'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createUser
+      summary: Create an user
+      tags:
+      - Users
+      x-commons-tier: core
+      x-commons-share: 0.649
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /users/{user_id}:
+    parameters:
+    - $ref: '#/components/parameters/user_id'
+    get:
+      operationId: getUser
+      summary: Get an user
+      tags:
+      - Users
+      x-commons-tier: core
+      x-commons-share: 0.746
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    delete:
+      operationId: deleteUser
+      summary: Delete an user
+      tags:
+      - Users
+      x-commons-tier: core
+      x-commons-share: 0.53
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateUser
+      summary: Update an user
+      tags:
+      - Users
+      x-commons-tier: core
+      x-commons-share: 0.53
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /groups:
+    get:
+      operationId: listGroups
+      summary: List groups
+      tags:
+      - Groups
+      x-commons-tier: core
+      x-commons-share: 0.964
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/Group'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createGroup
+      summary: Create a group
+      tags:
+      - Groups
+      x-commons-tier: core
+      x-commons-share: 0.735
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /groups/{group_id}:
+    parameters:
+    - $ref: '#/components/parameters/group_id'
+    get:
+      operationId: getGroup
+      summary: Get a group
+      tags:
+      - Groups
+      x-commons-tier: core
+      x-commons-share: 0.795
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    delete:
+      operationId: deleteGroup
+      summary: Delete a group
+      tags:
+      - Groups
+      x-commons-tier: core
+      x-commons-share: 0.699
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    patch:
+      operationId: updateGroup
+      summary: Update a group
+      tags:
+      - Groups
+      x-commons-tier: core
+      x-commons-share: 0.651
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /organizations:
+    get:
+      operationId: listOrganizations
+      summary: List organizations
+      tags:
+      - Organizations
+      x-commons-tier: core
+      x-commons-share: 0.847
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/Organization'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createOrganization
+      summary: Create an organization
+      tags:
+      - Organizations
+      x-commons-tier: core
+      x-commons-share: 0.695
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /organizations/{organization_id}:
+    parameters:
+    - $ref: '#/components/parameters/organization_id'
+    get:
+      operationId: getOrganization
+      summary: Get an organization
+      tags:
+      - Organizations
+      x-commons-tier: core
+      x-commons-share: 0.644
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    patch:
+      operationId: updateOrganization
+      summary: Update an organization
+      tags:
+      - Organizations
+      x-commons-tier: core
+      x-commons-share: 0.542
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+    delete:
+      operationId: deleteOrganization
+      summary: Delete an organization
+      tags:
+      - Organizations
+      x-commons-tier: extended
+      x-commons-share: 0.492
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+  /roles:
+    get:
+      operationId: listRoles
+      summary: List roles
+      tags:
+      - Roles
+      x-commons-tier: core
+      x-commons-share: 0.857
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id004
+                  $ref: '#/components/schemas/Role'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createRole
+      summary: Create a role
+      tags:
+      - Roles
+      x-commons-tier: core
+      x-commons-share: 0.635
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /roles/{role_id}:
+    parameters:
+    - $ref: '#/components/parameters/role_id'
+    get:
+      operationId: getRole
+      summary: Get a role
+      tags:
+      - Roles
+      x-commons-tier: core
+      x-commons-share: 0.603
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    delete:
+      operationId: deleteRole
+      summary: Delete a role
+      tags:
+      - Roles
+      x-commons-tier: core
+      x-commons-share: 0.556
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    patch:
+      operationId: updateRole
+      summary: Update a role
+      tags:
+      - Roles
+      x-commons-tier: core
+      x-commons-share: 0.508
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /permissions:
+    get:
+      operationId: listPermissions
+      summary: List permissions
+      tags:
+      - Permissions
+      x-commons-tier: core
+      x-commons-share: 0.804
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id005
+                  $ref: '#/components/schemas/Permission'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createPermission
+      summary: Create a permission
+      tags:
+      - Permissions
+      x-commons-tier: core
+      x-commons-share: 0.587
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /permissions/{permission_id}:
+    parameters:
+    - $ref: '#/components/parameters/permission_id'
+    delete:
+      operationId: deletePermission
+      summary: Delete a permission
+      tags:
+      - Permissions
+      x-commons-tier: extended
+      x-commons-share: 0.457
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    get:
+      operationId: getPermission
+      summary: Get a permission
+      tags:
+      - Permissions
+      x-commons-tier: extended
+      x-commons-share: 0.457
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    patch:
+      operationId: updatePermission
+      summary: Update a permission
+      tags:
+      - Permissions
+      x-commons-tier: extended
+      x-commons-share: 0.348
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /api-keys:
+    get:
+      operationId: listApiKeys
+      summary: List api keys
+      tags:
+      - Api Keys
+      x-commons-tier: core
+      x-commons-share: 0.84
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id006
+                  $ref: '#/components/schemas/ApiKey'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createApiKey
+      summary: Create an api key
+      tags:
+      - Api Keys
+      x-commons-tier: core
+      x-commons-share: 0.8
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+  /api-keys/{api_key_id}:
+    parameters:
+    - $ref: '#/components/parameters/api_key_id'
+    delete:
+      operationId: deleteApiKey
+      summary: Delete an api key
+      tags:
+      - Api Keys
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+    get:
+      operationId: getApiKey
+      summary: Get an api key
+      tags:
+      - Api Keys
+      x-commons-tier: extended
+      x-commons-share: 0.36
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+    patch:
+      operationId: updateApiKey
+      summary: Update an api key
+      tags:
+      - Api Keys
+      x-commons-tier: extended
+      x-commons-share: 0.24
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+components:
+  schemas:
+    User:
+      $ref: ./schema/user.json
+    Group:
+      $ref: ./schema/group.json
+    Organization:
+      $ref: ./schema/organization.json
+    Role:
+      $ref: ./schema/role.json
+    Permission:
+      $ref: ./schema/permission.json
+    Invite:
+      $ref: ./schema/invite.json
+    ApiKey:
+      $ref: ./schema/api_key.json
+  parameters:
+    user_id:
+      name: user_id
+      in: path
+      required: true
+      schema:
+        type: string
+    group_id:
+      name: group_id
+      in: path
+      required: true
+      schema:
+        type: string
+    organization_id:
+      name: organization_id
+      in: path
+      required: true
+      schema:
+        type: string
+    role_id:
+      name: role_id
+      in: path
+      required: true
+      schema:
+        type: string
+    permission_id:
+      name: permission_id
+      in: path
+      required: true
+      schema:
+        type: string
+    invite_id:
+      name: invite_id
+      in: path
+      required: true
+      schema:
+        type: string
+    api_key_id:
+      name: api_key_id
+      in: path
+      required: true
+      schema:
+        type: string

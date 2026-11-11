@@ -1,0 +1,32 @@
+provider: university-of-cambridge
+apis_io: https://apis.io/providers/university-of-cambridge/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    properties:
+      id: id
+      name: displayName
+      last_name: surname
+      metadata: attributes
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/university-of-cambridge-lookup.yaml#GET /group/{groupid}/members
+    - openapi/_original/university-of-cambridge-lookup.yaml#GET /inst/{instid}/members
+  group:
+    path_segment:
+    - group
+    - groups
+    properties:
+      id: id
+      name:
+      - name
+      - title
+      description: description
+      member_ids: members
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/university-of-cambridge-lookup.yaml#GET /group/{groupid}
+    - openapi/_original/university-of-cambridge-lookup.yaml#GET /person/{scheme}/{identifier}/groups

@@ -1,0 +1,110 @@
+provider: workos
+apis_io: https://apis.io/providers/workos/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id:
+      - id
+      - external_id
+      email: email
+      created_at: created_at
+      last_name: last_name
+      first_name: first_name
+      updated_at: updated_at
+      metadata: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/workos-openapi.yml#DELETE /user_management/users/{id}
+    - openapi/_original/workos-openapi.yml#GET /user_management/users
+    - openapi/_original/workos-openapi.yml#GET /user_management/users/{id}
+    - openapi/_original/workos-openapi.yml#POST /user_management/users
+    - openapi/_original/workos-openapi.yml#PUT /user_management/users/{id}
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      name: name
+      description: description
+      created_at: created_at
+      updated_at: updated_at
+      organization_id: organization_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/workos-openapi.yml#DELETE /organizations/{organizationId}/groups/{groupId}
+    - openapi/_original/workos-openapi.yml#GET /organizations/{organizationId}/groups
+    - openapi/_original/workos-openapi.yml#GET /organizations/{organizationId}/groups/{groupId}
+    - openapi/_original/workos-openapi.yml#GET /user_management/organization_memberships/{omId}/groups
+    - openapi/_original/workos-openapi.yml#PATCH /organizations/{organizationId}/groups/{groupId}
+  organization:
+    path_segment:
+    - organizations
+    properties:
+      name: name
+      id:
+      - id
+      - external_id
+      created_at: created_at
+      updated_at: updated_at
+      metadata: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/workos-openapi.yml#DELETE /organizations/{id}
+    - openapi/_original/workos-openapi.yml#GET /organizations
+    - openapi/_original/workos-openapi.yml#GET /organizations/{id}
+    - openapi/_original/workos-openapi.yml#POST /organizations
+    - openapi/_original/workos-openapi.yml#PUT /organizations/{id}
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+      description: description
+      permission_ids: permissions
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/workos-openapi.yml#DELETE /authorization/organizations/{organizationId}/roles/{slug}
+    - openapi/_original/workos-openapi.yml#GET /authorization/organizations/{organizationId}/roles
+    - openapi/_original/workos-openapi.yml#GET /authorization/organizations/{organizationId}/roles/{slug}
+    - openapi/_original/workos-openapi.yml#GET /authorization/roles
+    - openapi/_original/workos-openapi.yml#GET /authorization/roles/{slug}
+  permission:
+    path_segment:
+    - permissions
+    properties:
+      id: id
+      name: name
+      description: description
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/workos-openapi.yml#DELETE /authorization/organizations/{organizationId}/roles/{slug}/permissions/{permissionSlug}
+    - openapi/_original/workos-openapi.yml#DELETE /authorization/permissions/{slug}
+    - openapi/_original/workos-openapi.yml#GET /authorization/organization_memberships/{organization_membership_id}/resources/{resource_id}/permissions
+    - openapi/_original/workos-openapi.yml#GET /authorization/organization_memberships/{organization_membership_id}/resources/{resource_type_slug}/{external_id}/permissions
+    - openapi/_original/workos-openapi.yml#GET /authorization/permissions
+  api_key:
+    path_segment:
+    - api_keys
+    properties:
+      id: id
+      created_at: created_at
+      name: name
+      scopes: permissions
+      updated_at: updated_at
+      organization_id: organization_id
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/workos-openapi.yml#DELETE /api_keys/{id}
+    - openapi/_original/workos-openapi.yml#GET /organizations/{organizationId}/api_keys
+    - openapi/_original/workos-openapi.yml#GET /user_management/users/{userId}/api_keys
+    - openapi/_original/workos-openapi.yml#POST /organizations/{organizationId}/api_keys
+    - openapi/_original/workos-openapi.yml#POST /user_management/users/{userId}/api_keys

@@ -1,0 +1,16 @@
+provider: lawmatics
+apis_io: https://apis.io/providers/lawmatics/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lawmatics-openapi.yml#DELETE /v1/users/{user_id}
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/users
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/users/{user_id}
+    - openapi/_original/lawmatics-openapi.yml#POST /v1/users
+    - openapi/_original/lawmatics-openapi.yml#PUT /v1/users/{user_id}

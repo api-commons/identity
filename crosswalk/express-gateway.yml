@@ -1,0 +1,27 @@
+provider: express-gateway
+apis_io: https://apis.io/providers/express-gateway/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/express-gateway-openapi.yml#DELETE /users/{id}
+    - openapi/_original/express-gateway-openapi.yml#GET /users
+    - openapi/_original/express-gateway-openapi.yml#GET /users/{id}
+    - openapi/_original/express-gateway-openapi.yml#POST /users
+    - openapi/_original/express-gateway-openapi.yml#PUT /users/{id}
+  permission:
+    path_segment:
+    - scopes
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/express-gateway-openapi.yml#DELETE /credentials/{type}/{id}/scopes/{scope}
+    - openapi/_original/express-gateway-openapi.yml#DELETE /scopes/{scope}
+    - openapi/_original/express-gateway-openapi.yml#GET /scopes
+    - openapi/_original/express-gateway-openapi.yml#GET /scopes/{scope}
+    - openapi/_original/express-gateway-openapi.yml#POST /scopes

@@ -1,0 +1,50 @@
+provider: cisco-directory-connector
+apis_io: https://apis.io/providers/cisco-directory-connector/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - people
+    - members
+    properties:
+      id: id
+      email: emails
+      name: displayName
+      status: status
+      created_at: created
+      last_name: lastName
+      username: userName
+      first_name: firstName
+      role_ids: roles
+      updated_at: lastModified
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cisco-directory-connector-openapi.yml#DELETE /people/{personId}
+    - openapi/_original/cisco-directory-connector-openapi.yml#GET /groups/{groupId}/members
+    - openapi/_original/cisco-directory-connector-openapi.yml#GET /people
+    - openapi/_original/cisco-directory-connector-openapi.yml#GET /people/{personId}
+    - openapi/_original/cisco-directory-connector-openapi.yml#POST /people
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      name: displayName
+      description: description
+      member_ids: members
+      organization_id: orgId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cisco-directory-connector-openapi.yml#DELETE /groups/{groupId}
+    - openapi/_original/cisco-directory-connector-openapi.yml#GET /groups
+    - openapi/_original/cisco-directory-connector-openapi.yml#GET /groups/{groupId}
+    - openapi/_original/cisco-directory-connector-openapi.yml#PATCH /groups/{groupId}
+    - openapi/_original/cisco-directory-connector-openapi.yml#POST /groups
+  organization:
+    path_segment:
+    - organizations
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/cisco-directory-connector-openapi.yml#GET /organizations/{orgId}

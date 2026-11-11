@@ -1,0 +1,34 @@
+provider: emory
+apis_io: https://apis.io/providers/emory/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/emory-digital-slide-archive.yaml#DELETE /user/{id}
+    - openapi/_original/emory-digital-slide-archive.yaml#GET /user
+    - openapi/_original/emory-digital-slide-archive.yaml#GET /user/{id}
+    - openapi/_original/emory-digital-slide-archive.yaml#POST /user
+    - openapi/_original/emory-digital-slide-archive.yaml#PUT /user/{id}
+  group:
+    path_segment:
+    - group
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/emory-digital-slide-archive.yaml#DELETE /group/{id}
+    - openapi/_original/emory-digital-slide-archive.yaml#GET /group
+    - openapi/_original/emory-digital-slide-archive.yaml#GET /group/{id}
+    - openapi/_original/emory-digital-slide-archive.yaml#POST /group
+    - openapi/_original/emory-digital-slide-archive.yaml#PUT /group/{id}
+  permission:
+    path_segment:
+    - scopes
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/emory-digital-slide-archive.yaml#GET /token/scopes

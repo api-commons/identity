@@ -1,0 +1,96 @@
+provider: canonical
+apis_io: https://apis.io/providers/canonical/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - identities
+    - members
+    properties:
+      id:
+      - id
+      - user_id
+      email: email
+      name: name
+      status:
+      - status
+      - state
+      created_at: created_at
+      username: username
+      role_ids:
+      - role
+      - roles
+      updated_at: updated_at
+      metadata: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/authz/groups/{id}/users/{user_id}
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/groups/{id}/identities/{identityId}
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/identities/{id}
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/authz/groups/{id}/users
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/groups/{id}/identities
+  group:
+    path_segment:
+    - groups
+    - teams
+    properties:
+      id:
+      - group_id
+      - id
+      name: name
+      description: description
+      member_ids: members
+      created_at: created_at
+      updated_at: updated_at
+      organization_id: tenant_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/authz/apps/{app_id}/groups
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/authz/groups/{id}
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/groups/{id}
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/authz/apps/{app_id}/groups
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/authz/groups
+  organization:
+    path_segment:
+    - tenants
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      status:
+      - enabled
+      - status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/tenants/{tenant_id}
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/me/tenants
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/tenants
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/users/{user_id}/tenants
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#PATCH /api/v0/tenants/{tenant_id}
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/groups/{id}/roles/{roleId}
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/roles/{id}
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/groups/{id}/roles
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/roles
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/roles/{id}
+  permission:
+    path_segment:
+    - entitlements
+    - permissions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/groups/{id}/entitlements/{entitlementId}
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/roles/{id}/entitlements/{entitlementId}
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/groups/{id}/entitlements
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/roles/{id}/entitlements
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#PATCH /api/v0/groups/{id}/entitlements

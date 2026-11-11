@@ -1,0 +1,119 @@
+provider: secureauth
+apis_io: https://apis.io/providers/secureauth/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id:
+      - id
+      - externalId
+      email: emails
+      status:
+      - status
+      - active
+      created_at: created_at
+      username: userName
+      updated_at: updated_at
+      metadata: metadata
+      phone: phoneNumbers
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/secureauth-analytics-openapi.yml#GET /pools/{ipID}/users
+    - openapi/_original/secureauth-analytics-openapi.yml#GET /tenants/{tenantID}/users
+    - openapi/_original/secureauth-analytics-openapi.yml#GET /users
+    - openapi/_original/secureauth-identity-openapi.yml#DELETE /admin/b2b/pools/{ipID}/users/{userID}
+    - openapi/_original/secureauth-identity-openapi.yml#DELETE /admin/pools/{ipID}/groups/{groupID}/users/{userID}
+  group:
+    path_segment:
+    - groups
+    properties:
+      id:
+      - id
+      - externalId
+      name:
+      - name
+      - displayName
+      description: description
+      member_ids: members
+      created_at: created_at
+      updated_at: updated_at
+      organization_id: tenant_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/secureauth-admin-openapi.yml#GET /gateways/{gw}/groups
+    - openapi/_original/secureauth-identity-openapi.yml#DELETE /admin/pools/{ipID}/groups/{groupID}
+    - openapi/_original/secureauth-identity-openapi.yml#GET /admin/pools/{ipID}/groups
+    - openapi/_original/secureauth-identity-openapi.yml#GET /admin/pools/{ipID}/groups/{groupID}
+    - openapi/_original/secureauth-identity-openapi.yml#GET /admin/pools/{ipID}/users/{userID}/groups
+  organization:
+    path_segment:
+    - organizations
+    - organization
+    - workspace
+    - tenants
+    - workspaces
+    - tenant
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      organization_id:
+      - tenant_id
+      - workspace_id
+      status: disabled
+      description: description
+      updated_at: updated_at
+      metadata:
+      - metadata
+      - attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/secureauth-admin-openapi.yml#DELETE /organizations/{wid}
+    - openapi/_original/secureauth-admin-openapi.yml#GET /organizations
+    - openapi/_original/secureauth-admin-openapi.yml#GET /organizations/{wid}
+    - openapi/_original/secureauth-admin-openapi.yml#GET /servers/{wid}/idps/organization/{iid}
+    - openapi/_original/secureauth-admin-openapi.yml#GET /servers/{wid}/idps/workspace/{iid}
+  role:
+    path_segment:
+    - roles
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/secureauth-admin-openapi.yml#GET /pools/{ipID}/roles
+    - openapi/_original/secureauth-admin-openapi.yml#GET /pools/{ipID}/users/{userID}/roles
+    - openapi/_original/secureauth-admin-openapi.yml#GET /servers/{wid}/roles
+    - openapi/_original/secureauth-admin-openapi.yml#GET /tenant/roles
+  permission:
+    path_segment:
+    - scopes
+    - permissions
+    properties:
+      id: id
+      name:
+      - display_name
+      - name
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/secureauth-admin-openapi.yml#DELETE /scopes/{scp}
+    - openapi/_original/secureauth-admin-openapi.yml#GET /scopes/{scp}
+    - openapi/_original/secureauth-admin-openapi.yml#GET /servers/{wid}/permissions
+    - openapi/_original/secureauth-admin-openapi.yml#GET /servers/{wid}/scopes
+    - openapi/_original/secureauth-admin-openapi.yml#GET /tenant/permissions
+  api_key:
+    path_segment:
+    - api-keys
+    properties:
+      id: id
+      created_at: created_at
+      key: token
+      name: name
+      expires_at: expires_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/secureauth-admin-openapi.yml#DELETE /servers/{wid}/custom-apps/{customAppID}/api-keys/{apiKeyID}
+    - openapi/_original/secureauth-admin-openapi.yml#GET /servers/{wid}/custom-apps/{customAppID}/api-keys
+    - openapi/_original/secureauth-admin-openapi.yml#POST /servers/{wid}/custom-apps/{customAppID}/api-keys

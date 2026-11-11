@@ -1,0 +1,55 @@
+provider: commerce-layer
+apis_io: https://apis.io/providers/commerce-layer/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /identity_providers/{identityProviderId}/user
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /user
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#PATCH /user
+  organization:
+    path_segment:
+    - organization
+    - organizations
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/commerce-layer-core-api-openapi.json#GET /organization
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /api_credentials/{apiCredentialId}/organization
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /application_memberships/{applicationMembershipId}/organization
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /membership_profiles/{membershipProfileId}/organization
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /memberships/{membershipId}/organization
+  role:
+    path_segment:
+    - roles
+    - role
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /api_credentials/{apiCredentialId}/role
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /application_memberships/{applicationMembershipId}/role
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /memberships/{membershipId}/role
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /organizations/{organizationId}/roles
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /permissions/{permissionId}/role
+  permission:
+    path_segment:
+    - permissions
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /organizations/{organizationId}/permissions
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /permissions
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /permissions/{permissionId}
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /roles/{roleId}/permissions
+    - openapi/_original/commerce-layer-provisioning-api-openapi.json#PATCH /permissions/{permissionId}

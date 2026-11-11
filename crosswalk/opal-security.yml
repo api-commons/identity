@@ -1,0 +1,35 @@
+provider: opal-security
+apis_io: https://apis.io/providers/opal-security/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - user
+    properties:
+      id: user_id
+      email: email
+      last_name: last_name
+      first_name: first_name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/opal-security-openapi.yaml#DELETE /groups/{group_id}/users/{user_id}
+    - openapi/_original/opal-security-openapi.yaml#DELETE /resources/{resource_id}/users/{user_id}
+    - openapi/_original/opal-security-openapi.yaml#DELETE /tags/{tag_id}/users/{user_id}
+    - openapi/_original/opal-security-openapi.yaml#GET /groups/users/{user_id}
+    - openapi/_original/opal-security-openapi.yaml#GET /groups/{group_id}/users
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: group_id
+      name: name
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/opal-security-openapi.yaml#DELETE /bundles/{bundle_id}/groups/{group_id}
+    - openapi/_original/opal-security-openapi.yaml#DELETE /groups/{group_id}
+    - openapi/_original/opal-security-openapi.yaml#DELETE /idp-group-mappings/{app_resource_id}/groups/{group_id}
+    - openapi/_original/opal-security-openapi.yaml#DELETE /tags/{tag_id}/groups/{group_id}
+    - openapi/_original/opal-security-openapi.yaml#GET /bundles/{bundle_id}/groups

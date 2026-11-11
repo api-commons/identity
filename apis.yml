@@ -1,64 +1,63 @@
-aid: standard-identity
-name: Identity
-type: Standard
-description: 'De facto standards for the identity layer. SCIM is the odd one out in this programme: it
-  was ratified in 2015, so describing it again adds nothing. What was missing is the measurement beside
-  it — every operation carries what RFC 7644 says about it AND what the industry actually declares.
-
-
-  368 providers mention SCIM, the largest claim cohort here. 77 publish a spec containing a SCIM path.'
+aid: common-identity
+name: Identity and Users
+type: Common
+description: 'The common Identity and Users vocabulary, distilled from the harvested OpenAPI of 443 providers in
+  APIs.io: shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names
+  to each provider''s own.'
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
 - Application Programming Interface
 - API
 - Identity
-- SCIM
-- Provisioning
+- Authentication
+- Identity Federation
+- Access Control
+- Common Schema
 created: '2026-09-13'
-modified: '2026-09-13'
+modified: '2026-11-10'
 url: https://raw.githubusercontent.com/api-commons/identity/main/apis.yml
 specificationVersion: '0.20'
 apis:
-- aid: standard-identity:scim-2.0
-  name: SCIM 2.0
-  description: SCIM as the industry implements it, set beside what RFC 7643 and RFC 7644 say. The one
-    standard in this programme whose OpenAPI is the artifact of record — SCIM is ordinary REST with real
-    paths.
-  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-  humanURL: https://apicommons.org/standards/identity/
-  baseURL: https://example.com/scim/v2
+- aid: common-identity:identity
+  name: Common Identity and Users Interface
+  description: The Identity and Users interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/identity
   tags:
-  - API
   - Identity
-  - SCIM
-  - Provisioning
+  - Authentication
   properties:
   - type: OpenAPI
-    url: https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/openapi.yml
+    url: https://raw.githubusercontent.com/api-commons/identity/main/openapi.yml
   - type: Profile
-    url: https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/profile.yml
-  - type: Arazzo
-    url: https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/arazzo/core-conformance.yml
-  - type: MCP
-    url: https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/mcp/tools.json
-  - type: SpectralRules
-    url: https://raw.githubusercontent.com/api-commons/identity/main/standard/scim-2.0/spectral/s3-profile.yaml
+    url: https://raw.githubusercontent.com/api-commons/identity/main/profile.yml
   - type: Adopters
-    url: https://raw.githubusercontent.com/api-commons/identity/main/adopters/scim-2.0.yml
-  - type: GitHubRepository
-    url: https://github.com/api-commons/identity
-  - type: Documentation
-    url: https://apicommons.org/standards/identity/
-  - type: License
-    url: https://github.com/api-commons/identity/blob/main/LICENSE
-  contact:
-  - FN: API Evangelist
-    email: info@apievangelist.com
+    url: https://raw.githubusercontent.com/api-commons/identity/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: user
+    url: https://raw.githubusercontent.com/api-commons/identity/main/schema/user.json
+  - type: JSONSchema
+    name: group
+    url: https://raw.githubusercontent.com/api-commons/identity/main/schema/group.json
+  - type: JSONSchema
+    name: organization
+    url: https://raw.githubusercontent.com/api-commons/identity/main/schema/organization.json
+  - type: JSONSchema
+    name: role
+    url: https://raw.githubusercontent.com/api-commons/identity/main/schema/role.json
+  - type: JSONSchema
+    name: permission
+    url: https://raw.githubusercontent.com/api-commons/identity/main/schema/permission.json
+  - type: JSONSchema
+    name: invite
+    url: https://raw.githubusercontent.com/api-commons/identity/main/schema/invite.json
+  - type: JSONSchema
+    name: api_key
+    url: https://raw.githubusercontent.com/api-commons/identity/main/schema/api_key.json
 common:
-- type: Commons
-  url: https://apicommons.org/standards/identity/
-- type: Discussion
-  url: https://github.com/orgs/api-commons/discussions
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/identity/main/LICENSE
 maintainers:
 - FN: Kin Lane
-  email: info@apievangelist.com
+  email: kin@apievangelist.com

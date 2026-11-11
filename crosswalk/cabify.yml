@@ -1,0 +1,21 @@
+provider: cabify
+apis_io: https://apis.io/providers/cabify/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      email: email
+      name: name
+      status: disabled
+      last_name: surname
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cabify-logistics-openapi.yml#GET /v1/users
+    - openapi/_original/cabify-ride-hailing-openapi.yml#GET /api/v4/users
+    - openapi/_original/cabify-ride-hailing-openapi.yml#GET /api/v4/users/{id}
+    - openapi/_original/cabify-ride-hailing-openapi.yml#PATCH /api/v4/users
+    - openapi/_original/cabify-ride-hailing-openapi.yml#POST /api/v4/users

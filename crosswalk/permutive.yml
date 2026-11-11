@@ -1,0 +1,15 @@
+provider: permutive
+apis_io: https://apis.io/providers/permutive/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/permutive-identity-api-openapi-original.json#POST /users
+    - openapi/_original/permutive-identity-api-openapi.yml#POST /users
+    - openapi/_original/permutive-openapi.yml#POST /users

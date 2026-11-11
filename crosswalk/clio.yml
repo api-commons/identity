@@ -1,0 +1,38 @@
+provider: clio
+apis_io: https://apis.io/providers/clio/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      email: email
+      name: name
+      status: enabled
+      created_at: created_at
+      last_name: last_name
+      first_name: first_name
+      role_ids: roles
+      updated_at: updated_at
+      phone: phone_number
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/clio-openapi.json#GET /users.json
+    - openapi/_original/clio-openapi.json#GET /users/{id}.json
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      name: name
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/clio-openapi.json#DELETE /groups/{id}.json
+    - openapi/_original/clio-openapi.json#GET /groups.json
+    - openapi/_original/clio-openapi.json#GET /groups/{id}.json
+    - openapi/_original/clio-openapi.json#PATCH /groups/{id}.json
+    - openapi/_original/clio-openapi.json#POST /groups.json

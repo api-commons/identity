@@ -1,0 +1,57 @@
+provider: orange-business
+apis_io: https://apis.io/providers/orange-business/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      email: email
+      status: state
+      username: login
+      role_ids: roles
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/orange-business-live-objects-openapi.json#DELETE /api/v0/users/{userId}
+    - openapi/_original/orange-business-live-objects-openapi.json#GET /api/v0/users
+    - openapi/_original/orange-business-live-objects-openapi.json#GET /api/v0/users/{userId}
+    - openapi/_original/orange-business-live-objects-openapi.json#POST /api/v0/users
+    - openapi/_original/orange-business-live-objects-openapi.json#POST /api/v0/users/{userId}
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      description: description
+      created_at: created
+      updated_at: updated
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/orange-business-live-objects-openapi.json#DELETE /api/v1/deviceMgt/groups/{groupId}
+    - openapi/_original/orange-business-live-objects-openapi.json#GET /api/v1/deviceMgt/groups
+    - openapi/_original/orange-business-live-objects-openapi.json#GET /api/v1/deviceMgt/groups/{groupId}
+    - openapi/_original/orange-business-live-objects-openapi.json#POST /api/v1/deviceMgt/groups
+    - openapi/_original/orange-business-live-objects-openapi.json#PUT /api/v1/deviceMgt/groups/{groupId}
+  api_key:
+    path_segment:
+    - apikeys
+    properties:
+      id:
+      - id
+      - userId
+      name: label
+      scopes:
+      - roles
+      - scope
+      status: active
+      description: description
+      organization_id: tenantId
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/orange-business-live-objects-openapi.json#DELETE /api/v0/apiKeys/{apiKeyId}
+    - openapi/_original/orange-business-live-objects-openapi.json#GET /api/v0/apiKeys
+    - openapi/_original/orange-business-live-objects-openapi.json#GET /api/v0/apiKeys/{apiKeyId}
+    - openapi/_original/orange-business-live-objects-openapi.json#POST /api/v0/apiKeys
+    - openapi/_original/orange-business-live-objects-openapi.json#POST /api/v0/apiKeys/{apiKeyId}

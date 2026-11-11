@@ -1,0 +1,44 @@
+provider: dust-identity
+apis_io: https://apis.io/providers/dust-identity/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    - users
+    properties:
+      id: userId
+      created_at: createdAt
+      role_ids: role
+      updated_at: updatedAt
+      metadata: metadata
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/dust-identity-openapi.json#DELETE /api/v1/org/teams/members
+    - openapi/_original/dust-identity-openapi.json#GET /api/v1/org/teams/members
+    - openapi/_original/dust-identity-openapi.json#GET /api/v1/users/{user_id}
+    - openapi/_original/dust-identity-openapi.json#POST /api/v1/org/teams/members
+  group:
+    path_segment:
+    - teams
+    properties:
+      name: name
+      description: description
+      created_at: createdAt
+      updated_at: updatedAt
+      organization_id: orgId
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/dust-identity-openapi.json#DELETE /api/v1/org/teams/{team_id}
+    - openapi/_original/dust-identity-openapi.json#GET /api/v1/org/teams
+    - openapi/_original/dust-identity-openapi.json#GET /api/v1/teams
+    - openapi/_original/dust-identity-openapi.json#PATCH /api/v1/org/teams/{team_id}
+    - openapi/_original/dust-identity-openapi.json#POST /api/v1/org/teams
+  permission:
+    path_segment:
+    - permissions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/dust-identity-openapi.json#POST /api/v1/threads/permissions

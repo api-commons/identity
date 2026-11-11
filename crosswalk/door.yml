@@ -1,0 +1,20 @@
+provider: door
+apis_io: https://apis.io/providers/door/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      email: email
+      last_name: lastName
+      first_name: firstName
+      role_ids: role
+      phone: phone
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/door-partner-openapi.json#GET /v1/users
+    - openapi/_original/door-partner-openapi.json#GET /v1/users/{userUuid}
+    - openapi/_original/door-partner-openapi.json#POST /v1/users
+    - openapi/_original/door-partner-openapi.json#POST /v2/users

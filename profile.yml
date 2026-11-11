@@ -1,0 +1,1135 @@
+context: identity
+name: Identity and Users
+generated: '2026-11-10'
+version: 0.1.0-draft.20261110
+status: draft
+cohort:
+  tags:
+  - Identity
+  - Authentication
+  - Identity Federation
+  - Access Control
+  - IAM
+  - Identity and Access Management
+  - SSO
+  - Single Sign-On
+  - User Management
+  - Authorization
+  - CIAM
+  providers_with_harvested_openapi: 443
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded:
+  user:
+    ccp-games: /fleets/{id}/members are game-fleet members
+    greenhelix-net: /identity/orgs/{id}/members are agent identities
+  organization:
+    butterflymx: /tenants are apartment residents
+  permission:
+    epic-games: /entitlements are owned game items
+duplicates:
+  conductorone:
+  - c1
+  oracle-health:
+  - cerner
+  cvent:
+  - cvent-hospitality-cloud
+  - cvent-registration
+  ccp-games:
+  - eve-online
+  dynamic-labs:
+  - dynamic-xyz
+  kinde:
+  - kinde-so
+shared_specs: {}
+concepts:
+  user:
+    segments_seen:
+      users: 134
+      members: 54
+      user: 45
+      identities: 14
+      people: 11
+    providers_exposing: 185
+    providers_with_readable_schema: 167
+    operations:
+    - operation: GET collection
+      providers: 156
+      share: 0.843
+      tier: core
+    - operation: GET item
+      providers: 138
+      share: 0.746
+      tier: core
+    - operation: POST collection
+      providers: 120
+      share: 0.649
+      tier: core
+    - operation: DELETE item
+      providers: 98
+      share: 0.53
+      tier: core
+    - operation: UPDATE item
+      providers: 98
+      share: 0.53
+      tier: core
+    - operation: UPDATE collection
+      providers: 23
+      share: 0.124
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 20
+      share: 0.108
+      tier: long-tail
+    - operation: POST item
+      providers: 19
+      share: 0.103
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 136
+      share: 0.814
+      type: string
+      spellings:
+      - id
+      - userId
+      - user_id
+      - externalId
+      - external_id
+      - uuid
+      - _id
+      - $id
+    - name: email
+      tier: core
+      providers: 113
+      share: 0.677
+      type: string
+      spellings:
+      - email
+      - emails
+      - mail
+      - userPrincipalName
+      - emailAddress
+      - primaryEmail
+      - email_address
+      - email_addresses
+    - name: name
+      tier: extended
+      providers: 82
+      share: 0.491
+      type: string
+      spellings:
+      - name
+      - displayName
+      - title
+      - display_name
+      - Name
+      - label
+    - name: status
+      tier: extended
+      providers: 75
+      share: 0.449
+      type: boolean
+      spellings:
+      - status
+      - active
+      - state
+      - enabled
+      - disabled
+      - isActive
+      - is_active
+      - blocked
+    - name: created_at
+      tier: extended
+      providers: 67
+      share: 0.401
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created
+      - createdDate
+      - createdOn
+      - create_time
+      - createdTimestamp
+      - date_created
+    - name: last_name
+      tier: extended
+      providers: 58
+      share: 0.347
+      type: string
+      spellings:
+      - lastName
+      - last_name
+      - surname
+      - family_name
+      - lastname
+      - familyName
+    - name: username
+      tier: extended
+      providers: 58
+      share: 0.347
+      type: string
+      spellings:
+      - username
+      - userName
+      - nickname
+      - login
+      - user_name
+      - Username
+    - name: first_name
+      tier: extended
+      providers: 57
+      share: 0.341
+      type: string
+      spellings:
+      - firstName
+      - first_name
+      - givenName
+      - given_name
+      - firstname
+    - name: role_ids
+      tier: extended
+      providers: 49
+      share: 0.293
+      type: array
+      spellings:
+      - roles
+      - role
+      - roleIds
+      - roleId
+      - role_id
+      - role_ids
+    - name: updated_at
+      tier: extended
+      providers: 45
+      share: 0.269
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - updated
+      - modifiedDate
+      - update_time
+      - modifiedAt
+      - lastModified
+      - $updatedAt
+    - name: metadata
+      tier: extended
+      providers: 42
+      share: 0.251
+      type: object
+      spellings:
+      - metadata
+      - attributes
+      - properties
+      - user_metadata
+      - customAttributes
+      - app_metadata
+      - public_metadata
+      - private_metadata
+    - name: phone
+      tier: extended
+      providers: 39
+      share: 0.234
+      type: string
+      spellings:
+      - phone
+      - phoneNumbers
+      - phone_number
+      - phoneNumber
+      - mobilePhone
+      - phone_numbers
+      - mobile
+    long_tail_count: 1314
+    long_tail_sample:
+    - locale
+    - password
+    - organization_id
+    - group_ids
+    - avatar_url
+    - type
+    - last_login_at
+    - email_verified
+    - total_results
+    - items_per_page
+    - resources
+    - start_index
+    - job_title
+    - operations
+    - time_zone
+    - user_type
+    - description
+    - next_page_token
+    - profile
+    - company_name
+    - created_by
+    - department
+    - addresses
+    - country
+    - credentials
+    - full_name
+    - relationships
+    - account_enabled
+    - city
+    - mail_nickname
+    - password_profile
+    - permissions
+    - photos
+    - usage_location
+    - assigned_licenses
+    - birthday
+    - business_phones
+    - created_date_time
+    - employee_id
+    - identifiers
+  group:
+    segments_seen:
+      groups: 67
+      teams: 15
+      group: 12
+      team: 6
+      usergroups: 3
+      user-groups: 3
+      user_groups: 2
+    providers_exposing: 83
+    providers_with_readable_schema: 75
+    operations:
+    - operation: GET collection
+      providers: 80
+      share: 0.964
+      tier: core
+    - operation: GET item
+      providers: 66
+      share: 0.795
+      tier: core
+    - operation: POST collection
+      providers: 61
+      share: 0.735
+      tier: core
+    - operation: DELETE item
+      providers: 58
+      share: 0.699
+      tier: core
+    - operation: UPDATE item
+      providers: 54
+      share: 0.651
+      tier: core
+    - operation: UPDATE collection
+      providers: 7
+      share: 0.084
+      tier: long-tail
+    - operation: POST item
+      providers: 5
+      share: 0.06
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 4
+      share: 0.048
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 59
+      share: 0.787
+      type: string
+      spellings:
+      - id
+      - externalId
+      - userId
+      - group_id
+      - uuid
+      - $id
+      - external_id
+      - groupId
+    - name: name
+      tier: core
+      providers: 58
+      share: 0.773
+      type: string
+      spellings:
+      - name
+      - displayName
+      - title
+      - display_name
+      - label
+      - Name
+    - name: description
+      tier: extended
+      providers: 37
+      share: 0.493
+      type: string
+      spellings:
+      - description
+      - details
+      - Description
+    - name: member_ids
+      tier: extended
+      providers: 28
+      share: 0.373
+      type: array
+      spellings:
+      - members
+      - users
+      - members_count
+      - memberIds
+      - memberCount
+      - member_count
+      - Members
+    - name: created_at
+      tier: extended
+      providers: 24
+      share: 0.32
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created
+      - $createdAt
+      - create_time
+      - createdDate
+      - date_created
+    - name: updated_at
+      tier: extended
+      providers: 22
+      share: 0.293
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - $updatedAt
+      - update_time
+      - modifiedAt
+      - modifiedDate
+      - updated
+    - name: organization_id
+      tier: extended
+      providers: 15
+      share: 0.2
+      type: string
+      spellings:
+      - orgId
+      - organizationId
+      - tenant_id
+      - organization_id
+      - tenantId
+      - accountId
+      - companyId
+    long_tail_count: 593
+    long_tail_sample:
+    - items_per_page
+    - start_index
+    - total_results
+    - resources
+    - type
+    - operations
+    - metadata
+    - status
+    - group_types
+    - mail_enabled
+    - mail_nickname
+    - roles
+    - security_enabled
+    - visibility
+    - created_date_time
+    - email
+    - mail
+    - membership_rule
+    - membership_rule_processing_state
+    - on_premises_sync_enabled
+    - path
+    - renewed_date_time
+    - team_id
+    - expiration_date_time
+    - is_assignable_to_role
+    - owners
+    - parent_id
+    - preferred_language
+    - proxy_addresses
+    - tags
+    - assigned_labels
+    - classification
+    - deleted_date_time
+    - next_page_token
+    - on_premises_domain_name
+    - on_premises_last_sync_date_time
+    - photos
+    - preferred_data_location
+    - secrets
+    - security_identifier
+  organization:
+    segments_seen:
+      organizations: 31
+      organization: 12
+      tenants: 10
+      workspaces: 9
+      org: 8
+      tenant: 6
+      orgs: 5
+      workspace: 5
+      organisations: 2
+    providers_exposing: 59
+    providers_with_readable_schema: 56
+    operations:
+    - operation: GET collection
+      providers: 50
+      share: 0.847
+      tier: core
+    - operation: POST collection
+      providers: 41
+      share: 0.695
+      tier: core
+    - operation: GET item
+      providers: 38
+      share: 0.644
+      tier: core
+    - operation: UPDATE item
+      providers: 32
+      share: 0.542
+      tier: core
+    - operation: DELETE item
+      providers: 29
+      share: 0.492
+      tier: extended
+    - operation: UPDATE collection
+      providers: 11
+      share: 0.186
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 3
+      share: 0.051
+      tier: long-tail
+    - operation: POST item
+      providers: 3
+      share: 0.051
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 46
+      share: 0.821
+      type: string
+      spellings:
+      - name
+      - displayName
+      - display_name
+      - label
+      - title
+    - name: id
+      tier: core
+      providers: 40
+      share: 0.714
+      type: string
+      spellings:
+      - id
+      - external_id
+      - externalId
+      - uuid
+      - $id
+      - sub
+      - '@id'
+      - objectId
+    - name: created_at
+      tier: core
+      providers: 29
+      share: 0.518
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created
+      - create_time
+      - createdDate
+      - $createdAt
+      - createdOn
+      - createTime
+    - name: organization_id
+      tier: extended
+      providers: 18
+      share: 0.321
+      type: string
+      spellings:
+      - tenantId
+      - org_id
+      - organization_id
+      - orgId
+      - organizationId
+      - workspaceId
+      - tenant_id
+      - workspace_id
+    - name: status
+      tier: extended
+      providers: 17
+      share: 0.304
+      type: string
+      spellings:
+      - status
+      - state
+      - enabled
+      - disabled
+      - active
+    - name: description
+      tier: extended
+      providers: 14
+      share: 0.25
+      type: string
+      spellings:
+      - description
+      - details
+    - name: updated_at
+      tier: extended
+      providers: 14
+      share: 0.25
+      type: string
+      spellings:
+      - updated_at
+      - update_time
+      - updatedAt
+      - modifiedDate
+      - $updatedAt
+    - name: metadata
+      tier: extended
+      providers: 13
+      share: 0.232
+      type: object
+      spellings:
+      - metadata
+      - attributes
+      - customAttributes
+      - public_metadata
+      - private_metadata
+    long_tail_count: 533
+    long_tail_sample:
+    - domain
+    - slug
+    - type
+    - created_by
+    - city
+    - country
+    - logo_url
+    - address
+    - billing_email
+    - branding
+    - parent
+    - phone
+    - role
+    - version
+    - addresses
+    - color
+    - company_name
+    - created_time
+    - email
+    - next_page_token
+    - postal_code
+    - projects
+    - settings
+    - street
+    - visibility
+    - website
+    - added_by_tenant_id
+    - added_date_time
+    - alias
+    - allowed_domains
+    - assigned_plans
+    - business_phones
+    - certificate_based_auth_configuration
+    - config
+    - contact_persons
+    - cost_centers
+    - country_letter_code
+    - created_date_time
+    - custom_defined_fields
+    - default_roles
+  role:
+    segments_seen:
+      roles: 59
+      role: 11
+    providers_exposing: 63
+    providers_with_readable_schema: 58
+    operations:
+    - operation: GET collection
+      providers: 54
+      share: 0.857
+      tier: core
+    - operation: POST collection
+      providers: 40
+      share: 0.635
+      tier: core
+    - operation: GET item
+      providers: 38
+      share: 0.603
+      tier: core
+    - operation: DELETE item
+      providers: 35
+      share: 0.556
+      tier: core
+    - operation: UPDATE item
+      providers: 32
+      share: 0.508
+      tier: core
+    - operation: UPDATE collection
+      providers: 17
+      share: 0.27
+      tier: extended
+    - operation: DELETE collection
+      providers: 9
+      share: 0.143
+      tier: long-tail
+    - operation: POST item
+      providers: 6
+      share: 0.095
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 44
+      share: 0.759
+      type: string
+      spellings:
+      - name
+      - displayName
+      - display_name
+      - title
+      - label
+    - name: id
+      tier: core
+      providers: 43
+      share: 0.741
+      type: string
+      spellings:
+      - id
+      - externalId
+      - userId
+      - role_id
+      - uuid
+      - _id
+      - user_id
+      - Guid
+    - name: description
+      tier: core
+      providers: 35
+      share: 0.603
+      type: string
+      spellings:
+      - description
+      - notes
+      - details
+    - name: permission_ids
+      tier: extended
+      providers: 19
+      share: 0.328
+      type: array
+      spellings:
+      - permissions
+      - scopes
+    - name: created_at
+      tier: extended
+      providers: 17
+      share: 0.293
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - created
+      - date_created
+      - create_time
+      - created-at
+      - creationDate
+    - name: updated_at
+      tier: extended
+      providers: 13
+      share: 0.224
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - modifiedAt
+      - update_time
+      - updated-at
+      - updated
+      - modified
+    long_tail_count: 342
+    long_tail_sample:
+    - type
+    - organization_id
+    - status
+    - metadata
+    - key
+    - is_default
+    - next_page_token
+    - role_ids
+    - default_role
+    - entitlements
+    - members
+    - resource
+    - role_name
+    - version
+    - application
+    - assignable_role_name
+    - body
+    - client
+    - client_role
+    - code
+    - composite
+    - composites
+    - container_id
+    - date_updated
+    - deleted_at
+    - global_role_assignments
+    - group
+    - groups
+    - is_editable
+    - local_role_assignments
+    - origin_id
+    - origin_system
+    - owner
+    - project_id
+    - target_system_name
+    - total_size
+    - user
+    - user_count
+    - username
+    - users
+  permission:
+    segments_seen:
+      permissions: 29
+      scopes: 20
+      entitlements: 6
+      permission: 4
+    providers_exposing: 46
+    providers_with_readable_schema: 40
+    operations:
+    - operation: GET collection
+      providers: 37
+      share: 0.804
+      tier: core
+    - operation: POST collection
+      providers: 27
+      share: 0.587
+      tier: core
+    - operation: DELETE item
+      providers: 21
+      share: 0.457
+      tier: extended
+    - operation: GET item
+      providers: 21
+      share: 0.457
+      tier: extended
+    - operation: UPDATE item
+      providers: 16
+      share: 0.348
+      tier: extended
+    - operation: UPDATE collection
+      providers: 14
+      share: 0.304
+      tier: extended
+    - operation: DELETE collection
+      providers: 7
+      share: 0.152
+      tier: long-tail
+    - operation: POST item
+      providers: 7
+      share: 0.152
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 24
+      share: 0.6
+      type: string
+      spellings:
+      - id
+      - permissionId
+      - object_id
+      - permission_id
+    - name: name
+      tier: core
+      providers: 24
+      share: 0.6
+      type: string
+      spellings:
+      - name
+      - displayName
+      - display_name
+    - name: description
+      tier: core
+      providers: 21
+      share: 0.525
+      type: string
+      spellings:
+      - description
+    - name: created_at
+      tier: extended
+      providers: 12
+      share: 0.3
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - createdDate
+      - createdOn
+      - creationDate
+      - created
+      - date_created
+    - name: updated_at
+      tier: extended
+      providers: 9
+      share: 0.225
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - updatedDate
+      - modified
+    - name: resource
+      tier: extended
+      providers: 8
+      share: 0.2
+      type: string
+      spellings:
+      - resource
+      - resource_server_identifier
+    long_tail_count: 358
+    long_tail_sample:
+    - key
+    - metadata
+    - organization_id
+    - type
+    - action
+    - claims
+    - system
+    - granted_to
+    - icon_url
+    - is_root_scope
+    - origin_id
+    - origin_system
+    - permission_name
+    - purpose
+    - resource_id
+    - service
+    - service_id
+    - slug
+    - status
+    - access_review_id
+    - account_sid
+    - activation_code
+    - addons
+    - agent_id
+    - alias
+    - allow_portfolios
+    - allow_stages
+    - allowed_scopes
+    - app_display_name
+    - app_entitlement_owner_ids
+    - app_entitlement_view
+    - app_ids
+    - app_label
+    - app_label_verbose
+    - app_resource_id
+    - app_resource_type_id
+    - app_user_ids
+    - application
+    - assigners
+    - associated_environments
+  invite:
+    segments_seen: {}
+    providers_exposing: 0
+    providers_with_readable_schema: 0
+    operations: []
+    properties: []
+    long_tail_count: 0
+    long_tail_sample: []
+  api_key:
+    segments_seen:
+      tokens: 10
+      api-keys: 8
+      apikeys: 3
+      keys: 3
+      api_keys: 3
+      personal-access-tokens: 1
+    providers_exposing: 25
+    providers_with_readable_schema: 21
+    operations:
+    - operation: GET collection
+      providers: 21
+      share: 0.84
+      tier: core
+    - operation: POST collection
+      providers: 20
+      share: 0.8
+      tier: core
+    - operation: DELETE item
+      providers: 15
+      share: 0.6
+      tier: core
+    - operation: GET item
+      providers: 9
+      share: 0.36
+      tier: extended
+    - operation: DELETE collection
+      providers: 6
+      share: 0.24
+      tier: extended
+    - operation: UPDATE item
+      providers: 6
+      share: 0.24
+      tier: extended
+    - operation: UPDATE collection
+      providers: 4
+      share: 0.16
+      tier: long-tail
+    - operation: POST item
+      providers: 2
+      share: 0.08
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 19
+      share: 0.905
+      type: string
+      spellings:
+      - id
+      - userId
+      - $id
+      - user_id
+    - name: created_at
+      tier: core
+      providers: 15
+      share: 0.714
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - $createdAt
+      - createdOn
+      - created
+    - name: key
+      tier: core
+      providers: 15
+      share: 0.714
+      type: string
+      spellings:
+      - secret
+      - token
+      - apiKey
+      - key
+      - api_key
+      - prefix
+    - name: name
+      tier: core
+      providers: 15
+      share: 0.714
+      type: string
+      spellings:
+      - name
+      - label
+    - name: scopes
+      tier: extended
+      providers: 9
+      share: 0.429
+      type: array
+      spellings:
+      - scopes
+      - permissions
+      - roles
+      - scope
+    - name: status
+      tier: extended
+      providers: 8
+      share: 0.381
+      type: string
+      spellings:
+      - status
+      - active
+      - enabled
+    - name: description
+      tier: extended
+      providers: 7
+      share: 0.333
+      type: string
+      spellings:
+      - description
+      - note
+      - notes
+    - name: expires_at
+      tier: extended
+      providers: 7
+      share: 0.333
+      type: string
+      spellings:
+      - expiresAt
+      - expires_at
+      - expiresOn
+      - expiration
+    - name: updated_at
+      tier: extended
+      providers: 7
+      share: 0.333
+      type: string
+      spellings:
+      - updatedAt
+      - updated_at
+      - $updatedAt
+    - name: created_by
+      tier: extended
+      providers: 6
+      share: 0.286
+      type: string
+      spellings:
+      - createdBy
+      - created_by
+    - name: organization_id
+      tier: extended
+      providers: 5
+      share: 0.238
+      type: string
+      spellings:
+      - orgId
+      - tenantId
+      - organization_id
+    long_tail_count: 143
+    long_tail_sample:
+    - last_used_at
+    - type
+    - app_id
+    - code
+    - expired
+    - keys
+    - owner
+    - revoked
+    - accessed_at
+    - activity_timestamp
+    - allowed_ips
+    - api_id
+    - assigned_to
+    - authorization_details
+    - category_id
+    - chat_logs_visible
+    - checksum
+    - cimd_url
+    - claims
+    - client
+    - client_cert
+    - client_id
+    - config_id
+    - consent_id
+    - content
+    - country_code
+    - created_dtm
+    - creation_ts
+    - current_name
+    - debug_mode_end_ts
+    - deleted
+    - deleted_at
+    - editors
+    - email
+    - embedded
+    - empty
+    - enterprise_id
+    - expire
+    - expiring_dtm
+    - first

@@ -1,0 +1,37 @@
+provider: jupyterhub
+apis_io: https://apis.io/providers/jupyterhub/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#DELETE /groups/{name}/users
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#DELETE /users/{name}
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#GET /users
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#GET /users/{name}
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#PATCH /users/{name}
+  group:
+    path_segment:
+    - groups
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#DELETE /groups/{name}
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#GET /groups
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#GET /groups/{name}
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#POST /groups
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#POST /groups/{name}
+  api_key:
+    path_segment:
+    - tokens
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#DELETE /users/{name}/tokens/{token_id}
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#GET /users/{name}/tokens
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#GET /users/{name}/tokens/{token_id}
+    - openapi/_original/jupyterhub-rest-api-openapi.yml#POST /users/{name}/tokens

@@ -1,0 +1,17 @@
+provider: opal
+apis_io: https://apis.io/providers/opal/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/opal-v2-openapi.json#POST /privacy/v2/groups/{group_id}/members
+    - openapi/_original/opal-v2-openapi.yml#POST /privacy/v2/groups/{group_id}/members
+    - openapi/_original/opal-v3-openapi.json#DELETE /user_groups/v3/user_groups/all/relationships/members
+    - openapi/_original/opal-v3-openapi.yml#DELETE /user_groups/v3/user_groups/all/relationships/members

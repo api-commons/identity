@@ -1,0 +1,29 @@
+provider: university-of-helsinki
+apis_io: https://apis.io/providers/university-of-helsinki/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/university-of-helsinki-contact-search-api-openapi.json#GET /company_organizations/{id}/members
+    - openapi/_original/university-of-helsinki-contact-search-api-openapi.json#GET /hr_organizations/{id}/members
+    - openapi/_original/university-of-helsinki-contact-search-api-openapi.json#GET /steering_groups/{id}/members
+  organization:
+    path_segment:
+    - organizations
+    properties:
+      name: name
+      id:
+      - '@id'
+      - id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/university-of-helsinki-contact-search-api-openapi.json#GET /organizations
+    - openapi/_original/university-of-helsinki-contact-search-api-openapi.json#GET /organizations/{id}
+    - openapi/_original/university-of-helsinki-finbif-laji-openapi.json#GET /organizations
+    - openapi/_original/university-of-helsinki-finbif-laji-openapi.json#GET /organizations/{id}
+    - openapi/_original/university-of-helsinki-finbif-laji-openapi.yml#GET /organizations

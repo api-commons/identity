@@ -1,0 +1,68 @@
+provider: zoho-crm
+apis_io: https://apis.io/providers/zoho-crm/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      email: email
+      status:
+      - status
+      - state
+      last_name: last_name
+      first_name: first_name
+      role_ids: role
+      phone:
+      - phone
+      - mobile
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/zoho-crm-portal-users-openapi.json#DELETE /settings/portals/{portal}/user_type/{userType}/users
+    - openapi/_original/zoho-crm-portal-users-openapi.json#GET /settings/portals/{portal}/user_type/{userType}/users
+    - openapi/_original/zoho-crm-territory-users-openapi.json#DELETE /settings/territories/{territory}/users
+    - openapi/_original/zoho-crm-territory-users-openapi.json#DELETE /settings/territories/{territory}/users/{user}
+    - openapi/_original/zoho-crm-territory-users-openapi.json#GET /settings/territories/{territory}/users
+  group:
+    path_segment:
+    - user_groups
+    properties:
+      name: name
+      description:
+      - details
+      - description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/zoho-crm-user-groups-openapi.json#DELETE /settings/user_groups/{group}
+    - openapi/_original/zoho-crm-user-groups-openapi.json#GET /settings/user_groups
+    - openapi/_original/zoho-crm-user-groups-openapi.json#GET /settings/user_groups/{group}
+    - openapi/_original/zoho-crm-user-groups-openapi.json#POST /settings/user_groups
+    - openapi/_original/zoho-crm-user-groups-openapi.json#PUT /settings/user_groups/{group}
+  organization:
+    path_segment:
+    - org
+    properties:
+      id: id
+      status: state
+      description: description
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/zoho-crm-org-openapi.json#GET /org
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+      description:
+      - details
+      - description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/zoho-crm-contact-roles-openapi.json#DELETE /contacts/roles
+    - openapi/_original/zoho-crm-contact-roles-openapi.json#DELETE /contacts/roles/{role}
+    - openapi/_original/zoho-crm-contact-roles-openapi.json#GET /contacts/roles
+    - openapi/_original/zoho-crm-contact-roles-openapi.json#GET /contacts/roles/{role}
+    - openapi/_original/zoho-crm-contact-roles-openapi.json#POST /contacts/roles

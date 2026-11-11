@@ -1,0 +1,65 @@
+provider: deutsche-telekom
+apis_io: https://apis.io/providers/deutsche-telekom/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties:
+      id: id
+      email: email
+      status: enabled
+      created_at: createdTimestamp
+      last_name: lastName
+      username: username
+      first_name: firstName
+      metadata: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/controlplane-identity-openapi.yml#DELETE /{realm}/attack-detection/brute-force/users
+    - openapi/_original/controlplane-identity-openapi.yml#DELETE /{realm}/attack-detection/brute-force/users/{userId}
+    - openapi/_original/controlplane-identity-openapi.yml#DELETE /{realm}/users/{id}
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/attack-detection/brute-force/users/{userId}
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/clients/{id}/roles/{role-name}/users
+  group:
+    path_segment:
+    - groups
+    - teams
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/controlplane-identity-openapi.yml#DELETE /{realm}/groups/{id}
+    - openapi/_original/controlplane-identity-openapi.yml#DELETE /{realm}/users/{id}/groups/{groupId}
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/clients/{id}/roles/{role-name}/groups
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/groups
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/groups/{id}
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/controlplane-identity-openapi.yml#DELETE /{realm}/clients/{id}/roles/{role-name}
+    - openapi/_original/controlplane-identity-openapi.yml#DELETE /{realm}/roles/{role-name}
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/clients/{id}/roles
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/clients/{id}/roles/{role-name}
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/roles
+  permission:
+    path_segment:
+    - permissions
+    properties:
+      resource: resource
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/clients/{id}/management/permissions
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/clients/{id}/roles/{role-name}/management/permissions
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/groups/{id}/management/permissions
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/identity-provider/instances/{alias}/management/permissions
+    - openapi/_original/controlplane-identity-openapi.yml#GET /{realm}/roles-by-id/{role-id}/management/permissions

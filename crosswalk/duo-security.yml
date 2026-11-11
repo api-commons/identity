@@ -1,0 +1,36 @@
+provider: duo-security
+apis_io: https://apis.io/providers/duo-security/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/duo-admin-api-openapi.yml#DELETE /admin/v1/users/{user_id}
+    - openapi/_original/duo-admin-api-openapi.yml#GET /admin/v1/users
+    - openapi/_original/duo-admin-api-openapi.yml#GET /admin/v1/users/{user_id}
+    - openapi/_original/duo-admin-api-openapi.yml#GET /admin/v2/groups/{group_id}/users
+    - openapi/_original/duo-admin-api-openapi.yml#POST /admin/v1/users
+  group:
+    path_segment:
+    - groups
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/duo-admin-api-openapi.yml#DELETE /admin/v1/users/{user_id}/groups/{group_id}
+    - openapi/_original/duo-admin-api-openapi.yml#GET /admin/v1/groups
+    - openapi/_original/duo-admin-api-openapi.yml#GET /admin/v1/users/{user_id}/groups
+    - openapi/_original/duo-admin-api-openapi.yml#GET /admin/v2/groups/{group_id}
+    - openapi/_original/duo-admin-api-openapi.yml#POST /admin/v1/groups
+  api_key:
+    path_segment:
+    - tokens
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/duo-admin-api-openapi.yml#DELETE /admin/v1/users/{user_id}/tokens/{token_id}
+    - openapi/_original/duo-admin-api-openapi.yml#GET /admin/v1/users/{user_id}/tokens
+    - openapi/_original/duo-admin-api-openapi.yml#POST /admin/v1/users/{user_id}/tokens

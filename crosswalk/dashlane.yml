@@ -1,0 +1,12 @@
+provider: dashlane
+apis_io: https://apis.io/providers/dashlane/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/dashlane-public-api-openapi-original.json#POST /teams/Members

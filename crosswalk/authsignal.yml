@@ -1,0 +1,15 @@
+provider: authsignal
+apis_io: https://apis.io/providers/authsignal/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/authsignal-openapi.yml#DELETE /users/{userId}
+    - openapi/_original/authsignal-openapi.yml#GET /users
+    - openapi/_original/authsignal-openapi.yml#GET /users/{userId}
+    - openapi/_original/authsignal-openapi.yml#PATCH /users/{userId}

@@ -1,0 +1,96 @@
+provider: appwrite
+apis_io: https://apis.io/providers/appwrite/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - identities
+    - user
+    properties:
+      id:
+      - userId
+      - $id
+      email: email
+      name: name
+      status: status
+      created_at:
+      - $createdAt
+      - createdAt
+      updated_at: $updatedAt
+      phone: phone
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/appwrite-open-api3-latest.json#DELETE /account/identities/{identityId}
+    - openapi/_original/appwrite-open-api3-latest.json#DELETE /users/{userId}
+    - openapi/_original/appwrite-open-api3-latest.json#GET /account/identities
+    - openapi/_original/appwrite-open-api3-latest.json#GET /users
+    - openapi/_original/appwrite-open-api3-latest.json#GET /users/{userId}
+  group:
+    path_segment:
+    - teams
+    - team
+    properties:
+      id:
+      - $id
+      - userId
+      name: name
+      description: description
+      created_at: $createdAt
+      updated_at: $updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/appwrite-open-api3-latest.json#DELETE /teams/{teamId}
+    - openapi/_original/appwrite-open-api3-latest.json#GET /teams
+    - openapi/_original/appwrite-open-api3-latest.json#GET /teams/{teamId}
+    - openapi/_original/appwrite-open-api3-latest.json#PATCH /apps/{appId}/team
+    - openapi/_original/appwrite-open-api3-latest.json#PATCH /domains/{domainId}/team
+  organization:
+    path_segment:
+    - organization
+    - organizations
+    properties:
+      name: name
+      id: $id
+      created_at: $createdAt
+      organization_id: organizationId
+      status: status
+      updated_at: $updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/appwrite-open-api3-latest.json#DELETE /organization
+    - openapi/_original/appwrite-open-api3-latest.json#DELETE /organizations/{organizationId}
+    - openapi/_original/appwrite-open-api3-latest.json#GET /console/scopes/organization
+    - openapi/_original/appwrite-open-api3-latest.json#GET /oauth2/{project_id}/organizations
+    - openapi/_original/appwrite-open-api3-latest.json#GET /organization
+  role:
+    path_segment:
+    - roles
+    properties:
+      permission_ids: scopes
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/appwrite-open-api3-latest.json#GET /organizations/{organizationId}/roles
+  api_key:
+    path_segment:
+    - keys
+    - tokens
+    properties:
+      id:
+      - $id
+      - userId
+      created_at: $createdAt
+      key:
+      - secret
+      - apiKey
+      name: name
+      scopes: scopes
+      updated_at: $updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/appwrite-open-api3-latest.json#DELETE /account/consents/{consentId}/tokens/{tokenId}
+    - openapi/_original/appwrite-open-api3-latest.json#DELETE /account/keys/{keyId}
+    - openapi/_original/appwrite-open-api3-latest.json#GET /account/consents/{consentId}/tokens
+    - openapi/_original/appwrite-open-api3-latest.json#GET /account/consents/{consentId}/tokens/{tokenId}
+    - openapi/_original/appwrite-open-api3-latest.json#GET /account/keys

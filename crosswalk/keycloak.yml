@@ -1,0 +1,52 @@
+provider: keycloak
+apis_io: https://apis.io/providers/keycloak/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties:
+      id: id
+      email: email
+      status: enabled
+      created_at: createdTimestamp
+      last_name: lastName
+      username: username
+      first_name: firstName
+      metadata: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#DELETE /{realm}/users/{userId}
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#GET /{realm}/groups/{groupId}/members
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#GET /{realm}/users
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#GET /{realm}/users/{userId}
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#POST /{realm}/users
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#DELETE /{realm}/groups/{groupId}
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#DELETE /{realm}/users/{userId}/groups/{groupId}
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#GET /{realm}/groups
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#GET /{realm}/groups/{groupId}
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#GET /{realm}/users/{userId}/groups
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#DELETE /{realm}/roles/{roleName}
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#GET /{realm}/roles
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#GET /{realm}/roles/{roleName}
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#POST /{realm}/roles
+    - openapi/_original/keycloak-admin-rest-api-openapi.yml#PUT /{realm}/roles/{roleName}

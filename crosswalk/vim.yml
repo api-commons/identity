@@ -1,0 +1,19 @@
+provider: vim
+apis_io: https://apis.io/providers/vim/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vim-rest-api-openapi-original.json#GET /applications/{applicationId}/organizations/{organizationId}/users
+  organization:
+    path_segment:
+    - organizations
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vim-rest-api-openapi-original.json#GET /applications/{applicationId}/organizations

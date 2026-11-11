@@ -1,0 +1,46 @@
+provider: lumos
+apis_io: https://apis.io/providers/lumos/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      email: email
+      status: status
+      last_name: family_name
+      first_name: given_name
+      metadata: custom_attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lumos-openapi.json#GET /groups/{group_id}/users
+    - openapi/_original/lumos-openapi.json#GET /users
+    - openapi/_original/lumos-openapi.json#GET /users/{user_id}
+    - openapi/_original/lumos-openapi.yml#GET /groups/{group_id}/users
+    - openapi/_original/lumos-openapi.yml#GET /users
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      name: name
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lumos-openapi.json#GET /groups
+    - openapi/_original/lumos-openapi.json#GET /groups/{group_id}
+    - openapi/_original/lumos-openapi.yml#GET /groups
+    - openapi/_original/lumos-openapi.yml#GET /groups/{group_id}
+  role:
+    path_segment:
+    - roles
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lumos-openapi.json#DELETE /users/{user_id}/roles/{role_name}
+    - openapi/_original/lumos-openapi.json#GET /users/{user_id}/roles
+    - openapi/_original/lumos-openapi.json#POST /users/{user_id}/roles/{role_name}
+    - openapi/_original/lumos-openapi.yml#DELETE /users/{user_id}/roles/{role_name}
+    - openapi/_original/lumos-openapi.yml#GET /users/{user_id}/roles

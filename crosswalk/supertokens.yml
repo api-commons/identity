@@ -1,0 +1,36 @@
+provider: supertokens
+apis_io: https://apis.io/providers/supertokens/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/supertokens-core-driver-interface-openapi.yml#GET /users
+  organization:
+    path_segment:
+    - tenant
+    properties:
+      organization_id: tenantId
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/supertokens-core-driver-interface-openapi.yml#GET /recipe/multitenancy/tenant
+    - openapi/_original/supertokens-core-driver-interface-openapi.yml#POST /recipe/multitenancy/tenant
+  role:
+    path_segment:
+    - roles
+    properties:
+      id: userId
+      permission_ids: permissions
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/supertokens-core-driver-interface-openapi.yml#DELETE /recipe/user/roles
+    - openapi/_original/supertokens-core-driver-interface-openapi.yml#GET /recipe/roles
+    - openapi/_original/supertokens-core-driver-interface-openapi.yml#GET /recipe/user/roles
+    - openapi/_original/supertokens-core-driver-interface-openapi.yml#PUT /recipe/roles
+    - openapi/_original/supertokens-core-driver-interface-openapi.yml#PUT /recipe/user/roles

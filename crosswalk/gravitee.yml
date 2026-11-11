@@ -1,0 +1,128 @@
+provider: gravitee
+apis_io: https://apis.io/providers/gravitee/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    - identities
+    - users
+    - user
+    properties:
+      id:
+      - externalId
+      - id
+      email:
+      - email
+      - emails
+      name:
+      - displayName
+      - title
+      - name
+      status:
+      - disabled
+      - enabled
+      created_at: createdAt
+      last_name: lastName
+      username: username
+      first_name: firstName
+      role_ids:
+      - role
+      - roles
+      updated_at: updatedAt
+      metadata: metadata
+      phone:
+      - phoneNumber
+      - phoneNumbers
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/gravitee-am-openapi.yml#DELETE /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/applications/{application}/members/{member}
+    - openapi/_original/gravitee-am-openapi.yml#DELETE /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/groups/{group}/members/{member}
+    - openapi/_original/gravitee-am-openapi.yml#DELETE /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/identities/{identity}
+    - openapi/_original/gravitee-am-openapi.yml#DELETE /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/members/{member}
+    - openapi/_original/gravitee-am-openapi.yml#DELETE /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/protected-resources/{protected-resource}/members/{member}
+  group:
+    path_segment:
+    - groups
+    properties:
+      id:
+      - id
+      - externalId
+      name:
+      - name
+      - displayName
+      - title
+      description: description
+      member_ids: members
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/gravitee-am-openapi.yml#DELETE /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/groups/{group}
+    - openapi/_original/gravitee-am-openapi.yml#DELETE /organizations/{organizationId}/groups/{group}
+    - openapi/_original/gravitee-am-openapi.yml#GET /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/groups
+    - openapi/_original/gravitee-am-openapi.yml#GET /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/groups/{group}
+    - openapi/_original/gravitee-am-openapi.yml#GET /organizations/{organizationId}/groups
+  organization:
+    path_segment:
+    - organizations
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/gravitee-apim-openapi.yml#GET /organizations/{orgId}
+  role:
+    path_segment:
+    - roles
+    properties:
+      name:
+      - name
+      - displayName
+      - title
+      id:
+      - id
+      - externalId
+      description: description
+      permission_ids: permissions
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/gravitee-am-openapi.yml#DELETE /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/groups/{group}/roles/{role}
+    - openapi/_original/gravitee-am-openapi.yml#DELETE /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/roles/{role}
+    - openapi/_original/gravitee-am-openapi.yml#DELETE /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/users/{user}/roles/{role}
+    - openapi/_original/gravitee-am-openapi.yml#DELETE /organizations/{organizationId}/roles/{role}
+    - openapi/_original/gravitee-am-openapi.yml#GET /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/groups/{group}/roles
+  permission:
+    path_segment:
+    - scopes
+    - permissions
+    properties:
+      id: id
+      name: name
+      description: description
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/gravitee-am-openapi.yml#DELETE /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/scopes/{scope}
+    - openapi/_original/gravitee-am-openapi.yml#GET /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/applications/{application}/members/permissions
+    - openapi/_original/gravitee-am-openapi.yml#GET /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/members/permissions
+    - openapi/_original/gravitee-am-openapi.yml#GET /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/protected-resources/{protected-resource}/members/permissions
+    - openapi/_original/gravitee-am-openapi.yml#GET /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/scopes
+  api_key:
+    path_segment:
+    - tokens
+    - keys
+    properties:
+      id: userId
+      created_at: createdAt
+      key: token
+      name: name
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/gravitee-am-openapi.yml#DELETE /organizations/{organizationId}/users/{user}/tokens/{tokenId}
+    - openapi/_original/gravitee-am-openapi.yml#GET /organizations/{organizationId}/environments/{environmentId}/domains/{domain}/certificates/{certificate}/keys
+    - openapi/_original/gravitee-am-openapi.yml#GET /organizations/{organizationId}/users/{user}/tokens
+    - openapi/_original/gravitee-am-openapi.yml#POST /organizations/{organizationId}/users/{user}/tokens

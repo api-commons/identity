@@ -1,0 +1,13 @@
+provider: withings
+apis_io: https://apis.io/providers/withings/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    properties:
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/withings-data-api-openapi.yml#POST https://wbsapi.withings.net/v2/user

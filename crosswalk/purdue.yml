@@ -1,0 +1,48 @@
+provider: purdue
+apis_io: https://apis.io/providers/purdue/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    - users
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/purdue-rcac-api.json#DELETE /courses/members/{id}
+    - openapi/_original/purdue-rcac-api.json#DELETE /groups/members/{id}
+    - openapi/_original/purdue-rcac-api.json#DELETE /queues/users/{id}
+    - openapi/_original/purdue-rcac-api.json#DELETE /resources/members/{user id}.{resource id}
+    - openapi/_original/purdue-rcac-api.json#DELETE /unixgroups/members/{id}
+  group:
+    path_segment:
+    - groups
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/purdue-rcac-api.json#DELETE /groups/{id}
+    - openapi/_original/purdue-rcac-api.json#GET /groups
+    - openapi/_original/purdue-rcac-api.json#GET /groups/{id}
+    - openapi/_original/purdue-rcac-api.json#POST /groups
+    - openapi/_original/purdue-rcac-api.json#PUT /groups/{id}
+  role:
+    path_segment:
+    - roles
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/purdue-rcac-api.json#DELETE /users/roles/{id}
+    - openapi/_original/purdue-rcac-api.json#GET /users/roles
+    - openapi/_original/purdue-rcac-api.json#GET /users/roles/{id}
+    - openapi/_original/purdue-rcac-api.json#POST /users/roles
+    - openapi/_original/purdue-rcac-api.json#PUT /users/roles/{id}
+  permission:
+    path_segment:
+    - permissions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/purdue-rcac-api.json#DELETE /users/permissions/{id}
+    - openapi/_original/purdue-rcac-api.json#GET /users/permissions
+    - openapi/_original/purdue-rcac-api.json#POST /users/permissions/{id}

@@ -1,0 +1,103 @@
+provider: britive
+apis_io: https://apis.io/providers/britive/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    - user
+    properties:
+      id:
+      - id
+      - userId
+      - externalId
+      email: email
+      name: name
+      status: status
+      created_at: created
+      last_name: lastName
+      username:
+      - userName
+      - username
+      first_name: firstName
+      updated_at: modified
+      phone:
+      - phone
+      - mobile
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/britive-services-api-openapi.json#DELETE /api/access/user-tags/{tagId}/users/{userId}
+    - openapi/_original/britive-services-api-openapi.json#DELETE /api/mfa/admin/registrations/{factor}/users/{targetUserId}
+    - openapi/_original/britive-services-api-openapi.json#DELETE /api/paps/sessions/user/{userId}
+    - openapi/_original/britive-services-api-openapi.json#DELETE /api/user-tags/{userTagId}/users/{userId}
+    - openapi/_original/britive-services-api-openapi.json#DELETE /api/users/{targetUserId}
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      name: name
+      description: description
+      created_at: created
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/britive-services-api-openapi.json#PATCH /api/apps/{appContainerId}/root-environment-group/groups
+    - openapi/_original/britive-services-api-openapi.json#POST /api/apps/{appContainerId}/root-environment-group/groups
+    - openapi/_original/britive-services-api-openapi.yml#PATCH /api/apps/{appContainerId}/root-environment-group/groups
+    - openapi/_original/britive-services-api-openapi.yml#POST /api/apps/{appContainerId}/root-environment-group/groups
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+      description: description
+      permission_ids: permissions
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/britive-secrets-manager-api-openapi.json#DELETE /api/v1/policy-admin/roles/{id}
+    - openapi/_original/britive-secrets-manager-api-openapi.json#GET /api/v1/policy-admin/roles
+    - openapi/_original/britive-secrets-manager-api-openapi.json#GET /api/v1/policy-admin/roles/{id}
+    - openapi/_original/britive-secrets-manager-api-openapi.json#PATCH /api/v1/policy-admin/roles/{id}
+    - openapi/_original/britive-secrets-manager-api-openapi.json#POST /api/v1/policy-admin/roles
+  permission:
+    path_segment:
+    - permissions
+    - scopes
+    properties:
+      id:
+      - id
+      - permissionId
+      name: name
+      description: description
+      created_at:
+      - createdDate
+      - createdOn
+      updated_at: updatedDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/britive-secrets-manager-api-openapi.json#DELETE /api/v1/policy-admin/permissions/{id}
+    - openapi/_original/britive-secrets-manager-api-openapi.json#GET /api/v1/policy-admin/permissions
+    - openapi/_original/britive-secrets-manager-api-openapi.json#GET /api/v1/policy-admin/permissions/{id}
+    - openapi/_original/britive-secrets-manager-api-openapi.json#PATCH /api/v1/policy-admin/permissions/{id}
+    - openapi/_original/britive-secrets-manager-api-openapi.json#POST /api/v1/policy-admin/permissions
+  api_key:
+    path_segment:
+    - tokens
+    properties:
+      id: id
+      created_at: createdOn
+      key: token
+      name: name
+      status: status
+      expires_at: expiresOn
+      created_by: createdBy
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/britive-services-api-openapi.json#GET /api/users/{targetUserId}/tokens
+    - openapi/_original/britive-services-api-openapi.json#PATCH /api/users/{targetUserId}/tokens
+    - openapi/_original/britive-services-api-openapi.json#POST /api/users/{targetUserId}/tokens
+    - openapi/_original/britive-services-api-openapi.yml#GET /api/users/{targetUserId}/tokens
+    - openapi/_original/britive-services-api-openapi.yml#PATCH /api/users/{targetUserId}/tokens

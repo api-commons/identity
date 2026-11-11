@@ -1,0 +1,28 @@
+provider: microsoft-active-directory
+apis_io: https://apis.io/providers/microsoft-active-directory/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/microsoft-active-directory-openapi.yml#DELETE /users/{id}
+    - openapi/_original/microsoft-active-directory-openapi.yml#GET /directoryRoles/{id}/members
+    - openapi/_original/microsoft-active-directory-openapi.yml#GET /groups/{id}/members
+    - openapi/_original/microsoft-active-directory-openapi.yml#GET /users
+    - openapi/_original/microsoft-active-directory-openapi.yml#GET /users/{id}
+  group:
+    path_segment:
+    - groups
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/microsoft-active-directory-openapi.yml#DELETE /groups/{id}
+    - openapi/_original/microsoft-active-directory-openapi.yml#GET /groups
+    - openapi/_original/microsoft-active-directory-openapi.yml#GET /groups/{id}
+    - openapi/_original/microsoft-active-directory-openapi.yml#PATCH /groups/{id}
+    - openapi/_original/microsoft-active-directory-openapi.yml#POST /groups

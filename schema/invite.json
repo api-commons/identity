@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/identity/main/schema/invite.json",
+  "title": "Invite",
+  "description": "The common invite in Identity and Users, distilled from 0 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {},
+  "required": [],
+  "x-commons": {
+    "context": "identity",
+    "concept": "invite",
+    "providers": 0,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

@@ -1,0 +1,70 @@
+provider: hootsuite
+apis_io: https://apis.io/providers/hootsuite/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    - users
+    properties:
+      id: id
+      email:
+      - email
+      - emails
+      name:
+      - name
+      - displayName
+      - title
+      status:
+      - isActive
+      - active
+      created_at: createdDate
+      username: userName
+      updated_at: modifiedDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#DELETE /v1/organizations/{organizationId}/members/{memberId}
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /scim/v2/Users
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /scim/v2/Users/{memberId}
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /v1/members/{memberId}
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /v1/organizations/{organizationId}/members
+  group:
+    path_segment:
+    - teams
+    - groups
+    properties:
+      id: id
+      name:
+      - name
+      - displayName
+      member_ids: members
+      created_at: createdDate
+      updated_at: modifiedDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /scim/v2/Groups
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /scim/v2/Groups/{groupId}
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /v1/organizations/{organizationId}/members/{memberId}/teams
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /v1/organizations/{organizationId}/teams
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /v1/socialProfiles/{socialProfileId}/teams
+  organization:
+    path_segment:
+    - organizations
+    properties:
+      name: name
+      id: id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/hootsuite-amplify-api-swagger.json#GET /me/organizations
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /v1/me/organizations
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /v1/members/{memberId}/organizations
+  permission:
+    path_segment:
+    - permissions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /v1/organizations/{organizationId}/members/{memberId}/permissions
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /v1/organizations/{organizationId}/members/{memberId}/socialProfiles/{socialProfileId}/permissions
+    - openapi/_original/hootsuite-rest-api-swagger.yaml#GET /v1/organizations/{organizationId}/teams/{teamId}/members/{memberId}/permissions

@@ -1,0 +1,38 @@
+provider: telesign
+apis_io: https://apis.io/providers/telesign/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id:
+      - id
+      - externalId
+      email: emails
+      name: name
+      status: active
+      username: userName
+      phone: phoneNumbers
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/telesign-accounts-api-openapi.json#DELETE /scim/v2/Users/{user_id}
+    - openapi/_original/telesign-accounts-api-openapi.json#GET /scim/v2/Users
+    - openapi/_original/telesign-accounts-api-openapi.json#GET /scim/v2/Users/{user_id}
+    - openapi/_original/telesign-accounts-api-openapi.json#PATCH /scim/v2/Users/{user_id}
+    - openapi/_original/telesign-accounts-api-openapi.json#POST /scim/v2/Users
+  group:
+    path_segment:
+    - groups
+    properties:
+      id:
+      - id
+      - externalId
+      name: displayName
+      member_ids: members
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/telesign-accounts-api-openapi.json#GET /scim/v2/Groups
+    - openapi/_original/telesign-accounts-api-openapi.json#GET /scim/v2/Groups/{group_id}
+    - openapi/_original/telesign-accounts-api-openapi.json#PATCH /scim/v2/Groups/{group_id}

@@ -1,0 +1,37 @@
+provider: hvault
+apis_io: https://apis.io/providers/hvault/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/hvault-auth-methods-openapi.yml#DELETE /auth/userpass/users/{username}
+    - openapi/_original/hvault-auth-methods-openapi.yml#GET /auth/userpass/users/{username}
+    - openapi/_original/hvault-auth-methods-openapi.yml#POST /auth/userpass/users/{username}
+  group:
+    path_segment:
+    - group
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/hvault-identity-openapi.yml#GET /identity/group
+    - openapi/_original/hvault-identity-openapi.yml#POST /identity/group
+    - openapi/_original/hvault-identity-openapi.yml#POST /identity/lookup/group
+  role:
+    path_segment:
+    - roles
+    - role
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/hvault-auth-methods-openapi.yml#DELETE /auth/approle/role/{role_name}
+    - openapi/_original/hvault-auth-methods-openapi.yml#DELETE /auth/kubernetes/role/{name}
+    - openapi/_original/hvault-auth-methods-openapi.yml#DELETE /auth/token/roles/{role_name}
+    - openapi/_original/hvault-auth-methods-openapi.yml#GET /auth/approle/role/{role_name}
+    - openapi/_original/hvault-auth-methods-openapi.yml#GET /auth/kubernetes/role/{name}

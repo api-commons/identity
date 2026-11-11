@@ -1,0 +1,85 @@
+provider: appdirect
+apis_io: https://apis.io/providers/appdirect/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties:
+      id:
+      - externalId
+      - id
+      email: email
+      status:
+      - enabled
+      - status
+      created_at: createdOn
+      last_name: lastName
+      username: username
+      first_name: firstName
+      role_ids:
+      - roles
+      - role
+      metadata: customAttributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /account/v2/users
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /account/v2/users/{userUuid}
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /appReseller/v1/users
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /appReseller/v1/users/{userId}
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /billing/v1/userProductContext/{applicationId}/companies/{companyId}/users/{userId}
+  group:
+    path_segment:
+    - groups
+    properties:
+      id:
+      - id
+      - userId
+      name: name
+      description: description
+      created_at: createdAt
+      updated_at: updatedAt
+      organization_id: orgId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/appdirect-companies-openapi-original.yml#DELETE /account/v2/companies/{companyUuid}/groups/{groupUuid}
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /account/v2/companies/{companyUuid}/groups
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /account/v2/companies/{companyUuid}/groups/{groupUuid}
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /account/v2/companies/{companyUuid}/memberships/{userUuid}/groups
+    - openapi/_original/appdirect-companies-openapi-original.yml#POST /account/v2/companies/{companyUuid}/groups
+  organization:
+    path_segment:
+    - org
+    properties:
+      organization_id: orgId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/appdirect-devsai-openapi-original.json#GET /api/v1/usage/org
+  role:
+    path_segment:
+    - roles
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/appdirect-companies-openapi-original.yml#PATCH /account/v2/companies/{companyUuid}/memberships/roles
+  api_key:
+    path_segment:
+    - api-keys
+    properties:
+      id:
+      - id
+      - userId
+      created_at: createdAt
+      key: key
+      name: name
+      scopes: scopes
+      description: description
+      updated_at: updatedAt
+      organization_id: orgId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/appdirect-devsai-openapi-original.json#DELETE /api/v1/api-keys
+    - openapi/_original/appdirect-devsai-openapi-original.json#PATCH /api/v1/api-keys
+    - openapi/_original/appdirect-devsai-openapi-original.json#POST /api/v1/api-keys

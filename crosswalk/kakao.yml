@@ -1,0 +1,20 @@
+provider: kakao
+apis_io: https://apis.io/providers/kakao/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/kakao-openapi.yml#GET /v2/app/users
+  permission:
+    path_segment:
+    - scopes
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/kakao-openapi.yml#GET /v2/user/scopes
+    - openapi/_original/kakao-openapi.yml#POST /v2/user/revoke/scopes

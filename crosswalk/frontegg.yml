@@ -1,0 +1,88 @@
+provider: frontegg
+apis_io: https://apis.io/providers/frontegg/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    - users
+    properties:
+      id:
+      - id
+      - userId
+      email: email
+      name: name
+      username: username
+      role_ids: roleIds
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/frontegg-combined-openapi.yml#DELETE /resources/groups/v1/{groupId}/users
+    - openapi/_original/frontegg-combined-openapi.yml#DELETE /resources/tenants/invites/v1/user
+    - openapi/_original/frontegg-combined-openapi.yml#GET /resources/applications/v1/{appId}/users
+    - openapi/_original/frontegg-combined-openapi.yml#GET /resources/tenants/invites/v1/user
+    - openapi/_original/frontegg-combined-openapi.yml#GET /resources/user-sources/v1/{id}/users
+  group:
+    path_segment:
+    - groups
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/frontegg-combined-openapi.yml#DELETE /resources/sso/v1/configurations/{configurationId}/groups/{groupId}
+    - openapi/_original/frontegg-combined-openapi.yml#GET /resources/sso/v1/configurations/{configurationId}/groups
+    - openapi/_original/frontegg-combined-openapi.yml#GET /resources/users/v3/groups
+    - openapi/_original/frontegg-combined-openapi.yml#PATCH /resources/sso/v1/configurations/{configurationId}/groups/{groupId}
+    - openapi/_original/frontegg-combined-openapi.yml#POST /resources/sso/v1/configurations/{configurationId}/groups
+  organization:
+    path_segment:
+    - tenant
+    - tenants
+    properties:
+      name: name
+      id:
+      - id
+      - sub
+      - externalId
+      created_at: createdAt
+      organization_id: tenantId
+      description: description
+      updated_at: updatedAt
+      metadata: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/frontegg-combined-openapi.yml#GET /resources/plans/v1/tenant/{tenantId}
+    - openapi/_original/frontegg-combined-openapi.yml#GET /resources/users/v1/me/tenants
+    - openapi/_original/frontegg-combined-openapi.yml#GET /resources/users/v2/me/tenants
+    - openapi/_original/frontegg-combined-openapi.yml#POST /resources/migrations/v1/tenants
+    - openapi/_original/frontegg-combined-openapi.yml#POST /resources/users/v1/{userId}/tenant
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id:
+      - id
+      - userId
+      description: description
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/frontegg-combined-openapi.yml#DELETE /resources/groups/v1/{groupId}/roles
+    - openapi/_original/frontegg-combined-openapi.yml#DELETE /resources/users/v1/{userId}/roles
+    - openapi/_original/frontegg-combined-openapi.yml#GET /resources/sso/v1/configurations/{configurationId}/roles
+    - openapi/_original/frontegg-combined-openapi.yml#GET /resources/users/v3/roles
+    - openapi/_original/frontegg-combined-openapi.yml#PATCH /resources/vendor-only/users/v1/{userId}/roles/bulk
+  permission:
+    path_segment:
+    - permissions
+    properties:
+      id: id
+      name: name
+      description: description
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/frontegg-combined-openapi.yml#PUT /resources/roles/v1/{roleId}/permissions
+    - openapi/_original/frontegg-identity-openapi.yml#PUT /resources/roles/v1/{roleId}/permissions

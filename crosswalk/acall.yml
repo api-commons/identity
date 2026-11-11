@@ -1,0 +1,17 @@
+provider: acall
+apis_io: https://apis.io/providers/acall/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: user_id
+      email: email
+      last_name: family_name
+      first_name: given_name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/acall-public-api-openapi-original.json#GET /users
+    - openapi/_original/acall-public-api-openapi-original.json#GET /users/{user_id}

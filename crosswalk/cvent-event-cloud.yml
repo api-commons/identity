@@ -1,0 +1,43 @@
+provider: cvent-event-cloud
+apis_io: https://apis.io/providers/cvent-event-cloud/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties:
+      id: id
+      email:
+      - emailAddress
+      - emails
+      name:
+      - name
+      - title
+      status: active
+      last_name: lastName
+      username: userName
+      first_name: firstName
+      phone: phoneNumbers
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cvent-event-cloud-rest-openapi.yml#DELETE /account-user-groups/{userGroupId}/users/{userId}
+    - openapi/_original/cvent-event-cloud-rest-openapi.yml#DELETE /scim/v2/Users/{id}
+    - openapi/_original/cvent-event-cloud-rest-openapi.yml#GET /events/{eventId}/attendee-messages/members
+    - openapi/_original/cvent-event-cloud-rest-openapi.yml#GET /hubs/{hubId}/members
+    - openapi/_original/cvent-event-cloud-rest-openapi.yml#GET /scim/v2/Users
+  group:
+    path_segment:
+    - user-groups
+    - groups
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cvent-event-cloud-rest-openapi.yml#DELETE /events/{id}/user-groups/{userGroupId}
+    - openapi/_original/cvent-event-cloud-rest-openapi.yml#GET /events/{id}/user-groups
+    - openapi/_original/cvent-event-cloud-rest-openapi.yml#GET /scim/v2/Groups
+    - openapi/_original/cvent-event-cloud-rest-openapi.yml#PUT /events/{id}/user-groups/{userGroupId}
+    - openapi/_original/cvent-rest-apis-openapi.yaml#DELETE /events/{id}/user-groups/{userGroupId}

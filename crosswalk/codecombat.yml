@@ -1,0 +1,26 @@
+provider: codecombat
+apis_io: https://apis.io/providers/codecombat/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    - users
+    properties:
+      id:
+      - _id
+      - userId
+      email: email
+      name:
+      - name
+      - displayName
+      role_ids: role
+      metadata: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/codecombat-openapi-original.yml#DELETE classrooms/{handle}/members
+    - openapi/_original/codecombat-openapi-original.yml#GET users/{handle}
+    - openapi/_original/codecombat-openapi-original.yml#POST users
+    - openapi/_original/codecombat-openapi-original.yml#PUT clan/{handle}/members
+    - openapi/_original/codecombat-openapi-original.yml#PUT classrooms/{handle}/members

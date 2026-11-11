@@ -1,0 +1,47 @@
+provider: ironclad
+apis_io: https://apis.io/providers/ironclad/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      email: emails
+      name:
+      - name
+      - title
+      status: active
+      username: userName
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ironclad-scim-api-openapi.yml#DELETE /Users/{userId}
+    - openapi/_original/ironclad-scim-api-openapi.yml#GET /Users
+    - openapi/_original/ironclad-scim-api-openapi.yml#GET /Users/{userId}
+    - openapi/_original/ironclad-scim-api-openapi.yml#PATCH /Users/{userId}
+    - openapi/_original/ironclad-scim-api-openapi.yml#POST /Users
+  group:
+    path_segment:
+    - groups
+    properties:
+      id:
+      - id
+      - externalId
+      name: displayName
+      member_ids: members
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ironclad-scim-api-openapi.yml#DELETE /Groups/{groupId}
+    - openapi/_original/ironclad-scim-api-openapi.yml#GET /Groups
+    - openapi/_original/ironclad-scim-api-openapi.yml#GET /Groups/{groupId}
+    - openapi/_original/ironclad-scim-api-openapi.yml#PATCH /Groups/{groupId}
+    - openapi/_original/ironclad-scim-api-openapi.yml#POST /Groups
+  role:
+    path_segment:
+    - roles
+    properties:
+      id: userId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/ironclad-public-api-openapi.yml#PATCH /workflows/{id}/roles/{roleName}

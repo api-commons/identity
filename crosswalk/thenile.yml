@@ -1,0 +1,38 @@
+provider: thenile
+apis_io: https://apis.io/providers/thenile/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      email: email
+      name: name
+      created_at: created
+      last_name: familyName
+      first_name: givenName
+      updated_at: updated
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/api-openapi.json#DELETE /databases/{databaseId}/users/{userId}
+    - openapi/_original/api-openapi.json#DELETE /workspaces/{workspaceSlug}/databases/{databaseName}/users/{userId}
+    - openapi/_original/api-openapi.json#GET /databases/{databaseId}/tenants/{tenantId}/users
+    - openapi/_original/api-openapi.json#GET /databases/{databaseId}/tenants/{tenantId}/users/{userId}
+    - openapi/_original/api-openapi.json#GET /databases/{databaseId}/users
+  organization:
+    path_segment:
+    - tenants
+    - workspaces
+    properties:
+      name: name
+      id: id
+      created_at: created
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/api-openapi.json#DELETE /databases/{databaseId}/tenants/{tenantId}
+    - openapi/_original/api-openapi.json#GET /databases/{databaseId}/tenants
+    - openapi/_original/api-openapi.json#GET /databases/{databaseId}/tenants/{tenantId}
+    - openapi/_original/api-openapi.json#PUT /databases/{databaseId}/tenants/{tenantId}
+    - openapi/_original/global-openapi.json#GET /workspaces

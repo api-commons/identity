@@ -1,0 +1,39 @@
+provider: lakekeeper
+apis_io: https://apis.io/providers/lakekeeper/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    - members
+    properties:
+      id: id
+      email: email
+      name: name
+      created_at: created-at
+      updated_at: updated-at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lakekeeper-management-api-openapi.yml#DELETE /management/v1/user/{user_id}
+    - openapi/_original/lakekeeper-management-api-openapi.yml#GET /management/v1/role/{role_id}/members
+    - openapi/_original/lakekeeper-management-api-openapi.yml#GET /management/v1/user
+    - openapi/_original/lakekeeper-management-api-openapi.yml#GET /management/v1/user/{user_id}
+    - openapi/_original/lakekeeper-management-api-openapi.yml#POST /management/v1/role/{role_id}/members
+  role:
+    path_segment:
+    - role
+    - roles
+    properties:
+      name: name
+      id: id
+      description: description
+      created_at: created-at
+      updated_at: updated-at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lakekeeper-management-api-openapi.yml#DELETE /management/v1/role/{role_id}
+    - openapi/_original/lakekeeper-management-api-openapi.yml#GET /management/v1/role
+    - openapi/_original/lakekeeper-management-api-openapi.yml#GET /management/v1/role/{role_id}
+    - openapi/_original/lakekeeper-management-api-openapi.yml#GET /management/v1/user/{user_id}/roles
+    - openapi/_original/lakekeeper-management-api-openapi.yml#POST /management/v1/role

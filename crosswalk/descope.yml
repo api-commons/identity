@@ -1,0 +1,69 @@
+provider: descope
+apis_io: https://apis.io/providers/descope/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - user
+    - members
+    properties:
+      id:
+      - id
+      - userId
+      email: emails
+      name:
+      - name
+      - displayName
+      status:
+      - status
+      - active
+      created_at: created
+      username: userName
+      metadata: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/descope-openapi.yml#DELETE /scim/v2/Users/{userId}
+    - openapi/_original/descope-openapi.yml#GET /scim/v2/Users
+    - openapi/_original/descope-openapi.yml#GET /scim/v2/Users/{userId}
+    - openapi/_original/descope-openapi.yml#GET /v1/mgmt/user
+    - openapi/_original/descope-openapi.yml#PATCH /scim/v2/Users/{userId}
+  group:
+    path_segment:
+    - groups
+    properties:
+      id:
+      - id
+      - externalId
+      - groupId
+      - userId
+      name: displayName
+      member_ids: members
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/descope-openapi.yml#DELETE /scim/v2/Groups/{groupId}
+    - openapi/_original/descope-openapi.yml#GET /scim/v2/Groups
+    - openapi/_original/descope-openapi.yml#GET /scim/v2/Groups/{groupId}
+    - openapi/_original/descope-openapi.yml#PATCH /scim/v2/Groups/{groupId}
+    - openapi/_original/descope-openapi.yml#POST /scim/v2/Groups
+  organization:
+    path_segment:
+    - tenant
+    properties:
+      name: name
+      id: id
+      organization_id: tenantId
+      status: disabled
+      metadata: customAttributes
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/descope-openapi.yml#GET /v1/mgmt/tenant
+    - openapi/_original/descope-openapi.yml#POST /v1/mgmt/thirdparty/consents/delete/tenant
+  api_key:
+    path_segment:
+    - tokens
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/descope-openapi.yml#DELETE /v1/mgmt/outbound/user/tokens

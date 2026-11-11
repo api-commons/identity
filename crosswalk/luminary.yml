@@ -1,0 +1,19 @@
+provider: luminary
+apis_io: https://apis.io/providers/luminary/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      email: email
+      created_at: created_at
+      last_name: last_name
+      first_name: first_name
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/luminary-openapi-original.yml#GET /users
+    - openapi/_original/luminary-openapi-original.yml#GET /users/{id}

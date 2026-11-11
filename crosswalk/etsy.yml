@@ -1,0 +1,23 @@
+provider: etsy
+apis_io: https://apis.io/providers/etsy/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: user_id
+      email: primary_email
+      last_name: last_name
+      first_name: first_name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/etsy-openapi-original.yml#GET /v3/application/users/{user_id}
+  permission:
+    path_segment:
+    - scopes
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/etsy-openapi-original.yml#POST /v3/application/scopes

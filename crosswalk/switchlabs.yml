@@ -1,0 +1,22 @@
+provider: switchlabs
+apis_io: https://apis.io/providers/switchlabs/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties:
+      id: id
+      email: email
+      name: name
+      status: status
+      role_ids: role
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/crm-switchlabs-openapi.json#DELETE /marketing-lists/{id}/members
+    - openapi/_original/crm-switchlabs-openapi.json#GET /marketing-lists/{id}/members
+    - openapi/_original/crm-switchlabs-openapi.json#GET /users
+    - openapi/_original/crm-switchlabs-openapi.json#GET /users/{id}
+    - openapi/_original/crm-switchlabs-openapi.json#PATCH /users/{id}

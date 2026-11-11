@@ -1,0 +1,15 @@
+provider: magic-link
+apis_io: https://apis.io/providers/magic-link/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    properties:
+      email: email
+      username: username
+      phone: phone_number
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/magic-link-openapi.yml#GET /v1/admin/user

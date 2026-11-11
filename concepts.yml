@@ -1,0 +1,120 @@
+context: identity
+name: Identity and Users
+intro: >-
+  The common identity vocabulary -- users, the groups and organizations they belong to, the
+  roles and permissions they hold, the invitations that bring them in and the API keys they
+  use -- distilled from the APIs that already exist. Cross-cutting: almost every other
+  context has users, and this is where their shape is measured.
+tags: [Identity, Authentication, Identity Federation, Access Control, IAM, Identity and Access Management, SSO, Single Sign-On, User Management, Authorization, CIAM]
+
+envelope: [_links, _pagination, _results, data, success, errors, warnings, count, total, page, meta, links,
+           value, results, next, previous, has_more, message, status_code, ids, next_page, previous_page,
+           page_info, cursor, total_count, per_page, total_pages, current_page, object, url, schemas,
+           Resources, itemsPerPage, startIndex, totalResults]
+
+common_fields:
+  id: [uuid, guid, object_id, record_id, user_id, sub, external_id]
+  created_at: [created, created_date, date_created, create_time, creation_date, created_on, created_timestamp, meta]
+  updated_at: [updated, updated_date, modified_at, last_modified, date_modified, update_time, modified_date, modified]
+  metadata: [meta_data, custom_fields, custom, attributes, properties, user_metadata, app_metadata, custom_attributes, public_metadata, private_metadata]
+  status: [state, active, is_active, enabled, disabled, blocked, suspended]
+  name: [title, display_name, displayName, label]
+  description: [notes, note, details]
+  organization_id: [organization, org_id, tenant_id, tenant, account_id, workspace_id, company_id]
+
+concepts:
+  user:
+    segments: [users, user, members, identities, principals, people]
+    aliases:
+      email: [emails, email_address, email_addresses, primary_email, primary_email_address, mail, user_principal_name]
+      username: [user_name, userName, login, handle, preferred_username, nickname]
+      first_name: [firstname, given_name, givenName, name_first]
+      last_name: [lastname, family_name, familyName, surname, name_last]
+      phone: [phone_number, phone_numbers, phoneNumbers, mobile, mobile_phone]
+      email_verified: [is_email_verified, verified, email_confirmed]
+      last_login_at: [last_login, last_sign_in_at, last_signed_in, last_login_time, last_seen_at, last_active_at]
+      avatar_url: [picture, image_url, profile_image_url, photo_url, avatar, photo]
+      role_ids: [roles, role, role_id]
+      group_ids: [groups, group_memberships]
+      locale: [language, preferred_language, lang]
+      time_zone: [timezone, tz, zoneinfo]
+  group:
+    requires: [user]
+    segments: [groups, group, teams, team, user_groups, user-groups, usergroups]
+    aliases:
+      member_ids: [members, users, user_ids, member_count, members_count]
+      parent_id: [parent, parent_group_id, parent_team_id]
+  organization:
+    requires: [user]
+    segments: [organizations, organization, organisations, orgs, org, tenants, tenant, workspaces, workspace]
+    aliases:
+      domain: [domains, email_domain, verified_domains]
+      slug: [handle, subdomain, key]
+      logo_url: [logo, image_url, avatar_url]
+  role:
+    requires: [user]
+    segments: [roles, role, role_definitions, user_roles]
+    aliases:
+      permission_ids: [permissions, scopes, privileges, actions, rights]
+      is_default: [default, built_in, is_builtin, system]
+  permission:
+    requires: [user]
+    segments: [permissions, permission, scopes, privileges, entitlements, policies@iam|authorization|access]
+    aliases:
+      resource: [resource_type, resource_server_identifier, object, target, resource_name]
+      action: [actions, operation, verb, value]
+  invite:
+    requires: [user]
+    segments: [invites, invite, invitations, invitation, user_invitations, invitation_requests]
+    aliases:
+      email: [email_address, invitee_email, invitee]
+      role: [role_id, roles, role_ids]
+      expires_at: [expiry, expiration, expires, expiration_date]
+      accepted_at: [accepted, redeemed_at, used_at]
+      inviter_id: [inviter, invited_by, sender_id, created_by]
+  api_key:
+    requires: [user]
+    # Bare keys, tokens and credentials were verifiable credentials, door-access credentials
+    # and signing keys as often as API keys; only the unambiguous names count.
+    segments: [api_keys, api-keys, apikeys, apiKeys, personal_access_tokens, personal-access-tokens, "tokens@users|user|me|account", "keys@users|user|me|account|projects|organizations"]
+    aliases:
+      key: [token, value, secret, api_key, prefix, key_prefix, masked_key]
+      expires_at: [expiry, expiration, expires, expiration_date, expires_on]
+      last_used_at: [last_used, last_used_on, last_access, last_accessed_at]
+      scopes: [permissions, roles, scope, abilities]
+
+exclude:
+  user:
+    ccp-games: /fleets/{id}/members are game-fleet members
+    greenhelix-net: /identity/orgs/{id}/members are agent identities
+  organization:
+    butterflymx: /tenants are apartment residents
+  permission:
+    epic-games: /entitlements are owned game items
+duplicates:
+  conductorone: [c1]
+  oracle-health: [cerner]
+  cvent: [cvent-hospitality-cloud, cvent-registration]
+  ccp-games: [eve-online]
+  dynamic-labs: [dynamic-xyz]
+  kinde: [kinde-so]
+
+findings:
+  - "A user agrees on only id and email. Name sits just under core (49%): SCIM nests it as an
+    object, others split first and last name, others carry a display name -- so the most
+    common resource in the catalog has the least agreement on what to call a person."
+  - "Roles and groups agree on name, id and description, and roles reference their
+    permissions a third of the time -- RBAC is the same shape everywhere."
+  - "An invite agrees on email, id and the role it grants: the minimum to bring someone in."
+  - "API keys agree on id, name, key and created_at once only unambiguous paths count."
+decisions:
+  - "`/accounts` is not a user: reviewed, it was brokerage, bank and ad-platform accounts."
+  - "API keys count only as api_keys, personal_access_tokens, or keys and tokens beneath a
+    user, account or project. Bare keys, tokens and credentials were verifiable
+    credentials, door-access credentials and signing keys as often as API keys."
+  - "OAuth scopes and entitlements count as permissions: each is a grantable unit of access."
+  - "An organization covers tenants and workspaces -- the boundary users are members of --
+    but residential tenants (ButterflyMX) are excluded."
+  - "Invites are `/invites`: invite and invites lead (22 providers) invitations (15)."
+  - "Duplicates merged: ConductorOne (C1), Cerner into Oracle Health, three Cvent listings,
+    EVE Online into CCP Games, Dynamic, Kinde."

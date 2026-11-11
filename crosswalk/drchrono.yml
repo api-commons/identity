@@ -1,0 +1,32 @@
+provider: drchrono
+apis_io: https://apis.io/providers/drchrono/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: id
+      username: username
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/drchrono-rest-api-openapi-schema.json#GET /api/users
+    - openapi/_original/drchrono-rest-api-openapi-schema.json#GET /api/users/{id}
+    - openapi/_original/drchrono-rest-api-openapi.yml#GET /api/users
+    - openapi/_original/drchrono-rest-api-openapi.yml#GET /api/users/{id}
+  group:
+    path_segment:
+    - user_groups
+    properties:
+      id: id
+      name: name
+      member_ids: members
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/drchrono-rest-api-openapi-schema.json#GET /api/user_groups
+    - openapi/_original/drchrono-rest-api-openapi-schema.json#GET /api/user_groups/{id}
+    - openapi/_original/drchrono-rest-api-openapi.yml#GET /api/user_groups
+    - openapi/_original/drchrono-rest-api-openapi.yml#GET /api/user_groups/{id}

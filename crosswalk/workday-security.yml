@@ -1,0 +1,13 @@
+provider: workday-security
+apis_io: https://apis.io/providers/workday-security/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    properties:
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/workday-security-security-groups-openapi.yml#GET /securityGroups/{securityGroupId}/members

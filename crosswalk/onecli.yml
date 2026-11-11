@@ -1,0 +1,56 @@
+provider: onecli
+apis_io: https://apis.io/providers/onecli/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    - user
+    properties:
+      id:
+      - id
+      - userId
+      email: email
+      name: name
+      created_at: createdAt
+      role_ids: role
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/onecli-openapi-original.yml#DELETE /partner/members/{userId}
+    - openapi/_original/onecli-openapi-original.yml#GET /partner/members
+    - openapi/_original/onecli-openapi-original.yml#GET /user
+    - openapi/_original/onecli-openapi-original.yml#PATCH /user
+    - openapi/_original/onecli-openapi-original.yml#POST /partner/members
+  organization:
+    path_segment:
+    - orgs
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      organization_id: organizationId
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/onecli-openapi-original.yml#DELETE /partner/orgs/{orgId}
+    - openapi/_original/onecli-openapi-original.yml#GET /partner/orgs
+    - openapi/_original/onecli-openapi-original.yml#GET /partner/orgs/{orgId}
+    - openapi/_original/onecli-openapi-original.yml#POST /partner/orgs
+  role:
+    path_segment:
+    - role
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/onecli-openapi-original.yml#PATCH /partner/members/{userId}/role
+  permission:
+    path_segment:
+    - permissions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/onecli-openapi-original.yml#GET /org/rules/permissions/{provider}
+    - openapi/_original/onecli-openapi-original.yml#GET /rules/permissions/{provider}
+    - openapi/_original/onecli-openapi-original.yml#PUT /org/rules/permissions/{provider}
+    - openapi/_original/onecli-openapi-original.yml#PUT /rules/permissions/{provider}

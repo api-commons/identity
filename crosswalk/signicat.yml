@@ -1,0 +1,71 @@
+provider: signicat
+apis_io: https://apis.io/providers/signicat/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id:
+      - id
+      - externalId
+      email: emails
+      name:
+      - name
+      - displayName
+      status:
+      - state
+      - active
+      created_at: created
+      username: userName
+      metadata:
+      - attributes
+      - customAttributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/mobileid-openapi.json#DELETE /users/{userId}
+    - openapi/_original/mobileid-openapi.json#GET /users/{userId}
+    - openapi/_original/mobileid-openapi.json#PATCH /users/{userId}
+    - openapi/_original/mobileid-openapi.json#POST /users
+    - openapi/_original/reuseid-openapi.json#DELETE /users/{userId}
+  organization:
+    path_segment:
+    - organizations
+    - organisations
+    - organization
+    properties:
+      name: name
+      id:
+      - id
+      - externalId
+      status:
+      - status
+      - active
+      metadata:
+      - metadata
+      - customAttributes
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/account-management-openapi.json#DELETE /organizations/{organizationId}
+    - openapi/_original/account-management-openapi.json#GET /organizations
+    - openapi/_original/account-management-openapi.json#GET /organizations/{organizationId}
+    - openapi/_original/account-management-openapi.json#PATCH /organizations/{organizationId}
+    - openapi/_original/account-management-openapi.json#POST /organizations
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: displayName
+      id:
+      - id
+      - externalId
+      description: description
+      permission_ids: permissions
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/data-verification-openapi.json#GET /countries/{country}/organizations/{id}/roles
+    - openapi/_original/siam-openapi.json#DELETE /api/scim/v2/Roles/{roleId}
+    - openapi/_original/siam-openapi.json#GET /api/scim/v2/Roles
+    - openapi/_original/siam-openapi.json#GET /api/scim/v2/Roles/{roleId}
+    - openapi/_original/siam-openapi.json#PATCH /api/scim/v2/Roles/{roleId}

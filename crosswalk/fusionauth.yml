@@ -1,0 +1,60 @@
+provider: fusionauth
+apis_io: https://apis.io/providers/fusionauth/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/fusionauth-openapi.yaml#DELETE /api/user/bulk
+    - openapi/_original/fusionauth-openapi.yaml#DELETE /api/user/{userId}
+    - openapi/_original/fusionauth-openapi.yaml#GET /api/user
+    - openapi/_original/fusionauth-openapi.yaml#GET /api/user/{userId}
+    - openapi/_original/fusionauth-openapi.yaml#PATCH /api/user/{userId}
+  group:
+    path_segment:
+    - group
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/fusionauth-openapi.yaml#DELETE /api/group/{groupId}
+    - openapi/_original/fusionauth-openapi.yaml#GET /api/group/{groupId}
+    - openapi/_original/fusionauth-openapi.yaml#PATCH /api/group/{groupId}
+    - openapi/_original/fusionauth-openapi.yaml#POST /api/group
+    - openapi/_original/fusionauth-openapi.yaml#POST /api/group/{groupId}
+  organization:
+    path_segment:
+    - tenant
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/fusionauth-openapi.yaml#DELETE /api/tenant/{tenantId}
+    - openapi/_original/fusionauth-openapi.yaml#GET /api/tenant/{tenantId}
+    - openapi/_original/fusionauth-openapi.yaml#PATCH /api/tenant/{tenantId}
+    - openapi/_original/fusionauth-openapi.yaml#POST /api/tenant
+    - openapi/_original/fusionauth-openapi.yaml#POST /api/tenant/{tenantId}
+  role:
+    path_segment:
+    - role
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/fusionauth-openapi.yaml#DELETE /api/application/{applicationId}/role/{roleId}
+    - openapi/_original/fusionauth-openapi.yaml#PATCH /api/application/{applicationId}/role/{roleId}
+    - openapi/_original/fusionauth-openapi.yaml#POST /api/application/{applicationId}/role
+    - openapi/_original/fusionauth-openapi.yaml#POST /api/application/{applicationId}/role/{roleId}
+    - openapi/_original/fusionauth-openapi.yaml#PUT /api/application/{applicationId}/role/{roleId}
+  permission:
+    path_segment:
+    - permission
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/fusionauth-openapi.yaml#DELETE /api/entity/type/{entityTypeId}/permission/{permissionId}
+    - openapi/_original/fusionauth-openapi.yaml#PATCH /api/entity/type/{entityTypeId}/permission/{permissionId}
+    - openapi/_original/fusionauth-openapi.yaml#POST /api/entity/type/{entityTypeId}/permission
+    - openapi/_original/fusionauth-openapi.yaml#POST /api/entity/type/{entityTypeId}/permission/{permissionId}
+    - openapi/_original/fusionauth-openapi.yaml#PUT /api/entity/type/{entityTypeId}/permission/{permissionId}

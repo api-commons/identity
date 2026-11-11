@@ -1,0 +1,36 @@
+provider: ory
+apis_io: https://apis.io/providers/ory/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - identities
+    properties:
+      id:
+      - external_id
+      - id
+      status: state
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/ory-kratos-openapi.json#DELETE /admin/identities/{id}
+    - openapi/_original/ory-kratos-openapi.json#GET /admin/identities
+    - openapi/_original/ory-kratos-openapi.json#GET /admin/identities/{id}
+    - openapi/_original/ory-kratos-openapi.json#PATCH /admin/identities
+    - openapi/_original/ory-kratos-openapi.json#PATCH /admin/identities/{id}
+  organization:
+    path_segment:
+    - organizations
+    properties:
+      name: label
+      id: id
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ory-network-openapi.yml#DELETE /admin/organizations/{id}
+    - openapi/_original/ory-network-openapi.yml#GET /admin/organizations
+    - openapi/_original/ory-network-openapi.yml#GET /admin/organizations/{id}
+    - openapi/_original/ory-network-openapi.yml#POST /admin/organizations
+    - openapi/_original/ory-network-openapi.yml#PUT /admin/organizations/{id}

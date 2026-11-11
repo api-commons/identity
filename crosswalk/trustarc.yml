@@ -1,0 +1,73 @@
+provider: trustarc
+apis_io: https://apis.io/providers/trustarc/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id:
+      - id
+      - externalId
+      email: emails
+      name:
+      - name
+      - displayName
+      - title
+      status:
+      - active
+      - status
+      created_at: createdDate
+      last_name: lastName
+      username:
+      - userName
+      - username
+      first_name: firstName
+      role_ids: roles
+      updated_at: modifiedDate
+      phone:
+      - phoneNumbers
+      - phone
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/trustarc-guardian-openapi.json#DELETE /api/v1/permission-profiles/{id}/users
+    - openapi/_original/trustarc-guardian-openapi.json#DELETE /api/v1/permission-profiles/{id}/users/{userId}
+    - openapi/_original/trustarc-guardian-openapi.json#DELETE /api/v1/users/{id}
+    - openapi/_original/trustarc-guardian-openapi.json#DELETE /external/api/v2/scim/Users/{id}
+    - openapi/_original/trustarc-guardian-openapi.json#GET /api/v1/accounts/{id}/users
+  group:
+    path_segment:
+    - groups
+    - group
+    properties:
+      id:
+      - id
+      - externalId
+      name:
+      - displayName
+      - name
+      member_ids: members
+      organization_id: accountId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/trustarc-guardian-openapi.json#DELETE /external/api/v2/scim/Groups/{id}
+    - openapi/_original/trustarc-guardian-openapi.json#GET /api/v1/accounts/{accountId}/organizational-structure/group/{externalGroupId}
+    - openapi/_original/trustarc-guardian-openapi.json#GET /api/v1/accounts/{accountId}/organizational-structure/hierarchy/group/{externalGroupId}
+    - openapi/_original/trustarc-guardian-openapi.json#GET /external/api/v2/scim/Groups
+    - openapi/_original/trustarc-guardian-openapi.json#GET /external/api/v2/scim/Groups/{id}
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+      description: description
+      permission_ids: permissions
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/trustarc-guardian-openapi.json#GET /api/v1/clients/{id}/roles
+    - openapi/_original/trustarc-guardian-openapi.json#GET /api/v1/roles
+    - openapi/_original/trustarc-guardian-openapi.json#POST /api/v1/clients/{id}/roles
+    - openapi/_original/trustarc-guardian-openapi.yml#GET /api/v1/clients/{id}/roles
+    - openapi/_original/trustarc-guardian-openapi.yml#GET /api/v1/roles

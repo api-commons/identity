@@ -1,0 +1,70 @@
+provider: outsystems
+apis_io: https://apis.io/providers/outsystems/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      email:
+      - Email
+      - email
+      name:
+      - Name
+      - name
+      status:
+      - IsActive
+      - status
+      - isActive
+      username:
+      - Username
+      - username
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/lifetime-api.json#DELETE /teams/{TeamKey}/users/{UserKey}/
+    - openapi/_original/lifetime-api.json#GET /users/
+    - openapi/_original/lifetime-api.json#GET /users/{UserKey}/
+    - openapi/_original/lifetime-api.json#POST /teams/{TeamKey}/users/
+    - openapi/_original/lifetime-api.json#POST /users/
+  group:
+    path_segment:
+    - groups
+    - teams
+    properties:
+      name: name
+      description: description
+      member_ids: users
+      updated_at: updatedAt
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/lifetime-api.json#DELETE /teams/{TeamKey}/
+    - openapi/_original/lifetime-api.json#GET /teams/
+    - openapi/_original/lifetime-api.json#GET /teams/{TeamKey}/
+    - openapi/_original/lifetime-api.json#POST /teams/
+    - openapi/_original/lifetime-api.json#PUT /teams/{TeamKey}/
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/lifetime-api.json#DELETE /roles/{RoleKey}/
+    - openapi/_original/lifetime-api.json#GET /roles/
+    - openapi/_original/lifetime-api.json#GET /roles/{RoleKey}/
+    - openapi/_original/lifetime-api.json#POST /roles/
+    - openapi/_original/lifetime-api.json#PUT /roles/{RoleKey}/
+  permission:
+    path_segment:
+    - entitlements
+    - permissions
+    properties:
+      name: name
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/outsystems-subscription-api-v1-openapi.json#GET /environments/{environmentKey}/entitlements
+    - openapi/_original/outsystems-subscription-api-v1-openapi.json#GET /organization/entitlements
+    - openapi/_original/outsystems-user-access-management-api-v1-openapi.json#GET /permissions
+    - openapi/_original/outsystems-user-access-management-api-v1-openapi.json#GET /permissions/{key}

@@ -1,0 +1,108 @@
+provider: okta
+apis_io: https://apis.io/providers/okta/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - user
+    properties:
+      id:
+      - externalId
+      - id
+      name:
+      - name
+      - title
+      - displayName
+      status: status
+      created_at: created
+      metadata: properties
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/okta-openapi-original.yml#DELETE /api/v1/apps/{appId}/users/{userId}
+    - openapi/_original/okta-openapi-original.yml#DELETE /api/v1/groups/{groupId}/users/{userId}
+    - openapi/_original/okta-openapi-original.yml#DELETE /api/v1/idps/{idpId}/users/{userId}
+    - openapi/_original/okta-openapi-original.yml#DELETE /api/v1/meta/types/user/{typeId}
+    - openapi/_original/okta-openapi-original.yml#DELETE /api/v1/users/{userId}
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      created_at: created
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/okta-openapi-original.yml#DELETE /api/v1/apps/{appId}/groups/{groupId}
+    - openapi/_original/okta-openapi-original.yml#DELETE /api/v1/groups/{groupId}
+    - openapi/_original/okta-openapi-original.yml#DELETE /api/v1/users/{userId}/roles/{roleId}/targets/groups/{groupId}
+    - openapi/_original/okta-openapi-original.yml#GET /api/v1/apps/{appId}/groups
+    - openapi/_original/okta-openapi-original.yml#GET /api/v1/apps/{appId}/groups/{groupId}
+  organization:
+    path_segment:
+    - org
+    - organization
+    properties:
+      name: name
+      id: id
+      created_at: created
+      status:
+      - state
+      - status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/okta-management.yaml#GET /idp/myaccount/organization
+    - openapi/_original/okta-openapi-original.yml#GET /api/v1/org
+    - openapi/_original/okta-openapi-original.yml#POST /api/v1/org
+    - openapi/_original/okta-openapi-original.yml#PUT /api/v1/org
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: label
+      id: id
+      description: description
+      created_at: created
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/okta-openapi-original.yml#DELETE /api/v1/groups/{groupId}/roles/{roleId}
+    - openapi/_original/okta-openapi-original.yml#DELETE /api/v1/users/{userId}/roles/{roleId}
+    - openapi/_original/okta-openapi-original.yml#GET /api/v1/groups/{groupId}/roles
+    - openapi/_original/okta-openapi-original.yml#GET /api/v1/groups/{groupId}/roles/{roleId}
+    - openapi/_original/okta-openapi-original.yml#GET /api/v1/users/{userId}/roles
+  permission:
+    path_segment:
+    - scopes
+    properties:
+      id: id
+      name:
+      - displayName
+      - name
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/okta-openapi-original.yml#DELETE /api/v1/authorizationServers/{authServerId}/scopes/{scopeId}
+    - openapi/_original/okta-openapi-original.yml#GET /api/v1/authorizationServers/{authServerId}/scopes
+    - openapi/_original/okta-openapi-original.yml#GET /api/v1/authorizationServers/{authServerId}/scopes/{scopeId}
+    - openapi/_original/okta-openapi-original.yml#POST /api/v1/authorizationServers/{authServerId}/scopes
+    - openapi/_original/okta-openapi-original.yml#PUT /api/v1/authorizationServers/{authServerId}/scopes/{scopeId}
+  api_key:
+    path_segment:
+    - tokens
+    properties:
+      id:
+      - id
+      - userId
+      created_at: created
+      key: token
+      scopes: scopes
+      status: status
+      expires_at: expiresAt
+      created_by: createdBy
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/okta-openapi-original.yml#DELETE /api/v1/users/{userId}/clients/{clientId}/tokens
+    - openapi/_original/okta-openapi-original.yml#DELETE /api/v1/users/{userId}/clients/{clientId}/tokens/{tokenId}
+    - openapi/_original/okta-openapi-original.yml#GET /api/v1/idps/{idpId}/users/{userId}/credentials/tokens
+    - openapi/_original/okta-openapi-original.yml#GET /api/v1/users/{userId}/clients/{clientId}/tokens
+    - openapi/_original/okta-openapi-original.yml#GET /api/v1/users/{userId}/clients/{clientId}/tokens/{tokenId}

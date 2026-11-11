@@ -1,0 +1,42 @@
+provider: cesnet
+apis_io: https://apis.io/providers/cesnet/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    properties:
+      id:
+      - userId
+      - id
+      - uuid
+      name: name
+      created_at: createdAt
+      username: login
+      updated_at: modifiedAt
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/cesnet-perun-rpc-openapi.yml#GET /json/facilitiesManager/getAssignedFacilities/user
+    - openapi/_original/cesnet-perun-rpc-openapi.yml#POST /json/attributesManager/setAttribute/user
+    - openapi/_original/cesnet-perun-rpc-openapi.yml#POST /json/usersManager/changePassword/user
+    - openapi/_original/cesnet-perun-rpc-openapi.yml#POST /json/usersManager/reserveLogin/user
+    - openapi/_original/cesnet-perun-rpc-openapi.yml#POST /json/usersManager/reservePassword/user
+  group:
+    path_segment:
+    - group
+    properties:
+      id:
+      - id
+      - uuid
+      name: name
+      description: description
+      created_at: createdAt
+      updated_at: modifiedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cesnet-perun-rpc-openapi.yml#GET /json/facilitiesManager/getAssignedFacilities/group
+    - openapi/_original/cesnet-perun-rpc-openapi.yml#GET /json/registrarManager/getApplicationForm/group
+    - openapi/_original/cesnet-perun-rpc-openapi.yml#GET /json/registrarManager/getFormItems/group
+    - openapi/_original/cesnet-perun-rpc-openapi.yml#GET /json/registrarManager/getGroupsToAutoRegistration/group
+    - openapi/_original/cesnet-perun-rpc-openapi.yml#GET /json/resourcesManager/getResourcesWhereUserIsAdmin/group

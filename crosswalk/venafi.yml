@@ -1,0 +1,73 @@
+provider: venafi
+apis_io: https://apis.io/providers/venafi/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties:
+      id: id
+      email: emailAddress
+      name: name
+      status: disabled
+      created_at: creationDate
+      last_name: lastname
+      username: username
+      first_name: firstname
+      role_ids: role
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/venafi-certificate-manager-saas-openapi.json#DELETE /v1/teams/{id}/members
+    - openapi/_original/venafi-certificate-manager-saas-openapi.json#GET /v1/users
+    - openapi/_original/venafi-certificate-manager-saas-openapi.json#GET /v1/users/{id}
+    - openapi/_original/venafi-certificate-manager-saas-openapi.json#POST /v1/teams/{id}/members
+    - openapi/_original/venafi-certificate-manager-saas-openapi.yml#DELETE /v1/teams/{id}/members
+  group:
+    path_segment:
+    - teams
+    properties:
+      id:
+      - id
+      - ID
+      name:
+      - name
+      - Name
+      description: Description
+      member_ids:
+      - members
+      - Members
+      organization_id: companyId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/venafi-certificate-manager-saas-openapi.json#DELETE /v1/teams/{id}
+    - openapi/_original/venafi-certificate-manager-saas-openapi.json#GET /v1/teams
+    - openapi/_original/venafi-certificate-manager-saas-openapi.json#GET /v1/teams/{id}
+    - openapi/_original/venafi-certificate-manager-saas-openapi.json#PATCH /v1/teams/{id}
+    - openapi/_original/venafi-certificate-manager-saas-openapi.json#POST /v1/teams
+  role:
+    path_segment:
+    - role
+    - roles
+    properties:
+      id:
+      - id
+      - Guid
+      created_at: creationDate
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/venafi-certificate-manager-saas-openapi.json#PUT /v1/users/{id}/roles
+    - openapi/_original/venafi-certificate-manager-saas-openapi.yml#PUT /v1/users/{id}/roles
+    - openapi/_original/venafi-trust-protection-foundation-websdk-openapi.json#DELETE /vedsdk/pki/hashicorp/role/{guid}
+    - openapi/_original/venafi-trust-protection-foundation-websdk-openapi.json#GET /vedsdk/pki/hashicorp/role/{guid}
+    - openapi/_original/venafi-trust-protection-foundation-websdk-openapi.json#POST /vedsdk/pki/hashicorp/role/
+  permission:
+    path_segment:
+    - scopes
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/venafi-certificate-manager-saas-openapi.json#GET /v1/serviceaccounts/scopes
+    - openapi/_original/venafi-certificate-manager-saas-openapi.yml#GET /v1/serviceaccounts/scopes

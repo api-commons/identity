@@ -1,0 +1,52 @@
+provider: stytch
+apis_io: https://apis.io/providers/stytch/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties:
+      id:
+      - external_id
+      - user_id
+      email:
+      - email_address
+      - email
+      - emails
+      name: name
+      status: status
+      created_at: created_at
+      role_ids: roles
+      metadata: attributes
+      phone:
+      - phone_number
+      - phone_numbers
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/stytch-b2b-openapi.yml#DELETE /v1/b2b/organizations/{organization_id}/members/{member_id}
+    - openapi/_original/stytch-b2b-openapi.yml#POST /v1/b2b/organizations/{organization_id}/members
+    - openapi/_original/stytch-b2b-openapi.yml#PUT /v1/b2b/organizations/{organization_id}/members/{member_id}
+    - openapi/_original/stytch-consumer-openapi.yml#DELETE /v1/users/{user_id}
+    - openapi/_original/stytch-consumer-openapi.yml#GET /v1/users/{user_id}
+  organization:
+    path_segment:
+    - organizations
+    properties:
+      organization_id: organization_id
+      description: description
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/stytch-b2b-openapi.yml#DELETE /v1/b2b/organizations/{organization_id}
+    - openapi/_original/stytch-b2b-openapi.yml#GET /v1/b2b/organizations/{organization_id}
+    - openapi/_original/stytch-b2b-openapi.yml#GET /v1/b2b/rbac/organizations/{organization_id}
+    - openapi/_original/stytch-b2b-openapi.yml#POST /v1/b2b/discovery/organizations
+    - openapi/_original/stytch-b2b-openapi.yml#POST /v1/b2b/organizations
+  api_key:
+    path_segment:
+    - keys
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/stytch-management-openapi.yml#POST /pwa/v3/projects/:project_slug/environments/:environment_slug/trusted_token_profiles/:profile_id/keys

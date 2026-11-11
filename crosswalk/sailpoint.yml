@@ -1,0 +1,43 @@
+provider: sailpoint
+apis_io: https://apis.io/providers/sailpoint/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - identities
+    properties:
+      id: id
+      email: email
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/identity-security-cloud-v3.yml#GET /roles/{id}/identities
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+      description: description
+      created_at: created
+      updated_at: modified
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/identity-security-cloud-v3.yml#DELETE /roles/{id}
+    - openapi/_original/identity-security-cloud-v3.yml#GET /roles
+    - openapi/_original/identity-security-cloud-v3.yml#GET /roles/{id}
+    - openapi/_original/identity-security-cloud-v3.yml#PATCH /roles/{id}
+    - openapi/_original/identity-security-cloud-v3.yml#POST /roles
+  permission:
+    path_segment:
+    - entitlements
+    properties:
+      id: id
+      name: name
+      description: description
+      created_at: created
+      updated_at: modified
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/identity-security-cloud-v3.yml#GET /access-profiles/{id}/entitlements

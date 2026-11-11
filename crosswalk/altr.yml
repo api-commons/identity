@@ -1,0 +1,81 @@
+provider: altr
+apis_io: https://apis.io/providers/altr/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: user_id
+      name: display_name
+      created_at: created_at
+      username: username
+      updated_at: updated_at
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/altr-service-user-openapi.json#DELETE /services/{service}/users/{userid}
+    - openapi/_original/altr-service-user-openapi.json#GET /services/{service}/users
+    - openapi/_original/altr-service-user-openapi.json#GET /services/{service}/users/{userid}
+    - openapi/_original/altr-service-user-openapi.json#GET /users
+    - openapi/_original/altr-service-user-openapi.json#PATCH /services/{service}/users/{userid}
+  group:
+    path_segment:
+    - usergroups
+    - groups
+    properties:
+      description:
+      - details
+      - description
+      member_ids: users
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/altr-classification-openapi.json#GET /jobs/groups
+    - openapi/_original/altr-classification-openapi.yml#GET /jobs/groups
+    - openapi/_original/altr-dis-openapi.json#DELETE /tags/v1/tags/groups/{tagGroupID}
+    - openapi/_original/altr-dis-openapi.yml#DELETE /tags/v1/tags/groups/{tagGroupID}
+    - openapi/_original/altr-mapi-openapi.json#DELETE /thresholds/{id}/groups
+  organization:
+    path_segment:
+    - org
+    - organization
+    properties:
+      name: name
+      status: state
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/altr-mapi-openapi.json#GET /metadata/org
+    - openapi/_original/altr-mapi-openapi.json#PATCH /organization
+    - openapi/_original/altr-mapi-openapi.yml#GET /metadata/org
+    - openapi/_original/altr-mapi-openapi.yml#PATCH /organization
+  role:
+    path_segment:
+    - roles
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/altr-snowflake-metadata-openapi.json#GET /{databaseID}/roles
+    - openapi/_original/altr-snowflake-metadata-openapi.yml#GET /{databaseID}/roles
+  api_key:
+    path_segment:
+    - apikeys
+    properties:
+      id:
+      - id
+      - userId
+      created_at: createdAt
+      key:
+      - apiKey
+      - secret
+      name: name
+      status: status
+      description: description
+      updated_at: updatedAt
+      organization_id: orgId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/altr-mapi-openapi.json#GET /apikeys
+    - openapi/_original/altr-mapi-openapi.json#GET /apikeys/{id}
+    - openapi/_original/altr-mapi-openapi.json#PATCH /apikeys/{id}
+    - openapi/_original/altr-mapi-openapi.json#POST /apikeys
+    - openapi/_original/altr-mapi-openapi.yml#GET /apikeys

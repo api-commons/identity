@@ -1,0 +1,48 @@
+provider: authenticx
+apis_io: https://apis.io/providers/authenticx/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - user
+    properties:
+      id:
+      - id
+      - externalId
+      email:
+      - emails
+      - email
+      name:
+      - name
+      - displayName
+      status:
+      - active
+      - disabled
+      created_at: createdOn
+      last_name: lastName
+      username: userName
+      first_name: firstName
+      role_ids: roles
+      phone:
+      - phoneNumbers
+      - phoneNumber
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/authenticx-openapi.json#DELETE /scim/v2/Users/{UserId}
+    - openapi/_original/authenticx-openapi.json#GET /User
+    - openapi/_original/authenticx-openapi.json#GET /User/{UserId}
+    - openapi/_original/authenticx-openapi.json#GET /scim/v2/Users
+    - openapi/_original/authenticx-openapi.json#GET /scim/v2/Users/{UserId}
+  group:
+    path_segment:
+    - groups
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/authenticx-openapi.json#DELETE /scim/v2/Groups/{GroupId}
+    - openapi/_original/authenticx-openapi.json#GET /scim/v2/Groups
+    - openapi/_original/authenticx-openapi.json#GET /scim/v2/Groups/{GroupId}
+    - openapi/_original/authenticx-openapi.json#PATCH /scim/v2/Groups/{GroupId}
+    - openapi/_original/authenticx-openapi.json#POST /scim/v2/Groups

@@ -1,0 +1,13 @@
+provider: sadq-holding-limited
+apis_io: https://apis.io/providers/sadq-holding-limited/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/sadq-holding-limited-openapi-original.json#POST /api/v1/users
+    - openapi/_original/sadq-holding-limited-openapi-original.json#PUT /api/v1/users/{userId}

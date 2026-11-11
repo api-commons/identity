@@ -1,0 +1,102 @@
+provider: microsoft-graph
+apis_io: https://apis.io/providers/microsoft-graph/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    - users
+    - identities
+    - people
+    - user
+    properties:
+      id:
+      - userId
+      - id
+      email:
+      - mail
+      - userPrincipalName
+      name: displayName
+      status: state
+      last_name: surname
+      first_name: givenName
+      role_ids: roles
+      phone: mobilePhone
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/chats-openapi-original.yml#DELETE /chats/{chat-id}/members/{conversationMember-id}
+    - openapi/_original/chats-openapi-original.yml#DELETE /me/chats/{chat-id}/members/{conversationMember-id}
+    - openapi/_original/chats-openapi-original.yml#GET /chats/{chat-id}/members
+    - openapi/_original/chats-openapi-original.yml#GET /chats/{chat-id}/members/{conversationMember-id}
+    - openapi/_original/chats-openapi-original.yml#GET /me/chats/{chat-id}/members
+  group:
+    path_segment:
+    - groups
+    - team
+    - group
+    - teams
+    properties:
+      id: id
+      name: displayName
+      description: description
+      member_ids: members
+      organization_id: tenantId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/connections-openapi-original.yml#DELETE /connections/{externalConnection-id}/groups/{externalGroup-id}
+    - openapi/_original/connections-openapi-original.yml#DELETE /external/connections/{externalConnection-id}/groups/{externalGroup-id}
+    - openapi/_original/connections-openapi-original.yml#GET /connections/{externalConnection-id}/groups
+    - openapi/_original/connections-openapi-original.yml#GET /connections/{externalConnection-id}/groups/{externalGroup-id}
+    - openapi/_original/connections-openapi-original.yml#GET /external/connections/{externalConnection-id}/groups
+  organization:
+    path_segment:
+    - organization
+    - workspaces
+    - tenants
+    properties:
+      name:
+      - displayName
+      - label
+      id: id
+      organization_id: tenantId
+      status: state
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/microsoft-graph-api-openapi.yml#DELETE /organization/{organization-id}
+    - openapi/_original/microsoft-graph-api-openapi.yml#DELETE /places/{place-id}/graph.roomList/workspaces/{workspace-id}
+    - openapi/_original/microsoft-graph-api-openapi.yml#DELETE /tenantRelationships/multiTenantOrganization/tenants/{multiTenantOrganizationMember-id}
+    - openapi/_original/microsoft-graph-api-openapi.yml#GET /organization
+    - openapi/_original/microsoft-graph-api-openapi.yml#GET /organization/{organization-id}
+  role:
+    path_segment:
+    - roles
+    - role
+    properties:
+      name: displayName
+      id: id
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/employeeexperience-openapi-original.yml#DELETE /employeeExperience/roles/{engagementRole-id}
+    - openapi/_original/employeeexperience-openapi-original.yml#GET /employeeExperience/roles
+    - openapi/_original/employeeexperience-openapi-original.yml#GET /employeeExperience/roles/{engagementRole-id}
+    - openapi/_original/employeeexperience-openapi-original.yml#PATCH /employeeExperience/roles/{engagementRole-id}
+    - openapi/_original/employeeexperience-openapi-original.yml#POST /employeeExperience/roles
+  permission:
+    path_segment:
+    - scopes
+    - permissions
+    - permission
+    properties:
+      id: id
+      name: displayName
+      description: description
+      resource: resource
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/drives-openapi-original.yml#DELETE /drives/{drive-id}/items/{driveItem-id}/permissions/{permission-id}
+    - openapi/_original/drives-openapi-original.yml#GET /drives/{drive-id}/items/{driveItem-id}/permissions
+    - openapi/_original/drives-openapi-original.yml#GET /drives/{drive-id}/items/{driveItem-id}/permissions/{permission-id}
+    - openapi/_original/drives-openapi-original.yml#PATCH /drives/{drive-id}/items/{driveItem-id}/permissions/{permission-id}
+    - openapi/_original/drives-openapi-original.yml#POST /drives/{drive-id}/items/{driveItem-id}/permissions

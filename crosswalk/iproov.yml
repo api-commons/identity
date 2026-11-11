@@ -1,0 +1,19 @@
+provider: iproov
+apis_io: https://apis.io/providers/iproov/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: user_id
+      name: name
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/iproov-openapi.yml#DELETE /users/{existing_user_id}
+    - openapi/_original/iproov-openapi.yml#GET /users/{existing_user_id}
+    - openapi/_original/iproov-openapi.yml#PUT /users/{existing_user_id}
+    - openapi/_original/iproov-swagger.json#DELETE /users/{existing_user_id}
+    - openapi/_original/iproov-swagger.json#GET /users/{existing_user_id}

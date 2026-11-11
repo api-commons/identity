@@ -1,0 +1,12 @@
+provider: deezer
+apis_io: https://apis.io/providers/deezer/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - user
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/deezer-openapi.yml#GET /user/{id}

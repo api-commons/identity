@@ -1,0 +1,22 @@
+provider: university-of-sheffield
+apis_io: https://apis.io/providers/university-of-sheffield/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - user
+    properties:
+      id: id
+      email: email
+      status: is_active
+      last_name: last_name
+      first_name: first_name
+      phone: phone
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/university-of-sheffield-sheffield-solar-openapi.json#DELETE /users/{id}
+    - openapi/_original/university-of-sheffield-sheffield-solar-openapi.json#GET /users/{id}
+    - openapi/_original/university-of-sheffield-sheffield-solar-openapi.json#PATCH /users/{id}
+    - openapi/_original/university-of-sheffield-sheffield-solar-openapi.json#POST /admin/admin_page/user/{user_id}

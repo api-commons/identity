@@ -1,0 +1,47 @@
+provider: university-of-warsaw
+apis_io: https://apis.io/providers/university-of-warsaw/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    - people
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/Docsense/People
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/PermsGroups/{name}/Members
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/PersonSystemRoleSap/CoaUser/Members
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/PersonSystemRoleSap/Security/Members
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/PersonSystemRoleSap/Workflow/Members
+  group:
+    path_segment:
+    - team
+    properties:
+      description: details
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/MyUw/Project/{projectId}/Team
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/Project/{projectId}/Team
+    - openapi/_original/university-of-warsaw-jaskier-api.json#PUT /api/v1/Project/{projectId}/Team
+  role:
+    path_segment:
+    - roles
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/PersonSystemRoleSap/Roles
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/UwPerson/{personId}/Roles
+  permission:
+    path_segment:
+    - permissions
+    - permission
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/Admin/ApiKey/{apiKeyName}/Permissions
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/Admin/CasRoles/{casRole}/Permissions
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/Admin/ObjectTypes/Permissions
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/Admin/PermGroups/{name}/Permissions
+    - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/Admin/UnitOccupation/{unitCode}/Permissions

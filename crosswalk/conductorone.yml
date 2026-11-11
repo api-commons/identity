@@ -1,0 +1,49 @@
+provider: conductorone
+apis_io: https://apis.io/providers/conductorone/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      email: email
+      role_ids: roleIds
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/c1-openapi-original.yml#GET /api/v1/apps/{app_id}/entitlements/users/{app_user_id}
+    - openapi/_original/c1-openapi-original.yml#GET /api/v1/apps/{app_id}/entitlements/{app_entitlement_id}/users
+    - openapi/_original/c1-openapi-original.yml#GET /api/v1/search/apps/{app_id}/entitlements/users/{app_user_id}
+    - openapi/_original/c1-openapi-original.yml#GET /api/v1/users
+    - openapi/_original/c1-openapi-original.yml#GET /api/v1/users/{id}
+  role:
+    path_segment:
+    - roles
+    properties:
+      name:
+      - displayName
+      - name
+      id: id
+      permission_ids: permissions
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/c1-openapi-original.yml#GET /api/v1/iam/roles
+    - openapi/_original/c1-openapi-original.yml#GET /api/v1/iam/roles/{role_id}
+    - openapi/_original/c1-openapi-original.yml#POST /api/v1/iam/roles/{role_id}
+    - openapi/_original/conductorone-openapi-original.yml#GET /api/v1/iam/roles
+    - openapi/_original/conductorone-openapi-original.yml#GET /api/v1/iam/roles/{role_id}
+  permission:
+    path_segment:
+    - entitlements
+    properties:
+      name: displayName
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/c1-openapi-original.yml#DELETE /api/v1/apps/{app_id}/entitlements/{id}
+    - openapi/_original/c1-openapi-original.yml#GET /api/v1/apps/{app_id}/entitlements
+    - openapi/_original/c1-openapi-original.yml#GET /api/v1/apps/{app_id}/entitlements/{id}
+    - openapi/_original/c1-openapi-original.yml#POST /api/v1/apps/{app_id}/entitlements
+    - openapi/_original/c1-openapi-original.yml#POST /api/v1/apps/{app_id}/entitlements/{id}

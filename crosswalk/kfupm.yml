@@ -1,0 +1,48 @@
+provider: kfupm
+apis_io: https://apis.io/providers/kfupm/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id: uuid
+      email: email
+      name: name
+      created_at: createdDate
+      username: username
+      updated_at: modifiedDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kfupm-openapi.yml#DELETE /users/{uuid}
+    - openapi/_original/kfupm-openapi.yml#GET /users
+    - openapi/_original/kfupm-openapi.yml#GET /users/{uuid}
+    - openapi/_original/kfupm-openapi.yml#PUT /users
+    - openapi/_original/kfupm-openapi.yml#PUT /users/{uuid}
+  organization:
+    path_segment:
+    - organizations
+    properties:
+      name: name
+      id: uuid
+      created_at: createdDate
+      updated_at: modifiedDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kfupm-openapi.yml#DELETE /organizations/{uuid}
+    - openapi/_original/kfupm-openapi.yml#GET /organizations
+    - openapi/_original/kfupm-openapi.yml#GET /organizations/{uuid}
+    - openapi/_original/kfupm-openapi.yml#PUT /organizations
+    - openapi/_original/kfupm-openapi.yml#PUT /organizations/{uuid}
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: title
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/kfupm-openapi.yml#GET /roles
+    - openapi/_original/kfupm-openapi.yml#GET /roles/{assignableRoleName}
+    - openapi/_original/kfupm-openapi.yml#GET /users/{uuid}/roles
+    - openapi/_original/kfupm-openapi.yml#PUT /users/{uuid}/roles

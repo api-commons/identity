@@ -1,0 +1,80 @@
+provider: postman
+apis_io: https://apis.io/providers/postman/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id:
+      - id
+      - externalId
+      email: email
+      name: name
+      status: active
+      username:
+      - userName
+      - username
+      role_ids: roles
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/postman-api-openapi.yml#GET /scim/v2/Users
+    - openapi/_original/postman-api-openapi.yml#GET /scim/v2/Users/{userId}
+    - openapi/_original/postman-api-openapi.yml#GET /users
+    - openapi/_original/postman-api-openapi.yml#GET /users/{userId}
+    - openapi/_original/postman-api-openapi.yml#PATCH /scim/v2/Users/{userId}
+  group:
+    path_segment:
+    - groups
+    - teams
+    properties:
+      id:
+      - id
+      - externalId
+      name:
+      - name
+      - displayName
+      description: description
+      member_ids:
+      - members
+      - memberCount
+      created_at: createdAt
+      updated_at: updatedAt
+      organization_id: organizationId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/postman-api-openapi.yml#DELETE /scim/v2/Groups/{groupId}
+    - openapi/_original/postman-api-openapi.yml#GET /groups
+    - openapi/_original/postman-api-openapi.yml#GET /groups/{groupId}
+    - openapi/_original/postman-api-openapi.yml#GET /scim/v2/Groups
+    - openapi/_original/postman-api-openapi.yml#GET /scim/v2/Groups/{groupId}
+  organization:
+    path_segment:
+    - workspaces
+    - workspace
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      description: description
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/postman-api-openapi.yml#DELETE /network/private/workspace/{workspaceId}
+    - openapi/_original/postman-api-openapi.yml#DELETE /workspaces/{workspaceId}
+    - openapi/_original/postman-api-openapi.yml#GET /workspaces
+    - openapi/_original/postman-api-openapi.yml#GET /workspaces/{workspaceId}
+    - openapi/_original/postman-api-openapi.yml#POST /workspaces
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: displayName
+      id: id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/postman-api-openapi.yml#GET /collections/{collectionId}/roles
+    - openapi/_original/postman-api-openapi.yml#GET /workspaces/{workspaceId}/roles
+    - openapi/_original/postman-api-openapi.yml#PATCH /collections/{collectionId}/roles
+    - openapi/_original/postman-api-openapi.yml#PATCH /workspaces/{workspaceId}/roles

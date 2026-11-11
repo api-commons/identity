@@ -1,0 +1,24 @@
+provider: university-of-vienna
+apis_io: https://apis.io/providers/university-of-vienna/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - members
+    properties:
+      status: status
+      metadata: metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/university-of-vienna-phaidra-api.yaml#GET /collection/{pid}/members
+    - openapi/_original/university-of-vienna-phaidra-api.yaml#GET /object/{pid}/index/members
+  group:
+    path_segment:
+    - groups
+    - group
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/university-of-vienna-phaidra-api.yaml#GET /group/{gid}
+    - openapi/_original/university-of-vienna-phaidra-api.yaml#GET /groups

@@ -1,0 +1,63 @@
+provider: openpath
+apis_io: https://apis.io/providers/openpath/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      id:
+      - id
+      - externalId
+      name: title
+      status: status
+      created_at: createdAt
+      role_ids: roles
+      updated_at: updatedAt
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/openpath-openapi-original.json#DELETE /orgs/{orgId}/groups/{groupId}/users/{userId}
+    - openapi/_original/openpath-openapi-original.json#DELETE /orgs/{orgId}/roles/{roleId}/users/{userId}
+    - openapi/_original/openpath-openapi-original.json#DELETE /orgs/{orgId}/sites/{siteId}/users/{userId}
+    - openapi/_original/openpath-openapi-original.json#DELETE /orgs/{orgId}/users/{userId}
+    - openapi/_original/openpath-openapi-original.json#DELETE /orgs/{orgId}/zones/{zoneId}/users/{userId}
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      name: name
+      description: description
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/openpath-openapi-original.json#DELETE /orgs/{orgId}/groups/{groupId}
+    - openapi/_original/openpath-openapi-original.json#DELETE /orgs/{orgId}/sites/{siteId}/groups/{groupId}
+    - openapi/_original/openpath-openapi-original.json#DELETE /orgs/{orgId}/zones/{zoneId}/groups/{groupId}
+    - openapi/_original/openpath-openapi-original.json#GET /orgs/{orgId}/groups
+    - openapi/_original/openpath-openapi-original.json#GET /orgs/{orgId}/groups/{groupId}
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+      description: description
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/openpath-openapi-original.json#DELETE /orgs/{orgId}/roles/{roleId}
+    - openapi/_original/openpath-openapi-original.json#GET /orgs/{orgId}/roles
+    - openapi/_original/openpath-openapi-original.json#GET /orgs/{orgId}/roles/{roleId}
+    - openapi/_original/openpath-openapi-original.json#GET /orgs/{orgId}/users/{userId}/roles
+    - openapi/_original/openpath-openapi-original.json#PATCH /orgs/{orgId}/roles/{roleId}
+  permission:
+    path_segment:
+    - permissions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openpath-openapi-original.json#PUT /orgs/{orgId}/lockdownPlans/{lockdownPlanId}/permissions

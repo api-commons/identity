@@ -1,0 +1,80 @@
+provider: beyond-identity
+apis_io: https://apis.io/providers/beyond-identity/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - identities
+    - users
+    properties:
+      id:
+      - id
+      - externalId
+      email: emails
+      name:
+      - display_name
+      - displayName
+      - name
+      status:
+      - status
+      - active
+      created_at: create_time
+      username: userName
+      updated_at: update_time
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#DELETE /v1/tenants/{tenant_id}/realms/{realm_id}/identities/{identity_id}
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#DELETE /v1/tenants/{tenant_id}/realms/{realm_id}/scim/v2/Users/{user_id}
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#GET /v1/tenants/{tenant_id}/realms/{realm_id}/identities
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#GET /v1/tenants/{tenant_id}/realms/{realm_id}/identities/{identity_id}
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#GET /v1/tenants/{tenant_id}/realms/{realm_id}/scim/v2/Users
+  group:
+    path_segment:
+    - groups
+    properties:
+      id: id
+      name:
+      - display_name
+      - displayName
+      description: description
+      created_at: create_time
+      updated_at: update_time
+      organization_id: tenant_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#DELETE /v1/tenants/{tenant_id}/realms/{realm_id}/groups/{group_id}
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#DELETE /v1/tenants/{tenant_id}/realms/{realm_id}/scim/v2/Groups/{group_id}
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#GET /v1/tenants/{tenant_id}/realms/{realm_id}/groups
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#GET /v1/tenants/{tenant_id}/realms/{realm_id}/groups/{group_id}
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#GET /v1/tenants/{tenant_id}/realms/{realm_id}/scim/v2/Groups/
+  organization:
+    path_segment:
+    - tenants
+    properties:
+      name: display_name
+      id: id
+      created_at: create_time
+      updated_at: update_time
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#GET /v1/tenants/{tenant_id}
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#PATCH /v1/tenants/{tenant_id}
+    - openapi/_original/beyond-identity-secure-workforce-api-openapi.yml#GET /v1/tenants/{tenant_id}
+    - openapi/_original/beyond-identity-secure-workforce-api-openapi.yml#PATCH /v1/tenants/{tenant_id}
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: display_name
+      id: id
+      description: description
+      created_at: create_time
+      updated_at: update_time
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#DELETE /v1/tenants/{tenant_id}/realms/{realm_id}/resource-servers/{resource_server_id}/roles/{role_id}
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#GET /v1/tenants/{tenant_id}/realms/{realm_id}/resource-servers/{resource_server_id}/roles
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#GET /v1/tenants/{tenant_id}/realms/{realm_id}/resource-servers/{resource_server_id}/roles/{role_id}
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#PATCH /v1/tenants/{tenant_id}/realms/{realm_id}/resource-servers/{resource_server_id}/roles/{role_id}
+    - openapi/_original/beyond-identity-secure-access-api-openapi.yml#POST /v1/tenants/{tenant_id}/realms/{realm_id}/resource-servers/{resource_server_id}/roles

@@ -1,0 +1,60 @@
+provider: authentik
+apis_io: https://apis.io/providers/authentik/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - user
+    properties:
+      id: uuid
+      email: email
+      name: name
+      status: is_active
+      username: username
+      role_ids: roles
+      metadata: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/authentik-openapi.yml#DELETE /core/users/{id}/
+    - openapi/_original/authentik-openapi.yml#GET /core/users/
+    - openapi/_original/authentik-openapi.yml#GET /core/users/{id}/
+    - openapi/_original/authentik-openapi.yml#PATCH /core/users/{id}/
+    - openapi/_original/authentik-openapi.yml#POST /core/users/
+  group:
+    path_segment:
+    - groups
+    properties:
+      name: name
+      member_ids: users
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/authentik-openapi.yml#DELETE /core/groups/{group_uuid}/
+    - openapi/_original/authentik-openapi.yml#GET /core/groups/
+    - openapi/_original/authentik-openapi.yml#GET /core/groups/{group_uuid}/
+    - openapi/_original/authentik-openapi.yml#PATCH /core/groups/{group_uuid}/
+    - openapi/_original/authentik-openapi.yml#POST /core/groups/
+  role:
+    path_segment:
+    - roles
+    properties:
+      name: name
+      id: id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/authentik-openapi.yml#DELETE /rbac/roles/{uuid}/
+    - openapi/_original/authentik-openapi.yml#GET /rbac/permissions/roles/
+    - openapi/_original/authentik-openapi.yml#GET /rbac/roles/
+    - openapi/_original/authentik-openapi.yml#GET /rbac/roles/{uuid}/
+    - openapi/_original/authentik-openapi.yml#PATCH /rbac/roles/{uuid}/
+  permission:
+    path_segment:
+    - permissions
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/authentik-openapi.yml#GET /rbac/permissions/
+    - openapi/_original/authentik-openapi.yml#GET /rbac/permissions/{id}/

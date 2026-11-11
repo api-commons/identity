@@ -1,0 +1,15 @@
+provider: softr
+apis_io: https://apis.io/providers/softr/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    properties:
+      email: email
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/softr-openapi.yml#DELETE /users/{email}
+    - openapi/_original/softr-openapi.yml#POST /users

@@ -1,0 +1,21 @@
+provider: nudge-security
+apis_io: https://apis.io/providers/nudge-security/
+context: identity
+generated: '2026-11-10'
+concepts:
+  user:
+    path_segment:
+    - users
+    - members
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/nudge-security-openapi.yml#GET /user-groups/{group_id}/members
+    - openapi/_original/nudge-security-openapi.yml#GET /users
+  group:
+    path_segment:
+    - user-groups
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/nudge-security-openapi.yml#GET /user-groups
