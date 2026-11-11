@@ -14,7 +14,7 @@ tags:
 - Access Control
 - Common Schema
 created: '2026-09-13'
-modified: '2026-11-10'
+modified: '2026-11-11'
 url: https://raw.githubusercontent.com/api-commons/identity/main/apis.yml
 specificationVersion: '0.20'
 apis:
@@ -32,6 +32,8 @@ apis:
     url: https://raw.githubusercontent.com/api-commons/identity/main/profile.yml
   - type: Adopters
     url: https://raw.githubusercontent.com/api-commons/identity/main/adopters.yml
+  - type: Arazzo
+    url: https://raw.githubusercontent.com/api-commons/identity/main/arazzo.yml
   - type: Rules
     url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
   - type: JSONSchema

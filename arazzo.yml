@@ -1,0 +1,55 @@
+arazzo: 1.0.1
+info:
+  title: Identity and Users workflows (API Commons)
+  version: 0.1.0-draft.20261111
+  summary: Reference workflows over the common Identity and Users operations.
+  description: 'Reference compositions of the operations this context''s providers share. Not measured: every step
+    is a core- or extended-tier operation of the common OpenAPI, so the workflow runs against any provider that
+    implements those operations (see crosswalk/).'
+sourceDescriptions:
+- name: identity
+  url: ./openapi.yml
+  type: openapi
+workflows:
+- workflowId: invite-into-group
+  summary: Invite a person by email, then add the resulting user to a group
+  description: Invite a person by email, then add the resulting user to a group.
+  inputs:
+    type: object
+    required:
+    - group_id
+    properties:
+      group_id:
+        type: string
+  steps:
+  - stepId: invite
+    operationId: createInvite
+    description: Create an invite -- a core-tier operation (91% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+  - stepId: group
+    operationId: getGroup
+    description: Get a group -- a core-tier operation (80% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    parameters:
+    - name: group_id
+      in: path
+      value: $inputs.group_id
+  - stepId: membership
+    operationId: updateGroup
+    description: Update a group -- a core-tier operation (66% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    parameters:
+    - name: group_id
+      in: path
+      value: $steps.group.outputs.id
+  x-commons-tiers:
+  - core

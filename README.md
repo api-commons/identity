@@ -38,6 +38,7 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 - [openapi.yml](openapi.yml) -- OpenAPI 3.1 of the shared operations. No one serves it; it
   is the shape to map to. Lints clean against the
   [naming ruleset](https://github.com/api-commons/schema-commons/blob/main/ruleset/schema-commons-naming.yaml).
+- [arazzo.yml](arazzo.yml) -- reference workflows composed only of the shared operations (compositions, not measurements).
 - [schema/](schema) -- JSON Schema 2020-12 per concept; each property carries
   `x-commons-tier`, `x-commons-share`, `x-commons-providers` and the spellings seen.
 - [crosswalk/](crosswalk) -- one per provider, common name -> their name, with the harvested

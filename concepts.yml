@@ -118,3 +118,11 @@ decisions:
   - "Invites are `/invites`: invite and invites lead (22 providers) invitations (15)."
   - "Duplicates merged: ConductorOne (C1), Cerner into Oracle Health, three Cvent listings,
     EVE Online into CCP Games, Dynamic, Kinde."
+
+workflows:
+  - id: invite-into-group
+    summary: Invite a person by email, then add the resulting user to a group
+    steps:
+      - {op: createInvite, id: invite}
+      - {op: getGroup, id: group, path: {"{group_id}": "$inputs.group_id"}}
+      - {op: updateGroup, id: membership, path: {"{group_id}": "$steps.group.outputs.id"}}
