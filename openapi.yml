@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Identity and Users (API Commons)
-  version: 0.1.0-draft.20261110
+  version: 0.1.0-draft.20261111
   description: 'The common Identity and Users interface, distilled from the harvested OpenAPI of 443 providers in
     the APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
     so that providers, agents and integrators can map to one vocabulary. See profile.yml.'

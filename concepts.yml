@@ -103,8 +103,8 @@ findings:
   - "A user agrees on id, email and name -- and only just on name: SCIM nests it as an
     object, others split first and last name, others carry a display name, so the most common
     resource in the catalog agrees on less than a CRM contact does."
-  - "Roles and groups agree on name, id and description, and roles reference their
-    permissions a third of the time -- RBAC is the same shape everywhere."
+  - "Roles and groups agree on name, id and description -- and a third of roles reference
+    their permissions: RBAC is the same shape everywhere."
   - "An invite agrees on email, id and the role it grants: the minimum to bring someone in."
   - "API keys agree on id, name, key and created_at once only unambiguous paths count."
 decisions:

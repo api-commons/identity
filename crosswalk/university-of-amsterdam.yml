@@ -1,7 +1,7 @@
 provider: university-of-amsterdam
 apis_io: https://apis.io/providers/university-of-amsterdam/
 context: identity
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   user:
     path_segment:

@@ -1,7 +1,7 @@
 provider: opal-security
 apis_io: https://apis.io/providers/opal-security/
 context: identity
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   user:
     path_segment:

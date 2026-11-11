@@ -1,7 +1,7 @@
 provider: privy
 apis_io: https://apis.io/providers/privy/
 context: identity
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   user:
     path_segment:

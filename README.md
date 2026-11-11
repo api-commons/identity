@@ -20,7 +20,7 @@ generated. Every number below is a count of providers.
 | invite | 34 | 30 | email 73%, id 70%, role 63% | invitations 15, invite 11, invites 11, invitation 1 |
 | api_key | 25 | 21 | id 90%, created_at 76%, key 71%, name 71% | tokens 10, api-keys 8, apikeys 3, keys 3 |
 
-Cohort: 443 providers with harvested OpenAPI, 185 crosswalks. Of the providers exposing a user: 65% create, 85% list, 75% fetch, 53% update, 53% delete. Generated 2026-11-10 by build.py.
+Cohort: 443 providers with harvested OpenAPI, 185 crosswalks. Of the providers exposing a user: 65% create, 85% list, 75% fetch, 53% update, 53% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The
@@ -29,7 +29,7 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 ## What the measurement shows
 
 - A user agrees on id, email and name -- and only just on name: SCIM nests it as an object, others split first and last name, others carry a display name, so the most common resource in the catalog agrees on less than a CRM contact does.
-- Roles and groups agree on name, id and description, and roles reference their permissions a third of the time -- RBAC is the same shape everywhere.
+- Roles and groups agree on name, id and description -- and a third of roles reference their permissions: RBAC is the same shape everywhere.
 - An invite agrees on email, id and the role it grants: the minimum to bring someone in.
 - API keys agree on id, name, key and created_at once only unambiguous paths count.
 

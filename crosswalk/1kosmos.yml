@@ -1,7 +1,7 @@
 provider: 1kosmos
 apis_io: https://apis.io/providers/1kosmos/
 context: identity
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   user:
     path_segment:

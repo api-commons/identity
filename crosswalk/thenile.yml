@@ -1,7 +1,7 @@
 provider: thenile
 apis_io: https://apis.io/providers/thenile/
 context: identity
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   user:
     path_segment:
