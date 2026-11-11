@@ -69,3 +69,17 @@ concepts:
     - openapi/_original/siam-openapi.json#GET /api/scim/v2/Roles
     - openapi/_original/siam-openapi.json#GET /api/scim/v2/Roles/{roleId}
     - openapi/_original/siam-openapi.json#PATCH /api/scim/v2/Roles/{roleId}
+  invite:
+    path_segment:
+    - invitations
+    properties:
+      id:
+      - id
+      - externalId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/siam-openapi.json#DELETE /api/scim/v2/Invitations/{invitationId}
+    - openapi/_original/siam-openapi.json#GET /api/scim/v2/Invitations
+    - openapi/_original/siam-openapi.json#GET /api/scim/v2/Invitations/{invitationId}
+    - openapi/_original/signicat-siam-openapi.yml#DELETE /api/scim/v2/Invitations/{invitationId}
+    - openapi/_original/signicat-siam-openapi.yml#GET /api/scim/v2/Invitations

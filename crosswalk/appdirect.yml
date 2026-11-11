@@ -64,6 +64,22 @@ concepts:
     core_coverage: 0.0
     evidence:
     - openapi/_original/appdirect-companies-openapi-original.yml#PATCH /account/v2/companies/{companyUuid}/memberships/roles
+  invite:
+    path_segment:
+    - invitations
+    - invite
+    properties:
+      email:
+      - email
+      - emailAddress
+      role: role
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/appdirect-companies-openapi-original.yml#DELETE /account/v2/companies/{companyUuid}/invitations/{email}
+    - openapi/_original/appdirect-companies-openapi-original.yml#GET /account/v2/companies/{companyUuid}/invitations
+    - openapi/_original/appdirect-companies-openapi-original.yml#POST /account/v2/companies/{companyUuid}/invitations
+    - openapi/_original/appdirect-companies-openapi-original.yml#POST /account/v2/companies/{companyUuid}/memberships/{userUuid}/invite
+    - openapi/_original/appdirect-devsai-openapi-original.json#GET /api/v1/tenant/organizations/{orgId}/invitations
   api_key:
     path_segment:
     - api-keys

@@ -104,3 +104,18 @@ concepts:
     - openapi/_original/permit-io-openapi.json#DELETE /v2/schema/{proj_id}/{env_id}/roles/{role_id}/permissions
     - openapi/_original/permit-io-openapi.json#GET /v2/policy_guards/scopes
     - openapi/_original/permit-io-openapi.json#GET /v2/policy_guards/scopes/{policy_guard_scope_id}
+  invite:
+    path_segment:
+    - invites
+    properties:
+      email: email
+      id: id
+      role: role
+      status: status
+      created_at: created_at
+      organization_id: organization_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/permit-io-openapi.json#DELETE /v2/orgs/{org_id}/invites/{invite_id}
+    - openapi/_original/permit-io-openapi.json#GET /v2/orgs/{org_id}/invites
+    - openapi/_original/permit-io-openapi.json#POST /v2/orgs/{org_id}/invites

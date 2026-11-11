@@ -11,3 +11,12 @@ concepts:
     evidence:
     - openapi/_original/sadq-holding-limited-openapi-original.json#POST /api/v1/users
     - openapi/_original/sadq-holding-limited-openapi-original.json#PUT /api/v1/users/{userId}
+  invite:
+    path_segment:
+    - invitations
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/sadq-holding-limited-openapi-original.json#POST /api/v1/invitations
+    - openapi/_original/sadq-holding-limited-openapi-original.json#POST /api/v2/invitations
+    - openapi/_original/sadq-holding-limited-openapi-original.json#POST /api/v3/invitations

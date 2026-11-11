@@ -65,3 +65,14 @@ concepts:
     - openapi/_original/sync-openapi-original.yml#DELETE /v1/Services/{ServiceSid}/Lists/{ListSid}/Permissions/{Identity}
     - openapi/_original/sync-openapi-original.yml#DELETE /v1/Services/{ServiceSid}/Maps/{MapSid}/Permissions/{Identity}
     - openapi/_original/sync-openapi-original.yml#GET /v1/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions
+  invite:
+    path_segment:
+    - invites
+    properties:
+      created_at: date_created
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/ip-message-openapi-original.yml#DELETE /v2/Services/{ServiceSid}/Channels/{ChannelSid}/Invites/{Sid}
+    - openapi/_original/ip-message-openapi-original.yml#GET /v2/Services/{ServiceSid}/Channels/{ChannelSid}/Invites
+    - openapi/_original/ip-message-openapi-original.yml#GET /v2/Services/{ServiceSid}/Channels/{ChannelSid}/Invites/{Sid}
+    - openapi/_original/ip-message-openapi-original.yml#POST /v2/Services/{ServiceSid}/Channels/{ChannelSid}/Invites

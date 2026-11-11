@@ -60,6 +60,16 @@ concepts:
     - openapi/_original/openwork-den-openapi.json#PATCH /v1/roles/{roleId}
     - openapi/_original/openwork-den-openapi.json#POST /v1/members/{memberId}/role
     - openapi/_original/openwork-den-openapi.json#POST /v1/roles
+  invite:
+    path_segment:
+    - invitations
+    properties:
+      email: email
+      role: role
+      expires_at: expiresAt
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/openwork-den-openapi.json#POST /v1/invitations
   api_key:
     path_segment:
     - api-keys

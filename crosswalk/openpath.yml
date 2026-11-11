@@ -61,3 +61,11 @@ concepts:
     core_coverage: 0.0
     evidence:
     - openapi/_original/openpath-openapi-original.json#PUT /orgs/{orgId}/lockdownPlans/{lockdownPlanId}/permissions
+  invite:
+    path_segment:
+    - invite
+    properties:
+      email: email
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/openpath-openapi-original.json#POST /orgs/{orgId}/wirelessLockProviders/{wirelessLockProviderId}/invite

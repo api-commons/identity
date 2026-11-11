@@ -13,3 +13,10 @@ concepts:
     evidence:
     - openapi/_original/softr-openapi.yml#DELETE /users/{email}
     - openapi/_original/softr-openapi.yml#POST /users
+  invite:
+    path_segment:
+    - invite
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/softr-openapi.yml#POST /users/{email}/invite

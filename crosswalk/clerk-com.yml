@@ -80,6 +80,28 @@ concepts:
     - openapi/_original/clerk-backend-api-openapi.yml#DELETE /organization_roles/{organization_role_id}/permissions/{permission_id}
     - openapi/_original/clerk-backend-api-openapi.yml#POST /machines/{machine_id}/scopes
     - openapi/_original/clerk-backend-api-openapi.yml#POST /organization_roles/{organization_role_id}/permissions/{permission_id}
+  invite:
+    path_segment:
+    - invitations
+    - invite
+    properties:
+      email: email_address
+      id: id
+      role: role
+      status: status
+      created_at: created_at
+      organization_id: organization_id
+      expires_at: expires_at
+      metadata:
+      - public_metadata
+      - private_metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/clerk-backend-api-openapi.yml#GET /invitations
+    - openapi/_original/clerk-backend-api-openapi.yml#GET /organizations/{organization_id}/invitations
+    - openapi/_original/clerk-backend-api-openapi.yml#GET /organizations/{organization_id}/invitations/{invitation_id}
+    - openapi/_original/clerk-backend-api-openapi.yml#POST /invitations
+    - openapi/_original/clerk-backend-api-openapi.yml#POST /invitations/bulk
   api_key:
     path_segment:
     - api_keys

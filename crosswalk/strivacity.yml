@@ -74,3 +74,18 @@ concepts:
     - openapi/_original/strivacity-admin-portal-openapi-original.json#DELETE /admin/api/v1/accessPolicies/{policyId}/scopes/{scopeId}
     - openapi/_original/strivacity-admin-portal-openapi-original.json#GET /admin/api/v1/accessPolicies/{policyId}/scopes/{scopeId}
     - openapi/_original/strivacity-admin-portal-openapi-original.json#GET /admin/api/v1/identityStores/{identityStoreName}/scopes
+  invite:
+    path_segment:
+    - invite
+    properties:
+      email: email
+      role: roles
+      organization_id: organization
+      metadata: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/strivacity-admin-management-openapi-original.json#DELETE /admin/api/v1/admin/identityStore/invite/{invitationId}
+    - openapi/_original/strivacity-admin-management-openapi-original.json#GET /admin/api/v1/admin/identityStore/invite
+    - openapi/_original/strivacity-admin-management-openapi-original.json#GET /admin/api/v1/admin/identityStore/invite/{invitationId}
+    - openapi/_original/strivacity-admin-management-openapi-original.json#POST /admin/api/v1/admin/identityStore/invite
+    - openapi/_original/strivacity-admin-management-openapi.yml#DELETE /admin/api/v1/admin/identityStore/invite/{invitationId}

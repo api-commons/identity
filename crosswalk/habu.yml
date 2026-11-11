@@ -21,3 +21,15 @@ concepts:
     - openapi/_original/habu-clean-room-api-openapi.yml#GET /cleanrooms/{cleanroomId}/users
     - openapi/_original/habu-clean-room-api-openapi.yml#GET /cleanrooms/{cleanroomId}/users/{cleanroomUserId}
     - openapi/_original/habu-clean-room-api-openapi.yml#GET /users
+  invite:
+    path_segment:
+    - invitations
+    properties:
+      id: id
+      status: Status
+      organization_id: organizationId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/habu-clean-room-api-openapi.yml#DELETE /cleanrooms/{cleanroomId}/invitations
+    - openapi/_original/habu-clean-room-api-openapi.yml#DELETE /cleanrooms/{cleanroomId}/invitations/{invitationId}
+    - openapi/_original/habu-clean-room-api-openapi.yml#GET /cleanrooms/{cleanroomId}/invitations

@@ -43,6 +43,23 @@ concepts:
     - openapi/_original/stytch-b2b-openapi.yml#GET /v1/b2b/rbac/organizations/{organization_id}
     - openapi/_original/stytch-b2b-openapi.yml#POST /v1/b2b/discovery/organizations
     - openapi/_original/stytch-b2b-openapi.yml#POST /v1/b2b/organizations
+  invite:
+    path_segment:
+    - invite
+    properties:
+      email:
+      - email_address
+      - email
+      id: user_id
+      role: roles
+      organization_id:
+      - organization
+      - organization_id
+      metadata: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/stytch-b2b-openapi.yml#POST /v1/b2b/magic_links/email/invite
+    - openapi/_original/stytch-consumer-openapi.yml#POST /v1/magic_links/email/invite
   api_key:
     path_segment:
     - keys

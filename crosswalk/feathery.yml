@@ -31,3 +31,11 @@ concepts:
     - openapi/_original/feathery-rest-api-openapi.yml#GET /api/workspace/{workspace_id}/
     - openapi/_original/feathery-rest-api-openapi.yml#PATCH /api/workspace/{workspace_id}/
     - openapi/_original/feathery-rest-api-openapi.yml#POST /api/workspace/
+  invite:
+    path_segment:
+    - invite
+    properties:
+      email: email
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/feathery-rest-api-openapi.yml#POST /api/account/invite/

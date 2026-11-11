@@ -100,3 +100,18 @@ concepts:
     - openapi/_original/drives-openapi-original.yml#GET /drives/{drive-id}/items/{driveItem-id}/permissions/{permission-id}
     - openapi/_original/drives-openapi-original.yml#PATCH /drives/{drive-id}/items/{driveItem-id}/permissions/{permission-id}
     - openapi/_original/drives-openapi-original.yml#POST /drives/{drive-id}/items/{driveItem-id}/permissions
+  invite:
+    path_segment:
+    - invite
+    - invitations
+    properties:
+      id: id
+      role: roles
+      status: status
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/communications-openapi-original.yml#POST /communications/calls/{call-id}/participants/invite
+    - openapi/_original/drives-openapi-original.yml#POST /drives/{drive-id}/items/{driveItem-id}/invite
+    - openapi/_original/invitations-openapi-original.yml#GET /invitations
+    - openapi/_original/invitations-openapi-original.yml#POST /invitations
+    - openapi/_original/microsoft-graph-api-openapi.yml#GET /invitations

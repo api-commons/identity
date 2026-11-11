@@ -41,6 +41,14 @@ concepts:
     evidence:
     - openapi/_original/supabase-management-api-openapi.yml#GET /organizations
     - openapi/_original/supabase-management-api-openapi.yml#POST /organizations
+  invite:
+    path_segment:
+    - invite
+    properties:
+      email: email
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/supabase-auth-api-openapi.yml#POST /invite
   api_key:
     path_segment:
     - api-keys

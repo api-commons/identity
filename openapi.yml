@@ -464,6 +464,79 @@ paths:
         content:
           application/json:
             schema: *id005
+  /invites:
+    post:
+      operationId: createInvite
+      summary: Create an invite
+      tags:
+      - Invites
+      x-commons-tier: core
+      x-commons-share: 0.909
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id006
+                $ref: '#/components/schemas/Invite'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+    get:
+      operationId: listInvites
+      summary: List invites
+      tags:
+      - Invites
+      x-commons-tier: core
+      x-commons-share: 0.606
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id006
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /invites/{invite_id}:
+    parameters:
+    - $ref: '#/components/parameters/invite_id'
+    delete:
+      operationId: deleteInvite
+      summary: Delete an invite
+      tags:
+      - Invites
+      x-commons-tier: extended
+      x-commons-share: 0.424
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+    get:
+      operationId: getInvite
+      summary: Get an invite
+      tags:
+      - Invites
+      x-commons-tier: extended
+      x-commons-share: 0.303
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
   /api-keys:
     get:
       operationId: listApiKeys
@@ -479,7 +552,7 @@ paths:
             application/json:
               schema:
                 type: array
-                items: &id006
+                items: &id007
                   $ref: '#/components/schemas/ApiKey'
       parameters:
       - name: limit
@@ -502,12 +575,12 @@ paths:
           description: OK
           content:
             application/json:
-              schema: *id006
+              schema: *id007
       requestBody:
         required: true
         content:
           application/json:
-            schema: *id006
+            schema: *id007
   /api-keys/{api_key_id}:
     parameters:
     - $ref: '#/components/parameters/api_key_id'
@@ -523,7 +596,7 @@ paths:
           description: OK
           content:
             application/json:
-              schema: *id006
+              schema: *id007
     get:
       operationId: getApiKey
       summary: Get an api key
@@ -536,7 +609,7 @@ paths:
           description: OK
           content:
             application/json:
-              schema: *id006
+              schema: *id007
     patch:
       operationId: updateApiKey
       summary: Update an api key
@@ -549,12 +622,12 @@ paths:
           description: OK
           content:
             application/json:
-              schema: *id006
+              schema: *id007
       requestBody:
         required: true
         content:
           application/json:
-            schema: *id006
+            schema: *id007
 components:
   schemas:
     User:

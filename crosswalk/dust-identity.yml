@@ -42,3 +42,10 @@ concepts:
     core_coverage: 0.0
     evidence:
     - openapi/_original/dust-identity-openapi.json#POST /api/v1/threads/permissions
+  invite:
+    path_segment:
+    - invites
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/dust-identity-openapi.json#GET /api/v1/orgs/invites

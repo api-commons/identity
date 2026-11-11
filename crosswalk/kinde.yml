@@ -77,6 +77,21 @@ concepts:
     - openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/apis/{api_id}/applications/{application_id}/scopes/{scope_id}
     - openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/apis/{api_id}/scopes/{scope_id}
     - openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/organizations/{org_code}/users/{user_id}/apis/{api_id}/scopes/{scope_id}
+  invite:
+    path_segment:
+    - invites
+    properties:
+      email: email
+      id: id
+      role: roles
+      created_at: created_on
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/organization/{org_code}/invites/{invite_code}
+    - openapi/_original/kinde-management-api-openapi.yml#GET /api/v1/organization/{org_code}/invites
+    - openapi/_original/kinde-management-api-openapi.yml#GET /api/v1/organization/{org_code}/invites/{invite_code}
+    - openapi/_original/kinde-management-api-openapi.yml#POST /api/v1/organization/{org_code}/invites
+    - openapi/_original/kinde-so-openapi.yml#DELETE /api/v1/organization/{org_code}/invites/{invite_code}
   api_key:
     path_segment:
     - api_keys

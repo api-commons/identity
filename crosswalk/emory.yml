@@ -32,3 +32,11 @@ concepts:
     core_coverage: null
     evidence:
     - openapi/_original/emory-digital-slide-archive.yaml#GET /token/scopes
+  invite:
+    path_segment:
+    - invitation
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/emory-digital-slide-archive.yaml#GET /group/{id}/invitation
+    - openapi/_original/emory-digital-slide-archive.yaml#POST /group/{id}/invitation

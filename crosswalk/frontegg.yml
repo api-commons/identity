@@ -86,3 +86,14 @@ concepts:
     evidence:
     - openapi/_original/frontegg-combined-openapi.yml#PUT /resources/roles/v1/{roleId}/permissions
     - openapi/_original/frontegg-identity-openapi.yml#PUT /resources/roles/v1/{roleId}/permissions
+  invite:
+    path_segment:
+    - invite
+    properties:
+      email: email
+      role: roleIds
+      metadata: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/frontegg-combined-openapi.yml#POST /resources/users/bulk/v1/invite
+    - openapi/_original/frontegg-identity-openapi.yml#POST /resources/users/bulk/v1/invite

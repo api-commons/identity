@@ -43,6 +43,20 @@ concepts:
     - openapi/_original/dynamic-xyz-organizations-api-openapi.yml#POST /organizations
     - openapi/_original/dynamic-xyz-organizations-api-openapi.yml#PUT /organizations/{organizationId}
     - openapi/_original/dynamic-xyz-openapi.yml#GET /organizations
+  invite:
+    path_segment:
+    - invites
+    properties:
+      email: email
+      role: role
+      status: status
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/dynamic-xyz-invites-api-openapi.yml#DELETE /invites/{inviteId}
+    - openapi/_original/dynamic-xyz-invites-api-openapi.yml#GET /invites
+    - openapi/_original/dynamic-xyz-invites-api-openapi.yml#GET /organizations/{organizationId}/invites
+    - openapi/_original/dynamic-xyz-invites-api-openapi.yml#POST /organizations/{organizationId}/invites
+    - openapi/_original/dynamic-xyz-invites-api-openapi.yml#PUT /invites/{inviteId}
   api_key:
     path_segment:
     - tokens

@@ -88,3 +88,13 @@ concepts:
     - openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resourceScopes/{accessPackageResourceScope-id}/resource/scopes/{accessPackageResourceScope-id1}
     - openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/roles/{accessPackageResourceRole-id}/resource/scopes/{accessPackageResourceScope-id}
     - openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/scopes/{accessPackageResourceScope-id}
+  invite:
+    path_segment:
+    - invitations
+    properties:
+      id: id
+      status: status
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/azure-ad-graph-identity-signins-openapi.yml#GET /invitations
+    - openapi/_original/azure-ad-graph-identity-signins-openapi.yml#POST /invitations

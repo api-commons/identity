@@ -64,6 +64,7 @@ adopters:
   concepts:
   - api_key
   - group
+  - invite
   - organization
   - role
   - user
@@ -99,6 +100,7 @@ adopters:
   crosswalk: crosswalk/auth0.yml
   concepts:
   - group
+  - invite
   - organization
   - permission
   - role
@@ -127,6 +129,7 @@ adopters:
   crosswalk: crosswalk/azure-ad.yml
   concepts:
   - group
+  - invite
   - organization
   - permission
   - role
@@ -170,6 +173,7 @@ adopters:
   crosswalk: crosswalk/canonical.yml
   concepts:
   - group
+  - invite
   - organization
   - permission
   - role
@@ -203,6 +207,7 @@ adopters:
   crosswalk: crosswalk/clerk-com.yml
   concepts:
   - api_key
+  - invite
   - organization
   - permission
   - role
@@ -334,6 +339,7 @@ adopters:
   crosswalk: crosswalk/dust-identity.yml
   concepts:
   - group
+  - invite
   - permission
   - user
 - provider: dynamic-labs
@@ -341,6 +347,7 @@ adopters:
   crosswalk: crosswalk/dynamic-labs.yml
   concepts:
   - api_key
+  - invite
   - organization
   - user
 - provider: eagle-eye-networks
@@ -354,6 +361,7 @@ adopters:
   crosswalk: crosswalk/emory.yml
   concepts:
   - group
+  - invite
   - permission
   - user
 - provider: epic-games
@@ -377,6 +385,7 @@ adopters:
   apis_io: https://apis.io/providers/feathery/
   crosswalk: crosswalk/feathery.yml
   concepts:
+  - invite
   - organization
   - user
 - provider: fenergo
@@ -407,6 +416,7 @@ adopters:
   crosswalk: crosswalk/frontegg.yml
   concepts:
   - group
+  - invite
   - organization
   - permission
   - role
@@ -452,6 +462,7 @@ adopters:
   apis_io: https://apis.io/providers/habu/
   crosswalk: crosswalk/habu.yml
   concepts:
+  - invite
   - user
 - provider: hanko
   apis_io: https://apis.io/providers/hanko/
@@ -568,6 +579,7 @@ adopters:
   crosswalk: crosswalk/kinde.yml
   concepts:
   - api_key
+  - invite
   - organization
   - permission
   - role
@@ -577,6 +589,7 @@ adopters:
   crosswalk: crosswalk/kisi.yml
   concepts:
   - group
+  - invite
   - organization
   - role
   - user
@@ -683,6 +696,7 @@ adopters:
   crosswalk: crosswalk/microsoft-graph.yml
   concepts:
   - group
+  - invite
   - organization
   - permission
   - role
@@ -738,6 +752,7 @@ adopters:
   crosswalk: crosswalk/openpath.yml
   concepts:
   - group
+  - invite
   - permission
   - role
   - user
@@ -747,6 +762,7 @@ adopters:
   concepts:
   - api_key
   - group
+  - invite
   - organization
   - role
   - user
@@ -795,6 +811,7 @@ adopters:
   crosswalk: crosswalk/permit-io.yml
   concepts:
   - group
+  - invite
   - organization
   - permission
   - role
@@ -824,6 +841,7 @@ adopters:
   crosswalk: crosswalk/postman.yml
   concepts:
   - group
+  - invite
   - organization
   - role
   - user
@@ -861,6 +879,7 @@ adopters:
   apis_io: https://apis.io/providers/rwth-aachen-university/
   crosswalk: crosswalk/rwth-aachen-university.yml
   concepts:
+  - invite
   - organization
   - role
   - user
@@ -868,6 +887,7 @@ adopters:
   apis_io: https://apis.io/providers/sadq-holding-limited/
   crosswalk: crosswalk/sadq-holding-limited.yml
   concepts:
+  - invite
   - user
 - provider: sailpoint
   apis_io: https://apis.io/providers/sailpoint/
@@ -898,11 +918,13 @@ adopters:
   apis_io: https://apis.io/providers/sign-in-enterprise/
   crosswalk: crosswalk/sign-in-enterprise.yml
   concepts:
+  - invite
   - user
 - provider: signicat
   apis_io: https://apis.io/providers/signicat/
   crosswalk: crosswalk/signicat.yml
   concepts:
+  - invite
   - organization
   - role
   - user
@@ -910,6 +932,7 @@ adopters:
   apis_io: https://apis.io/providers/simba-chain/
   crosswalk: crosswalk/simba-chain.yml
   concepts:
+  - invite
   - organization
   - permission
   - role
@@ -924,6 +947,7 @@ adopters:
   apis_io: https://apis.io/providers/softr/
   crosswalk: crosswalk/softr.yml
   concepts:
+  - invite
   - user
 - provider: specterops
   apis_io: https://apis.io/providers/specterops/
@@ -949,6 +973,7 @@ adopters:
   crosswalk: crosswalk/strivacity.yml
   concepts:
   - group
+  - invite
   - organization
   - permission
   - role
@@ -958,6 +983,7 @@ adopters:
   crosswalk: crosswalk/stytch.yml
   concepts:
   - api_key
+  - invite
   - organization
   - user
 - provider: supabase
@@ -965,6 +991,7 @@ adopters:
   crosswalk: crosswalk/supabase.yml
   concepts:
   - api_key
+  - invite
   - organization
   - user
 - provider: supertokens
@@ -990,6 +1017,7 @@ adopters:
   crosswalk: crosswalk/taskfolk.yml
   concepts:
   - api_key
+  - invite
   - organization
   - user
 - provider: telesign
@@ -1013,6 +1041,7 @@ adopters:
   apis_io: https://apis.io/providers/thenile/
   crosswalk: crosswalk/thenile.yml
   concepts:
+  - invite
   - organization
   - user
 - provider: trakt
@@ -1038,6 +1067,7 @@ adopters:
   apis_io: https://apis.io/providers/twilio/
   crosswalk: crosswalk/twilio.yml
   concepts:
+  - invite
   - organization
   - permission
   - role
@@ -1139,6 +1169,7 @@ adopters:
   crosswalk: crosswalk/venafi.yml
   concepts:
   - group
+  - invite
   - permission
   - role
   - user
@@ -1146,6 +1177,7 @@ adopters:
   apis_io: https://apis.io/providers/vim/
   crosswalk: crosswalk/vim.yml
   concepts:
+  - invite
   - organization
   - user
 - provider: wahoo
@@ -1178,6 +1210,7 @@ adopters:
   concepts:
   - api_key
   - group
+  - invite
   - organization
   - permission
   - role

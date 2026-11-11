@@ -17,3 +17,12 @@ concepts:
     core_coverage: 0.0
     evidence:
     - openapi/_original/vim-rest-api-openapi-original.json#GET /applications/{applicationId}/organizations
+  invite:
+    path_segment:
+    - invitations
+    properties:
+      id: userId
+      organization_id: organizationId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/vim-rest-api-openapi-original.json#POST /invitations

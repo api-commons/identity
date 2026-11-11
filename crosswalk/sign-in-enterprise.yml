@@ -10,3 +10,14 @@ concepts:
     core_coverage: null
     evidence:
     - openapi/_original/sign-in-enterprise-guest-api-openapi-original.yml#GET /users/{user_id}
+  invite:
+    path_segment:
+    - invites
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/sign-in-enterprise-guest-api-openapi-original.yml#DELETE /invites/{invite_id}
+    - openapi/_original/sign-in-enterprise-guest-api-openapi-original.yml#GET /invites
+    - openapi/_original/sign-in-enterprise-guest-api-openapi-original.yml#GET /invites/{invite_id}
+    - openapi/_original/sign-in-enterprise-guest-api-openapi-original.yml#POST /locations/{location_id}/invites
+    - openapi/_original/sign-in-enterprise-guest-api-openapi-original.yml#POST /registrations/{registration_id}/invites

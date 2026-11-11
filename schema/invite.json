@@ -2,14 +2,121 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/identity/main/schema/invite.json",
   "title": "Invite",
-  "description": "The common invite in Identity and Users, distilled from 0 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common invite in Identity and Users, distilled from 29 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
-  "properties": {},
-  "required": [],
+  "properties": {
+    "email": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.724,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "email",
+        "invitee",
+        "email_address",
+        "emailAddress",
+        "invitee_email"
+      ],
+      "format": "email"
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.621,
+      "x-commons-providers": 18,
+      "x-commons-spellings": [
+        "id",
+        "userId",
+        "externalId",
+        "user_id"
+      ]
+    },
+    "role": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.621,
+      "x-commons-providers": 18,
+      "x-commons-spellings": [
+        "role",
+        "roles",
+        "roleId",
+        "roleIds",
+        "role_ids"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.379,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "status",
+        "Status",
+        "state"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.345,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "created_at",
+        "created_on",
+        "created",
+        "date_created"
+      ],
+      "format": "date-time"
+    },
+    "organization_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.345,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "organization_id",
+        "organizationId",
+        "organization",
+        "tenant_id",
+        "companyId"
+      ]
+    },
+    "expires_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.276,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "expires_at",
+        "expiresAt",
+        "expirationDate",
+        "expires"
+      ],
+      "format": "date-time"
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.207,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "metadata",
+        "app_metadata",
+        "user_metadata",
+        "public_metadata",
+        "private_metadata",
+        "attributes",
+        "properties"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
   "x-commons": {
     "context": "identity",
     "concept": "invite",
-    "providers": 0,
+    "providers": 29,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

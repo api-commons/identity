@@ -17,7 +17,7 @@ generated. Every number below is a count of providers.
 | organization | 59 | 56 | name 82%, id 71%, created_at 52% | organizations 31, organization 12, tenants 10, workspaces 9 |
 | role | 63 | 58 | name 76%, id 74%, description 60% | roles 59, role 11 |
 | permission | 46 | 40 | id 60%, name 60%, description 52% | permissions 29, scopes 20, entitlements 6, permission 4 |
-| invite | 0 | 0 |  |  |
+| invite | 33 | 29 | email 72%, id 62%, role 62% | invitations 14, invite 11, invites 11, invitation 1 |
 | api_key | 25 | 21 | id 90%, created_at 71%, key 71%, name 71% | tokens 10, api-keys 8, apikeys 3, keys 3 |
 
 Cohort: 443 providers with harvested OpenAPI, 185 crosswalks. Of the providers exposing a user: 65% create, 84% list, 75% fetch, 53% update, 53% delete. Generated 2026-11-10 by build.py.

@@ -91,6 +91,21 @@ concepts:
     - openapi/_original/workos-openapi.yml#GET /authorization/organization_memberships/{organization_membership_id}/resources/{resource_id}/permissions
     - openapi/_original/workos-openapi.yml#GET /authorization/organization_memberships/{organization_membership_id}/resources/{resource_type_slug}/{external_id}/permissions
     - openapi/_original/workos-openapi.yml#GET /authorization/permissions
+  invite:
+    path_segment:
+    - invitations
+    properties:
+      email: email
+      id: id
+      status: state
+      created_at: created_at
+      organization_id: organization_id
+      expires_at: expires_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/workos-openapi.yml#GET /user_management/invitations
+    - openapi/_original/workos-openapi.yml#GET /user_management/invitations/{id}
+    - openapi/_original/workos-openapi.yml#POST /user_management/invitations
   api_key:
     path_segment:
     - api_keys

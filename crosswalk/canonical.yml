@@ -94,3 +94,13 @@ concepts:
     - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/groups/{id}/entitlements
     - openapi/_original/canonical-identity-platform-api-openapi.yml#GET /api/v0/roles/{id}/entitlements
     - openapi/_original/canonical-identity-platform-api-openapi.yml#PATCH /api/v0/groups/{id}/entitlements
+  invite:
+    path_segment:
+    - invites
+    properties:
+      email: email
+      role: role
+      status: status
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/canonical-identity-platform-api-openapi.yml#POST /api/v0/tenants/{tenant_id}/invites

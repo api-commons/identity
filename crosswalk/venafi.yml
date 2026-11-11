@@ -71,3 +71,17 @@ concepts:
     evidence:
     - openapi/_original/venafi-certificate-manager-saas-openapi.json#GET /v1/serviceaccounts/scopes
     - openapi/_original/venafi-certificate-manager-saas-openapi.yml#GET /v1/serviceaccounts/scopes
+  invite:
+    path_segment:
+    - invitations
+    properties:
+      id:
+      - id
+      - userId
+      role: role
+      organization_id: companyId
+      metadata: properties
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/venafi-certificate-manager-saas-openapi.json#POST /outagedetection/v1/applications/{id}/invitations
+    - openapi/_original/venafi-certificate-manager-saas-openapi.yml#POST /outagedetection/v1/applications/{id}/invitations

@@ -69,3 +69,22 @@ concepts:
     - openapi/_original/simba-chain-member-service-openapi.json#GET /identity/{simba_id}/permissions/
     - openapi/_original/simba-chain-member-service-openapi.json#GET /permissions/
     - openapi/_original/simba-chain-member-service-openapi.json#GET /permissions/{permission_id}
+  invite:
+    path_segment:
+    - invites
+    properties:
+      email: invitee_email
+      id: id
+      role:
+      - roles
+      - role_ids
+      status: status
+      created_at: created_at
+      expires_at: expires_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/simba-chain-member-service-openapi.json#DELETE /organisations/{organisation_name}/invites/{invite_id}
+    - openapi/_original/simba-chain-member-service-openapi.json#GET /invites/
+    - openapi/_original/simba-chain-member-service-openapi.json#GET /invites/{invite_id}
+    - openapi/_original/simba-chain-member-service-openapi.json#GET /organisations/{organisation_name}/invites/
+    - openapi/_original/simba-chain-member-service-openapi.json#GET /organisations/{organisation_name}/invites/{invite_id}

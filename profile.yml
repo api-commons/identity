@@ -935,13 +935,170 @@ concepts:
     - assigners
     - associated_environments
   invite:
-    segments_seen: {}
-    providers_exposing: 0
-    providers_with_readable_schema: 0
-    operations: []
-    properties: []
-    long_tail_count: 0
-    long_tail_sample: []
+    segments_seen:
+      invitations: 14
+      invite: 11
+      invites: 11
+      invitation: 1
+    providers_exposing: 33
+    providers_with_readable_schema: 29
+    operations:
+    - operation: POST collection
+      providers: 30
+      share: 0.909
+      tier: core
+    - operation: GET collection
+      providers: 20
+      share: 0.606
+      tier: core
+    - operation: DELETE item
+      providers: 14
+      share: 0.424
+      tier: extended
+    - operation: GET item
+      providers: 10
+      share: 0.303
+      tier: extended
+    - operation: UPDATE item
+      providers: 2
+      share: 0.061
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 1
+      share: 0.03
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.03
+      tier: long-tail
+    properties:
+    - name: email
+      tier: core
+      providers: 21
+      share: 0.724
+      type: string
+      spellings:
+      - email
+      - invitee
+      - email_address
+      - emailAddress
+      - invitee_email
+    - name: id
+      tier: core
+      providers: 18
+      share: 0.621
+      type: string
+      spellings:
+      - id
+      - userId
+      - externalId
+      - user_id
+    - name: role
+      tier: core
+      providers: 18
+      share: 0.621
+      type: string
+      spellings:
+      - role
+      - roles
+      - roleId
+      - roleIds
+      - role_ids
+    - name: status
+      tier: extended
+      providers: 11
+      share: 0.379
+      type: string
+      spellings:
+      - status
+      - Status
+      - state
+    - name: created_at
+      tier: extended
+      providers: 10
+      share: 0.345
+      type: string
+      spellings:
+      - created_at
+      - created_on
+      - created
+      - date_created
+    - name: organization_id
+      tier: extended
+      providers: 10
+      share: 0.345
+      type: string
+      spellings:
+      - organization_id
+      - organizationId
+      - organization
+      - tenant_id
+      - companyId
+    - name: expires_at
+      tier: extended
+      providers: 8
+      share: 0.276
+      type: string
+      spellings:
+      - expires_at
+      - expiresAt
+      - expirationDate
+      - expires
+    - name: metadata
+      tier: extended
+      providers: 6
+      share: 0.207
+      type: object
+      spellings:
+      - metadata
+      - app_metadata
+      - user_metadata
+      - public_metadata
+      - private_metadata
+      - attributes
+      - properties
+    long_tail_count: 143
+    long_tail_sample:
+    - inviter_id
+    - updated_at
+    - invite_redirect_url
+    - name
+    - client_id
+    - code
+    - expires_in_days
+    - invite_redeem_url
+    - invited_user
+    - invited_user_display_name
+    - invited_user_email_address
+    - invited_user_message_info
+    - invited_user_sponsors
+    - invited_user_type
+    - inviter_user_id
+    - locale
+    - member_id
+    - notify
+    - password
+    - phone_number
+    - reset_redemption
+    - revoked
+    - send_invitation_message
+    - token
+    - accept_invitation_url
+    - accepted_at
+    - accepted_on
+    - accepted_user_id
+    - access_key
+    - account_sid
+    - action
+    - alias
+    - channel_sid
+    - clean_room_id
+    - client
+    - client_context
+    - connection_id
+    - date_updated
+    - email_id
+    - email_metadata
   api_key:
     segments_seen:
       tokens: 10

@@ -69,3 +69,13 @@ concepts:
     evidence:
     - openapi/_original/kisi-openapi-original.yml#GET /roles
     - openapi/_original/kisi-openapi-original.yml#GET /roles/{id}
+  invite:
+    path_segment:
+    - invites
+    properties:
+      email: invitee
+      id: id
+      created_at: created_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/kisi-openapi-original.yml#POST /invites
