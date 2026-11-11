@@ -47,7 +47,7 @@ shared_specs: {}
 concepts:
   user:
     segments_seen:
-      users: 134
+      users: 135
       members: 54
       user: 45
       identities: 14
@@ -56,12 +56,12 @@ concepts:
     providers_with_readable_schema: 167
     operations:
     - operation: GET collection
-      providers: 156
-      share: 0.843
+      providers: 158
+      share: 0.854
       tier: core
     - operation: GET item
-      providers: 138
-      share: 0.746
+      providers: 139
+      share: 0.751
       tier: core
     - operation: POST collection
       providers: 120
@@ -294,33 +294,33 @@ concepts:
       team: 6
       usergroups: 3
       user-groups: 3
-      user_groups: 2
-    providers_exposing: 83
-    providers_with_readable_schema: 75
+      user_groups: 3
+    providers_exposing: 84
+    providers_with_readable_schema: 76
     operations:
     - operation: GET collection
-      providers: 80
+      providers: 81
       share: 0.964
       tier: core
     - operation: GET item
-      providers: 66
-      share: 0.795
+      providers: 67
+      share: 0.798
       tier: core
     - operation: POST collection
-      providers: 61
-      share: 0.735
+      providers: 62
+      share: 0.738
       tier: core
     - operation: DELETE item
-      providers: 58
-      share: 0.699
+      providers: 59
+      share: 0.702
       tier: core
     - operation: UPDATE item
-      providers: 54
-      share: 0.651
+      providers: 55
+      share: 0.655
       tier: core
     - operation: UPDATE collection
       providers: 7
-      share: 0.084
+      share: 0.083
       tier: long-tail
     - operation: POST item
       providers: 5
@@ -333,8 +333,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 59
-      share: 0.787
+      providers: 60
+      share: 0.789
       type: string
       spellings:
       - id
@@ -348,7 +348,7 @@ concepts:
     - name: name
       tier: core
       providers: 58
-      share: 0.773
+      share: 0.763
       type: string
       spellings:
       - name
@@ -360,7 +360,7 @@ concepts:
     - name: description
       tier: extended
       providers: 37
-      share: 0.493
+      share: 0.487
       type: string
       spellings:
       - description
@@ -369,7 +369,7 @@ concepts:
     - name: member_ids
       tier: extended
       providers: 28
-      share: 0.373
+      share: 0.368
       type: array
       spellings:
       - members
@@ -382,7 +382,7 @@ concepts:
     - name: created_at
       tier: extended
       providers: 24
-      share: 0.32
+      share: 0.316
       type: string
       spellings:
       - created_at
@@ -395,7 +395,7 @@ concepts:
     - name: updated_at
       tier: extended
       providers: 22
-      share: 0.293
+      share: 0.289
       type: string
       spellings:
       - updated_at
@@ -405,28 +405,16 @@ concepts:
       - modifiedAt
       - modifiedDate
       - updated
-    - name: organization_id
-      tier: extended
-      providers: 15
-      share: 0.2
-      type: string
-      spellings:
-      - orgId
-      - organizationId
-      - tenant_id
-      - organization_id
-      - tenantId
-      - accountId
-      - companyId
-    long_tail_count: 593
+    long_tail_count: 594
     long_tail_sample:
+    - organization_id
     - items_per_page
     - start_index
     - total_results
-    - resources
     - type
-    - operations
+    - resources
     - metadata
+    - operations
     - status
     - group_types
     - mail_enabled
@@ -459,58 +447,57 @@ concepts:
     - photos
     - preferred_data_location
     - secrets
-    - security_identifier
   organization:
     segments_seen:
       organizations: 31
       organization: 12
-      tenants: 10
+      tenants: 11
+      org: 9
       workspaces: 9
-      org: 8
       tenant: 6
       orgs: 5
       workspace: 5
       organisations: 2
-    providers_exposing: 59
-    providers_with_readable_schema: 56
+    providers_exposing: 60
+    providers_with_readable_schema: 57
     operations:
     - operation: GET collection
-      providers: 50
-      share: 0.847
+      providers: 51
+      share: 0.85
       tier: core
     - operation: POST collection
-      providers: 41
-      share: 0.695
+      providers: 42
+      share: 0.7
       tier: core
     - operation: GET item
-      providers: 38
-      share: 0.644
+      providers: 39
+      share: 0.65
       tier: core
     - operation: UPDATE item
-      providers: 32
-      share: 0.542
+      providers: 33
+      share: 0.55
       tier: core
     - operation: DELETE item
-      providers: 29
-      share: 0.492
-      tier: extended
+      providers: 30
+      share: 0.5
+      tier: core
     - operation: UPDATE collection
       providers: 11
-      share: 0.186
+      share: 0.183
       tier: long-tail
     - operation: DELETE collection
       providers: 3
-      share: 0.051
+      share: 0.05
       tier: long-tail
     - operation: POST item
       providers: 3
-      share: 0.051
+      share: 0.05
       tier: long-tail
     properties:
     - name: name
       tier: core
-      providers: 46
-      share: 0.821
+      providers: 47
+      share: 0.825
       type: string
       spellings:
       - name
@@ -521,7 +508,7 @@ concepts:
     - name: id
       tier: core
       providers: 40
-      share: 0.714
+      share: 0.702
       type: string
       spellings:
       - id
@@ -535,7 +522,7 @@ concepts:
     - name: created_at
       tier: core
       providers: 29
-      share: 0.518
+      share: 0.509
       type: string
       spellings:
       - created_at
@@ -549,7 +536,7 @@ concepts:
     - name: organization_id
       tier: extended
       providers: 18
-      share: 0.321
+      share: 0.316
       type: string
       spellings:
       - tenantId
@@ -563,7 +550,7 @@ concepts:
     - name: status
       tier: extended
       providers: 17
-      share: 0.304
+      share: 0.298
       type: string
       spellings:
       - status
@@ -574,7 +561,7 @@ concepts:
     - name: description
       tier: extended
       providers: 14
-      share: 0.25
+      share: 0.246
       type: string
       spellings:
       - description
@@ -582,7 +569,7 @@ concepts:
     - name: updated_at
       tier: extended
       providers: 14
-      share: 0.25
+      share: 0.246
       type: string
       spellings:
       - updated_at
@@ -593,7 +580,7 @@ concepts:
     - name: metadata
       tier: extended
       providers: 13
-      share: 0.232
+      share: 0.228
       type: object
       spellings:
       - metadata
@@ -601,7 +588,7 @@ concepts:
       - customAttributes
       - public_metadata
       - private_metadata
-    long_tail_count: 533
+    long_tail_count: 536
     long_tail_sample:
     - domain
     - slug
@@ -936,46 +923,46 @@ concepts:
     - associated_environments
   invite:
     segments_seen:
-      invitations: 14
+      invitations: 15
       invite: 11
       invites: 11
       invitation: 1
-    providers_exposing: 33
-    providers_with_readable_schema: 29
+    providers_exposing: 34
+    providers_with_readable_schema: 30
     operations:
     - operation: POST collection
-      providers: 30
-      share: 0.909
+      providers: 31
+      share: 0.912
       tier: core
     - operation: GET collection
-      providers: 20
-      share: 0.606
+      providers: 21
+      share: 0.618
       tier: core
     - operation: DELETE item
-      providers: 14
-      share: 0.424
+      providers: 15
+      share: 0.441
       tier: extended
     - operation: GET item
-      providers: 10
-      share: 0.303
+      providers: 11
+      share: 0.324
       tier: extended
     - operation: UPDATE item
-      providers: 2
-      share: 0.061
+      providers: 3
+      share: 0.088
       tier: long-tail
     - operation: DELETE collection
       providers: 1
-      share: 0.03
+      share: 0.029
       tier: long-tail
     - operation: UPDATE collection
       providers: 1
-      share: 0.03
+      share: 0.029
       tier: long-tail
     properties:
     - name: email
       tier: core
       providers: 21
-      share: 0.724
+      share: 0.7
       type: string
       spellings:
       - email
@@ -986,7 +973,7 @@ concepts:
     - name: id
       tier: core
       providers: 18
-      share: 0.621
+      share: 0.6
       type: string
       spellings:
       - id
@@ -996,7 +983,7 @@ concepts:
     - name: role
       tier: core
       providers: 18
-      share: 0.621
+      share: 0.6
       type: string
       spellings:
       - role
@@ -1007,7 +994,7 @@ concepts:
     - name: status
       tier: extended
       providers: 11
-      share: 0.379
+      share: 0.367
       type: string
       spellings:
       - status
@@ -1016,7 +1003,7 @@ concepts:
     - name: created_at
       tier: extended
       providers: 10
-      share: 0.345
+      share: 0.333
       type: string
       spellings:
       - created_at
@@ -1026,7 +1013,7 @@ concepts:
     - name: organization_id
       tier: extended
       providers: 10
-      share: 0.345
+      share: 0.333
       type: string
       spellings:
       - organization_id
@@ -1036,18 +1023,27 @@ concepts:
       - companyId
     - name: expires_at
       tier: extended
-      providers: 8
-      share: 0.276
+      providers: 9
+      share: 0.3
       type: string
       spellings:
       - expires_at
+      - expires
       - expiresAt
       - expirationDate
-      - expires
+    - name: inviter_id
+      tier: extended
+      providers: 6
+      share: 0.2
+      type: string
+      spellings:
+      - created_by
+      - inviter
+      - inviter_id
     - name: metadata
       tier: extended
       providers: 6
-      share: 0.207
+      share: 0.2
       type: object
       spellings:
       - metadata
@@ -1057,12 +1053,11 @@ concepts:
       - private_metadata
       - attributes
       - properties
-    long_tail_count: 143
+    long_tail_count: 147
     long_tail_sample:
-    - inviter_id
     - updated_at
-    - invite_redirect_url
     - name
+    - invite_redirect_url
     - client_id
     - code
     - expires_in_days
@@ -1099,6 +1094,7 @@ concepts:
     - date_updated
     - email_id
     - email_metadata
+    - email_verified
   api_key:
     segments_seen:
       tokens: 10

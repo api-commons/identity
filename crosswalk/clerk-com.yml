@@ -92,6 +92,7 @@ concepts:
       created_at: created_at
       organization_id: organization_id
       expires_at: expires_at
+      inviter_id: inviter_id
       metadata:
       - public_metadata
       - private_metadata

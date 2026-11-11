@@ -12,15 +12,15 @@ generated. Every number below is a count of providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| user | 185 | 167 | id 81%, email 68% | users 134, members 54, user 45, identities 14 |
-| group | 83 | 75 | id 79%, name 77% | groups 67, teams 15, group 12, team 6 |
-| organization | 59 | 56 | name 82%, id 71%, created_at 52% | organizations 31, organization 12, tenants 10, workspaces 9 |
+| user | 185 | 167 | id 81%, email 68% | users 135, members 54, user 45, identities 14 |
+| group | 84 | 76 | id 79%, name 76% | groups 67, teams 15, group 12, team 6 |
+| organization | 60 | 57 | name 82%, id 70%, created_at 51% | organizations 31, organization 12, tenants 11, org 9 |
 | role | 63 | 58 | name 76%, id 74%, description 60% | roles 59, role 11 |
 | permission | 46 | 40 | id 60%, name 60%, description 52% | permissions 29, scopes 20, entitlements 6, permission 4 |
-| invite | 33 | 29 | email 72%, id 62%, role 62% | invitations 14, invite 11, invites 11, invitation 1 |
+| invite | 34 | 30 | email 70%, id 60%, role 60% | invitations 15, invite 11, invites 11, invitation 1 |
 | api_key | 25 | 21 | id 90%, created_at 71%, key 71%, name 71% | tokens 10, api-keys 8, apikeys 3, keys 3 |
 
-Cohort: 443 providers with harvested OpenAPI, 185 crosswalks. Of the providers exposing a user: 65% create, 84% list, 75% fetch, 53% update, 53% delete. Generated 2026-11-10 by build.py.
+Cohort: 443 providers with harvested OpenAPI, 185 crosswalks. Of the providers exposing a user: 65% create, 85% list, 75% fetch, 53% update, 53% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

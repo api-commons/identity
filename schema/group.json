@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/identity/main/schema/group.json",
   "title": "Group",
-  "description": "The common group in Identity and Users, distilled from 75 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common group in Identity and Users, distilled from 76 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.787,
-      "x-commons-providers": 59,
+      "x-commons-share": 0.789,
+      "x-commons-providers": 60,
       "x-commons-spellings": [
         "id",
         "externalId",
@@ -24,7 +24,7 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.773,
+      "x-commons-share": 0.763,
       "x-commons-providers": 58,
       "x-commons-spellings": [
         "name",
@@ -38,7 +38,7 @@
     "description": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.493,
+      "x-commons-share": 0.487,
       "x-commons-providers": 37,
       "x-commons-spellings": [
         "description",
@@ -49,7 +49,7 @@
     "member_ids": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.373,
+      "x-commons-share": 0.368,
       "x-commons-providers": 28,
       "x-commons-spellings": [
         "members",
@@ -64,7 +64,7 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.32,
+      "x-commons-share": 0.316,
       "x-commons-providers": 24,
       "x-commons-spellings": [
         "created_at",
@@ -80,7 +80,7 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.293,
+      "x-commons-share": 0.289,
       "x-commons-providers": 22,
       "x-commons-spellings": [
         "updated_at",
@@ -92,21 +92,6 @@
         "updated"
       ],
       "format": "date-time"
-    },
-    "organization_id": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.2,
-      "x-commons-providers": 15,
-      "x-commons-spellings": [
-        "orgId",
-        "organizationId",
-        "tenant_id",
-        "organization_id",
-        "tenantId",
-        "accountId",
-        "companyId"
-      ]
     }
   },
   "required": [
@@ -115,7 +100,7 @@
   "x-commons": {
     "context": "identity",
     "concept": "group",
-    "providers": 75,
+    "providers": 76,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

@@ -116,6 +116,8 @@ adopters:
   crosswalk: crosswalk/authentik.yml
   concepts:
   - group
+  - invite
+  - organization
   - permission
   - role
   - user
@@ -740,6 +742,7 @@ adopters:
   apis_io: https://apis.io/providers/opal/
   crosswalk: crosswalk/opal.yml
   concepts:
+  - group
   - user
 - provider: opal-security
   apis_io: https://apis.io/providers/opal-security/

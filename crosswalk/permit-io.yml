@@ -46,6 +46,7 @@ concepts:
     - tenants
     - orgs
     - tenant
+    - org
     properties:
       name: name
       id: id

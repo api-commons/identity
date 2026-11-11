@@ -100,6 +100,7 @@ concepts:
       created_at: created_at
       organization_id: organization_id
       expires_at: expires_at
+      inviter_id: inviter
       metadata:
       - app_metadata
       - user_metadata

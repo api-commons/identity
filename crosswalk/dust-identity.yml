@@ -27,7 +27,6 @@ concepts:
       description: description
       created_at: createdAt
       updated_at: updatedAt
-      organization_id: orgId
     core_coverage: 0.5
     evidence:
     - openapi/_original/dust-identity-openapi.json#DELETE /api/v1/org/teams/{team_id}

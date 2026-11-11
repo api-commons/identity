@@ -70,6 +70,7 @@ concepts:
     - invites
     properties:
       created_at: date_created
+      inviter_id: created_by
     core_coverage: 0.0
     evidence:
     - openapi/_original/ip-message-openapi-original.yml#DELETE /v2/Services/{ServiceSid}/Channels/{ChannelSid}/Invites/{Sid}

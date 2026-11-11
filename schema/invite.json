@@ -2,13 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/identity/main/schema/invite.json",
   "title": "Invite",
-  "description": "The common invite in Identity and Users, distilled from 29 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common invite in Identity and Users, distilled from 30 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "email": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.724,
+      "x-commons-share": 0.7,
       "x-commons-providers": 21,
       "x-commons-spellings": [
         "email",
@@ -22,7 +22,7 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.621,
+      "x-commons-share": 0.6,
       "x-commons-providers": 18,
       "x-commons-spellings": [
         "id",
@@ -34,7 +34,7 @@
     "role": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.621,
+      "x-commons-share": 0.6,
       "x-commons-providers": 18,
       "x-commons-spellings": [
         "role",
@@ -47,7 +47,7 @@
     "status": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.379,
+      "x-commons-share": 0.367,
       "x-commons-providers": 11,
       "x-commons-spellings": [
         "status",
@@ -58,7 +58,7 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.345,
+      "x-commons-share": 0.333,
       "x-commons-providers": 10,
       "x-commons-spellings": [
         "created_at",
@@ -71,7 +71,7 @@
     "organization_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.345,
+      "x-commons-share": 0.333,
       "x-commons-providers": 10,
       "x-commons-spellings": [
         "organization_id",
@@ -84,20 +84,31 @@
     "expires_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.276,
-      "x-commons-providers": 8,
+      "x-commons-share": 0.3,
+      "x-commons-providers": 9,
       "x-commons-spellings": [
         "expires_at",
+        "expires",
         "expiresAt",
-        "expirationDate",
-        "expires"
+        "expirationDate"
       ],
       "format": "date-time"
+    },
+    "inviter_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "created_by",
+        "inviter",
+        "inviter_id"
+      ]
     },
     "metadata": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.207,
+      "x-commons-share": 0.2,
       "x-commons-providers": 6,
       "x-commons-spellings": [
         "metadata",
@@ -116,7 +127,7 @@
   "x-commons": {
     "context": "identity",
     "concept": "invite",
-    "providers": 29,
+    "providers": 30,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

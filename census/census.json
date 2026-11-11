@@ -446,9 +446,11 @@
     },
     "evidence": [
      "openapi/_original/appwrite-open-api3-latest.json#DELETE /account/identities/{identityId}",
+     "openapi/_original/appwrite-open-api3-latest.json#DELETE /users/identities/{identityId}",
      "openapi/_original/appwrite-open-api3-latest.json#DELETE /users/{userId}",
      "openapi/_original/appwrite-open-api3-latest.json#GET /account/identities",
      "openapi/_original/appwrite-open-api3-latest.json#GET /users",
+     "openapi/_original/appwrite-open-api3-latest.json#GET /users/identities",
      "openapi/_original/appwrite-open-api3-latest.json#GET /users/{userId}",
      "openapi/_original/appwrite-open-api3-latest.json#POST /manager/projects/{projectId}/user",
      "openapi/_original/appwrite-open-api3-latest.json#POST /users",
@@ -5204,23 +5206,34 @@
    },
    "opal": {
     "segments": [
+     "users",
      "members"
     ],
     "operations": [
      "DELETE collection",
+     "GET collection",
+     "GET item",
      "POST collection"
     ],
     "properties": {
      "id": "string",
      "type": "string",
      "attributes": "object",
-     "relationships": "object"
+     "relationships": "object",
+     "meta": "object",
+     "links": "object"
     },
     "evidence": [
+     "openapi/_original/opal-v2-openapi.json#GET /users/v2/users",
      "openapi/_original/opal-v2-openapi.json#POST /privacy/v2/groups/{group_id}/members",
+     "openapi/_original/opal-v2-openapi.yml#GET /users/v2/users",
      "openapi/_original/opal-v2-openapi.yml#POST /privacy/v2/groups/{group_id}/members",
      "openapi/_original/opal-v3-openapi.json#DELETE /user_groups/v3/user_groups/all/relationships/members",
-     "openapi/_original/opal-v3-openapi.yml#DELETE /user_groups/v3/user_groups/all/relationships/members"
+     "openapi/_original/opal-v3-openapi.json#GET /users/v3/users",
+     "openapi/_original/opal-v3-openapi.json#GET /users/v3/users/{user_id}",
+     "openapi/_original/opal-v3-openapi.yml#DELETE /user_groups/v3/user_groups/all/relationships/members",
+     "openapi/_original/opal-v3-openapi.yml#GET /users/v3/users",
+     "openapi/_original/opal-v3-openapi.yml#GET /users/v3/users/{user_id}"
     ]
    },
    "opal-security": {
@@ -7374,6 +7387,7 @@
     ],
     "operations": [
      "DELETE item",
+     "GET collection",
      "GET item",
      "PATCH item",
      "POST item"
@@ -7393,6 +7407,7 @@
     },
     "evidence": [
      "openapi/_original/university-of-sheffield-sheffield-solar-openapi.json#DELETE /users/{id}",
+     "openapi/_original/university-of-sheffield-sheffield-solar-openapi.json#GET /user/user",
      "openapi/_original/university-of-sheffield-sheffield-solar-openapi.json#GET /users/{id}",
      "openapi/_original/university-of-sheffield-sheffield-solar-openapi.json#PATCH /users/{id}",
      "openapi/_original/university-of-sheffield-sheffield-solar-openapi.json#POST /admin/admin_page/user/{user_id}"
@@ -10165,6 +10180,37 @@
      "openapi/_original/okta-openapi-original.yml#PUT /api/v1/groups/{groupId}"
     ]
    },
+   "opal": {
+    "segments": [
+     "user_groups"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "meta": "object",
+     "attributes": "object",
+     "relationships": "object"
+    },
+    "evidence": [
+     "openapi/_original/opal-v3-openapi.json#DELETE /user_groups/v3/user_groups/{user_group_id}",
+     "openapi/_original/opal-v3-openapi.json#GET /user_groups/v3/user_groups",
+     "openapi/_original/opal-v3-openapi.json#GET /user_groups/v3/user_groups/{user_group_id}",
+     "openapi/_original/opal-v3-openapi.json#PATCH /user_groups/v3/user_groups/{user_group_id}",
+     "openapi/_original/opal-v3-openapi.json#POST /user_groups/v3/user_groups",
+     "openapi/_original/opal-v3-openapi.yml#DELETE /user_groups/v3/user_groups/{user_group_id}",
+     "openapi/_original/opal-v3-openapi.yml#GET /user_groups/v3/user_groups",
+     "openapi/_original/opal-v3-openapi.yml#GET /user_groups/v3/user_groups/{user_group_id}",
+     "openapi/_original/opal-v3-openapi.yml#PATCH /user_groups/v3/user_groups/{user_group_id}",
+     "openapi/_original/opal-v3-openapi.yml#POST /user_groups/v3/user_groups"
+    ]
+   },
    "opal-security": {
     "segments": [
      "groups"
@@ -11571,6 +11617,33 @@
      "openapi/_original/auth0-management-api-openapi.yml#POST /organizations"
     ]
    },
+   "authentik": {
+    "segments": [
+     "tenants"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "tenant_uuid": "string",
+     "schema_name": "string",
+     "name": "string",
+     "ready": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/authentik-openapi.yml#DELETE /tenants/tenants/{tenant_uuid}/",
+     "openapi/_original/authentik-openapi.yml#GET /tenants/tenants/",
+     "openapi/_original/authentik-openapi.yml#GET /tenants/tenants/{tenant_uuid}/",
+     "openapi/_original/authentik-openapi.yml#PATCH /tenants/tenants/{tenant_uuid}/",
+     "openapi/_original/authentik-openapi.yml#POST /tenants/tenants/",
+     "openapi/_original/authentik-openapi.yml#PUT /tenants/tenants/{tenant_uuid}/"
+    ]
+   },
    "azure-ad": {
     "segments": [
      "organization",
@@ -12951,7 +13024,8 @@
     "segments": [
      "tenants",
      "orgs",
-     "tenant"
+     "tenant",
+     "org"
     ],
     "operations": [
      "DELETE collection",
@@ -12997,11 +13071,11 @@
      "openapi/_original/permit-io-openapi.json#GET /v2/facts/{proj_id}/{env_id}/tenants",
      "openapi/_original/permit-io-openapi.json#GET /v2/facts/{proj_id}/{env_id}/tenants/{tenant_id}",
      "openapi/_original/permit-io-openapi.json#GET /v2/orgs",
+     "openapi/_original/permit-io-openapi.json#GET /v2/orgs/active/org",
      "openapi/_original/permit-io-openapi.json#GET /v2/orgs/{org_id}",
      "openapi/_original/permit-io-openapi.json#PATCH /v2/facts/{proj_id}/{env_id}/tenants/{tenant_id}",
      "openapi/_original/permit-io-openapi.json#PATCH /v2/orgs/{org_id}",
-     "openapi/_original/permit-io-openapi.json#POST /v2/facts/{proj_id}/{env_id}/access_requests/{elements_config_id}/user/{user_id}/tenant/{tenant_id}",
-     "openapi/_original/permit-io-openapi.json#POST /v2/facts/{proj_id}/{env_id}/bulk/tenants"
+     "openapi/_original/permit-io-openapi.json#POST /v2/facts/{proj_id}/{env_id}/access_requests/{elements_config_id}/user/{user_id}/tenant/{tenant_id}"
     ]
    },
    "plansource": {
@@ -14297,12 +14371,12 @@
      "openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/roles/{accessPackageResourceRole-id}",
      "openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/scopes/{accessPackageResourceScope-id}/resource/roles/{accessPackageResourceRole-id}",
      "openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/entitlementManagement/accessPackages/{accessPackage-id}/resourceRoleScopes/{accessPackageResourceRoleScope-id}/role",
+     "openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/entitlementManagement/accessPackages/{accessPackage-id}/resourceRoleScopes/{accessPackageResourceRoleScope-id}/role/resource/roles/{accessPackageResourceRole-id}",
      "openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/entitlementManagement/accessPackages/{accessPackage-id}/resourceRoleScopes/{accessPackageResourceRoleScope-id}/scope/resource/roles/{accessPackageResourceRole-id}",
      "openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/resourceRoles/{accessPackageResourceRole-id}/resource/roles/{accessPackageResourceRole-id1}",
      "openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/resourceRoles/{accessPackageResourceRole-id}/resource/scopes/{accessPackageResourceScope-id}/resource/roles/{accessPackageResourceRole-id1}",
      "openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/resourceScopes/{accessPackageResourceScope-id}/resource/roles/{accessPackageResourceRole-id}",
-     "openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/roles/{accessPackageResourceRole-id}",
-     "openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/scopes/{accessPackageResourceScope-id}/resource/roles/{accessPackageResourceRole-id}"
+     "openapi/_original/azure-ad-graph-identity-governance-openapi.yml#DELETE /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/roles/{accessPackageResourceRole-id}"
     ]
    },
    "beyond-identity": {
@@ -15340,12 +15414,12 @@
      "openapi/_original/employeeexperience-openapi-original.yml#PATCH /employeeExperience/roles/{engagementRole-id}",
      "openapi/_original/employeeexperience-openapi-original.yml#POST /employeeExperience/roles",
      "openapi/_original/identity-openapi-original.yml#DELETE /identityGovernance/entitlementManagement/accessPackages/{accessPackage-id}/resourceRoleScopes/{accessPackageResourceRoleScope-id}/role",
+     "openapi/_original/identity-openapi-original.yml#DELETE /identityGovernance/entitlementManagement/accessPackages/{accessPackage-id}/resourceRoleScopes/{accessPackageResourceRoleScope-id}/role/resource/roles/{accessPackageResourceRole-id}",
      "openapi/_original/identity-openapi-original.yml#DELETE /identityGovernance/entitlementManagement/accessPackages/{accessPackage-id}/resourceRoleScopes/{accessPackageResourceRoleScope-id}/scope/resource/roles/{accessPackageResourceRole-id}",
      "openapi/_original/identity-openapi-original.yml#DELETE /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/resourceRoles/{accessPackageResourceRole-id}/resource/roles/{accessPackageResourceRole-id1}",
      "openapi/_original/identity-openapi-original.yml#DELETE /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/resourceRoles/{accessPackageResourceRole-id}/resource/scopes/{accessPackageResourceScope-id}/resource/roles/{accessPackageResourceRole-id1}",
      "openapi/_original/identity-openapi-original.yml#DELETE /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/resourceScopes/{accessPackageResourceScope-id}/resource/roles/{accessPackageResourceRole-id}",
-     "openapi/_original/identity-openapi-original.yml#DELETE /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/roles/{accessPackageResourceRole-id}",
-     "openapi/_original/identity-openapi-original.yml#DELETE /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/scopes/{accessPackageResourceScope-id}/resource/roles/{accessPackageResourceRole-id}"
+     "openapi/_original/identity-openapi-original.yml#DELETE /identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/resources/{accessPackageResource-id}/roles/{accessPackageResourceRole-id}"
     ]
    },
    "neon": {
@@ -18243,6 +18317,37 @@
      "openapi/_original/auth0-management-api-openapi.yml#GET /organizations/{id}/invitations",
      "openapi/_original/auth0-management-api-openapi.yml#GET /organizations/{id}/invitations/{invitation_id}",
      "openapi/_original/auth0-management-api-openapi.yml#POST /organizations/{id}/invitations"
+    ]
+   },
+   "authentik": {
+    "segments": [
+     "invitations"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "pk": "string",
+     "name": "string",
+     "expires": "string",
+     "fixed_data": "object",
+     "created_by": null,
+     "single_use": "boolean",
+     "flow": "string",
+     "flow_obj": null
+    },
+    "evidence": [
+     "openapi/_original/authentik-openapi.yml#DELETE /stages/invitation/invitations/{invite_uuid}/",
+     "openapi/_original/authentik-openapi.yml#GET /stages/invitation/invitations/",
+     "openapi/_original/authentik-openapi.yml#GET /stages/invitation/invitations/{invite_uuid}/",
+     "openapi/_original/authentik-openapi.yml#PATCH /stages/invitation/invitations/{invite_uuid}/",
+     "openapi/_original/authentik-openapi.yml#POST /stages/invitation/invitations/",
+     "openapi/_original/authentik-openapi.yml#PUT /stages/invitation/invitations/{invite_uuid}/"
     ]
    },
    "azure-ad": {

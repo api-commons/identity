@@ -35,6 +35,18 @@ concepts:
     - openapi/_original/authentik-openapi.yml#GET /core/groups/{group_uuid}/
     - openapi/_original/authentik-openapi.yml#PATCH /core/groups/{group_uuid}/
     - openapi/_original/authentik-openapi.yml#POST /core/groups/
+  organization:
+    path_segment:
+    - tenants
+    properties:
+      name: name
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/authentik-openapi.yml#DELETE /tenants/tenants/{tenant_uuid}/
+    - openapi/_original/authentik-openapi.yml#GET /tenants/tenants/
+    - openapi/_original/authentik-openapi.yml#GET /tenants/tenants/{tenant_uuid}/
+    - openapi/_original/authentik-openapi.yml#PATCH /tenants/tenants/{tenant_uuid}/
+    - openapi/_original/authentik-openapi.yml#POST /tenants/tenants/
   role:
     path_segment:
     - roles
@@ -58,3 +70,16 @@ concepts:
     evidence:
     - openapi/_original/authentik-openapi.yml#GET /rbac/permissions/
     - openapi/_original/authentik-openapi.yml#GET /rbac/permissions/{id}/
+  invite:
+    path_segment:
+    - invitations
+    properties:
+      expires_at: expires
+      inviter_id: created_by
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/authentik-openapi.yml#DELETE /stages/invitation/invitations/{invite_uuid}/
+    - openapi/_original/authentik-openapi.yml#GET /stages/invitation/invitations/
+    - openapi/_original/authentik-openapi.yml#GET /stages/invitation/invitations/{invite_uuid}/
+    - openapi/_original/authentik-openapi.yml#PATCH /stages/invitation/invitations/{invite_uuid}/
+    - openapi/_original/authentik-openapi.yml#POST /stages/invitation/invitations/

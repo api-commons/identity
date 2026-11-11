@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/identity/main/schema/organization.json",
   "title": "Organization",
-  "description": "The common organization in Identity and Users, distilled from 56 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common organization in Identity and Users, distilled from 57 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.821,
-      "x-commons-providers": 46,
+      "x-commons-share": 0.825,
+      "x-commons-providers": 47,
       "x-commons-spellings": [
         "name",
         "displayName",
@@ -21,7 +21,7 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.714,
+      "x-commons-share": 0.702,
       "x-commons-providers": 40,
       "x-commons-spellings": [
         "id",
@@ -37,7 +37,7 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.518,
+      "x-commons-share": 0.509,
       "x-commons-providers": 29,
       "x-commons-spellings": [
         "created_at",
@@ -54,7 +54,7 @@
     "organization_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.321,
+      "x-commons-share": 0.316,
       "x-commons-providers": 18,
       "x-commons-spellings": [
         "tenantId",
@@ -70,7 +70,7 @@
     "status": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.304,
+      "x-commons-share": 0.298,
       "x-commons-providers": 17,
       "x-commons-spellings": [
         "status",
@@ -83,7 +83,7 @@
     "description": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.25,
+      "x-commons-share": 0.246,
       "x-commons-providers": 14,
       "x-commons-spellings": [
         "description",
@@ -93,7 +93,7 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.25,
+      "x-commons-share": 0.246,
       "x-commons-providers": 14,
       "x-commons-spellings": [
         "updated_at",
@@ -107,7 +107,7 @@
     "metadata": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.232,
+      "x-commons-share": 0.228,
       "x-commons-providers": 13,
       "x-commons-spellings": [
         "metadata",
@@ -124,7 +124,7 @@
   "x-commons": {
     "context": "identity",
     "concept": "organization",
-    "providers": 56,
+    "providers": 57,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

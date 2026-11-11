@@ -21,7 +21,6 @@ concepts:
     - group
     properties:
       id: id
-      organization_id: organization_id
     core_coverage: 0.5
     evidence:
     - openapi/_original/telnyx-openapi.json#GET /messages/group/{message_id}
