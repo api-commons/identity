@@ -28,7 +28,7 @@ concepts:
     properties:
       name: name
       member_ids: users
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/authentik-openapi.yml#DELETE /core/groups/{group_uuid}/
     - openapi/_original/authentik-openapi.yml#GET /core/groups/
@@ -51,8 +51,8 @@ concepts:
     path_segment:
     - roles
     properties:
-      name: name
       id: id
+      name: name
     core_coverage: 0.667
     evidence:
     - openapi/_original/authentik-openapi.yml#DELETE /rbac/roles/{uuid}/

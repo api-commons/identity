@@ -8,6 +8,6 @@ concepts:
     - members
     properties:
       id: id
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/workday-security-security-groups-openapi.yml#GET /securityGroups/{securityGroupId}/members

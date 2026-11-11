@@ -10,7 +10,7 @@ concepts:
       id: user_id
       name: name
       status: status
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/iproov-openapi.yml#DELETE /users/{existing_user_id}
     - openapi/_original/iproov-openapi.yml#GET /users/{existing_user_id}

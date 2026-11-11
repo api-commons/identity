@@ -12,13 +12,13 @@ generated. Every number below is a count of providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| user | 185 | 167 | id 81%, email 68% | users 135, members 54, user 45, identities 14 |
-| group | 84 | 76 | id 79%, name 76% | groups 67, teams 15, group 12, team 6 |
-| organization | 60 | 57 | name 82%, id 70%, created_at 51% | organizations 31, organization 12, tenants 11, org 9 |
-| role | 63 | 58 | name 76%, id 74%, description 60% | roles 59, role 11 |
-| permission | 46 | 40 | id 60%, name 60%, description 52% | permissions 29, scopes 20, entitlements 6, permission 4 |
-| invite | 34 | 30 | email 70%, id 60%, role 60% | invitations 15, invite 11, invites 11, invitation 1 |
-| api_key | 25 | 21 | id 90%, created_at 71%, key 71%, name 71% | tokens 10, api-keys 8, apikeys 3, keys 3 |
+| user | 185 | 167 | id 84%, email 70%, name 51% | users 135, members 54, user 45, identities 14 |
+| group | 84 | 76 | id 84%, name 78%, description 50% | groups 67, teams 15, group 12, team 6 |
+| organization | 60 | 57 | name 84%, id 74%, created_at 51% | organizations 31, organization 12, tenants 11, org 9 |
+| role | 63 | 58 | id 78%, name 78%, description 60% | roles 59, role 11 |
+| permission | 46 | 40 | id 62%, name 62%, description 52% | permissions 29, scopes 20, entitlements 6, permission 4 |
+| invite | 34 | 30 | email 73%, id 70%, role 63% | invitations 15, invite 11, invites 11, invitation 1 |
+| api_key | 25 | 21 | id 90%, created_at 76%, key 71%, name 71% | tokens 10, api-keys 8, apikeys 3, keys 3 |
 
 Cohort: 443 providers with harvested OpenAPI, 185 crosswalks. Of the providers exposing a user: 65% create, 85% list, 75% fetch, 53% update, 53% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
@@ -28,7 +28,7 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 
 ## What the measurement shows
 
-- A user agrees on only id and email. Name sits just under core (49%): SCIM nests it as an object, others split first and last name, others carry a display name -- so the most common resource in the catalog has the least agreement on what to call a person.
+- A user agrees on id, email and name -- and only just on name: SCIM nests it as an object, others split first and last name, others carry a display name, so the most common resource in the catalog agrees on less than a CRM contact does.
 - Roles and groups agree on name, id and description, and roles reference their permissions a third of the time -- RBAC is the same shape everywhere.
 - An invite agrees on email, id and the role it grants: the minimum to bring someone in.
 - API keys agree on id, name, key and created_at once only unambiguous paths count.

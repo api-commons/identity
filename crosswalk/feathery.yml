@@ -10,7 +10,7 @@ concepts:
       id: user_id
       created_at: created_at
       updated_at: updated_at
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/feathery-rest-api-openapi.yml#DELETE /api/user/{user_id}/
     - openapi/_original/feathery-rest-api-openapi.yml#GET /api/user/

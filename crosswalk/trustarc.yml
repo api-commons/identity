@@ -41,14 +41,10 @@ concepts:
     - groups
     - group
     properties:
-      id:
-      - id
-      - externalId
-      name:
-      - displayName
-      - name
-      member_ids: members
-    core_coverage: 1.0
+      name: name
+      type: type
+      organization_id: accountId
+    core_coverage: 0.333
     evidence:
     - openapi/_original/trustarc-guardian-openapi.json#DELETE /external/api/v2/scim/Groups/{id}
     - openapi/_original/trustarc-guardian-openapi.json#GET /api/v1/accounts/{accountId}/organizational-structure/group/{externalGroupId}
@@ -59,8 +55,8 @@ concepts:
     path_segment:
     - roles
     properties:
-      name: name
       id: id
+      name: name
       description: description
       permission_ids: permissions
     core_coverage: 1.0

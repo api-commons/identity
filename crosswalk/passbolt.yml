@@ -7,10 +7,17 @@ concepts:
     path_segment:
     - users
     properties:
-      status: disabled
+      id: id
+      status:
+      - active
+      - disabled
+      created_at: created
       username: username
-      role_ids: role_id
-    core_coverage: 0.0
+      role_ids:
+      - role_id
+      - role
+      updated_at: modified
+    core_coverage: 0.333
     evidence:
     - openapi/_original/passbolt-openapi.yaml#DELETE /users/{userId}.json
     - openapi/_original/passbolt-openapi.yaml#GET /users.json
@@ -21,8 +28,11 @@ concepts:
     path_segment:
     - groups
     properties:
+      id: id
       name: name
-    core_coverage: 0.5
+      created_at: created
+      updated_at: modified
+    core_coverage: 0.667
     evidence:
     - openapi/_original/passbolt-openapi.yaml#DELETE /groups/{groupId}.json
     - openapi/_original/passbolt-openapi.yaml#GET /groups.json
@@ -32,7 +42,12 @@ concepts:
   role:
     path_segment:
     - roles
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      name: name
+      description: description
+      created_at: created
+      updated_at: modified
+    core_coverage: 1.0
     evidence:
     - openapi/_original/passbolt-openapi.yaml#GET /roles.json

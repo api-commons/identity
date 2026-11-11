@@ -8,8 +8,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.6,
-      "x-commons-providers": 24,
+      "x-commons-share": 0.625,
+      "x-commons-providers": 25,
       "x-commons-spellings": [
         "id",
         "permissionId",
@@ -20,8 +20,8 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.6,
-      "x-commons-providers": 24,
+      "x-commons-share": 0.625,
+      "x-commons-providers": 25,
       "x-commons-spellings": [
         "name",
         "displayName",

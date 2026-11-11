@@ -13,7 +13,7 @@ concepts:
       role_ids: role
       updated_at: updatedAt
       metadata: metadata
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/dust-identity-openapi.json#DELETE /api/v1/org/teams/members
     - openapi/_original/dust-identity-openapi.json#GET /api/v1/org/teams/members
@@ -27,7 +27,8 @@ concepts:
       description: description
       created_at: createdAt
       updated_at: updatedAt
-    core_coverage: 0.5
+      organization_id: orgId
+    core_coverage: 0.667
     evidence:
     - openapi/_original/dust-identity-openapi.json#DELETE /api/v1/org/teams/{team_id}
     - openapi/_original/dust-identity-openapi.json#GET /api/v1/org/teams
@@ -44,7 +45,18 @@ concepts:
   invite:
     path_segment:
     - invites
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      email: email
+      id: id
+      role: role
+      status: status
+      organization_id:
+      - organizationId
+      - organization
+      expires_at: expiresAt
+      inviter_id:
+      - inviterId
+      - inviter
+    core_coverage: 1.0
     evidence:
     - openapi/_original/dust-identity-openapi.json#GET /api/v1/orgs/invites

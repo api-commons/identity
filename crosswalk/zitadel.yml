@@ -14,7 +14,7 @@ concepts:
       status: state
       username: userName
       role_ids: roles
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/zitadel-management-openapi.yml#DELETE /management/v1/users/{userId}
     - openapi/_original/zitadel-management-openapi.yml#GET /management/v1/users/{userId}

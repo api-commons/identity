@@ -8,7 +8,7 @@ concepts:
     - people
     properties:
       id: id
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/johns-hopkins-university-hub-api-openapi.yml#GET /people
     - openapi/_original/johns-hopkins-university-hub-api-openapi.yml#GET /people/{id}

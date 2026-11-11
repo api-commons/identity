@@ -8,7 +8,7 @@ concepts:
     - users
     properties:
       name: name
-    core_coverage: 0.0
+    core_coverage: 0.333
     evidence:
     - openapi/_original/infra-openapi-original.json#DELETE /api/users/{id}
     - openapi/_original/infra-openapi-original.json#GET /api/users
@@ -20,7 +20,7 @@ concepts:
     - groups
     properties:
       name: name
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/infra-openapi-original.json#DELETE /api/groups/{id}
     - openapi/_original/infra-openapi-original.json#GET /api/groups

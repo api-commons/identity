@@ -10,6 +10,6 @@ concepts:
       email: email
       username: username
       phone: phone_number
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/magic-link-openapi.yml#GET /v1/admin/user

@@ -6,7 +6,11 @@ concepts:
   user:
     path_segment:
     - members
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      email: email
+      name: name
+      status: status
+      role_ids: role
+    core_coverage: 0.667
     evidence:
     - openapi/_original/dashlane-public-api-openapi-original.json#POST /teams/Members

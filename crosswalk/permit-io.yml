@@ -67,11 +67,11 @@ concepts:
     path_segment:
     - roles
     properties:
-      name: name
       id:
       - id
       - user_id
       - role_id
+      name: name
       description: description
       permission_ids: permissions
       created_at:
@@ -113,8 +113,8 @@ concepts:
       id: id
       role: role
       status: status
-      created_at: created_at
       organization_id: organization_id
+      created_at: created_at
     core_coverage: 1.0
     evidence:
     - openapi/_original/permit-io-openapi.json#DELETE /v2/orgs/{org_id}/invites/{invite_id}

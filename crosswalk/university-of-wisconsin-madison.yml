@@ -10,7 +10,7 @@ concepts:
     properties:
       id: id
       metadata: attributes
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/university-of-wisconsin-madison-manifest-api-openapi.yml#GET /groups/{id}/members
     - openapi/_original/university-of-wisconsin-madison-manifest-api-openapi.yml#GET /members/{id}
@@ -22,7 +22,8 @@ concepts:
     - groups
     properties:
       id: id
-    core_coverage: 0.5
+      type: type
+    core_coverage: 0.333
     evidence:
     - openapi/_original/university-of-wisconsin-madison-manifest-api-openapi.yml#GET /groups
     - openapi/_original/university-of-wisconsin-madison-manifest-api-openapi.yml#GET /groups/{id}

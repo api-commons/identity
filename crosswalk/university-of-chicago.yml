@@ -11,7 +11,7 @@ concepts:
       name: display_name
       username: username
       phone: phone_number
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/university-of-chicago-fence.yaml#GET /admin/user/{username}
     - openapi/_original/university-of-chicago-fence.yaml#GET /user

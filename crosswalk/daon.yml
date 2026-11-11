@@ -13,7 +13,7 @@ concepts:
       last_name: lastName
       first_name: firstName
       metadata: attributes
-    core_coverage: 1.0
+    core_coverage: 0.667
     evidence:
     - openapi/_original/daon-trustx-openapi.yml#DELETE /api/identity-store/stores/{storeName}/users/{userId}
     - openapi/_original/daon-trustx-openapi.yml#GET /api/identity-store/stores/{storeName}/users
@@ -28,8 +28,8 @@ concepts:
       name: name
       scopes: permissions
       status: status
-      description: description
       created_by: createdBy
+      description: description
     core_coverage: 0.5
     evidence:
     - openapi/_original/daon-trustx-openapi.yml#DELETE /api/arthr/apiKeys/{apiKeyId}

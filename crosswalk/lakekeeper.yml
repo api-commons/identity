@@ -25,8 +25,8 @@ concepts:
     - role
     - roles
     properties:
-      name: name
       id: id
+      name: name
       description: description
       created_at: created-at
       updated_at: updated-at

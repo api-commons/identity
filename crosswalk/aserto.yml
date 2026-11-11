@@ -9,7 +9,7 @@ concepts:
     properties:
       id: id
       updated_at: updated_at
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/aserto-decision-logs-openapi.yml#GET /api/v2/decision_logs/users
     - openapi/_original/aserto-decision-logs-openapi.yml#GET /api/v2/decision_logs/users/{id}

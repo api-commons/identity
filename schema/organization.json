@@ -8,8 +8,8 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.825,
-      "x-commons-providers": 47,
+      "x-commons-share": 0.842,
+      "x-commons-providers": 48,
       "x-commons-spellings": [
         "name",
         "displayName",
@@ -21,8 +21,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.702,
-      "x-commons-providers": 40,
+      "x-commons-share": 0.737,
+      "x-commons-providers": 42,
       "x-commons-spellings": [
         "id",
         "external_id",
@@ -70,11 +70,11 @@
     "status": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.298,
-      "x-commons-providers": 17,
+      "x-commons-share": 0.316,
+      "x-commons-providers": 18,
       "x-commons-spellings": [
-        "status",
         "state",
+        "status",
         "enabled",
         "disabled",
         "active"
@@ -83,8 +83,8 @@
     "description": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.246,
-      "x-commons-providers": 14,
+      "x-commons-share": 0.263,
+      "x-commons-providers": 15,
       "x-commons-spellings": [
         "description",
         "details"

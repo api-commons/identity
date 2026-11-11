@@ -13,7 +13,7 @@ concepts:
       status: state
       created_at: created_at
       updated_at: updated_at
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/ory-kratos-openapi.json#DELETE /admin/identities/{id}
     - openapi/_original/ory-kratos-openapi.json#GET /admin/identities

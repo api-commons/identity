@@ -25,13 +25,8 @@ concepts:
   group:
     path_segment:
     - groups
-    properties:
-      id:
-      - id
-      - externalId
-      name: displayName
-      member_ids: members
-    core_coverage: 1.0
+    properties: {}
+    core_coverage: 0.0
     evidence:
     - openapi/_original/telesign-accounts-api-openapi.json#GET /scim/v2/Groups
     - openapi/_original/telesign-accounts-api-openapi.json#GET /scim/v2/Groups/{group_id}

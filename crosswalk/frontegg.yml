@@ -59,10 +59,10 @@ concepts:
     path_segment:
     - roles
     properties:
-      name: name
       id:
       - id
       - userId
+      name: name
       description: description
       created_at: createdAt
       updated_at: updatedAt

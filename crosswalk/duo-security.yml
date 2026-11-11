@@ -6,8 +6,13 @@ concepts:
   user:
     path_segment:
     - users
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: user_id
+      email: email
+      status: status
+      created_at: created
+      username: username
+    core_coverage: 0.667
     evidence:
     - openapi/_original/duo-admin-api-openapi.yml#DELETE /admin/v1/users/{user_id}
     - openapi/_original/duo-admin-api-openapi.yml#GET /admin/v1/users

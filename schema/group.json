@@ -8,64 +8,49 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.789,
-      "x-commons-providers": 60,
+      "x-commons-share": 0.842,
+      "x-commons-providers": 64,
       "x-commons-spellings": [
         "id",
         "externalId",
-        "userId",
         "group_id",
         "uuid",
-        "$id",
+        "userId",
         "external_id",
+        "$id",
         "groupId"
       ]
     },
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.763,
-      "x-commons-providers": 58,
+      "x-commons-share": 0.776,
+      "x-commons-providers": 59,
       "x-commons-spellings": [
         "name",
         "displayName",
-        "title",
         "display_name",
+        "title",
         "label",
         "Name"
       ]
     },
     "description": {
       "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.487,
-      "x-commons-providers": 37,
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 38,
       "x-commons-spellings": [
         "description",
         "details",
         "Description"
       ]
     },
-    "member_ids": {
-      "type": "array",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.368,
-      "x-commons-providers": 28,
-      "x-commons-spellings": [
-        "members",
-        "users",
-        "members_count",
-        "memberIds",
-        "memberCount",
-        "member_count",
-        "Members"
-      ]
-    },
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.316,
-      "x-commons-providers": 24,
+      "x-commons-share": 0.329,
+      "x-commons-providers": 25,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
@@ -77,11 +62,26 @@
       ],
       "format": "date-time"
     },
+    "member_ids": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.303,
+      "x-commons-providers": 23,
+      "x-commons-spellings": [
+        "members",
+        "users",
+        "members_count",
+        "memberIds",
+        "memberCount",
+        "member_count",
+        "Members"
+      ]
+    },
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.289,
-      "x-commons-providers": 22,
+      "x-commons-share": 0.303,
+      "x-commons-providers": 23,
       "x-commons-spellings": [
         "updated_at",
         "updatedAt",
@@ -89,9 +89,34 @@
         "update_time",
         "modifiedAt",
         "modifiedDate",
-        "updated"
+        "updated",
+        "modified"
       ],
       "format": "date-time"
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.25,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "type"
+      ]
+    },
+    "organization_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.211,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "orgId",
+        "organizationId",
+        "tenant_id",
+        "organization_id",
+        "tenantId",
+        "accountId",
+        "companyId"
+      ]
     }
   },
   "required": [

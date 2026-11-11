@@ -9,7 +9,7 @@ concepts:
     properties:
       id: id
       email: email
-    core_coverage: 1.0
+    core_coverage: 0.667
     evidence:
     - openapi/_original/textmaster-api-v1-openapi-original.yml#PUT /v1/clients/users/{user_id}
     - openapi/_original/textmaster-api-v1-openapi.yml#PUT /v1/clients/users/{user_id}

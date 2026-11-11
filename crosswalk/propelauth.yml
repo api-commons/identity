@@ -17,7 +17,7 @@ concepts:
       metadata:
       - properties
       - metadata
-    core_coverage: 1.0
+    core_coverage: 0.667
     evidence:
     - openapi/_original/propelauth-user-api-openapi.yml#DELETE /api/backend/v1/user/{userId}
     - openapi/_original/propelauth-user-api-openapi.yml#GET /api/backend/v1/user/{userId}

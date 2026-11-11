@@ -7,10 +7,17 @@ concepts:
     path_segment:
     - users
     properties:
-      id: user_id
+      id:
+      - id
+      - user_id
+      email: email
+      status: active
+      last_name: family_name
+      username: preferred_username
+      first_name: given_name
       role_ids: roles
       metadata: metadata
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/scalekit-openapi.yml#DELETE /api/v1/memberships/organizations/{organization_id}/users/{id}
     - openapi/_original/scalekit-openapi.yml#GET /api/v1/organizations/{organization_id}/directories/{directory_id}/users
@@ -19,8 +26,12 @@ concepts:
   group:
     path_segment:
     - groups
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id:
+      - id
+      - external_id
+      name: display_name
+    core_coverage: 0.667
     evidence:
     - openapi/_original/scalekit-openapi.yml#GET /api/v1/organizations/{organization_id}/directories/{directory_id}/groups
   organization:
@@ -45,10 +56,10 @@ concepts:
     path_segment:
     - roles
     properties:
+      id: id
       name:
       - name
       - display_name
-      id: id
       description: description
       permission_ids: permissions
     core_coverage: 1.0

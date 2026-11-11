@@ -23,7 +23,7 @@ concepts:
       - app_metadata
       - user_metadata
       phone: phone
-    core_coverage: 1.0
+    core_coverage: 0.667
     evidence:
     - openapi/_original/supabase-auth-api-openapi.yml#DELETE /admin/users/{user_id}
     - openapi/_original/supabase-auth-api-openapi.yml#GET /admin/users

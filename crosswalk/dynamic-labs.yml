@@ -22,7 +22,7 @@ concepts:
       - updated
       metadata: metadata
       phone: phoneNumber
-    core_coverage: 1.0
+    core_coverage: 0.667
     evidence:
     - openapi/_original/dynamic-labs-openapi.yml#DELETE /environments/{environmentId}/users/{userId}
     - openapi/_original/dynamic-labs-openapi.yml#GET /environments/{environmentId}/users
@@ -48,9 +48,11 @@ concepts:
     - invites
     properties:
       email: email
+      id: id
       role: role
       status: status
-    core_coverage: 0.667
+      organization_id: organizationId
+    core_coverage: 1.0
     evidence:
     - openapi/_original/dynamic-xyz-invites-api-openapi.yml#DELETE /invites/{inviteId}
     - openapi/_original/dynamic-xyz-invites-api-openapi.yml#GET /invites
@@ -65,8 +67,8 @@ concepts:
       created_at: createdAt
       scopes: scopes
       status: active
-      description: note
       created_by: createdBy
+      description: note
     core_coverage: 0.5
     evidence:
     - openapi/_original/dynamic-xyz-userapitokens-api-openapi.yml#DELETE /user/tokens/{tokenId}

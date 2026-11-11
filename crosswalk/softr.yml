@@ -9,7 +9,7 @@ concepts:
     properties:
       email: email
       status: status
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/softr-openapi.yml#DELETE /users/{email}
     - openapi/_original/softr-openapi.yml#POST /users

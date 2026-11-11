@@ -13,7 +13,7 @@ concepts:
       username: username
       first_name: firstName
       phone: phoneNumber
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/dream-sports-guardian-integrations-openapi.yml#GET /user
     - openapi/_original/dream-sports-guardian-integrations-openapi.yml#POST /user

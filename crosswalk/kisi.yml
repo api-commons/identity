@@ -33,8 +33,8 @@ concepts:
       id: id
       name: name
       description: description
-      member_ids: members_count
       created_at: created_at
+      member_ids: members_count
       updated_at: updated_at
     core_coverage: 1.0
     evidence:
@@ -61,8 +61,8 @@ concepts:
     path_segment:
     - roles
     properties:
-      name: name
       id: id
+      name: name
       description: description
       permission_ids: permissions
     core_coverage: 1.0

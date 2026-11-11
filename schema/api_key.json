@@ -20,13 +20,14 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.714,
-      "x-commons-providers": 15,
+      "x-commons-share": 0.762,
+      "x-commons-providers": 16,
       "x-commons-spellings": [
         "createdAt",
         "created_at",
         "$createdAt",
         "createdOn",
+        "created_on",
         "created"
       ],
       "format": "date-time"
@@ -42,7 +43,8 @@
         "apiKey",
         "key",
         "api_key",
-        "prefix"
+        "prefix",
+        "key_prefix"
       ]
     },
     "name": {
@@ -58,8 +60,8 @@
     "scopes": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.429,
-      "x-commons-providers": 9,
+      "x-commons-share": 0.476,
+      "x-commons-providers": 10,
       "x-commons-spellings": [
         "scopes",
         "permissions",
@@ -70,12 +72,22 @@
     "status": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.381,
-      "x-commons-providers": 8,
+      "x-commons-share": 0.429,
+      "x-commons-providers": 9,
       "x-commons-spellings": [
         "status",
         "active",
         "enabled"
+      ]
+    },
+    "created_by": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "createdBy",
+        "created_by"
       ]
     },
     "description": {
@@ -113,16 +125,6 @@
         "$updatedAt"
       ],
       "format": "date-time"
-    },
-    "created_by": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.286,
-      "x-commons-providers": 6,
-      "x-commons-spellings": [
-        "createdBy",
-        "created_by"
-      ]
     },
     "organization_id": {
       "type": "string",

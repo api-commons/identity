@@ -6,8 +6,15 @@ concepts:
   user:
     path_segment:
     - members
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id:
+      - '@id'
+      - id
+      email: email
+      name: title
+      last_name: lastname
+      phone: phoneNumber
+    core_coverage: 1.0
     evidence:
     - openapi/_original/university-of-helsinki-contact-search-api-openapi.json#GET /company_organizations/{id}/members
     - openapi/_original/university-of-helsinki-contact-search-api-openapi.json#GET /hr_organizations/{id}/members

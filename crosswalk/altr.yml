@@ -12,7 +12,7 @@ concepts:
       created_at: created_at
       username: username
       updated_at: updated_at
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/altr-service-user-openapi.json#DELETE /services/{service}/users/{userid}
     - openapi/_original/altr-service-user-openapi.json#GET /services/{service}/users
@@ -24,11 +24,12 @@ concepts:
     - usergroups
     - groups
     properties:
+      id: group_id
       description:
       - details
       - description
       member_ids: users
-    core_coverage: 0.0
+    core_coverage: 0.667
     evidence:
     - openapi/_original/altr-classification-openapi.json#GET /jobs/groups
     - openapi/_original/altr-classification-openapi.yml#GET /jobs/groups

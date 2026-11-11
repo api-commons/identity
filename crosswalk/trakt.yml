@@ -10,7 +10,7 @@ concepts:
     properties:
       name: name
       username: username
-    core_coverage: 0.0
+    core_coverage: 0.333
     evidence:
     - openapi/_original/trakt-openapi.yml#GET /movies/{id}/people
     - openapi/_original/trakt-openapi.yml#GET /people/{id}

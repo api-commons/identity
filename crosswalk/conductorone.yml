@@ -9,7 +9,7 @@ concepts:
     properties:
       email: email
       role_ids: roleIds
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/c1-openapi-original.yml#GET /api/v1/apps/{app_id}/entitlements/users/{app_user_id}
     - openapi/_original/c1-openapi-original.yml#GET /api/v1/apps/{app_id}/entitlements/{app_entitlement_id}/users
@@ -20,10 +20,10 @@ concepts:
     path_segment:
     - roles
     properties:
+      id: id
       name:
       - displayName
       - name
-      id: id
       permission_ids: permissions
       created_at: createdAt
       updated_at: updatedAt

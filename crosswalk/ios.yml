@@ -9,7 +9,7 @@ concepts:
     properties:
       id: id
       metadata: attributes
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/app-store-connect-openapi.json#DELETE /v1/users/{id}
     - openapi/_original/app-store-connect-openapi.json#GET /v1/users
@@ -20,7 +20,8 @@ concepts:
     - teams
     properties:
       id: id
-    core_coverage: 0.5
+      type: type
+    core_coverage: 0.333
     evidence:
     - openapi/_original/app-store-connect-openapi.json#GET /v1/gameCenterMatchmakingRuleSets/{id}/relationships/teams
     - openapi/_original/app-store-connect-openapi.json#GET /v1/gameCenterMatchmakingRuleSets/{id}/teams

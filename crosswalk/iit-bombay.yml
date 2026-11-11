@@ -18,8 +18,8 @@ concepts:
     path_segment:
     - roles
     properties:
-      name: name
       id: id
+      name: name
       permission_ids: permissions
     core_coverage: 0.667
     evidence:

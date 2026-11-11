@@ -9,6 +9,6 @@ concepts:
     properties:
       id: id
       metadata: attributes
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/clearslide-platform-api-swagger.json#GET /users

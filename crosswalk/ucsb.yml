@@ -11,7 +11,7 @@ concepts:
       last_name: lastName
       first_name: firstName
       phone: phone
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/gradapplverifications-v1.yaml#POST /v{apiVersion}/user
     - openapi/_original/ucsb-grad-application-verifications-openapi.yml#POST /v{apiVersion}/user

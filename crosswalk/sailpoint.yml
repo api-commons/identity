@@ -17,8 +17,8 @@ concepts:
     path_segment:
     - roles
     properties:
-      name: name
       id: id
+      name: name
       description: description
       created_at: created
       updated_at: modified

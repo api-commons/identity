@@ -7,8 +7,10 @@ concepts:
     path_segment:
     - users
     properties:
-      status: status
-    core_coverage: 0.0
+      id: id
+      email: emails
+      phone: phoneNumbers
+    core_coverage: 0.667
     evidence:
     - openapi/_original/supertokens-core-driver-interface-openapi.yml#GET /users
   organization:

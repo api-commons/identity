@@ -6,14 +6,8 @@ concepts:
   user:
     path_segment:
     - users
-    properties:
-      email: emails
-      name:
-      - displayName
-      - name
-      status: active
-      username: userName
-    core_coverage: 0.5
+    properties: {}
+    core_coverage: 0.0
     evidence:
     - openapi/_original/cyberark-identity-openapi.yml#DELETE /scim/v2/Users/{id}
     - openapi/_original/cyberark-identity-openapi.yml#GET /scim/v2/Users

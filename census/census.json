@@ -85,10 +85,11 @@
     "properties": {
      "uuid": "string",
      "name": "string",
+     "description": [
+      "string",
+      "null"
+     ],
      "email": "string",
-     "role": "string",
-     "status": "string",
-     "groups": "array",
      "onboarding": "boolean",
      "role_uuids": "array",
      "group_uuids": "array"
@@ -289,8 +290,6 @@
      "POST collection"
     ],
     "properties": {
-     "totalCount": "integer",
-     "users": "array",
      "id": "integer",
      "name": "string",
      "firstName": "string",
@@ -328,8 +327,6 @@
      "currency": "string",
      "roles": "array",
      "username": "string",
-     "content": "array",
-     "page": "object",
      "id": "string",
      "companyId": "string",
      "email": "string",
@@ -360,11 +357,12 @@
      "purchaseRestriction": "array",
      "status": "string",
      "subscription": "object",
-     "members": "array",
-     "totalCount": "integer",
-     "success": "boolean",
+     "userId": "string",
      "role": "string",
-     "membershipType": "string"
+     "membershipType": "string",
+     "createdAt": "string",
+     "externalUserId": "string",
+     "success": "boolean"
     },
     "evidence": [
      "openapi/_original/appdirect-companies-openapi-original.yml#GET /account/v2/users",
@@ -411,14 +409,17 @@
      "POST collection"
     ],
     "properties": {
-     "total": "integer",
-     "identities": "array",
-     "userId": "string",
-     "jwt": "string",
-     "users": "array",
      "$id": "string",
      "$createdAt": "string",
      "$updatedAt": "string",
+     "userId": "string",
+     "provider": "string",
+     "providerUid": "string",
+     "providerEmail": "string",
+     "providerAccessToken": "string",
+     "providerAccessTokenExpiry": "string",
+     "providerRefreshToken": "string",
+     "jwt": "string",
      "name": "string",
      "password": "string",
      "hash": "string",
@@ -511,19 +512,22 @@
      "POST collection"
     ],
     "properties": {
-     "members": "array",
-     "next": "string",
+     "id": "string",
+     "member_type": "string",
+     "type": "string",
+     "connection_id": "string",
+     "created_at": "string",
      "user_id": "string",
      "picture": "string",
      "name": "string",
      "email": "string",
      "roles": "array",
+     "members": "array",
      "users": "array",
      "email_verified": "boolean",
      "username": "string",
      "phone_number": "string",
      "phone_verified": "boolean",
-     "created_at": null,
      "updated_at": null,
      "identities": "array",
      "app_metadata": "object",
@@ -572,10 +576,6 @@
     ],
     "properties": {
      "schemas": "array",
-     "itemsPerPage": "integer",
-     "startIndex": "integer",
-     "totalResults": "integer",
-     "Resources": "array",
      "meta": "object",
      "id": "string",
      "externalId": "string",
@@ -590,7 +590,9 @@
      "urn:authenticx:params:scim:schemas:extension:agent:2.0:User": "object",
      "roles": "array",
      "enableAgentUser": "boolean",
-     "operations": "array",
+     "options": "object",
+     "parent": "object",
+     "root": "object",
      "organizationId": "string",
      "firstName": "string",
      "lastName": "string",
@@ -866,9 +868,6 @@
      "PUT item"
     ],
     "properties": {
-     "identities": "array",
-     "total_size": "integer",
-     "next_page_token": "string",
      "id": "string",
      "realm_id": "string",
      "tenant_id": "string",
@@ -879,10 +878,6 @@
      "traits": null,
      "enrollment_status": "string",
      "schemas": "array",
-     "Resources": "array",
-     "totalResults": "integer",
-     "startIndex": "integer",
-     "itemsPerPage": "integer",
      "externalId": "string",
      "userName": "string",
      "displayName": "string",
@@ -988,10 +983,6 @@
      "POST item"
     ],
     "properties": {
-     "count": "integer",
-     "page": "integer",
-     "size": "integer",
-     "users": "array",
      "id": "string",
      "userName": "string",
      "firstName": "string",
@@ -1151,8 +1142,6 @@
      "state_changed_at": "string",
      "traits": "object",
      "verifiable_addresses": "array",
-     "next_page_token": "string",
-     "users": "array",
      "email": "string",
      "user_id": "string",
      "metadata": "array",
@@ -1171,14 +1160,9 @@
      "ssh-keys": "array",
      "sudoer": "boolean",
      "known": "boolean",
-     "count": "integer",
-     "limit": "integer",
-     "offset": "integer",
      "name": "string",
-     "launchpad_handle": null,
-     "teams": "array",
-     "is_admin": "boolean",
      "permissions": "array",
+     "is_admin": null,
      "members": "array",
      "artefact_matching_rules": "array"
     },
@@ -1560,7 +1544,9 @@
      "kind": "string",
      "metadata": "object",
      "userId": "string",
-     "courses": "array",
+     "levels": "array",
+     "enrolled": "array",
+     "instance_id": "string",
      "code": "string",
      "retMemberLimit": "number",
      "email": "string",
@@ -1654,8 +1640,6 @@
      "POST collection"
     ],
     "properties": {
-     "users": "array",
-     "paging": "object",
      "userID": "string",
      "status": "string",
      "fullName": "string",
@@ -1711,10 +1695,6 @@
      "visible": "boolean",
      "id": "string",
      "schemas": "array",
-     "itemsPerPage": "integer",
-     "startIndex": "integer",
-     "totalResults": "integer",
-     "Resources": "array",
      "name": "object",
      "userName": "string",
      "active": "boolean",
@@ -1779,10 +1759,6 @@
      "visible": "boolean",
      "id": "string",
      "schemas": "array",
-     "itemsPerPage": "integer",
-     "startIndex": "integer",
-     "totalResults": "integer",
-     "Resources": "array",
      "name": "object",
      "userName": "string",
      "active": "boolean",
@@ -1847,10 +1823,6 @@
      "visible": "boolean",
      "id": "string",
      "schemas": "array",
-     "itemsPerPage": "integer",
-     "startIndex": "integer",
-     "totalResults": "integer",
-     "Resources": "array",
      "name": "object",
      "userName": "string",
      "active": "boolean",
@@ -1912,10 +1884,6 @@
      "visible": "boolean",
      "id": "string",
      "schemas": "array",
-     "itemsPerPage": "integer",
-     "startIndex": "integer",
-     "totalResults": "integer",
-     "Resources": "array",
      "name": "object",
      "userName": "string",
      "active": "boolean",
@@ -1958,11 +1926,9 @@
      "startIndex": "integer",
      "itemsPerPage": "integer",
      "Resources": "array",
-     "userName": "string",
-     "displayName": "string",
-     "active": "boolean",
-     "emails": "array",
-     "name": "object"
+     "value": "string",
+     "primary": "boolean",
+     "type": "string"
     },
     "evidence": [
      "openapi/_original/cyberark-identity-openapi.yml#DELETE /scim/v2/Users/{id}",
@@ -2034,9 +2000,19 @@
      "POST collection"
     ],
     "properties": {
-     "members": "array",
+     "email": "string",
+     "status": "string",
+     "joinedDate": "number",
+     "lastUpdateDate": "number",
+     "role": "object",
+     "invitedDate": "number",
+     "removedDate": "number",
+     "language": "string",
+     "passwordsTotal": "number",
+     "name": "string",
+     "authentication": "object",
+     "passwordHealth": "object",
      "page": "integer",
-     "pages": "integer",
      "order": "string",
      "orderBy": "string",
      "limit": "integer"
@@ -2088,13 +2064,19 @@
      "displayName": "string",
      "attributes": "object",
      "userId": "string",
-     "groupId": "string",
-     "operations": "array",
+     "op": "string",
+     "path": "string",
+     "valueString": "string",
+     "valueBoolean": "boolean",
+     "valueArray": "array",
+     "valueID": "string",
+     "valueDisplayName": "string",
      "user": "object",
      "created": "boolean",
+     "loginId": "string",
      "display": "string",
-     "members": "array",
-     "tenantId": "string"
+     "tenantId": "string",
+     "groupId": "string"
     },
     "evidence": [
      "openapi/_original/descope-openapi.yml#DELETE /scim/v2/Users/{userId}",
@@ -2210,23 +2192,30 @@
      "POST collection"
     ],
     "properties": {
-     "accesses": "array",
+     "doorUuid": "string",
+     "doorcode": "object",
+     "endTime": "string",
+     "granter": "object",
+     "passcodeType": "string",
+     "role": "string",
+     "sdkDoorUuid": "string",
+     "shareable": "boolean",
+     "startTime": "string",
+     "userUuid": "string",
+     "accessibilityType": "string",
+     "buildingUuid": "string",
+     "device": "object",
+     "isConnected": "boolean",
+     "name": "string",
+     "type": "string",
+     "uuid": "string",
+     "doorUuids": "array",
+     "keyUuids": "array",
      "email": "string",
      "firstName": "string",
      "lastName": "string",
      "phone": "string",
-     "userUuid": "string",
-     "nextPageToken": "string",
-     "users": "array",
-     "doors": "array",
-     "doorUuids": "array",
-     "keyUuids": "array",
-     "endTime": "string",
-     "passcodeType": "string",
-     "role": "string",
-     "shareable": "boolean",
-     "shouldNotify": "boolean",
-     "startTime": "string"
+     "shouldNotify": "boolean"
     },
     "evidence": [
      "openapi/_original/door-partner-openapi.json#GET /v1/users",
@@ -2296,8 +2285,15 @@
      "POST item"
     ],
     "properties": {
+     "user_id": "string",
+     "username": "string",
+     "realname": "string",
+     "email": "string",
+     "status": "string",
+     "created": "integer",
+     "last_login": "integer",
      "stat": "string",
-     "response": "array"
+     "response": "object"
     },
     "evidence": [
      "openapi/_original/duo-admin-api-openapi.yml#DELETE /admin/v1/users/{user_id}",
@@ -2320,8 +2316,6 @@
      "POST collection"
     ],
     "properties": {
-     "memberships": "array",
-     "total": "number",
      "createdAt": "string",
      "metadata": null,
      "role": "string",
@@ -2333,6 +2327,7 @@
      "path": "string",
      "team": "object",
      "user": "object",
+     "memberships": "array",
      "orgs": "array",
      "teams": "array"
     },
@@ -2357,19 +2352,18 @@
      "PUT item"
     ],
     "properties": {
-     "users": "array",
-     "count": "integer",
      "id": "string",
+     "format": "string",
+     "address": "string",
+     "chain": "string",
+     "walletName": "string",
      "email": "string",
      "alias": "string",
-     "firstVisit": "string",
-     "lastVisit": "string",
-     "verifiedCredentials": "array",
      "metadata": "object",
      "user": null,
      "role": "string",
-     "members": "array",
      "projectEnvironmentId": "string",
+     "verifiedCredentials": "array",
      "lastVerifiedCredentialId": "string",
      "sessionId": "string",
      "country": [
@@ -2408,6 +2402,8 @@
       "string",
       "null"
      ],
+     "firstVisit": "string",
+     "lastVisit": "string",
      "newUser": "boolean",
      "mfaBackupCodeAcknowledgement": [
       "string",
@@ -2532,8 +2528,6 @@
      "chainalysisChecks": "array",
      "oauthAccounts": "array",
      "mfaDevices": "array",
-     "count": "integer",
-     "users": "array",
      "emailVerifiedAt": "string",
      "created": "array",
      "updated": "array",
@@ -2541,7 +2535,6 @@
      "total": "integer",
      "user": null,
      "role": "string",
-     "members": "array",
      "mfaToken": "string",
      "jwt": "string",
      "minifiedJwt": "string",
@@ -2799,16 +2792,12 @@
      "sortBy": "string",
      "sortOrder": null,
      "searchTerm": "string",
-     "data": "array",
-     "messages": "array",
+     "message": "string",
+     "type": "string",
+     "errorCode": "string",
      "id": "string",
      "username": "string",
      "email": "string",
-     "schemas": "array",
-     "totalResults": "integer",
-     "itemsPerPage": "integer",
-     "startIndex": "integer",
-     "Resources": "array",
      "externalId": "string",
      "name": "object",
      "active": "boolean",
@@ -2827,13 +2816,15 @@
      "addresses": "array",
      "x509Certificates": "array",
      "urn:ietf:params:scim:schemas:extension:custom:1.0:User": "object",
+     "schemas": "array",
      "meta": "object",
-     "operations": "array",
+     "op": "string",
+     "path": "string",
+     "value": null,
      "firstName": "string",
      "lastName": "string",
      "customProperties": "object",
      "enabled": "boolean",
-     "users": "array",
      "sources": "array",
      "emailConfirmed": "boolean",
      "lastLogin": "string",
@@ -2869,8 +2860,6 @@
      "PUT item"
     ],
     "properties": {
-     "members": "array",
-     "nextPageToken": "string",
      "addTime": "string",
      "committed": "boolean",
      "counts": null,
@@ -2882,7 +2871,6 @@
      "userId": "string",
      "role": "string",
      "validateOnly": "boolean",
-     "users": "array",
      "accountId": "integer",
      "active": "boolean",
      "aiEnabled": "boolean",
@@ -3101,26 +3089,28 @@
      "PUT item"
     ],
     "properties": {
-     "start": "integer",
-     "totalEntriesCount": "integer",
-     "entriesCount": "integer",
-     "entries": "array",
+     "dn": "string",
      "id": "string",
-     "timestamp": "integer",
+     "metricType": "string",
+     "timestamp": "string",
      "userId": "string",
      "username": "string",
      "operationType": "string",
      "status": "string",
      "durationMs": "integer",
      "authenticatorType": "string",
-     "nodeId": "string",
-     "ipAddress": "string",
-     "userAgent": "string",
      "deviceInfo": "object",
      "errorReason": "string",
      "errorCategory": "string",
+     "fallbackMethod": "string",
+     "fallbackReason": "string",
+     "userAgent": "string",
+     "ipAddress": "string",
      "sessionId": "string",
+     "nodeId": "string",
      "applicationType": "string",
+     "additionalData": "object",
+     "baseDn": "string",
      "schemas": "array",
      "totalResults": "integer",
      "startIndex": "integer",
@@ -3149,7 +3139,9 @@
      "roles": "array",
      "x509Certificates": "array",
      "urn:ietf:params:scim:schemas:extension:gluu:2.0:User": "object",
-     "Operations": "array"
+     "op": "string",
+     "path": "string",
+     "value": null
     },
     "evidence": [
      "openapi/_original/gluu-jans-config-api-fido2-plugin-openapi.yml#GET /fido2/metrics/entries/user/{userId}",
@@ -3182,10 +3174,16 @@
      "PUT item"
     ],
     "properties": {
-     "memberships": "array",
-     "metadata": "object",
+     "createdAt": "string",
+     "domain": "string",
+     "fromRoleMapper": "boolean",
+     "id": "string",
      "memberId": "string",
      "memberType": "string",
+     "referenceId": "string",
+     "referenceType": "string",
+     "roleId": "string",
+     "updatedAt": "string",
      "role": "string",
      "accountLockedAt": "string",
      "accountLockedUntil": "string",
@@ -3196,7 +3194,6 @@
      "addresses": "array",
      "birthdate": "string",
      "client": "string",
-     "createdAt": "string",
      "credentialsNonExpired": "boolean",
      "disabled": "boolean",
      "displayName": "string",
@@ -3212,7 +3209,6 @@
      "forceResetPassword": "boolean",
      "fullId": "object",
      "groups": "array",
-     "id": "string",
      "identities": "array",
      "identitiesAsMap": "object",
      "ims": "array",
@@ -3241,8 +3237,6 @@
      "preRegistration": "boolean",
      "preferredLanguage": "string",
      "profile": "string",
-     "referenceId": "string",
-     "referenceType": "string",
      "registrationAccessToken": "string",
      "registrationCompleted": "boolean",
      "registrationUserUri": "string",
@@ -3253,7 +3247,6 @@
      "temporarilyLocked": "boolean",
      "title": "string",
      "type": "string",
-     "updatedAt": "string",
      "username": "string",
      "website": "string",
      "x509Certificates": "array",
@@ -3268,7 +3261,6 @@
      "groupMapper": "object",
      "mappers": "object",
      "roleMapper": "object",
-     "domain": "string",
      "body": "object",
      "errorDetails": "object",
      "httpStatus": "integer",
@@ -3389,22 +3381,32 @@
      "webauthn_credentials": "array",
      "emails": "array",
      "username": "object",
-     "otp": "object",
-     "password": "object",
-     "identities": "array",
-     "metadata": "object",
+     "email_id": null,
+     "provider_id": "string",
+     "provider_name": "string",
+     "address": "string",
+     "is_primary": "boolean",
+     "is_verified": "boolean",
      "name": "string",
      "given_name": "string",
      "family_name": "string",
      "picture": "string",
-     "email_id": "string",
      "verified": "boolean",
      "has_webauthn_credential": "boolean",
      "email": "string",
      "user_id": null,
      "passkeys": "array",
      "security_keys": "array",
-     "mfa_config": "object"
+     "metadata": "object",
+     "mfa_config": "object",
+     "aaguid": "string",
+     "attestation_type": "string",
+     "backup_eligible": "boolean",
+     "backup_state": "boolean",
+     "last_used_at": "string",
+     "mfa_only": "boolean",
+     "public-key": "string",
+     "transports": "array"
     },
     "evidence": [
      "openapi/_original/hanko-admin-api-openapi.yml#DELETE /users/{id}",
@@ -3445,10 +3447,6 @@
      "language": "string",
      "organizationIds": "array",
      "data": "object",
-     "Resources": "array",
-     "totalResults": "number",
-     "startIndex": "number",
-     "itemsPerPage": "number",
      "schemas": "array",
      "meta": "object",
      "userName": "string",
@@ -3459,7 +3457,9 @@
      "title": "string",
      "groups": "array",
      "active": "boolean",
-     "Operations": "array"
+     "op": "string",
+     "path": "string",
+     "value": "object"
     },
     "evidence": [
      "openapi/_original/hootsuite-rest-api-swagger.yaml#DELETE /v1/organizations/{organizationId}/members/{memberId}",
@@ -3602,11 +3602,6 @@
      "update_time": "string",
      "email_address": "object",
      "time_zone": "string",
-     "users": "array",
-     "next_page_token": "string",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
      "date_created": "string",
      "infusionsoft_id": "string",
      "job_title": "string",
@@ -3731,10 +3726,6 @@
     ],
     "properties": {
      "schemas": "array",
-     "totalResults": "integer",
-     "Resources": "array",
-     "startIndex": "integer",
-     "itemsPerPage": "integer",
      "userName": "string",
      "name": "object",
      "title": "string",
@@ -3745,7 +3736,9 @@
      "urn:ietf:params:scim:schemas:extension:ironclad:2.0:User": "object",
      "meta": "object",
      "password": "string",
-     "Operations": "array"
+     "op": "string",
+     "path": "string",
+     "value": "string"
     },
     "evidence": [
      "openapi/_original/ironclad-scim-api-openapi.yml#DELETE /Users/{userId}",
@@ -3836,8 +3829,6 @@
      "PATCH item"
     ],
     "properties": {
-     "hydra:member": "array",
-     "hydra:totalItems": "integer",
      "@id": "string",
      "@type": "string",
      "id": "object",
@@ -4014,20 +4005,21 @@
      "is_primary": "boolean",
      "message": "string",
      "code": "string",
-     "organization_users": "array",
-     "next_token": "string",
-     "users_added": "array",
+     "full_name": "string",
+     "last_name": "string",
+     "first_name": "string",
+     "picture": "string",
+     "joined_on": "string",
+     "last_accessed_on": "string",
+     "is_suspended": "boolean",
      "roles": "array",
+     "users_added": "array",
      "permissions": "array",
      "users_updated": "array",
      "users_removed": "array",
      "operation": "string",
      "provided_id": "string",
      "username": "string",
-     "last_name": "string",
-     "first_name": "string",
-     "is_suspended": "boolean",
-     "picture": "string",
      "total_sign_ins": "integer",
      "failed_sign_ins": "integer",
      "last_signed_in": "string",
@@ -4035,13 +4027,13 @@
      "identities": "array",
      "properties": "object",
      "api_scopes": "array",
-     "users": "array",
-     "preferred_email": "string",
      "phone": "string",
+     "last_organization_sign_ins": "array",
      "billing": "object",
+     "preferred_email": "string",
      "created": "boolean",
-     "profile": "object",
-     "organization_code": "string",
+     "is_verified": "boolean",
+     "details": "object",
      "given_name": "string",
      "family_name": "string",
      "is_password_reset_requested": "boolean"
@@ -4252,20 +4244,19 @@
      "PUT item"
     ],
     "properties": {
-     "members": "array",
-     "next-page-token": [
-      "string",
-      "null"
-     ],
      "email": [
       "string",
       "null"
      ],
      "id": "string",
-     "name": "string",
-     "user-type": "string",
+     "name": [
+      "string",
+      "null"
+     ],
+     "user-type": null,
+     "type": "string",
+     "members": "array",
      "search": "string",
-     "users": "array",
      "created-at": "string",
      "last-updated-with": "string",
      "updated-at": [
@@ -5579,12 +5570,6 @@
      "POST collection"
     ],
     "properties": {
-     "users": "array",
-     "page": "integer",
-     "limit": "integer",
-     "created_before": "integer",
-     "total_users": "integer",
-     "_links": "object",
      "id": "string",
      "email": "string",
      "email_verified": "boolean",
@@ -5593,13 +5578,13 @@
      "external_id": "string",
      "status": "string",
      "login_count": "integer",
-     "webauthn": "boolean",
-     "webauthn_types": "array",
-     "webauthn_devices": "array",
      "user_metadata": "object",
      "last_login_at": "string",
      "created_at": "string",
-     "updated_at": "string"
+     "updated_at": "string",
+     "webauthn": "boolean",
+     "webauthn_types": "array",
+     "webauthn_devices": "array"
     },
     "evidence": [
      "openapi/_original/passage-1password-openapi.yml#DELETE /apps/{app_id}/users/{user_id}",
@@ -5621,12 +5606,23 @@
      "PUT item"
     ],
     "properties": {
-     "header": "object",
-     "body": "array",
-     "username": "string",
+     "is_mfa_enabled": "boolean",
+     "id": "string",
      "role_id": "string",
+     "username": "string",
+     "active": "boolean",
+     "deleted": "boolean",
+     "created": "string",
+     "modified": "string",
+     "disabled": "string",
      "profile": "object",
-     "disabled": "boolean"
+     "groups_users": "object",
+     "gpgkey": "object",
+     "role": "object",
+     "missing_metadata_key_ids": "array",
+     "last_logged_in": "string",
+     "header": "object",
+     "body": "object"
     },
     "evidence": [
      "openapi/_original/passbolt-openapi.yaml#DELETE /users/{userId}.json",
@@ -5670,7 +5666,17 @@
      "invite": "object",
      "settings": "object",
      "grants": "array",
-     "permissions": "array",
+     "organization_id": "string",
+     "project_id": "string",
+     "environment_id": "string",
+     "object_type": "string",
+     "access_level": "string",
+     "organization_key": "string",
+     "project_key": "string",
+     "environment_key": "string",
+     "organization_name": "string",
+     "project_name": "string",
+     "environment_name": "string",
      "key": "string",
      "assigned_roles": "array",
      "users": "array",
@@ -5678,18 +5684,16 @@
      "group_instance_key": "string",
      "group_tenant": "string",
      "tenant": "string",
-     "organization_id": "string",
-     "project_id": "string",
-     "environment_id": "string",
      "associated_tenants": "array",
      "roles": "array",
      "updated_at": "string",
      "first_name": "string",
      "last_name": "string",
      "attributes": "object",
-     "role_assignments": "array",
+     "role": "string",
+     "resource_instance": "string",
      "idents": "array",
-     "role": "string"
+     "role_assignments": "array"
     },
     "evidence": [
      "openapi/_original/permit-io-openapi.json#DELETE /v2/elements/{proj_id}/{env_id}/config/{elements_config_id}/data/users/{user_id}",
@@ -5815,11 +5819,7 @@
      "PUT item"
     ],
     "properties": {
-     "Resources": "array",
-     "itemsPerPage": "number",
      "schemas": "array",
-     "startIndex": "number",
-     "totalResults": "number",
      "id": "string",
      "userName": "string",
      "name": "object",
@@ -6066,12 +6066,15 @@
      "POST item"
     ],
     "properties": {
-     "users": "array",
-     "next_page_token": "string",
-     "total_size": "integer",
+     "id": "string",
+     "email": "string",
+     "preferred_username": "string",
+     "given_name": "string",
+     "family_name": "string",
+     "active": "boolean",
+     "roles": "array",
      "user_id": "string",
      "organization_id": "string",
-     "roles": "array",
      "membership_status": "string",
      "metadata": "object"
     },
@@ -6127,10 +6130,6 @@
      "user_identifiers": "array",
      "user_verifiable_addresses": "array",
      "users": "array",
-     "Resources": "array",
-     "itemsPerPage": "integer",
-     "startIndex": "integer",
-     "totalResults": "integer",
      "active": "boolean",
      "emails": "array",
      "externalId": "string",
@@ -6139,7 +6138,8 @@
      "phoneNumbers": "array",
      "urn:ietf:params:scim:schemas:extension:secureauthciam:2.0:User": "object",
      "userName": "string",
-     "Operations": "array"
+     "op": "string",
+     "path": "string"
     },
     "evidence": [
      "openapi/_original/secureauth-analytics-openapi.yml#GET /pools/{ipID}/users",
@@ -6250,7 +6250,13 @@
       "string",
       "null"
      ],
-     "Operations": "array"
+     "path": [
+      "string",
+      "null"
+     ],
+     "removeOpValue": null,
+     "op": "string",
+     "value": "null"
     },
     "evidence": [
      "openapi/_original/mobileid-openapi.json#DELETE /users/{userId}",
@@ -6560,7 +6566,6 @@
      "password": "string",
      "data": "object",
      "nonce": "string",
-     "users": "array",
      "email_confirm": "boolean",
      "phone_confirm": "boolean",
      "ban_duration": "string",
@@ -6588,9 +6593,13 @@
      "GET collection"
     ],
     "properties": {
-     "status": "string",
-     "users": "array",
-     "nextPaginationToken": "string"
+     "id": "string",
+     "emails": "array",
+     "phoneNumbers": "array",
+     "thirdParty": "array",
+     "timeJoined": "integer",
+     "tenantIds": "array",
+     "loginMethods": "array"
     },
     "evidence": [
      "openapi/_original/supertokens-core-driver-interface-openapi.yml#GET /users"
@@ -6723,7 +6732,9 @@
      "groups": "array",
      "meta": "object",
      "phoneNumbers": "array",
-     "Operations": "array"
+     "op": "string",
+     "path": "string",
+     "value": null
     },
     "evidence": [
      "openapi/_original/telesign-accounts-api-openapi.json#DELETE /scim/v2/Users/{user_id}",
@@ -6944,7 +6955,33 @@
      "entitlements": "array",
      "roles": "array",
      "x509Certificates": "array",
-     "Operations": "array",
+     "path": "string",
+     "removeOpValue": null,
+     "op": "string",
+     "container": "boolean",
+     "integralNumber": "boolean",
+     "string": "boolean",
+     "missingNode": "boolean",
+     "valueNode": "boolean",
+     "object": "boolean",
+     "pojo": "boolean",
+     "floatingPointNumber": "boolean",
+     "short": "boolean",
+     "int": "boolean",
+     "long": "boolean",
+     "double": "boolean",
+     "bigDecimal": "boolean",
+     "bigInteger": "boolean",
+     "textual": "boolean",
+     "boolean": "boolean",
+     "binary": "boolean",
+     "array": "boolean",
+     "empty": "boolean",
+     "null": "boolean",
+     "float": "boolean",
+     "nodeType": "string",
+     "number": "boolean",
+     "embeddedValue": "boolean",
      "createdDate": "string",
      "modifiedDate": "string",
      "firstName": "string",
@@ -6982,12 +7019,10 @@
      "pageable": "object",
      "size": "integer",
      "content": "array",
-     "number": "integer",
      "sort": "object",
      "first": "boolean",
      "last": "boolean",
-     "numberOfElements": "integer",
-     "empty": "boolean"
+     "numberOfElements": "integer"
     },
     "evidence": [
      "openapi/_original/trustarc-guardian-openapi.json#DELETE /api/v1/permission-profiles/{id}/users",
@@ -7035,9 +7070,6 @@
      "avatar": "string",
      "state": "string",
      "is_available": "boolean",
-     "Resources": "array",
-     "totalResults": "integer",
-     "schemas": "array",
      "id": "string",
      "externalId": "string",
      "userName": "string",
@@ -7047,8 +7079,11 @@
      "active": "boolean",
      "locale": "string",
      "timezone": "string",
+     "schemas": "array",
      "meta": "object",
-     "Operations": "array",
+     "op": "string",
+     "path": "string",
+     "value": "object",
      "channel_sid": "string",
      "service_sid": "string",
      "last_consumed_message_index": "integer",
@@ -7191,7 +7226,9 @@
      "meta": null,
      "name": null,
      "userName": null,
-     "Operations": "array"
+     "op": "string",
+     "path": null,
+     "value": null
     },
     "evidence": [
      "openapi/_original/ucsd-tritonai-scim.yaml#DELETE /scim/v2/Users/{user_id}",
@@ -7229,7 +7266,9 @@
      "meta": null,
      "name": null,
      "userName": null,
-     "Operations": "array"
+     "op": "string",
+     "path": null,
+     "value": null
     },
     "evidence": [
      "openapi/_original/university-of-amsterdam-llm-gateway-openapi.json#DELETE /scim/v2/Users/{user_id}",
@@ -7305,10 +7344,72 @@
      "GET collection"
     ],
     "properties": {
-     "hydra:member": "array",
-     "hydra:totalItems": "integer",
-     "hydra:view": "object",
-     "hydra:search": "object"
+     "@id": "string",
+     "@type": "string",
+     "@context": null,
+     "companyOrganizations": "array",
+     "title": null,
+     "id": "integer",
+     "firstnames": "string",
+     "lastname": "string",
+     "fullname": "string",
+     "email": [
+      "string",
+      "null"
+     ],
+     "address": "object",
+     "mobileNumber": [
+      "string",
+      "null"
+     ],
+     "phoneNumber": [
+      "string",
+      "null"
+     ],
+     "isPublic": "boolean",
+     "organizations": "array",
+     "researchOrganizations": [
+      "array",
+      "null"
+     ],
+     "steeringGroups": "array",
+     "hrOrganizations": "array",
+     "fieldsOfScience": "array",
+     "picture": [
+      "string",
+      "null"
+     ],
+     "description": "object",
+     "publicWorkDescription": "object",
+     "currentStatus": "object",
+     "tuhUri": "object",
+     "twitterLink": [
+      "string",
+      "null"
+     ],
+     "linkedinLink": [
+      "string",
+      "null"
+     ],
+     "facebookLink": [
+      "string",
+      "null"
+     ],
+     "instagramLink": [
+      "string",
+      "null"
+     ],
+     "youtubeLink": [
+      "string",
+      "null"
+     ],
+     "personalLinks": "array",
+     "contact": null,
+     "steeringGroup": "object",
+     "studentName": [
+      "string",
+      "null"
+     ]
     },
     "evidence": [
      "openapi/_original/university-of-helsinki-contact-search-api-openapi.json#GET /company_organizations/{id}/members",
@@ -7777,35 +7878,106 @@
      "PUT item"
     ],
     "properties": {
-     "users": "array",
-     "info": "object",
+     "personality_id": "string",
+     "confirm": "boolean",
+     "status_reason__s": "string",
+     "created_time": "string",
+     "module": "string",
+     "name": "string",
+     "active": "boolean",
+     "email": "string",
+     "Source__s": "string",
      "code": "string",
      "message": "string",
      "details": "object",
      "status": "string",
-     "$current_shift": null,
-     "$next_shift": null,
-     "Current_Shift__s": null,
-     "$shift_effective_from": null,
-     "confirm": "boolean",
-     "date_format": "string",
-     "decimal_separator": "string",
-     "email": "string",
-     "first_name": "string",
-     "full_name": "string",
      "id": "string",
-     "last_name": null,
-     "type__s": "string",
+     "first_name": "string",
+     "last_name": [
+      "string",
+      "null"
+     ],
+     "full_name": "string",
+     "country": [
+      "string",
+      "null"
+     ],
+     "state": [
+      "string",
+      "null"
+     ],
+     "city": [
+      "string",
+      "null"
+     ],
+     "zip": [
+      "string",
+      "null"
+     ],
+     "fax": [
+      "string",
+      "null"
+     ],
+     "street": [
+      "string",
+      "null"
+     ],
+     "category": "string",
      "profile": "object",
      "role": "object",
-     "zuid": null,
-     "alias": null,
-     "created_by": null,
-     "created_time": null,
+     "created_by": "object",
+     "Modified_By": "object",
+     "Modified_Time": "string",
+     "language": "string",
      "locale": "string",
+     "time_zone": "string",
+     "time_format": "string",
+     "date_format": "string",
+     "decimal_separator": "string",
+     "number_separator": "string",
+     "country_locale": "string",
      "microsoft": "boolean",
-     "Modified_By": null,
-     "Modified_Time": null,
+     "sandboxDeveloper": "boolean",
+     "personal_account": "boolean",
+     "Isonline": "boolean",
+     "offset": "integer",
+     "zuid": "string",
+     "alias": [
+      "string",
+      "null"
+     ],
+     "dob": [
+      "string",
+      "null"
+     ],
+     "website": [
+      "string",
+      "null"
+     ],
+     "signature": [
+      "string",
+      "null"
+     ],
+     "name_format__s": "string",
+     "sort_order_preference__s": "string",
+     "default_tab_group": "string",
+     "$shift_effective_from": [
+      "object",
+      "null"
+     ],
+     "$current_shift": [
+      "object",
+      "null"
+     ],
+     "$next_shift": [
+      "object",
+      "null"
+     ],
+     "customize_info": "object",
+     "theme": "object",
+     "users": "array",
+     "Current_Shift__s": null,
+     "type__s": "string",
      "phone": [
       "string",
       "null"
@@ -7814,37 +7986,12 @@
       "string",
       "null"
      ],
-     "city": null,
-     "country": null,
-     "dob": null,
-     "fax": null,
-     "number_separator": "string",
-     "state": null,
-     "street": null,
-     "time_format": "string",
-     "website": null,
-     "zip": null,
-     "sandboxDeveloper": "boolean",
-     "name_format__s": "string",
-     "language": "string",
-     "status_reason__s": null,
-     "country_locale": "string",
      "ezuid": "string",
      "image_link": "string",
-     "sort_order_preference__s": "string",
      "Reporting_To": null,
      "share_among_subordinates": "boolean",
      "imap_status": "boolean",
-     "time_zone": "string",
-     "distance_preference__s": "string",
-     "default_tab_group": "string",
-     "signature": [
-      "string",
-      "null"
-     ],
-     "personal_account": "boolean",
-     "customize_info": "object",
-     "theme": "object"
+     "distance_preference__s": "string"
     },
     "evidence": [
      "openapi/_original/zoho-crm-portal-users-openapi.json#DELETE /settings/portals/{portal}/user_type/{userType}/users",
@@ -7950,12 +8097,20 @@
      "POST collection"
     ],
     "properties": {
-     "contiguous_id": "string",
-     "groups": "array",
+     "classification_method_label": "string",
+     "classification_type": "integer",
+     "collection_name": "string",
+     "connection_type": "string",
+     "database_id": "integer",
+     "group_id": "string",
+     "has_more_runs": "boolean",
+     "jobs": "array",
+     "source_key": "string",
      "removed_tag_value_count": "integer",
      "message": "string",
      "details": "object",
      "hasActiveAnomalies": "boolean",
+     "groups": "array",
      "locks": "array",
      "applications": "array",
      "users": "integer",
@@ -7964,8 +8119,6 @@
      "timeWindow": "array",
      "success": "boolean",
      "ids": "array",
-     "userGroups": "array",
-     "count": "number",
      "userGroupId": "integer",
      "userGroupName": "string",
      "userGroupType": "string",
@@ -7997,8 +8150,10 @@
      "GET collection"
     ],
     "properties": {
-     "totalCount": "integer",
-     "groups": "array"
+     "id": "integer",
+     "name": "string",
+     "description": "string",
+     "groupSource": "integer"
     },
     "evidence": [
      "openapi/_original/apache-ranger-rest-api.yaml#GET /xusers/groups"
@@ -8154,7 +8309,6 @@
      "oAuth2ServerDeviceCodeDuration": "integer",
      "oAuth2ServerDiscoveryUrl": "string",
      "total": "integer",
-     "teams": "array",
      "prefs": "object",
      "roles": "array"
     },
@@ -8384,9 +8538,6 @@
      "POST collection"
     ],
     "properties": {
-     "groups": "array",
-     "total_size": "integer",
-     "next_page_token": "string",
      "id": "string",
      "realm_id": "string",
      "tenant_id": "string",
@@ -8395,10 +8546,6 @@
      "create_time": "string",
      "update_time": "string",
      "schemas": "array",
-     "Resources": "array",
-     "totalResults": "integer",
-     "startIndex": "integer",
-     "itemsPerPage": "integer",
      "displayName": "string",
      "meta": "object"
     },
@@ -8503,9 +8650,22 @@
      "meta": "object",
      "metadata": "array",
      "status_code": "integer",
-     "permissions": "array",
+     "entitlement": "string",
+     "entity_type": "string",
+     "url": "string",
      "members": "array",
-     "artefact_matching_rules": "array"
+     "permissions": "array",
+     "artefact_matching_rules": "array",
+     "family": "string",
+     "stage": "string",
+     "track": "string",
+     "branch": "string",
+     "store": "string",
+     "series": "string",
+     "os": "string",
+     "release": "string",
+     "owner": "string",
+     "grant_permissions": "array"
     },
     "evidence": [
      "openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/authz/apps/{app_id}/groups",
@@ -8731,10 +8891,8 @@
      "id": "string",
      "name": "string",
      "schemas": "array",
-     "itemsPerPage": "integer",
-     "startIndex": "integer",
-     "totalResults": "integer",
-     "Resources": "array"
+     "displayName": "string",
+     "meta": "object"
     },
     "evidence": [
      "openapi/_original/cvent-openapi.json#DELETE /events/{id}/user-groups/{userGroupId}",
@@ -8761,10 +8919,8 @@
      "id": "string",
      "name": "string",
      "schemas": "array",
-     "itemsPerPage": "integer",
-     "startIndex": "integer",
-     "totalResults": "integer",
-     "Resources": "array"
+     "displayName": "string",
+     "meta": "object"
     },
     "evidence": [
      "openapi/_original/cvent-event-cloud-rest-openapi.yml#DELETE /events/{id}/user-groups/{userGroupId}",
@@ -8791,10 +8947,8 @@
      "id": "string",
      "name": "string",
      "schemas": "array",
-     "itemsPerPage": "integer",
-     "startIndex": "integer",
-     "totalResults": "integer",
-     "Resources": "array"
+     "displayName": "string",
+     "meta": "object"
     },
     "evidence": [
      "openapi/_original/cvent-hospitality-cloud-rest-apis-openapi.json#DELETE /events/{id}/user-groups/{userGroupId}",
@@ -8817,10 +8971,8 @@
      "id": "string",
      "name": "string",
      "schemas": "array",
-     "itemsPerPage": "integer",
-     "startIndex": "integer",
-     "totalResults": "integer",
-     "Resources": "array"
+     "displayName": "string",
+     "meta": "object"
     },
     "evidence": [
      "openapi/_original/cvent-rest-apis-openapi.yaml#DELETE /events/{id}/user-groups/{userGroupId}",
@@ -8876,8 +9028,13 @@
      "externalId": "string",
      "groupId": "string",
      "excludedAttributes": "string",
-     "userId": "string",
-     "operations": "array"
+     "op": "string",
+     "path": "string",
+     "valueString": "string",
+     "valueBoolean": "boolean",
+     "valueArray": "array",
+     "valueID": "string",
+     "valueDisplayName": "string"
     },
     "evidence": [
      "openapi/_original/descope-openapi.yml#DELETE /scim/v2/Groups/{groupId}",
@@ -8984,8 +9141,6 @@
      "POST collection"
     ],
     "properties": {
-     "teams": "array",
-     "total": "number",
      "createdAt": "string",
      "description": null,
      "detail": null,
@@ -9095,17 +9250,15 @@
      "id": "string",
      "users": "array",
      "usersCount": "integer",
-     "schemas": "array",
-     "totalResults": "integer",
-     "itemsPerPage": "integer",
-     "startIndex": "integer",
-     "Resources": "array",
      "displayName": "string",
      "urn:ietf:params:scim:schemas:extension:fenxgroup:2.0:Group": "object",
      "externalId": "string",
+     "schemas": "array",
      "meta": "object",
      "members": "array",
-     "operations": "array"
+     "op": "string",
+     "path": "string",
+     "value": null
     },
     "evidence": [
      "openapi/_original/fenergo-auditquery-v3-0-openapi.json#POST /api/v3/authorization/teams",
@@ -9193,8 +9346,14 @@
      "PUT item"
     ],
     "properties": {
+     "data": "object",
+     "id": "string",
+     "insertInstant": "integer",
+     "lastUpdateInstant": "integer",
+     "name": "string",
+     "roles": "array",
+     "tenantId": "string",
      "group": "object",
-     "groups": "array",
      "roleIds": "array"
     },
     "evidence": [
@@ -9225,9 +9384,12 @@
      "itemsPerPage": "integer",
      "id": "string",
      "meta": "object",
-     "displayName": "string",
-     "members": "array",
-     "Operations": "array"
+     "$ref": "string",
+     "type": "string",
+     "display": "string",
+     "value": "string",
+     "op": "string",
+     "path": "string"
     },
     "evidence": [
      "openapi/_original/gluu-jans-scim-openapi.yml#DELETE /Groups/{id}",
@@ -9385,14 +9547,10 @@
      "modifiedDate": "string",
      "modifiedByMember": "object",
      "teamName": "string",
-     "Resources": "array",
-     "totalResults": "number",
-     "startIndex": "number",
-     "itemsPerPage": "number",
+     "value": "string",
+     "$ref": "string",
+     "display": "string",
      "schemas": "array",
-     "meta": "object",
-     "displayName": "string",
-     "members": "array",
      "Operations": "array"
     },
     "evidence": [
@@ -9552,10 +9710,6 @@
     ],
     "properties": {
      "schemas": "array",
-     "totalResults": "integer",
-     "Resources": "array",
-     "startIndex": "integer",
-     "itemsPerPage": "integer",
      "displayName": "string",
      "id": "string",
      "externalId": "string",
@@ -9711,8 +9865,10 @@
      "GET item"
     ],
     "properties": {
+     "rank": "integer",
      "id": "string",
-     "teams": "array",
+     "score": "integer",
+     "players": "array",
      "name": "string",
      "description": "string",
      "flair": "string",
@@ -10065,6 +10221,7 @@
      "eligibilityScheduleRequests": "array",
      "eligibilitySchedules": "array",
      "id": "string",
+     "type": null,
      "firstChannelName": "string",
      "funSettings": null,
      "guestSettings": null,
@@ -10111,11 +10268,71 @@
      "GET item"
     ],
     "properties": {
-     "groups": "array",
-     "meta": "object",
+     "id": "string",
+     "title": "string",
+     "type": "string",
+     "is_team": "boolean",
+     "address": "object",
+     "count": "integer",
      "links": "object",
-     "linked": "object",
-     "teams": "array"
+     "email": "string",
+     "first_name": "string",
+     "last_name": "string",
+     "user_status": "string",
+     "updated_at": "integer",
+     "created_at": "integer",
+     "preferred_name": "string",
+     "image": "object",
+     "full_name": "string",
+     "job_title": "object",
+     "reports_to": "array",
+     "employee_type": "object",
+     "access_role": "string",
+     "ethnicity": [
+      "string",
+      "null"
+     ],
+     "middle_name": "string",
+     "gender": "string",
+     "job_change_reason": "string",
+     "terminated_reason": "string",
+     "start_date": "string",
+     "departure_date": "string",
+     "employee_id": "string",
+     "personal_email": "string",
+     "dob": "string",
+     "ssn": "string",
+     "marital_status": "string",
+     "bio": "string",
+     "asset_management": "string",
+     "laptop_asset_number": "string",
+     "corporate_card_member": "string",
+     "key_tag_number": "string",
+     "linkedin_url": "string",
+     "office_main_number": "string",
+     "office_direct_dial": "string",
+     "office_phone": "string",
+     "office_fax": "string",
+     "office_company_mobile": "string",
+     "home_phone": "string",
+     "mobile_phone": "string",
+     "home": "object",
+     "office": "object",
+     "emergency_contact": "string",
+     "emergency_contact_phone": "string",
+     "resume": "string",
+     "current_job_description": "string",
+     "job_description": "string",
+     "salary": "object",
+     "healthcare": "object",
+     "healthcare_info": "string",
+     "dental": "object",
+     "dental_info": "string",
+     "vision_plan_info": "string",
+     "life_insurance_info": "string",
+     "namely_time_employee_role": "string",
+     "namely_time_manager_role": "string",
+     "name": "string"
     },
     "evidence": [
      "openapi/_original/namely-api-openapi.json#GET /group_types/{id}/groups",
@@ -10224,10 +10441,6 @@
      "PUT collection"
     ],
     "properties": {
-     "previous": "string",
-     "next": "string",
-     "total_count": "integer",
-     "bundle_groups": "array",
      "bundle_id": "string",
      "group_id": "string",
      "access_level_name": "string",
@@ -10480,10 +10693,18 @@
      "PUT item"
     ],
     "properties": {
-     "header": "object",
-     "body": "array",
+     "id": "string",
      "name": "string",
+     "deleted": "boolean",
+     "created": "string",
+     "modified": "string",
+     "created_by": "string",
+     "modified_by": "string",
+     "my_group_user": "object",
      "groups_users": "array",
+     "user_count": "integer",
+     "header": "object",
+     "body": "object",
      "secrets": "array"
     },
     "evidence": [
@@ -10541,11 +10762,7 @@
      "members": "array",
      "roles": "array",
      "managers": "array",
-     "Resources": "array",
-     "itemsPerPage": "number",
      "schemas": "array",
-     "startIndex": "number",
-     "totalResults": "number",
      "displayName": "string",
      "externalId": "string",
      "meta": "object",
@@ -10644,8 +10861,9 @@
      "GET collection"
     ],
     "properties": {
-     "groups": "array",
-     "next_page_token": "string"
+     "id": "string",
+     "display_name": "string",
+     "external_id": "string"
     },
     "evidence": [
      "openapi/_original/scalekit-openapi.yml#GET /api/v1/organizations/{organization_id}/directories/{directory_id}/groups"
@@ -10677,16 +10895,11 @@
      "parent_id": "string",
      "updated_at": "string",
      "user_pool_id": "string",
-     "Resources": "array",
-     "itemsPerPage": "integer",
-     "schemas": "array",
-     "startIndex": "integer",
-     "totalResults": "integer",
-     "displayName": "string",
-     "externalId": "string",
-     "members": "array",
-     "meta": "object",
-     "Operations": "array"
+     "$ref": "string",
+     "type": "string",
+     "value": "string",
+     "op": "string",
+     "path": "string"
     },
     "evidence": [
      "openapi/_original/secureauth-admin-openapi.yml#GET /gateways/{gw}/groups",
@@ -10826,12 +11039,11 @@
      "startIndex": "integer",
      "itemsPerPage": "integer",
      "Resources": "array",
-     "id": "string",
-     "externalId": "string",
-     "displayName": "string",
-     "members": "array",
-     "meta": "object",
-     "Operations": "array"
+     "value": "string",
+     "display": "string",
+     "ref": "string",
+     "op": "string",
+     "path": "string"
     },
     "evidence": [
      "openapi/_original/telesign-accounts-api-openapi.json#GET /scim/v2/Groups",
@@ -10950,13 +11162,37 @@
      "PUT item"
     ],
     "properties": {
-     "schemas": "array",
-     "id": "string",
-     "externalId": "string",
-     "meta": "object",
-     "displayName": "string",
-     "members": "array",
-     "Operations": "array",
+     "value": "string",
+     "display": "string",
+     "type": "string",
+     "$ref": "string",
+     "path": "string",
+     "removeOpValue": null,
+     "op": "string",
+     "container": "boolean",
+     "integralNumber": "boolean",
+     "string": "boolean",
+     "missingNode": "boolean",
+     "valueNode": "boolean",
+     "object": "boolean",
+     "pojo": "boolean",
+     "floatingPointNumber": "boolean",
+     "short": "boolean",
+     "int": "boolean",
+     "long": "boolean",
+     "double": "boolean",
+     "bigDecimal": "boolean",
+     "bigInteger": "boolean",
+     "textual": "boolean",
+     "boolean": "boolean",
+     "binary": "boolean",
+     "array": "boolean",
+     "empty": "boolean",
+     "null": "boolean",
+     "float": "boolean",
+     "nodeType": "string",
+     "number": "boolean",
+     "embeddedValue": "boolean",
      "accountId": "string",
      "timestamp": "string",
      "root": "object",
@@ -11047,7 +11283,9 @@
      "id": null,
      "members": null,
      "meta": null,
-     "Operations": "array"
+     "op": "string",
+     "path": null,
+     "value": null
     },
     "evidence": [
      "openapi/_original/ucsd-tritonai-scim.yaml#DELETE /scim/v2/Groups/{group_id}",
@@ -11141,7 +11379,8 @@
      "displayName": "string",
      "externalId": null,
      "meta": null,
-     "Operations": "array"
+     "op": "string",
+     "value": null
     },
     "evidence": [
      "openapi/_original/university-of-amsterdam-llm-gateway-openapi.json#DELETE /scim/v2/Groups/{group_id}",
@@ -11357,6 +11596,9 @@
      "role": "string",
      "systemRoles": "array",
      "userMatchingRules": "array",
+     "claimName": "string",
+     "operator": "string",
+     "value": "string",
      "ID": "object",
      "InvalidMembers": "array",
      "Message": "string",
@@ -11427,15 +11669,22 @@
      "PUT item"
     ],
     "properties": {
-     "user_groups": "array",
-     "info": "object",
+     "created_by": "object",
+     "modified_by": null,
+     "modified_time": null,
+     "created_time": "string",
+     "description": null,
+     "id": "string",
+     "name": "string",
+     "sources_count": "object",
      "code": "string",
      "message": "string",
      "status": "string",
      "details": "object",
-     "description": null,
-     "name": "string",
-     "sources": "array"
+     "type": "string",
+     "source": "object",
+     "subordinates": null,
+     "sub_territories": null
     },
     "evidence": [
      "openapi/_original/zoho-crm-user-groups-openapi.json#DELETE /settings/user_groups/{group}",
@@ -11532,10 +11781,12 @@
      "PUT collection"
     ],
     "properties": {
-     "total": "integer",
-     "scopes": "array",
-     "organizations": "array",
      "$id": "string",
+     "description": "string",
+     "category": "string",
+     "deprecated": "boolean",
+     "total": "integer",
+     "organizations": "array",
      "$createdAt": "string",
      "$updatedAt": "string",
      "name": "string",
@@ -11569,7 +11820,6 @@
      "markedForDeletion": "boolean",
      "platform": "string",
      "projects": "array",
-     "teams": "array",
      "organizationId": "string",
      "invites": "array",
      "couponId": "string",
@@ -11605,7 +11855,11 @@
      "branding": "object",
      "metadata": "object",
      "token_quota": "object",
-     "enabled_connections": "array"
+     "enabled_connections": "array",
+     "connection_id": "string",
+     "assign_membership_on_login": "boolean",
+     "show_as_button": "boolean",
+     "is_signup_enabled": "boolean"
     },
     "evidence": [
      "openapi/_original/auth0-management-api-openapi.yml#DELETE /organizations/{id}",
@@ -11805,8 +12059,6 @@
      "enabled": "boolean",
      "id": "string",
      "name": "string",
-     "next_page_token": "string",
-     "tenants": "array",
      "tenant": "object",
      "update_mask": "string",
      "message": "string",
@@ -12238,23 +12490,24 @@
      "POST collection"
     ],
     "properties": {
-     "nextPageToken": "string",
-     "projects": "array",
      "archiveTime": "string",
+     "conversationCount": "integer",
+     "displayName": "string",
+     "id": "string",
+     "lastActivityTime": "string",
+     "memberCount": "integer",
+     "name": "string",
+     "state": "string",
      "callerIsOwner": "boolean",
      "counts": "object",
      "createTime": "string",
      "createdBy": "string",
      "description": "string",
-     "displayName": "string",
-     "id": "string",
      "instructions": "string",
      "instructionsUpdateTime": "string",
      "instructionsUpdatedBy": "string",
      "instructionsVersion": "integer",
-     "members": "array",
-     "name": "string",
-     "state": "string"
+     "members": "array"
     },
     "evidence": [
      "openapi/_original/flume-health-openapi.json#GET /api/v1/context/workspaces",
@@ -12346,9 +12599,45 @@
      "PUT item"
     ],
     "properties": {
-     "tenant": "object",
-     "tenants": "array",
+     "data": "object",
+     "accessControlConfiguration": "object",
+     "captchaConfiguration": "object",
+     "configured": "boolean",
+     "connectorPolicies": "array",
+     "emailConfiguration": "object",
+     "eventConfiguration": "object",
+     "externalIdentifierConfiguration": "object",
+     "failedAuthenticationConfiguration": "object",
+     "familyConfiguration": "object",
+     "formConfiguration": "object",
+     "httpSessionMaxInactiveInterval": "integer",
+     "id": "string",
+     "insertInstant": "integer",
+     "issuer": "string",
+     "jwtConfiguration": "object",
+     "lambdaConfiguration": "object",
+     "lastUpdateInstant": "integer",
+     "loginConfiguration": "object",
+     "logoutURL": "string",
+     "maximumPasswordAge": "object",
+     "minimumPasswordAge": "object",
+     "multiFactorConfiguration": "object",
+     "name": "string",
+     "oauthConfiguration": "object",
+     "passwordEncryptionConfiguration": "object",
+     "passwordValidationRules": "object",
+     "phoneConfiguration": "object",
+     "rateLimitConfiguration": "object",
+     "registrationConfiguration": "object",
+     "scimServerConfiguration": "object",
+     "ssoConfiguration": "object",
+     "state": "string",
+     "themeId": "string",
+     "userDeletePolicy": "object",
+     "usernameConfiguration": "object",
+     "webAuthnConfiguration": "object",
      "sourceTenantId": "string",
+     "tenant": "object",
      "webhookIds": "array",
      "eventInfo": "object",
      "async": "boolean"
@@ -12618,8 +12907,6 @@
      "is_create_billing_customer": "boolean",
      "billing_email": "string",
      "billing_plan_code": "string",
-     "organizations": "array",
-     "next_token": "string",
      "is_auto_join_domain_list": "boolean",
      "is_enable_advanced_orgs": "boolean",
      "is_enforce_mfa": "boolean"
@@ -12917,11 +13204,11 @@
      "organizations": "array",
      "page": "object",
      "generatedAt": "string",
-     "ok": "boolean",
-     "organization": "object",
-     "setup": "object",
-     "skill": "object",
-     "claimLinks": "array",
+     "id": "string",
+     "role": "string",
+     "token": "string",
+     "url": "string",
+     "expiresAt": "string",
      "workspaceName": "string",
      "skillName": "string",
      "devicePublicKey": "string",
@@ -12931,6 +13218,7 @@
      "orgs": "array",
      "activeOrgId": null,
      "activeOrgSlug": null,
+     "organization": "object",
      "currentMember": "object",
      "currentMemberTeams": "array",
      "name": "string",
@@ -13218,9 +13506,6 @@
      "POST collection"
     ],
     "properties": {
-     "organizations": "array",
-     "next_page_token": "string",
-     "total_size": "integer",
      "id": "string",
      "external_id": "string",
      "display_name": "string",
@@ -13423,7 +13708,13 @@
       "null"
      ],
      "parent": "null",
-     "Operations": "array"
+     "path": [
+      "string",
+      "null"
+     ],
+     "removeOpValue": null,
+     "op": "string",
+     "value": "null"
     },
     "evidence": [
      "openapi/_original/account-management-openapi.json#DELETE /organizations/{organizationId}",
@@ -13592,9 +13883,10 @@
      "role_id": "string",
      "description": "string",
      "permissions": "array",
-     "email_address": "string",
-     "discovered_organizations": "array",
-     "organization_id_hint": "string",
+     "member_authenticated": "boolean",
+     "membership": "object",
+     "primary_required": "object",
+     "mfa_required": "object",
      "intermediate_session_token": "string",
      "session_token": "string",
      "session_jwt": "string"
@@ -13807,10 +14099,6 @@
      "GET item"
     ],
     "properties": {
-     "hydra:member": "array",
-     "hydra:totalItems": "integer",
-     "hydra:view": "object",
-     "hydra:search": "object",
      "@id": "string",
      "@type": "string",
      "@context": null,
@@ -14013,13 +14301,13 @@
      "PUT item"
     ],
     "properties": {
-     "count": "integer",
-     "list": "array",
      "organizationId": "string",
      "externalOrganizationId": "string",
      "parentOrganizationId": "string",
      "displayName": "string",
      "description": "string",
+     "count": "integer",
+     "list": "array",
      "pagination": "object"
     },
     "evidence": [
@@ -14391,9 +14679,6 @@
      "POST collection"
     ],
     "properties": {
-     "groups": "array",
-     "total_size": "integer",
-     "next_page_token": "string",
      "id": "string",
      "resource_server_id": "string",
      "realm_id": "string",
@@ -14426,7 +14711,10 @@
      "id": "string",
      "name": "string",
      "description": "string",
-     "permissions": "array",
+     "consumer": "string",
+     "actions": "array",
+     "resources": "array",
+     "isInline": "boolean",
      "isReadOnly": "boolean"
     },
     "evidence": [
@@ -14447,8 +14735,6 @@
      "POST item"
     ],
     "properties": {
-     "list": "array",
-     "nextPageToken": "string",
      "createdAt": "string",
      "deletedAt": "string",
      "displayName": "string",
@@ -14594,8 +14880,6 @@
      "POST item"
     ],
     "properties": {
-     "list": "array",
-     "nextPageToken": "string",
      "createdAt": "string",
      "deletedAt": "string",
      "displayName": "string",
@@ -14771,9 +15055,9 @@
      "roleIds": "array",
      "categoryId": "string",
      "fePermission": "boolean",
-     "tenantId": "string",
+     "isDefault": "boolean",
+     "level": "number",
      "userId": "string",
-     "roles": "array",
      "affectedTenants": "number",
      "rolesAdded": "array",
      "rolesRemoved": "array",
@@ -14808,8 +15092,40 @@
      "PUT item"
     ],
     "properties": {
+     "accessControlConfiguration": "object",
+     "active": "boolean",
+     "authenticationTokenConfiguration": "object",
+     "cleanSpeakConfiguration": "object",
+     "data": "object",
+     "emailConfiguration": "object",
+     "externalIdentifierConfiguration": "object",
+     "formConfiguration": "object",
+     "id": "string",
+     "insertInstant": "integer",
+     "jwtConfiguration": "object",
+     "lambdaConfiguration": "object",
+     "lastUpdateInstant": "integer",
+     "loginConfiguration": "object",
+     "multiFactorConfiguration": "object",
+     "name": "string",
+     "oauthConfiguration": "object",
+     "passwordlessConfiguration": "object",
+     "phoneConfiguration": "object",
+     "registrationConfiguration": "object",
+     "registrationDeletePolicy": "object",
+     "roles": "array",
+     "samlv2Configuration": "object",
+     "scopes": "array",
+     "state": "string",
+     "tenantId": "string",
+     "themeId": "string",
+     "universalConfiguration": "object",
+     "unverified": "object",
+     "verificationEmailTemplateId": "string",
+     "verificationStrategy": "string",
+     "verifyRegistration": "boolean",
+     "webAuthnConfiguration": "object",
      "application": "object",
-     "applications": "array",
      "role": "object",
      "sourceApplicationId": "string",
      "eventInfo": "object"
@@ -14831,8 +15147,6 @@
      "POST collection"
     ],
     "properties": {
-     "roles": "array",
-     "nextPageToken": "string",
      "name": "string",
      "title": "string",
      "description": "string",
@@ -15167,17 +15481,15 @@
      "POST collection"
     ],
     "properties": {
-     "org_code": "string",
-     "roles": "array",
-     "code": "string",
-     "message": "string",
-     "next_token": "string",
-     "role_id": "string",
-     "role": "object",
+     "id": "string",
      "name": "string",
-     "description": "string",
      "key": "string",
+     "message": "string",
+     "code": "string",
+     "role_id": "string",
+     "description": "string",
      "is_default_role": "boolean",
+     "role": "object",
      "assignment_permission_id": "string"
     },
     "evidence": [
@@ -15281,11 +15593,6 @@
      "POST item"
     ],
     "properties": {
-     "next-page-token": [
-      "string",
-      "null"
-     ],
-     "roles": "array",
      "created-at": "string",
      "description": [
       "string",
@@ -15398,10 +15705,12 @@
      "POST collection"
     ],
     "properties": {
-     "displayName": "string",
-     "members": "array",
+     "createdDateTime": "string",
+     "userId": "string",
+     "user": null,
      "@odata.type": "string",
      "description": "string",
+     "displayName": "string",
      "originId": "string",
      "originSystem": "string",
      "resource": null,
@@ -15439,8 +15748,13 @@
      "protected": "boolean",
      "created_at": "string",
      "updated_at": "string",
-     "role": "object",
-     "operations": "array"
+     "id": "string",
+     "project_id": "string",
+     "endpoint_id": "string",
+     "action": "string",
+     "status": "string",
+     "failures_count": "integer",
+     "role": "object"
     },
     "evidence": [
      "openapi/_original/neon-management-api-openapi.yml#DELETE /projects/{project_id}/branches/{branch_id}/roles/{role_name}",
@@ -15590,12 +15904,12 @@
      "PUT item"
     ],
     "properties": {
-     "Key": "string",
-     "name": "string",
-     "description": "string",
-     "manageInfrastructure": "boolean",
-     "manageTeams": "boolean",
-     "environmentPermissions": "array"
+     "environmentKey": "string",
+     "environmentName": "string",
+     "level": "integer",
+     "levelLabel": "string",
+     "createApplications": "boolean",
+     "addDependenciesToSystem": "boolean"
     },
     "evidence": [
      "openapi/_original/lifetime-api.json#DELETE /roles/{RoleKey}/",
@@ -15613,8 +15927,11 @@
      "GET collection"
     ],
     "properties": {
-     "header": "object",
-     "body": "array"
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "created": "string",
+     "modified": "string"
     },
     "evidence": [
      "openapi/_original/passbolt-openapi.yaml#GET /roles.json"
@@ -15905,7 +16222,13 @@
       "null"
      ],
      "permissions": "array",
-     "Operations": "array"
+     "path": [
+      "string",
+      "null"
+     ],
+     "removeOpValue": null,
+     "op": "string",
+     "value": "null"
     },
     "evidence": [
      "openapi/_original/data-verification-openapi.json#GET /countries/{country}/organizations/{id}/roles",
@@ -16014,7 +16337,8 @@
      "deleted_at": null,
      "name": "string",
      "description": "string",
-     "permissions": "array"
+     "permissions": "array",
+     "authority": "string"
     },
     "evidence": [
      "openapi/_original/specterops-bloodhound-openapi.json#GET /api/v2/roles",
@@ -16768,9 +17092,9 @@
      "message": "string",
      "status": "integer",
      "updates": "array",
-     "metadata": "array",
-     "status_code": "integer",
-     "type": "string"
+     "entitlement": "string",
+     "entity_type": "string",
+     "url": "string"
     },
     "evidence": [
      "openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/groups/{id}/entitlements/{entitlementId}",
@@ -17170,8 +17494,14 @@
      "PUT item"
     ],
     "properties": {
+     "data": "object",
+     "id": "string",
+     "insertInstant": "integer",
+     "jwtConfiguration": "object",
+     "lastUpdateInstant": "integer",
+     "name": "string",
+     "permissions": "array",
      "entityType": "object",
-     "entityTypes": "array",
      "permission": "object"
     },
     "evidence": [
@@ -17338,8 +17668,12 @@
      "GET collection"
     ],
     "properties": {
-     "permissions": "array",
-     "last_available_id": "number"
+     "id": "number",
+     "key_id": "string",
+     "permission_id": "string",
+     "action": "string",
+     "action_message": "object",
+     "metadata": "object"
     },
     "evidence": [
      "openapi/_original/keyper-access-openapi.yml#GET /v1/permissions"
@@ -17364,20 +17698,21 @@
      "org_code": "string",
      "plans": "array",
      "entitlements": "array",
-     "permissions": "array",
-     "code": "string",
-     "message": "string",
-     "scopes": "array",
-     "scope": "object",
+     "id": "string",
+     "name": "string",
      "key": "string",
      "description": "string",
+     "message": "string",
+     "code": "string",
+     "scope": "object",
      "has_more": "boolean",
+     "roles": "array",
      "permission_id": "string",
-     "next_token": "string",
-     "name": "string",
+     "api_id": "string",
      "scope_id": "string",
      "permissions_added": "array",
-     "permissions_removed": "array"
+     "permissions_removed": "array",
+     "permissions": "array"
     },
     "evidence": [
      "openapi/_original/kinde-frontend-api-openapi.yml#GET /account_api/v1/entitlements",
@@ -18270,11 +18605,12 @@
     "properties": {
      "email": "string",
      "role": "string",
-     "invitations": "array",
-     "totalCount": "integer",
-     "success": "boolean",
+     "id": "string",
      "emailAddress": "string",
-     "membershipType": "string"
+     "status": "string",
+     "membershipType": "string",
+     "createdAt": "string",
+     "success": "boolean"
     },
     "evidence": [
      "openapi/_original/appdirect-companies-openapi-original.yml#DELETE /account/v2/companies/{companyUuid}/invitations/{email}",
@@ -18455,8 +18791,15 @@
      "GET collection"
     ],
     "properties": {
-     "invites": "array",
-     "total": "number"
+     "email": "string",
+     "expiresAt": "string",
+     "id": "string",
+     "inviterId": "string",
+     "organizationId": "string",
+     "role": "string",
+     "status": null,
+     "inviter": "object",
+     "organization": "object"
     },
     "evidence": [
      "openapi/_original/dust-identity-openapi.json#GET /api/v1/orgs/invites"
@@ -18473,14 +18816,16 @@
      "PUT item"
     ],
     "properties": {
-     "count": "integer",
-     "invites": "array",
+     "id": "string",
+     "organizationId": "string",
+     "organizationName": "string",
      "status": "string",
-     "walletPublicKey": "string",
-     "alias": "string",
      "email": "string",
-     "phoneNumber": "string",
-     "role": "string"
+     "alias": "string",
+     "walletPublicKey": "string",
+     "role": "string",
+     "createdByEmail": "string",
+     "phoneNumber": "string"
     },
     "evidence": [
      "openapi/_original/dynamic-xyz-invites-api-openapi.yml#DELETE /invites/{inviteId}",
@@ -18501,14 +18846,16 @@
      "PUT item"
     ],
     "properties": {
-     "count": "integer",
-     "invites": "array",
+     "id": "string",
+     "organizationId": "string",
+     "organizationName": "string",
      "status": "string",
-     "walletPublicKey": "string",
-     "alias": "string",
      "email": "string",
-     "phoneNumber": "string",
-     "role": "string"
+     "alias": "string",
+     "walletPublicKey": "string",
+     "role": "string",
+     "createdByEmail": "string",
+     "phoneNumber": "string"
     },
     "evidence": [
      "openapi/_original/dynamic-xyz-openapi.yml#DELETE /invites/{inviteId}",
@@ -18610,23 +18957,21 @@
      "POST collection"
     ],
     "properties": {
+     "id": "string",
      "code": "string",
-     "message": "string",
-     "invites": "array",
-     "next_token": "string",
-     "invite": "object",
      "email": "string",
      "first_name": "string",
      "last_name": "string",
-     "roles": "array",
-     "send_email": "boolean",
-     "id": "string",
      "full_name": "string",
      "created_on": "string",
      "is_sent": "boolean",
      "accepted_on": "string",
+     "roles": "array",
      "is_revoked": "boolean",
-     "invite_link": "string"
+     "invite_link": "string",
+     "message": "string",
+     "invite": "object",
+     "send_email": "boolean"
     },
     "evidence": [
      "openapi/_original/kinde-management-api-openapi.yml#DELETE /api/v1/organization/{org_code}/invites/{invite_code}",
@@ -18711,6 +19056,11 @@
      "invitedUser": null,
      "invitedUserSponsors": "array",
      "@odata.type": "string",
+     "hidden": "boolean",
+     "identity": "object",
+     "participantId": "string",
+     "removeFromDefaultAudioRoutingGroup": "boolean",
+     "replacesCallId": "string",
      "id": "string"
     },
     "evidence": [
@@ -19282,9 +19632,7 @@
      "POST collection"
     ],
     "properties": {
-     "keys": "array",
-     "count": "integer",
-     "id": "integer",
+     "id": "string",
      "orgId": "string",
      "apiKey": "string",
      "description": "string",
@@ -19415,8 +19763,6 @@
      "PUT item"
     ],
     "properties": {
-     "total": "integer",
-     "tokens": "array",
      "$id": "string",
      "$createdAt": "string",
      "$updatedAt": "string",
@@ -19428,7 +19774,6 @@
      "resources": "array",
      "authorizationDetails": "string",
      "expire": "string",
-     "keys": "array",
      "name": "string",
      "secret": "string",
      "accessedAt": "string",
@@ -19777,13 +20122,21 @@
      "PUT item"
     ],
     "properties": {
-     "code": "string",
-     "message": "string",
-     "has_more": "boolean",
-     "api_keys": "array",
-     "api_key": "object",
+     "id": "string",
      "name": "string",
      "type": "string",
+     "status": "string",
+     "key_prefix": "string",
+     "key_suffix": "string",
+     "created_on": "string",
+     "last_verified_on": "string",
+     "last_verified_ip": "string",
+     "created_by": "string",
+     "api_ids": "array",
+     "scopes": "array",
+     "message": "string",
+     "code": "string",
+     "api_key": "object",
      "api_id": "string",
      "scope_ids": "array",
      "user_id": "string",
@@ -20206,8 +20559,16 @@
      "GET item"
     ],
     "properties": {
-     "count": "integer",
-     "list": "array"
+     "keyUUID": "string",
+     "keyName": "string",
+     "apiName": "string",
+     "applicationName": "string",
+     "keyType": "string",
+     "user": "string",
+     "issuedOn": "integer",
+     "validityPeriod": "integer",
+     "lastUsed": "integer",
+     "associatedApp": "string"
     },
     "evidence": [
      "openapi/_original/wso2-admin-api.yaml#GET /api-keys",
@@ -23966,10 +24327,12 @@
     "clerk-com",
     "clever",
     "clio",
+    "codecombat",
     "coram-ai",
     "didit",
     "drchrono",
     "dream-sports",
+    "duo-security",
     "dust-identity",
     "etsy",
     "eve-online",
@@ -23991,6 +24354,7 @@
     "luminary",
     "lumos",
     "magic-link",
+    "namely",
     "neon",
     "nudge-security",
     "onelogin",
@@ -24045,6 +24409,7 @@
     "fenergo",
     "forgerock",
     "gluu",
+    "hootsuite",
     "ironclad",
     "johns-hopkins-university",
     "kadence",
@@ -24053,39 +24418,30 @@
     "microsoft-graph",
     "okta",
     "outsystems",
-    "passage-1password",
     "secureauth",
+    "trustarc",
     "university-of-helsinki",
     "zoho-crm"
    ],
    "PascalCase": [
-    "authenticx",
-    "beyond-identity",
     "chalmers-university-of-technology",
-    "cvent",
-    "cvent-event-cloud",
-    "cvent-hospitality-cloud",
-    "cvent-registration",
     "cyberark-identity",
     "descope",
-    "fenergo",
-    "gluu",
     "habu",
     "hootsuite",
     "ironclad",
     "outsystems",
     "postman",
-    "secureauth",
     "signicat",
     "telesign",
-    "trustarc",
-    "twilio",
     "ucsd",
     "university-of-amsterdam",
-    "venafi"
+    "venafi",
+    "zoho-crm"
    ],
    "kebab-case": [
     "canonical",
+    "hanko",
     "lakekeeper"
    ]
   }

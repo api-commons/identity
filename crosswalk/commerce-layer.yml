@@ -9,7 +9,7 @@ concepts:
     properties:
       id: id
       metadata: attributes
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /identity_providers/{identityProviderId}/user
     - openapi/_original/commerce-layer-provisioning-api-openapi.json#GET /user

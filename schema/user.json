@@ -8,24 +8,24 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.814,
-      "x-commons-providers": 136,
+      "x-commons-share": 0.844,
+      "x-commons-providers": 141,
       "x-commons-spellings": [
         "id",
         "userId",
         "user_id",
         "externalId",
-        "external_id",
         "uuid",
+        "external_id",
         "_id",
-        "$id"
+        "@id"
       ]
     },
     "email": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.677,
-      "x-commons-providers": 113,
+      "x-commons-share": 0.701,
+      "x-commons-providers": 117,
       "x-commons-spellings": [
         "email",
         "emails",
@@ -40,9 +40,9 @@
     },
     "name": {
       "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.491,
-      "x-commons-providers": 82,
+      "x-commons-tier": "core",
+      "x-commons-share": 0.509,
+      "x-commons-providers": 85,
       "x-commons-spellings": [
         "name",
         "displayName",
@@ -71,8 +71,8 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.401,
-      "x-commons-providers": 67,
+      "x-commons-share": 0.413,
+      "x-commons-providers": 69,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
@@ -88,8 +88,8 @@
     "last_name": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.347,
-      "x-commons-providers": 58,
+      "x-commons-share": 0.359,
+      "x-commons-providers": 60,
       "x-commons-spellings": [
         "lastName",
         "last_name",
@@ -102,22 +102,23 @@
     "username": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.347,
-      "x-commons-providers": 58,
+      "x-commons-share": 0.353,
+      "x-commons-providers": 59,
       "x-commons-spellings": [
         "username",
         "userName",
         "nickname",
         "login",
         "user_name",
-        "Username"
+        "Username",
+        "preferred_username"
       ]
     },
     "first_name": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.341,
-      "x-commons-providers": 57,
+      "x-commons-share": 0.347,
+      "x-commons-providers": 58,
       "x-commons-spellings": [
         "firstName",
         "first_name",
@@ -134,8 +135,8 @@
       "x-commons-spellings": [
         "roles",
         "role",
-        "roleIds",
         "roleId",
+        "roleIds",
         "role_id",
         "role_ids"
       ]
@@ -143,28 +144,28 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.269,
-      "x-commons-providers": 45,
+      "x-commons-share": 0.275,
+      "x-commons-providers": 46,
       "x-commons-spellings": [
         "updated_at",
         "updatedAt",
         "updated",
         "modifiedDate",
         "update_time",
+        "modified",
         "modifiedAt",
-        "lastModified",
-        "$updatedAt"
+        "lastModified"
       ],
       "format": "date-time"
     },
     "metadata": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.251,
-      "x-commons-providers": 42,
+      "x-commons-share": 0.246,
+      "x-commons-providers": 41,
       "x-commons-spellings": [
-        "metadata",
         "attributes",
+        "metadata",
         "properties",
         "user_metadata",
         "customAttributes",
@@ -176,13 +177,13 @@
     "phone": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.234,
-      "x-commons-providers": 39,
+      "x-commons-share": 0.246,
+      "x-commons-providers": 41,
       "x-commons-spellings": [
         "phone",
         "phoneNumbers",
-        "phone_number",
         "phoneNumber",
+        "phone_number",
         "mobilePhone",
         "phone_numbers",
         "mobile"

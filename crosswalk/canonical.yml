@@ -41,9 +41,11 @@ concepts:
       - id
       name: name
       description: description
-      member_ids: members
       created_at: created_at
+      member_ids: members
       updated_at: updated_at
+      type: type
+      organization_id: tenant_id
     core_coverage: 1.0
     evidence:
     - openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/authz/apps/{app_id}/groups
@@ -72,8 +74,8 @@ concepts:
     path_segment:
     - roles
     properties:
-      name: name
       id: id
+      name: name
     core_coverage: 0.667
     evidence:
     - openapi/_original/canonical-identity-platform-api-openapi.yml#DELETE /api/v0/groups/{id}/roles/{roleId}

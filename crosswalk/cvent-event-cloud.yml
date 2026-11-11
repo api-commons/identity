@@ -33,8 +33,10 @@ concepts:
     - groups
     properties:
       id: id
-      name: name
-    core_coverage: 1.0
+      name:
+      - name
+      - displayName
+    core_coverage: 0.667
     evidence:
     - openapi/_original/cvent-event-cloud-rest-openapi.yml#DELETE /events/{id}/user-groups/{userGroupId}
     - openapi/_original/cvent-event-cloud-rest-openapi.yml#GET /events/{id}/user-groups

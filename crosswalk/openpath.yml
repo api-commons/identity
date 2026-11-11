@@ -15,7 +15,7 @@ concepts:
       created_at: createdAt
       role_ids: roles
       updated_at: updatedAt
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/openpath-openapi-original.json#DELETE /orgs/{orgId}/groups/{groupId}/users/{userId}
     - openapi/_original/openpath-openapi-original.json#DELETE /orgs/{orgId}/roles/{roleId}/users/{userId}
@@ -42,8 +42,8 @@ concepts:
     path_segment:
     - roles
     properties:
-      name: name
       id: id
+      name: name
       description: description
       created_at: createdAt
       updated_at: updatedAt

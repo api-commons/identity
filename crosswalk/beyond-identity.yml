@@ -40,6 +40,7 @@ concepts:
       description: description
       created_at: create_time
       updated_at: update_time
+      organization_id: tenant_id
     core_coverage: 1.0
     evidence:
     - openapi/_original/beyond-identity-secure-access-api-openapi.yml#DELETE /v1/tenants/{tenant_id}/realms/{realm_id}/groups/{group_id}
@@ -65,8 +66,8 @@ concepts:
     path_segment:
     - roles
     properties:
-      name: display_name
       id: id
+      name: display_name
       description: description
       created_at: create_time
       updated_at: update_time

@@ -15,7 +15,7 @@ concepts:
       status: disabled
       created_at: createdAt
       username: username
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/lichess-openapi.yml#GET /api/games/user/{username}
     - openapi/_original/lichess-openapi.yml#GET /api/team/{teamId}/users

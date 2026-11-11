@@ -12,7 +12,7 @@ concepts:
       created_at: created_at
       updated_at: updated_at
       metadata: metadata
-    core_coverage: 0.0
+    core_coverage: 0.333
     evidence:
     - openapi/_original/didit-openapi-original.json#GET /v3/users/
     - openapi/_original/didit-openapi-original.json#GET /v3/users/{vendor_data}/

@@ -8,8 +8,8 @@
     "email": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.7,
-      "x-commons-providers": 21,
+      "x-commons-share": 0.733,
+      "x-commons-providers": 22,
       "x-commons-spellings": [
         "email",
         "invitee",
@@ -22,8 +22,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.6,
-      "x-commons-providers": 18,
+      "x-commons-share": 0.7,
+      "x-commons-providers": 21,
       "x-commons-spellings": [
         "id",
         "userId",
@@ -34,8 +34,8 @@
     "role": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.6,
-      "x-commons-providers": 18,
+      "x-commons-share": 0.633,
+      "x-commons-providers": 19,
       "x-commons-spellings": [
         "role",
         "roles",
@@ -47,32 +47,19 @@
     "status": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.367,
-      "x-commons-providers": 11,
+      "x-commons-share": 0.433,
+      "x-commons-providers": 13,
       "x-commons-spellings": [
         "status",
         "Status",
         "state"
       ]
     },
-    "created_at": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.333,
-      "x-commons-providers": 10,
-      "x-commons-spellings": [
-        "created_at",
-        "created_on",
-        "created",
-        "date_created"
-      ],
-      "format": "date-time"
-    },
     "organization_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.333,
-      "x-commons-providers": 10,
+      "x-commons-share": 0.4,
+      "x-commons-providers": 12,
       "x-commons-spellings": [
         "organization_id",
         "organizationId",
@@ -81,11 +68,25 @@
         "companyId"
       ]
     },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.367,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created_on",
+        "created",
+        "date_created"
+      ],
+      "format": "date-time"
+    },
     "expires_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.3,
-      "x-commons-providers": 9,
+      "x-commons-share": 0.333,
+      "x-commons-providers": 10,
       "x-commons-spellings": [
         "expires_at",
         "expires",
@@ -97,12 +98,13 @@
     "inviter_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.2,
-      "x-commons-providers": 6,
+      "x-commons-share": 0.233,
+      "x-commons-providers": 7,
       "x-commons-spellings": [
-        "created_by",
         "inviter",
-        "inviter_id"
+        "created_by",
+        "inviter_id",
+        "inviterId"
       ]
     },
     "metadata": {

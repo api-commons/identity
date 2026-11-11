@@ -20,7 +20,7 @@ concepts:
     - team
     properties:
       description: details
-    core_coverage: 0.0
+    core_coverage: 0.333
     evidence:
     - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/MyUw/Project/{projectId}/Team
     - openapi/_original/university-of-warsaw-jaskier-api.json#GET /api/v1/Project/{projectId}/Team

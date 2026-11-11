@@ -9,7 +9,7 @@ concepts:
     properties:
       id: id
       metadata: attributes
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/cobot-api2-openapi.yml#GET /user
   group:
@@ -17,7 +17,8 @@ concepts:
     - teams
     properties:
       id: id
-    core_coverage: 0.5
+      type: type
+    core_coverage: 0.333
     evidence:
     - openapi/_original/cobot-api2-openapi.yml#GET /spaces/{spaceId}/teams
     - openapi/_original/cobot-api2-openapi.yml#GET /teams/{id}

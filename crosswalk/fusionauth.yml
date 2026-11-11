@@ -17,8 +17,11 @@ concepts:
   group:
     path_segment:
     - group
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      name: name
+      organization_id: tenantId
+    core_coverage: 0.667
     evidence:
     - openapi/_original/fusionauth-openapi.yaml#DELETE /api/group/{groupId}
     - openapi/_original/fusionauth-openapi.yaml#GET /api/group/{groupId}
@@ -28,8 +31,11 @@ concepts:
   organization:
     path_segment:
     - tenant
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      name: name
+      id: id
+      status: state
+    core_coverage: 0.667
     evidence:
     - openapi/_original/fusionauth-openapi.yaml#DELETE /api/tenant/{tenantId}
     - openapi/_original/fusionauth-openapi.yaml#GET /api/tenant/{tenantId}
@@ -39,8 +45,11 @@ concepts:
   role:
     path_segment:
     - role
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      name: name
+      permission_ids: scopes
+    core_coverage: 0.667
     evidence:
     - openapi/_original/fusionauth-openapi.yaml#DELETE /api/application/{applicationId}/role/{roleId}
     - openapi/_original/fusionauth-openapi.yaml#PATCH /api/application/{applicationId}/role/{roleId}
@@ -50,8 +59,10 @@ concepts:
   permission:
     path_segment:
     - permission
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.667
     evidence:
     - openapi/_original/fusionauth-openapi.yaml#DELETE /api/entity/type/{entityTypeId}/permission/{permissionId}
     - openapi/_original/fusionauth-openapi.yaml#PATCH /api/entity/type/{entityTypeId}/permission/{permissionId}

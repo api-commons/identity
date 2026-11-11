@@ -90,22 +90,22 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 136
-      share: 0.814
+      providers: 141
+      share: 0.844
       type: string
       spellings:
       - id
       - userId
       - user_id
       - externalId
-      - external_id
       - uuid
+      - external_id
       - _id
-      - $id
+      - '@id'
     - name: email
       tier: core
-      providers: 113
-      share: 0.677
+      providers: 117
+      share: 0.701
       type: string
       spellings:
       - email
@@ -117,9 +117,9 @@ concepts:
       - email_address
       - email_addresses
     - name: name
-      tier: extended
-      providers: 82
-      share: 0.491
+      tier: core
+      providers: 85
+      share: 0.509
       type: string
       spellings:
       - name
@@ -144,8 +144,8 @@ concepts:
       - blocked
     - name: created_at
       tier: extended
-      providers: 67
-      share: 0.401
+      providers: 69
+      share: 0.413
       type: string
       spellings:
       - created_at
@@ -158,8 +158,8 @@ concepts:
       - date_created
     - name: last_name
       tier: extended
-      providers: 58
-      share: 0.347
+      providers: 60
+      share: 0.359
       type: string
       spellings:
       - lastName
@@ -170,8 +170,8 @@ concepts:
       - familyName
     - name: username
       tier: extended
-      providers: 58
-      share: 0.347
+      providers: 59
+      share: 0.353
       type: string
       spellings:
       - username
@@ -180,10 +180,11 @@ concepts:
       - login
       - user_name
       - Username
+      - preferred_username
     - name: first_name
       tier: extended
-      providers: 57
-      share: 0.341
+      providers: 58
+      share: 0.347
       type: string
       spellings:
       - firstName
@@ -199,14 +200,14 @@ concepts:
       spellings:
       - roles
       - role
-      - roleIds
       - roleId
+      - roleIds
       - role_id
       - role_ids
     - name: updated_at
       tier: extended
-      providers: 45
-      share: 0.269
+      providers: 46
+      share: 0.275
       type: string
       spellings:
       - updated_at
@@ -214,17 +215,17 @@ concepts:
       - updated
       - modifiedDate
       - update_time
+      - modified
       - modifiedAt
       - lastModified
-      - $updatedAt
     - name: metadata
       tier: extended
-      providers: 42
-      share: 0.251
+      providers: 41
+      share: 0.246
       type: object
       spellings:
-      - metadata
       - attributes
+      - metadata
       - properties
       - user_metadata
       - customAttributes
@@ -233,59 +234,59 @@ concepts:
       - private_metadata
     - name: phone
       tier: extended
-      providers: 39
-      share: 0.234
+      providers: 41
+      share: 0.246
       type: string
       spellings:
       - phone
       - phoneNumbers
-      - phone_number
       - phoneNumber
+      - phone_number
       - mobilePhone
       - phone_numbers
       - mobile
-    long_tail_count: 1314
+    long_tail_count: 1410
     long_tail_sample:
     - locale
     - password
-    - organization_id
-    - group_ids
-    - avatar_url
     - type
+    - organization_id
+    - avatar_url
+    - group_ids
     - last_login_at
     - email_verified
-    - total_results
-    - items_per_page
-    - resources
-    - start_index
-    - job_title
-    - operations
-    - time_zone
-    - user_type
+    - path
     - description
-    - next_page_token
-    - profile
+    - job_title
+    - time_zone
+    - op
+    - user_type
     - company_name
     - created_by
     - department
+    - full_name
+    - profile
+    - address
     - addresses
     - country
     - credentials
-    - full_name
+    - items_per_page
     - relationships
+    - start_index
+    - total_results
     - account_enabled
     - city
     - mail_nickname
     - password_profile
-    - permissions
     - photos
+    - resources
     - usage_location
     - assigned_licenses
     - birthday
     - business_phones
     - created_date_time
+    - deleted
     - employee_id
-    - identifiers
   group:
     segments_seen:
       groups: 67
@@ -333,56 +334,43 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 60
-      share: 0.789
+      providers: 64
+      share: 0.842
       type: string
       spellings:
       - id
       - externalId
-      - userId
       - group_id
       - uuid
-      - $id
+      - userId
       - external_id
+      - $id
       - groupId
     - name: name
       tier: core
-      providers: 58
-      share: 0.763
+      providers: 59
+      share: 0.776
       type: string
       spellings:
       - name
       - displayName
-      - title
       - display_name
+      - title
       - label
       - Name
     - name: description
-      tier: extended
-      providers: 37
-      share: 0.487
+      tier: core
+      providers: 38
+      share: 0.5
       type: string
       spellings:
       - description
       - details
       - Description
-    - name: member_ids
-      tier: extended
-      providers: 28
-      share: 0.368
-      type: array
-      spellings:
-      - members
-      - users
-      - members_count
-      - memberIds
-      - memberCount
-      - member_count
-      - Members
     - name: created_at
       tier: extended
-      providers: 24
-      share: 0.316
+      providers: 25
+      share: 0.329
       type: string
       spellings:
       - created_at
@@ -392,10 +380,23 @@ concepts:
       - create_time
       - createdDate
       - date_created
+    - name: member_ids
+      tier: extended
+      providers: 23
+      share: 0.303
+      type: array
+      spellings:
+      - members
+      - users
+      - members_count
+      - memberIds
+      - memberCount
+      - member_count
+      - Members
     - name: updated_at
       tier: extended
-      providers: 22
-      share: 0.289
+      providers: 23
+      share: 0.303
       type: string
       spellings:
       - updated_at
@@ -405,22 +406,42 @@ concepts:
       - modifiedAt
       - modifiedDate
       - updated
-    long_tail_count: 594
+      - modified
+    - name: type
+      tier: extended
+      providers: 19
+      share: 0.25
+      type: string
+      spellings:
+      - type
+    - name: organization_id
+      tier: extended
+      providers: 16
+      share: 0.211
+      type: string
+      spellings:
+      - orgId
+      - organizationId
+      - tenant_id
+      - organization_id
+      - tenantId
+      - accountId
+      - companyId
+    long_tail_count: 653
     long_tail_sample:
-    - organization_id
-    - items_per_page
-    - start_index
-    - total_results
-    - type
-    - resources
     - metadata
-    - operations
+    - path
     - status
+    - op
+    - roles
     - group_types
+    - items_per_page
     - mail_enabled
     - mail_nickname
-    - roles
+    - ref
     - security_enabled
+    - start_index
+    - total_results
     - visibility
     - created_date_time
     - email
@@ -428,11 +449,14 @@ concepts:
     - membership_rule
     - membership_rule_processing_state
     - on_premises_sync_enabled
-    - path
     - renewed_date_time
+    - resources
     - team_id
+    - created_by
+    - display
     - expiration_date_time
     - is_assignable_to_role
+    - operations
     - owners
     - parent_id
     - preferred_language
@@ -441,12 +465,10 @@ concepts:
     - assigned_labels
     - classification
     - deleted_date_time
-    - next_page_token
+    - modified_by
     - on_premises_domain_name
     - on_premises_last_sync_date_time
     - photos
-    - preferred_data_location
-    - secrets
   organization:
     segments_seen:
       organizations: 31
@@ -496,8 +518,8 @@ concepts:
     properties:
     - name: name
       tier: core
-      providers: 47
-      share: 0.825
+      providers: 48
+      share: 0.842
       type: string
       spellings:
       - name
@@ -507,8 +529,8 @@ concepts:
       - title
     - name: id
       tier: core
-      providers: 40
-      share: 0.702
+      providers: 42
+      share: 0.737
       type: string
       spellings:
       - id
@@ -549,19 +571,19 @@ concepts:
       - workspace_id
     - name: status
       tier: extended
-      providers: 17
-      share: 0.298
+      providers: 18
+      share: 0.316
       type: string
       spellings:
-      - status
       - state
+      - status
       - enabled
       - disabled
       - active
     - name: description
       tier: extended
-      providers: 14
-      share: 0.246
+      providers: 15
+      share: 0.263
       type: string
       spellings:
       - description
@@ -588,7 +610,7 @@ concepts:
       - customAttributes
       - public_metadata
       - private_metadata
-    long_tail_count: 536
+    long_tail_count: 568
     long_tail_sample:
     - domain
     - slug
@@ -597,21 +619,19 @@ concepts:
     - city
     - country
     - logo_url
+    - role
     - address
     - billing_email
     - branding
     - parent
     - phone
-    - role
     - version
     - addresses
     - color
     - company_name
     - created_time
     - email
-    - next_page_token
     - postal_code
-    - projects
     - settings
     - street
     - visibility
@@ -630,6 +650,8 @@ concepts:
     - created_date_time
     - custom_defined_fields
     - default_roles
+    - default_usage_location
+    - deleted_date_time
   role:
     segments_seen:
       roles: 59
@@ -670,10 +692,24 @@ concepts:
       share: 0.095
       tier: long-tail
     properties:
+    - name: id
+      tier: core
+      providers: 45
+      share: 0.776
+      type: string
+      spellings:
+      - id
+      - userId
+      - externalId
+      - role_id
+      - uuid
+      - _id
+      - user_id
+      - Guid
     - name: name
       tier: core
-      providers: 44
-      share: 0.759
+      providers: 45
+      share: 0.776
       type: string
       spellings:
       - name
@@ -681,20 +717,6 @@ concepts:
       - display_name
       - title
       - label
-    - name: id
-      tier: core
-      providers: 43
-      share: 0.741
-      type: string
-      spellings:
-      - id
-      - externalId
-      - userId
-      - role_id
-      - uuid
-      - _id
-      - user_id
-      - Guid
     - name: description
       tier: core
       providers: 35
@@ -706,16 +728,17 @@ concepts:
       - details
     - name: permission_ids
       tier: extended
-      providers: 19
-      share: 0.328
+      providers: 20
+      share: 0.345
       type: array
       spellings:
       - permissions
       - scopes
+      - actions
     - name: created_at
       tier: extended
-      providers: 17
-      share: 0.293
+      providers: 18
+      share: 0.31
       type: string
       spellings:
       - createdAt
@@ -727,36 +750,34 @@ concepts:
       - creationDate
     - name: updated_at
       tier: extended
-      providers: 13
-      share: 0.224
+      providers: 14
+      share: 0.241
       type: string
       spellings:
       - updated_at
       - updatedAt
+      - modified
       - modifiedAt
       - update_time
       - updated-at
       - updated
-      - modified
-    long_tail_count: 342
+    long_tail_count: 369
     long_tail_sample:
+    - status
     - type
     - organization_id
-    - status
     - metadata
-    - key
     - is_default
-    - next_page_token
+    - key
     - role_ids
     - default_role
     - entitlements
-    - members
     - resource
     - role_name
+    - user
     - version
     - application
     - assignable_role_name
-    - body
     - client
     - client_role
     - code
@@ -767,16 +788,18 @@ concepts:
     - deleted_at
     - global_role_assignments
     - group
-    - groups
     - is_editable
+    - level
     - local_role_assignments
+    - members
+    - op
     - origin_id
     - origin_system
     - owner
+    - path
     - project_id
+    - resources
     - target_system_name
-    - total_size
-    - user
     - user_count
     - username
     - users
@@ -824,8 +847,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 24
-      share: 0.6
+      providers: 25
+      share: 0.625
       type: string
       spellings:
       - id
@@ -834,8 +857,8 @@ concepts:
       - permission_id
     - name: name
       tier: core
-      providers: 24
-      share: 0.6
+      providers: 25
+      share: 0.625
       type: string
       spellings:
       - name
@@ -879,15 +902,17 @@ concepts:
       spellings:
       - resource
       - resource_server_identifier
-    long_tail_count: 358
+    long_tail_count: 360
     long_tail_sample:
     - key
     - metadata
     - organization_id
-    - type
     - action
     - claims
     - system
+    - type
+    - entitlement
+    - entity_type
     - granted_to
     - icon_url
     - is_root_scope
@@ -896,6 +921,7 @@ concepts:
     - permission_name
     - purpose
     - resource_id
+    - roles
     - service
     - service_id
     - slug
@@ -909,6 +935,7 @@ concepts:
     - allow_portfolios
     - allow_stages
     - allowed_scopes
+    - api_id
     - app_display_name
     - app_entitlement_owner_ids
     - app_entitlement_view
@@ -917,10 +944,6 @@ concepts:
     - app_label_verbose
     - app_resource_id
     - app_resource_type_id
-    - app_user_ids
-    - application
-    - assigners
-    - associated_environments
   invite:
     segments_seen:
       invitations: 15
@@ -961,8 +984,8 @@ concepts:
     properties:
     - name: email
       tier: core
-      providers: 21
-      share: 0.7
+      providers: 22
+      share: 0.733
       type: string
       spellings:
       - email
@@ -972,8 +995,8 @@ concepts:
       - invitee_email
     - name: id
       tier: core
-      providers: 18
-      share: 0.6
+      providers: 21
+      share: 0.7
       type: string
       spellings:
       - id
@@ -982,8 +1005,8 @@ concepts:
       - user_id
     - name: role
       tier: core
-      providers: 18
-      share: 0.6
+      providers: 19
+      share: 0.633
       type: string
       spellings:
       - role
@@ -993,27 +1016,17 @@ concepts:
       - role_ids
     - name: status
       tier: extended
-      providers: 11
-      share: 0.367
+      providers: 13
+      share: 0.433
       type: string
       spellings:
       - status
       - Status
       - state
-    - name: created_at
-      tier: extended
-      providers: 10
-      share: 0.333
-      type: string
-      spellings:
-      - created_at
-      - created_on
-      - created
-      - date_created
     - name: organization_id
       tier: extended
-      providers: 10
-      share: 0.333
+      providers: 12
+      share: 0.4
       type: string
       spellings:
       - organization_id
@@ -1021,10 +1034,21 @@ concepts:
       - organization
       - tenant_id
       - companyId
+    - name: created_at
+      tier: extended
+      providers: 11
+      share: 0.367
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created_on
+      - created
+      - date_created
     - name: expires_at
       tier: extended
-      providers: 9
-      share: 0.3
+      providers: 10
+      share: 0.333
       type: string
       spellings:
       - expires_at
@@ -1033,13 +1057,14 @@ concepts:
       - expirationDate
     - name: inviter_id
       tier: extended
-      providers: 6
-      share: 0.2
+      providers: 7
+      share: 0.233
       type: string
       spellings:
-      - created_by
       - inviter
+      - created_by
       - inviter_id
+      - inviterId
     - name: metadata
       tier: extended
       providers: 6
@@ -1053,7 +1078,7 @@ concepts:
       - private_metadata
       - attributes
       - properties
-    long_tail_count: 147
+    long_tail_count: 152
     long_tail_sample:
     - updated_at
     - name
@@ -1061,6 +1086,7 @@ concepts:
     - client_id
     - code
     - expires_in_days
+    - identity
     - invite_redeem_url
     - invited_user
     - invited_user_display_name
@@ -1091,10 +1117,9 @@ concepts:
     - client
     - client_context
     - connection_id
+    - created_by_email
     - date_updated
     - email_id
-    - email_metadata
-    - email_verified
   api_key:
     segments_seen:
       tokens: 10
@@ -1151,14 +1176,15 @@ concepts:
       - user_id
     - name: created_at
       tier: core
-      providers: 15
-      share: 0.714
+      providers: 16
+      share: 0.762
       type: string
       spellings:
       - createdAt
       - created_at
       - $createdAt
       - createdOn
+      - created_on
       - created
     - name: key
       tier: core
@@ -1172,6 +1198,7 @@ concepts:
       - key
       - api_key
       - prefix
+      - key_prefix
     - name: name
       tier: core
       providers: 15
@@ -1182,8 +1209,8 @@ concepts:
       - label
     - name: scopes
       tier: extended
-      providers: 9
-      share: 0.429
+      providers: 10
+      share: 0.476
       type: array
       spellings:
       - scopes
@@ -1192,13 +1219,21 @@ concepts:
       - scope
     - name: status
       tier: extended
-      providers: 8
-      share: 0.381
+      providers: 9
+      share: 0.429
       type: string
       spellings:
       - status
       - active
       - enabled
+    - name: created_by
+      tier: extended
+      providers: 7
+      share: 0.333
+      type: string
+      spellings:
+      - createdBy
+      - created_by
     - name: description
       tier: extended
       providers: 7
@@ -1227,14 +1262,6 @@ concepts:
       - updatedAt
       - updated_at
       - $updatedAt
-    - name: created_by
-      tier: extended
-      providers: 6
-      share: 0.286
-      type: string
-      spellings:
-      - createdBy
-      - created_by
     - name: organization_id
       tier: extended
       providers: 5
@@ -1244,20 +1271,20 @@ concepts:
       - orgId
       - tenantId
       - organization_id
-    long_tail_count: 143
+    long_tail_count: 145
     long_tail_sample:
     - last_used_at
     - type
     - app_id
     - code
     - expired
-    - keys
     - owner
     - revoked
     - accessed_at
     - activity_timestamp
     - allowed_ips
     - api_id
+    - api_ids
     - assigned_to
     - authorization_details
     - category_id

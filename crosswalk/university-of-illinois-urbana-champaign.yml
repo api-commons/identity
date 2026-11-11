@@ -9,7 +9,7 @@ concepts:
     properties:
       id: id
       name: name
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/university-of-illinois-urbana-champaign-rokwire-gateway.yaml#GET /api/bbs/appointments/people
   group:
@@ -45,8 +45,8 @@ concepts:
     path_segment:
     - roles
     properties:
-      name: name
       id: id
+      name: name
       description: description
       permission_ids:
       - permissions

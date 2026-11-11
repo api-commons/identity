@@ -9,7 +9,7 @@ concepts:
     properties:
       name: displayName
       status: state
-    core_coverage: 0.0
+    core_coverage: 0.333
     evidence:
     - openapi/_original/issuer-node-api.yaml#GET /v2/identities
     - openapi/_original/issuer-node-api.yaml#GET /v2/identities/{identifier}

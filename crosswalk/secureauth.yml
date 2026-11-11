@@ -19,7 +19,7 @@ concepts:
       updated_at: updated_at
       metadata: metadata
       phone: phoneNumbers
-    core_coverage: 1.0
+    core_coverage: 0.667
     evidence:
     - openapi/_original/secureauth-analytics-openapi.yml#GET /pools/{ipID}/users
     - openapi/_original/secureauth-analytics-openapi.yml#GET /tenants/{tenantID}/users
@@ -30,16 +30,13 @@ concepts:
     path_segment:
     - groups
     properties:
-      id:
-      - id
-      - externalId
-      name:
-      - name
-      - displayName
+      id: id
+      name: name
       description: description
-      member_ids: members
       created_at: created_at
       updated_at: updated_at
+      type: type
+      organization_id: tenant_id
     core_coverage: 1.0
     evidence:
     - openapi/_original/secureauth-admin-openapi.yml#GET /gateways/{gw}/groups

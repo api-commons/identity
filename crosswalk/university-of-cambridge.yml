@@ -11,7 +11,7 @@ concepts:
       name: displayName
       last_name: surname
       metadata: attributes
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/university-of-cambridge-lookup.yaml#GET /group/{groupid}/members
     - openapi/_original/university-of-cambridge-lookup.yaml#GET /inst/{instid}/members

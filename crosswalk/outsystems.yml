@@ -20,7 +20,7 @@ concepts:
       username:
       - Username
       - username
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/lifetime-api.json#DELETE /teams/{TeamKey}/users/{UserKey}/
     - openapi/_original/lifetime-api.json#GET /users/
@@ -36,7 +36,7 @@ concepts:
       description: description
       member_ids: users
       updated_at: updatedAt
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/lifetime-api.json#DELETE /teams/{TeamKey}/
     - openapi/_original/lifetime-api.json#GET /teams/
@@ -46,10 +46,8 @@ concepts:
   role:
     path_segment:
     - roles
-    properties:
-      name: name
-      description: description
-    core_coverage: 0.667
+    properties: {}
+    core_coverage: 0.0
     evidence:
     - openapi/_original/lifetime-api.json#DELETE /roles/{RoleKey}/
     - openapi/_original/lifetime-api.json#GET /roles/

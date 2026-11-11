@@ -10,7 +10,7 @@ concepts:
       id: id
       email: email
       created_at: created_at
-    core_coverage: 1.0
+    core_coverage: 0.667
     evidence:
     - openapi/_original/telnyx-openapi.json#GET /organizations/users
     - openapi/_original/telnyx-openapi.json#GET /organizations/users/{id}
@@ -21,7 +21,9 @@ concepts:
     - group
     properties:
       id: id
-    core_coverage: 0.5
+      type: type
+      organization_id: organization_id
+    core_coverage: 0.333
     evidence:
     - openapi/_original/telnyx-openapi.json#GET /messages/group/{message_id}
     - openapi/_original/telnyx-openapi.yml#GET /messages/group/{message_id}
